@@ -1,0 +1,91 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 49,
+  part: 7,
+  title: '종합 테스트',
+  subtitle: '중2 전체 범위 종합 테스트! PART 4~7의 핵심 문제를 풀어 보자.',
+  isTest: true,
+  lectures: [],
+  concepts: [
+    {
+      id: 'g2d49-c1',
+      title: '종합 테스트 안내',
+      content: 'PART 4 (일차함수) ~ PART 7 (확률)까지 전체 범위에서 출제됩니다.\\n\\n각 PART에서 핵심 유형이 골고루 나오니, 틀린 문제는 해당 Day로 돌아가 복습하세요!\\n\\n시간을 재며 풀어보면 실전 감각을 키울 수 있습니다.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'g2d49-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: '[PART 4] 일차함수 $y = -2x + 8$의 그래프의 $x$절편을 구하시오.',
+      answer: '4',
+      explanation: '$y = 0$ 대입: $0 = -2x + 8$ → $2x = 8$ → $x = 4$',
+    },
+    {
+      id: 'g2d49-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: '[PART 5] 평행사변형 $ABCD$에서 $\\\\angle A = 65°$일 때, $\\\\angle C$의 크기는?',
+      options: ['$55°$', '$65°$', '$115°$', '$125°$'],
+      answer: '$65°$',
+      explanation: '평행사변형에서 대각의 크기가 같으므로\\n$\\\\angle C = \\\\angle A = 65°$',
+    },
+    {
+      id: 'g2d49-p3',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: '[PART 4] 두 직선 $y = 2x - 1$과 $y = -x + 5$의 교점의 좌표를 $(a, b)$라 할 때, $a + b$의 값을 구하시오.',
+      answer: '5',
+      explanation: '$2x - 1 = -x + 5$\\n$3x = 6$ → $x = 2$\\n$y = 2 \\\\times 2 - 1 = 3$\\n교점 $(2, 3)$이므로 $a + b = 5$',
+    },
+    {
+      id: 'g2d49-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: '[PART 6] 직각삼각형에서 두 변이 $9$cm, $12$cm일 때, 빗변의 길이는?',
+      options: ['$13$cm', '$15$cm', '$17$cm', '$21$cm'],
+      answer: '$15$cm',
+      explanation: '$c = \\\\sqrt{9^2 + 12^2} = \\\\sqrt{81 + 144} = \\\\sqrt{225} = 15$(cm)',
+    },
+    {
+      id: 'g2d49-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: '[PART 6] $\\\\triangle ABC \\\\sim \\\\triangle DEF$이고 닮음비가 $3 : 4$이다. $\\\\triangle ABC$의 넓이가 $36$cm$^2$일 때, $\\\\triangle DEF$의 넓이를 구하시오.',
+      answer: '64',
+      explanation: '넓이비 $= 3^2 : 4^2 = 9 : 16$\\n$\\\\frac{36}{S} = \\\\frac{9}{16}$\\n$S = \\\\frac{36 \\\\times 16}{9} = 64$(cm$^2$)',
+    },
+    {
+      id: 'g2d49-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: '[PART 7] 두 개의 주사위를 던질 때, 눈의 합이 $8$ 이상일 확률은?',
+      options: ['$\\\\frac{5}{12}$', '$\\\\frac{5}{18}$', '$\\\\frac{13}{36}$', '$\\\\frac{5}{36}$'],
+      answer: '$\\\\frac{5}{12}$',
+      explanation: '합 $8$: $(2,6)(3,5)(4,4)(5,3)(6,2)$ → $5$\\n합 $9$: $(3,6)(4,5)(5,4)(6,3)$ → $4$\\n합 $10$: $(4,6)(5,5)(6,4)$ → $3$\\n합 $11$: $(5,6)(6,5)$ → $2$\\n합 $12$: $(6,6)$ → $1$\\n합계: $15$가지\\n$P = \\\\frac{15}{36} = \\\\frac{5}{12}$',
+    },
+    {
+      id: 'g2d49-p7',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: '[PART 5] 마름모 $ABCD$에서 $\\\\overline{AC} = 16$cm, $\\\\overline{BD} = 12$cm일 때, 한 변의 길이를 구하시오.',
+      answer: '10',
+      explanation: '마름모의 대각선은 서로 수직이등분\\n반대각선: $8$cm, $6$cm\\n한 변 $= \\\\sqrt{8^2 + 6^2} = \\\\sqrt{64 + 36} = \\\\sqrt{100} = 10$(cm)',
+    },
+    {
+      id: 'g2d49-p8',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: '[PART 7] 흰 공 $3$개, 검은 공 $2$개에서 $2$개를 동시에 뽑을 때, 같은 색일 확률은?',
+      options: ['$\\\\frac{2}{5}$', '$\\\\frac{3}{10}$', '$\\\\frac{4}{10}$', '$\\\\frac{1}{2}$'],
+      answer: '$\\\\frac{2}{5}$',
+      explanation: '전체: $_5C_2 = 10$가지\\n흰 공 2개: $_3C_2 = 3$가지\\n검은 공 2개: $_2C_2 = 1$가지\\n같은 색: $3 + 1 = 4$가지\\n$P = \\\\frac{4}{10} = \\\\frac{2}{5}$',
+    },
+  ],
+  realLifeExample: '종합 테스트를 통해 중2 수학의 후반부를 모두 점검했습니다! 일차함수는 데이터 분석의 기초, 도형의 성질은 건축과 디자인의 기반, 닮음과 피타고라스 정리는 측량과 공학에, 확률은 인공지능과 통계의 핵심입니다. 이 모든 것이 고등수학으로 이어져요!',
+};
+
+export default dayContent;

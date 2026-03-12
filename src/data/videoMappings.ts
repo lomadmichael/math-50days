@@ -41,7 +41,7 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       days: [8, 9, 10],
     },
     {
-      youtubeVideoId: 'eJJlVuPdjd8',
+      youtubeVideoId: '4PR6bPQu3Ek',
       title: '완전제곱식 인수분해',
       description: '완전제곱식을 인수분해 하는 방법',
       days: [11],
@@ -59,7 +59,7 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       days: [12, 13, 14],
     },
     {
-      youtubeVideoId: '61_GCxyj9GI',
+      youtubeVideoId: '2FK8cyjXvKU',
       title: '인수정리와 조립제법',
       description: '인수정리와 조립제법 완벽 정리',
       days: [13, 14],
@@ -77,13 +77,13 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       days: [15, 16, 17, 18],
     },
     {
-      youtubeVideoId: '_qS5_e4J2fA',
+      youtubeVideoId: 'ULlvimOimU4',
       title: '이차방정식 심화',
       description: '가슴에 와닿는 이차방정식 수업',
       days: [19, 20, 21],
     },
     {
-      youtubeVideoId: 'l2O2_mN-Fzc',
+      youtubeVideoId: 'A6MDR3vNHpo',
       title: '평행이동',
       description: '이차함수를 이해하기 위한 필수조건 평행이동',
       days: [27, 28],
@@ -95,7 +95,7 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       days: [31, 32, 33],
     },
     {
-      youtubeVideoId: 'OTzYS-qocvg',
+      youtubeVideoId: '2kcycGNYWls',
       title: '원의 방정식',
       description: '고1 수학에서 꼭 나오는 원의 방정식',
       days: [39, 40, 41, 42],
@@ -135,7 +135,7 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       days: [10, 11],
     },
     {
-      youtubeVideoId: 'SbhDzlKbYzs',
+      youtubeVideoId: 'AbOSkFWlZrM',
       title: '문자를 사용한 식',
       description: '숫자에서 문자로! 문자의 사용과 식의 계산',
       days: [12, 13],
@@ -157,13 +157,13 @@ export const videoMappings: Record<string, VideoMapping[]> = {
   // ── 중2 코스: 7개 영상 ──
   grade2: [
     {
-      youtubeVideoId: 'I7EwLfYyj-Q',
+      youtubeVideoId: 'H6treQu1_uY',
       title: '다항식과 일차식',
       description: '다항식과 일차식은 식은 죽 먹기',
       days: [1, 2, 3],
     },
     {
-      youtubeVideoId: 'cCEi3VHgxwg',
+      youtubeVideoId: '8kHMKr9nLRI',
       title: '단항식의 곱셈과 나눗셈',
       description: '단항식의 곱셈과 나눗셈 확실하게 정리',
       days: [4, 5],
@@ -203,19 +203,19 @@ export const videoMappings: Record<string, VideoMapping[]> = {
   // ── 기초탄탄 코스: 3개 영상 ──
   foundation: [
     {
-      youtubeVideoId: 't8kJfmojhKI',
+      youtubeVideoId: 'k8VnUHUMNSk',
       title: '분수의 모든 것',
       description: '분수를 가장 쉽게 한 번에 이해하는 법',
       days: [6, 7, 8, 9, 10, 11],
     },
     {
-      youtubeVideoId: '5Ov8t3MVDKQ',
+      youtubeVideoId: 'PNb7prOGowE',
       title: '소수의 사칙연산',
       description: '수학 명의가 핵심만 짚어주는 소수의 사칙연산',
       days: [12, 13, 14, 15],
     },
     {
-      youtubeVideoId: 'QLBChnCxYpw',
+      youtubeVideoId: 'ADBtgOxs8e8',
       title: '공약수와 공배수',
       description: '모든 것이 쉬워진다! 공약수와 공배수',
       days: [16, 17, 18, 19],

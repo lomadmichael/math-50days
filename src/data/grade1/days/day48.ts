@@ -17,7 +17,7 @@ const dayContent: DayContent = {
       id: 'g1d48-c2',
       title: 'PART 8 핵심 요약: 주의할 점',
       content: '• 도수분포표에서는 **원래 자료의 정확한 값**을 알 수 없음\n• 상대도수는 **자료 수가 다른 두 집단 비교**에 필수\n• **극단값**이 있으면 평균보다 중앙값이 적절\n• 도수분포다각형의 넓이 = 히스토그램의 넓이 = 계급의 크기 $\\times$ 도수의 합',
-      type: 'concept',
+      type: 'definition',
     },
   ],
   problems: [

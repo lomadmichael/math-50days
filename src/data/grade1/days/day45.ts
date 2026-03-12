@@ -17,7 +17,7 @@ const dayContent: DayContent = {
       id: 'g1d45-c2',
       title: '히스토그램',
       content: '**히스토그램**은 도수분포표를 막대그래프로 나타낸 것입니다.\n\n특징:\n• 가로축: 계급 (구간), 세로축: 도수\n• 막대 사이에 **빈틈이 없음** (일반 막대그래프와 다른 점!)\n• 막대의 넓이 = 계급의 크기 $\\times$ 도수\n• 모든 막대의 넓이의 합 = 계급의 크기 $\\times$ 도수의 합\n\n히스토그램을 보면 자료의 분포 모양을 한눈에 파악할 수 있습니다.',
-      type: 'concept',
+      type: 'definition',
     },
   ],
   problems: [

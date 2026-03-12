@@ -11,13 +11,13 @@ const dayContent: DayContent = {
       id: 'g1d22-c1',
       title: '그래프란?',
       content: '• **그래프**: 두 양 사이의 관계를 좌표평면 위에 나타낸 것\n• x축: **독립변수** (원인, 입력값)\n• y축: **종속변수** (결과, 출력값)\n• 그래프를 보면 두 양이 어떻게 변하는지 한눈에 알 수 있다!',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d22-c2',
       title: '좌표 읽기와 점 찍기',
       content: '• **점 찍기**: x좌표만큼 가로 이동 → y좌표만큼 세로 이동\n• **좌표 읽기**: 점에서 x축에 수선 → x좌표, y축에 수선 → y좌표\n• 예: 점 $(3, 2)$ → 오른쪽 3, 위로 2 이동한 위치',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d22-c3',

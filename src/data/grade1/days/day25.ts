@@ -11,13 +11,13 @@ const dayContent: DayContent = {
       id: 'g1d25-c1',
       title: '정비례 활용 패턴',
       content: '• **$y = ax$ 형태를 찾아라!**\n• 속력 일정 → 거리 = 속력 $\\times$ 시간 (거리와 시간이 정비례)\n• 단가 일정 → 가격 = 단가 $\\times$ 개수 (가격과 개수가 정비례)\n• 비율 일정 → 한 양이 커지면 다른 양도 같은 비율로 커짐',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d25-c2',
       title: '반비례 활용 패턴',
       content: '• **$y = \\frac{a}{x}$ 또는 $xy = a$ 형태를 찾아라!**\n• 거리 일정 → 속력 $\\times$ 시간 = 거리 (속력과 시간이 반비례)\n• 넓이 일정 → 가로 $\\times$ 세로 = 넓이 (가로와 세로가 반비례)\n• 총량 일정 → 인원 $\\times$ 1인당 몫 = 총량',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d25-c3',

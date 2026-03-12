@@ -11,7 +11,7 @@ const dayContent: DayContent = {
       id: 'g1d23-c1',
       title: '정비례란?',
       content: '• **정비례**: $x$가 2배, 3배, ...가 되면 $y$도 2배, 3배, ...가 되는 관계\n• 식: $y = ax$ ($a \\neq 0$인 상수)\n• $a$를 **비례상수**라 한다\n• $x$와 $y$의 비 $\\frac{y}{x} = a$로 항상 일정!',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d23-c2',

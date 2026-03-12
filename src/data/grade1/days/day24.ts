@@ -11,7 +11,7 @@ const dayContent: DayContent = {
       id: 'g1d24-c1',
       title: '반비례란?',
       content: '• **반비례**: $x$가 2배, 3배, ...가 되면 $y$는 $\\frac{1}{2}$배, $\\frac{1}{3}$배, ...가 되는 관계\n• 식: $y = \\frac{a}{x}$ ($a \\neq 0$인 상수)\n• $a$를 **비례상수**라 한다\n• $x \\times y = a$로 곱이 항상 일정!',
-      type: 'concept',
+      type: 'definition',
     },
     {
       id: 'g1d24-c2',

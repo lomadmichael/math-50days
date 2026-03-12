@@ -4,8 +4,9 @@ import { use, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { courses, getPartForDay } from '@/data/curriculum';
+import { getVideosForDay, EBS_COURSE_URL } from '@/data/videoMappings';
 import { useProgress } from '@/hooks/useProgress';
-import { GradeId, DayContent } from '@/lib/types';
+import { GradeId, DayContent, LectureMapping } from '@/lib/types';
 import YouTubePlayer from '@/components/YouTubePlayer';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
@@ -41,12 +42,45 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
   const [summaryText, setSummaryText] = useState('');
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // Load day content dynamically
+  // Load day content dynamically + inject video mappings
   useEffect(() => {
     async function loadContent() {
       try {
         const mod = await import(`@/data/${gradeId}/days/day${String(dayNumber).padStart(2, '0')}`);
-        setDayContent(mod.default || mod.dayContent);
+        const content: DayContent = mod.default || mod.dayContent;
+
+        // 중앙 매핑에서 이 Day에 해당하는 YouTube 영상 가져오기
+        const videos = getVideosForDay(gradeId, dayNumber);
+
+        let enrichedLectures: LectureMapping[];
+
+        if (videos.length > 0) {
+          // YouTube 매핑이 있으면 매핑 데이터로 lectures 구성
+          enrichedLectures = videos.map((v, i) => ({
+            lectureNumber: i + 1,
+            youtubeVideoId: v.youtubeVideoId,
+            title: v.title,
+            description: v.description,
+            ebsLectureUrl: EBS_COURSE_URL,
+          }));
+        } else if (content.lectures && content.lectures.length > 0) {
+          // 기존 lectures가 있으면 EBS URL만 추가
+          enrichedLectures = content.lectures.map(l => ({
+            ...l,
+            ebsLectureUrl: l.ebsLectureUrl || EBS_COURSE_URL,
+          }));
+        } else {
+          // 둘 다 없으면 EBS 링크만 제공
+          enrichedLectures = [{
+            lectureNumber: 0,
+            youtubeVideoId: '',
+            title: `Day ${dayNumber} - ${content.title}`,
+            description: 'EBS 정승제의 50일 수학 풀강의',
+            ebsLectureUrl: EBS_COURSE_URL,
+          }];
+        }
+
+        setDayContent({ ...content, lectures: enrichedLectures });
       } catch {
         // No content file yet - use placeholder
         setDayContent(null);

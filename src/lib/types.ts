@@ -50,6 +50,7 @@ export interface LectureMapping {
   startTime?: number;        // 초 단위
   endTime?: number;          // 초 단위
   description: string;
+  ebsLectureUrl?: string;    // EBS 풀강의 외부 링크
 }
 
 export interface ConceptBlock {

@@ -23,7 +23,7 @@ const dayContent: DayContent = {
       id: 'g1d35-c3',
       title: '원과 부채꼴의 성질',
       content: '• 한 원에서 반지름의 길이는 모두 같다\n• 한 원에서 지름의 길이는 모두 같다\n• **지름은 가장 긴 현**이다\n• 한 호에 대한 중심각의 크기는 하나로 정해진다\n• 중심각의 크기가 같으면 호의 길이도 같다\n• **호의 길이와 부채꼴의 넓이는 중심각의 크기에 정비례**한다',
-      type: 'property',
+      type: 'definition',
     },
   ],
   problems: [

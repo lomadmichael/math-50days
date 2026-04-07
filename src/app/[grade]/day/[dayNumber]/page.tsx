@@ -97,7 +97,7 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
     );
   }
 
-  const dayRecord = isLoaded ? getDayStatus(gradeId, dayNumber) : { status: 'locked' as const };
+  const dayRecord = isLoaded ? getDayStatus(gradeId, dayNumber) : { status: 'available' as const };
   const totalProblems = dayContent?.problems.length || 0;
 
   const handleComplete = () => {

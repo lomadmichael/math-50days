@@ -117,7 +117,7 @@ export default function CourseDashboard({ params }: { params: Promise<{ grade: s
             (_, i) => part.startDay + i
           );
           const completedInPart = partDays.filter(d => {
-            const s = isLoaded ? getDayStatus(gradeId, d) : { status: 'locked' };
+            const s = isLoaded ? getDayStatus(gradeId, d) : { status: 'available' };
             return s.status === 'completed';
           }).length;
           const partProgress = Math.round((completedInPart / partDays.length) * 100);
@@ -154,18 +154,15 @@ export default function CourseDashboard({ params }: { params: Promise<{ grade: s
               {/* Day Grid */}
               <div className="grid grid-cols-5 sm:grid-cols-7 gap-2">
                 {partDays.map((dayNum) => {
-                  const dayRecord = isLoaded ? getDayStatus(gradeId, dayNum) : { status: 'locked' as const };
+                  const dayRecord = isLoaded ? getDayStatus(gradeId, dayNum) : { status: 'available' as const };
                   const isTest = testDays.includes(dayNum);
                   const isCompleted = dayRecord.status === 'completed';
-                  const isAvailable = dayRecord.status === 'available';
                   const isInProgress = dayRecord.status === 'in-progress';
-                  const isLocked = dayRecord.status === 'locked';
 
                   return (
                     <Link
                       key={dayNum}
-                      href={isLocked ? '#' : `/${gradeId}/day/${dayNum}`}
-                      className={isLocked ? 'pointer-events-none' : ''}
+                      href={`/${gradeId}/day/${dayNum}`}
                     >
                       <div
                         className={`
@@ -173,9 +170,7 @@ export default function CourseDashboard({ params }: { params: Promise<{ grade: s
                           transition-all duration-200
                           ${isCompleted
                             ? `${gradeBg[gradeId]} text-white shadow-lg`
-                            : isAvailable || isInProgress
-                              ? 'bg-card border border-white/10 text-foreground hover:border-white/20 hover:-translate-y-0.5 hover:shadow-md cursor-pointer'
-                              : 'bg-muted/30 text-muted-foreground/40 border border-transparent'
+                            : 'bg-card border border-white/10 text-foreground hover:border-white/20 hover:-translate-y-0.5 hover:shadow-md cursor-pointer'
                           }
                           ${isInProgress ? 'ring-2 ring-offset-2 ring-offset-background ring-violet-500 animate-pulse' : ''}
                         `}
@@ -187,9 +182,6 @@ export default function CourseDashboard({ params }: { params: Promise<{ grade: s
                         )}
                         {isCompleted && (
                           <span className="absolute bottom-1 text-[10px]">✓</span>
-                        )}
-                        {isLocked && (
-                          <span className="absolute bottom-1 text-[10px] opacity-40">🔒</span>
                         )}
                       </div>
                     </Link>

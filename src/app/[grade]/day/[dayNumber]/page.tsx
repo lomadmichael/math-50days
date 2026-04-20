@@ -10,6 +10,7 @@ import { GradeId, DayContent, LectureMapping } from '@/lib/types';
 import YouTubePlayer from '@/components/YouTubePlayer';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
+import AITutor from '@/components/AITutor';
 
 const tabs = [
   { id: 'lecture', label: '강의', icon: '📺' },
@@ -260,6 +261,21 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
                   </p>
                 </div>
               )}
+
+              {/* AI Tutor Chat */}
+              <div>
+                <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
+                  💬 AI 튜터에게 질문하기
+                </h3>
+                <AITutor
+                  dayTitle={dayContent?.title}
+                  dayConcepts={dayContent?.concepts?.map(c => ({
+                    title: c.title,
+                    content: c.content,
+                  }))}
+                  gradeLabel={course?.title}
+                />
+              </div>
 
               {/* 3-line Summary */}
               <div>

@@ -155,8 +155,10 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
     }
   };
 
+  // embedded 모드에서는 flex-1 로 부모 flex-col 안에서 남은 공간을 모두 채움
+  // (h-full 은 중간 래퍼에서 계산이 끊겨 overflow 가 동작하지 않음)
   const containerClass = embedded
-    ? 'flex flex-col h-full'
+    ? 'flex flex-col flex-1 min-h-0'
     : 'rounded-xl border border-violet-500/20 bg-gradient-to-br from-violet-500/5 to-cyan-500/5 overflow-hidden';
 
   const messagesClass = embedded

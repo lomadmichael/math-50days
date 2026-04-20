@@ -105,8 +105,8 @@ export default function FloatingAITutor(props: FloatingAITutorProps) {
               transition={{ type: 'spring', damping: 24, stiffness: 260 }}
               className="fixed z-50
                          bottom-0 right-0 left-0 md:bottom-6 md:right-6 md:left-auto md:top-auto
-                         md:w-[420px] md:max-h-[min(640px,calc(100vh-6rem))]
-                         max-h-[85vh] h-auto
+                         md:w-[420px]
+                         h-[85vh] md:h-[min(640px,calc(100vh-6rem))]
                          flex flex-col
                          rounded-t-2xl md:rounded-2xl
                          bg-card border border-violet-500/20 shadow-2xl shadow-violet-900/20
@@ -134,15 +134,13 @@ export default function FloatingAITutor(props: FloatingAITutorProps) {
                 </button>
               </div>
 
-              {/* 챗 본체 — AITutor embedded 모드 */}
-              <div className="flex-1 min-h-0">
-                <AITutor
-                  dayTitle={props.dayTitle}
-                  dayConcepts={props.dayConcepts}
-                  gradeLabel={props.gradeLabel}
-                  embedded
-                />
-              </div>
+              {/* 챗 본체 — AITutor embedded 모드 (자체적으로 flex-1 min-h-0 사용) */}
+              <AITutor
+                dayTitle={props.dayTitle}
+                dayConcepts={props.dayConcepts}
+                gradeLabel={props.gradeLabel}
+                embedded
+              />
             </motion.div>
           </>
         )}

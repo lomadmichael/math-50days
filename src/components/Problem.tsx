@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Problem as ProblemType } from '@/lib/types';
+import { useProblemAttempts } from '@/hooks/useProblemAttempts';
 import MathRenderer from './MathRenderer';
 
 interface ProblemProps {
@@ -10,13 +11,16 @@ interface ProblemProps {
   index: number;
   onCorrect?: () => void;
   onWrong?: () => void;
+  /** AI 튜터 컨텍스트 저장 시 표시할 섹션 라벨 (예: "Finding Slope") */
+  sectionLabel?: string;
 }
 
-export default function Problem({ problem, index, onCorrect, onWrong }: ProblemProps) {
+export default function Problem({ problem, index, onCorrect, onWrong, sectionLabel }: ProblemProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
+  const attemptsCtx = useProblemAttempts();
 
   const isCorrect = problem.type === 'multiple-choice'
     ? selected === problem.answer
@@ -27,6 +31,19 @@ export default function Problem({ problem, index, onCorrect, onWrong }: ProblemP
     if (problem.type === 'short-answer' && !inputValue.trim()) return;
 
     setShowResult(true);
+
+    // 샘(AI 튜터) 에게 풀이 상황 공유하기 위해 시도 기록
+    attemptsCtx?.recordAttempt({
+      problemId: problem.id,
+      question: problem.question,
+      studentAnswer: problem.type === 'multiple-choice' ? (selected ?? '') : inputValue.trim(),
+      correctAnswer: problem.answer,
+      isCorrect,
+      type: problem.type,
+      options: problem.options,
+      sectionLabel,
+    });
+
     if (isCorrect) {
       onCorrect?.();
     } else {

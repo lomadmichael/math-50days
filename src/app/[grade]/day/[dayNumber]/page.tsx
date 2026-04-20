@@ -12,6 +12,7 @@ import YouTubePlayer from '@/components/YouTubePlayer';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
 import FloatingAITutor from '@/components/FloatingAITutor';
+import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
 
 const tabs = [
   { id: 'lecture', label: '강의', icon: '📺' },
@@ -119,6 +120,7 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
   };
 
   return (
+    <ProblemAttemptsProvider>
     <div className="min-h-screen bg-background pb-20">
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-white/10">
@@ -239,6 +241,7 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
                     index={i}
                     onCorrect={handleCorrect}
                     onWrong={handleWrong}
+                    sectionLabel={dayContent?.title ? `Day ${dayNumber} - ${dayContent.title}` : undefined}
                   />
                 ))
               ) : (
@@ -338,5 +341,6 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
         gradeLabel={course?.title}
       />
     </div>
+    </ProblemAttemptsProvider>
   );
 }

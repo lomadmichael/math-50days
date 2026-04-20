@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useProblemAttempts, formatAttemptsForTutor } from '@/hooks/useProblemAttempts';
 import MathRenderer from './MathRenderer';
 
 interface Message {
@@ -17,11 +18,25 @@ interface AITutorProps {
   embedded?: boolean;
 }
 
-const SUGGESTED_QUESTIONS = [
+const SUGGESTED_QUESTIONS_DEFAULT = [
   '오늘 배운 내용을 한 줄로 정리해줘',
   '이 개념이 왜 중요해요?',
   '실생활에서 어디에 쓰여요?',
   '더 쉬운 예시로 설명해줄래요?',
+];
+
+const SUGGESTED_QUESTIONS_WITH_WRONG = [
+  '내가 틀린 문제들 왜 틀렸는지 설명해줘',
+  '오답 하나씩 다시 풀어보자',
+  '이 개념이 헷갈려요, 쉽게 설명해줄래요?',
+  '비슷한 연습문제 하나만 더 내줘',
+];
+
+const SUGGESTED_QUESTIONS_ALL_CORRECT = [
+  '다 맞혔어! 더 어려운 문제 내줘',
+  '오늘 배운 내용을 한 줄로 정리해줘',
+  '실생활에서 어디에 쓰여요?',
+  '다음엔 어떤 개념을 배우면 좋을까?',
 ];
 
 export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = false }: AITutorProps) {
@@ -31,6 +46,17 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
   const [streamingText, setStreamingText] = useState('');
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const attemptsCtx = useProblemAttempts();
+  const attempts = attemptsCtx?.attempts ?? [];
+  const wrongCount = attempts.filter((a) => !a.isCorrect).length;
+
+  // 문제 풀이 상황에 따라 제안 질문 달라지게
+  const suggestedQuestions =
+    attempts.length === 0
+      ? SUGGESTED_QUESTIONS_DEFAULT
+      : wrongCount > 0
+        ? SUGGESTED_QUESTIONS_WITH_WRONG
+        : SUGGESTED_QUESTIONS_ALL_CORRECT;
 
   // Auto scroll on new messages
   useEffect(() => {
@@ -50,6 +76,12 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
       dayConcepts.forEach((c, i) => {
         parts.push(`${i + 1}. ${c.title}: ${c.content}`);
       });
+    }
+    // 학생 문제 풀이 상황 (있으면)
+    const attemptsBlock = formatAttemptsForTutor(attempts);
+    if (attemptsBlock) {
+      parts.push('');
+      parts.push(attemptsBlock);
     }
     return parts.join('\n');
   };
@@ -146,6 +178,27 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
         </div>
       )}
 
+      {/* 문제 풀이 상황 배지 (있을 때만) */}
+      {attempts.length > 0 && (
+        <div className="px-4 py-2 border-b border-white/5 bg-white/[0.02]">
+          <div className="flex items-center justify-between text-xs">
+            <span className="text-muted-foreground flex items-center gap-1.5">
+              <span>📋</span>
+              <span>샘이 보고 있어요:</span>
+            </span>
+            <span className="flex items-center gap-2.5">
+              <span className="text-emerald-400">
+                ✓ {attempts.filter((a) => a.isCorrect).length}
+              </span>
+              {wrongCount > 0 && (
+                <span className="text-rose-400 font-medium">✗ {wrongCount}</span>
+              )}
+              <span className="text-muted-foreground/70">/ 총 {attempts.length}</span>
+            </span>
+          </div>
+        </div>
+      )}
+
       {/* Messages */}
       <div ref={scrollRef} className={messagesClass}>
         {messages.length === 0 && !streamingText && (
@@ -154,7 +207,7 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
               💡 이런 질문을 해볼 수 있어요
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
-              {SUGGESTED_QUESTIONS.map((q) => (
+              {suggestedQuestions.map((q) => (
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}

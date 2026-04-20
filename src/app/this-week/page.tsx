@@ -8,8 +8,17 @@ import { WeeklyPrepItem } from '@/lib/types';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
 import FloatingAITutor from '@/components/FloatingAITutor';
+import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
 
 export default function ThisWeekPage() {
+  return (
+    <ProblemAttemptsProvider>
+      <ThisWeekContent />
+    </ProblemAttemptsProvider>
+  );
+}
+
+function ThisWeekContent() {
   const quizItems = thisWeek.prep.filter((p) => p.kind === 'quiz-review');
   const newItems = thisWeek.prep.filter((p) => p.kind === 'new-topic');
 
@@ -237,7 +246,12 @@ function PrepSection({
                 </h4>
                 <div className="space-y-3">
                   {item.problems.map((p, idx) => (
-                    <Problem key={p.id} problem={p} index={idx} />
+                    <Problem
+                      key={p.id}
+                      problem={p}
+                      index={idx}
+                      sectionLabel={`${item.koreanTerm} (${item.englishTerm})`}
+                    />
                   ))}
                 </div>
               </div>

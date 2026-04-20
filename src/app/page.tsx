@@ -73,6 +73,48 @@ export default function HomePage() {
           </p>
         </motion.section>
 
+        {/* 이번 주 학습 대비 배너 (학교 메일 기반) */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-10"
+        >
+          <Link href="/this-week">
+            <div className="group relative overflow-hidden rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/15 via-purple-500/10 to-violet-500/15 hover:border-violet-400/40 transition-all duration-300 hover:-translate-y-0.5">
+              <div className="p-5 md:p-6 flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-violet-500/20 flex items-center justify-center text-3xl shrink-0">
+                  📬
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-lg font-bold text-foreground">이번 주 학습 대비</h3>
+                    <span className="text-[10px] uppercase tracking-wider bg-violet-500/20 text-violet-300 px-2 py-0.5 rounded-full font-semibold">
+                      NEW
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    학교 선생님 주간 메일 기반 · 다음 주 Quiz·새 주제 예습·샘에게 질문
+                  </p>
+                </div>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-violet-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </div>
+            </div>
+          </Link>
+        </motion.section>
+
         {/* Course Cards */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {courseOrder.map((gradeId, index) => {

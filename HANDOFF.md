@@ -1,9 +1,9 @@
 # math-50days (50일 수학) 작업 인수인계
 
-> 최근 업데이트: 2026-04-21 (심야 세션)
+> 최근 업데이트: 2026-04-22 (심야 Auto mode 세션)
 > 라이브 URL: https://math-50days.vercel.app
 > GitHub: https://github.com/lomadmichael/math-50days
-> 브랜치: `master` (최신 커밋 `ec637bd`)
+> 브랜치: `master` (최신 커밋 `b203808`)
 
 ## 프로젝트 개요
 중학교 1학년 아들(2012년 7월생, 캐나다 BC주 Surrey교육청 Grandview Heights Secondary Grade 8)을 위한 "50일 수학" 웹 앱.
@@ -11,7 +11,49 @@ Next.js 16 + Vercel 배포. 4개 독립 코스 (기초탄탄, 중1, 중2, 중3) 
 
 ---
 
-## 이번 세션 완료 작업 (심야, 사용자 취침 중 Auto mode)
+## 2026-04-22 심야 세션 추가 작업 (Auto mode)
+
+### 6. LaTeX 수식 렌더링 이슈 대량 수정 (커밋 `252d6f8`)
+사용자 지적: Day 15 realLifeExample 에 `$\times 0.7$` 가 수식이 아닌 평문으로 노출됨.
+
+**원인 분석**:
+1. `realLifeExample` 필드가 Day 페이지에서 plain text 로 렌더링됨
+2. Day 제목에 LaTeX 포함된 경우 (grade3 Day 23~25) 평문 노출
+3. **grade2/grade3/foundation 121개 파일에 이중 이스케이프 (`\\\\frac`)** 존재
+   - grade1 은 `\\frac` 으로 정상, 나머지 grade 는 `\\\\frac` 으로 깨짐
+   - JS 문자열: `\\frac` → KaTeX `\\` + `frac` = 줄바꿈 + 깨짐
+
+**수정**:
+- `MathRenderer` 컴포넌트: `inline` 프롭 추가 (span 렌더 지원)
+- Day 페이지: `realLifeExample`, `title` 을 MathRenderer 로 감쌈
+- Python 스크립트로 121개 파일에서 `\\\\` → `\\` 일괄 교정
+  - matrix/cases 의 `\\\\\\\\` (8) → `\\\\` (4) = 정상 유지
+- 수정 전: grade2 1184 wrong, grade3 1525 wrong, foundation 259 wrong
+- 수정 후: 모든 grade wrong=0, correct=5433
+
+### 7. grade1 전체 영어 용어 병기 (커밋 `b203808`)
+아들이 캐나다 Grade 8 영어 수업 따라가는 중이라 한국 수학 개념과 영어 용어 매칭 필요.
+
+**작업 방법**:
+4개 Sonnet 서브에이전트 병렬 디스패치 (Day 1~13, 14~26, 27~37, 38~50)
+- title, subtitle, concepts, realLifeExample 에 영어 병기
+- 첫 등장 시에만 병기 (시각적 혼잡 방지)
+- 수식/problems 는 미수정
+
+**추가된 영어 용어** (~400개 병기):
+
+| 영역 | 주요 용어 |
+|---|---|
+| 수와 연산 | Integer, Rational Number, Prime Factorization, GCD, LCM, Absolute Value |
+| 문자와 식 | Polynomial, Linear Equation, Distributive Property, Solution, Transposition |
+| 좌표 | Coordinate Plane, Quadrant, Direct/Inverse Proportion |
+| 도형 | Congruence (SSS·SAS·ASA), Polygon, Interior/Exterior Angle, Circle, Sector |
+| 입체도형 | Polyhedron, Prism, Cylinder, Pyramid, Cone, Sphere, Surface Area, Volume |
+| 통계 | Stem-and-Leaf Plot, Histogram, Relative Frequency, Mean/Median/Mode |
+
+---
+
+## 이전 세션 완료 작업 (심야, 사용자 취침 중 Auto mode)
 
 ### 1. 이번 주 학습 대비 페이지 `/this-week` (커밋 `c455d36`)
 학교 선생님 주간 메일 기반으로 다음 주 학습 대비 페이지 신설.

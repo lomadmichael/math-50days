@@ -13,6 +13,8 @@ interface AITutorProps {
   dayTitle?: string;
   dayConcepts?: Array<{ title: string; content: string }>;
   gradeLabel?: string;
+  /** true 이면 자체 헤더·카드 테두리를 숨김 (플로팅 패널 안에 임베드할 때 사용) */
+  embedded?: boolean;
 }
 
 const SUGGESTED_QUESTIONS = [
@@ -22,7 +24,7 @@ const SUGGESTED_QUESTIONS = [
   '더 쉬운 예시로 설명해줄래요?',
 ];
 
-export default function AITutor({ dayTitle, dayConcepts, gradeLabel }: AITutorProps) {
+export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = false }: AITutorProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -121,24 +123,31 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel }: AITutorPr
     }
   };
 
+  const containerClass = embedded
+    ? 'flex flex-col h-full'
+    : 'rounded-xl border border-violet-500/20 bg-gradient-to-br from-violet-500/5 to-cyan-500/5 overflow-hidden';
+
+  const messagesClass = embedded
+    ? 'flex-1 min-h-0 overflow-y-auto px-4 py-3 space-y-3'
+    : 'max-h-[360px] min-h-[200px] overflow-y-auto px-4 py-3 space-y-3';
+
   return (
-    <div className="rounded-xl border border-violet-500/20 bg-gradient-to-br from-violet-500/5 to-cyan-500/5 overflow-hidden">
-      {/* Header */}
-      <div className="px-4 py-3 border-b border-white/5 flex items-center gap-2">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-base">
-          🤖
+    <div className={containerClass}>
+      {/* Header (embedded 모드에서는 외부 컨테이너가 헤더를 담당) */}
+      {!embedded && (
+        <div className="px-4 py-3 border-b border-white/5 flex items-center gap-2">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-base">
+            🤖
+          </div>
+          <div className="flex-1">
+            <h3 className="text-sm font-semibold text-foreground">샘(Sam)에게 물어보기</h3>
+            <p className="text-xs text-muted-foreground">모르는 건 언제든지 물어봐요. 쉽게 설명해줄게요!</p>
+          </div>
         </div>
-        <div className="flex-1">
-          <h3 className="text-sm font-semibold text-foreground">샘(Sam)에게 물어보기</h3>
-          <p className="text-xs text-muted-foreground">모르는 건 언제든지 물어봐요. 쉽게 설명해줄게요!</p>
-        </div>
-      </div>
+      )}
 
       {/* Messages */}
-      <div
-        ref={scrollRef}
-        className="max-h-[360px] min-h-[200px] overflow-y-auto px-4 py-3 space-y-3"
-      >
+      <div ref={scrollRef} className={messagesClass}>
         {messages.length === 0 && !streamingText && (
           <div className="py-4">
             <p className="text-xs text-muted-foreground mb-3 text-center">

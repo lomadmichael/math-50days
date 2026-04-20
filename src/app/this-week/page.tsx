@@ -7,7 +7,7 @@ import { thisWeek } from '@/data/thisWeek';
 import { WeeklyPrepItem } from '@/lib/types';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
-import AITutor from '@/components/AITutor';
+import FloatingAITutor from '@/components/FloatingAITutor';
 
 export default function ThisWeekPage() {
   const quizItems = thisWeek.prep.filter((p) => p.kind === 'quiz-review');
@@ -147,21 +147,6 @@ export default function ThisWeekPage() {
           />
         )}
 
-        {/* AI 튜터 */}
-        <section>
-          <div className="mb-4">
-            <h2 className="text-xl font-bold text-foreground mb-1">💬 샘(Sam)에게 질문하기</h2>
-            <p className="text-sm text-muted-foreground">
-              이번 주 학교에서 배울 주제에 대해 뭐든 물어보세요. 샘이 이번 주 맥락을 알고 답해줘요.
-            </p>
-          </div>
-          <AITutor
-            gradeLabel="이번 주 학습 대비"
-            dayTitle={tutorDayTitle}
-            dayConcepts={tutorConcepts}
-          />
-        </section>
-
         {/* 업데이트 안내 */}
         <section className="rounded-xl border border-white/5 bg-card/50 p-5">
           <div className="flex items-start gap-3">
@@ -183,6 +168,13 @@ export default function ThisWeekPage() {
       <footer className="border-t border-white/5 py-6 text-center text-xs text-muted-foreground">
         <p>학교 선생님의 주간 메일을 기반으로 구성된 학습 대비 자료입니다</p>
       </footer>
+
+      {/* 플로팅 샘 버튼 (우측 하단) */}
+      <FloatingAITutor
+        gradeLabel="이번 주 학습 대비"
+        dayTitle={tutorDayTitle}
+        dayConcepts={tutorConcepts}
+      />
     </div>
   );
 }

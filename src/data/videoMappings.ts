@@ -102,37 +102,43 @@ export const videoMappings: Record<string, VideoMapping[]> = {
     },
   ],
 
-  // ── 중1 코스: 8개 영상 ──
+  // ── 중1 코스: 정승제 8개 영상 (각 Day 주제에 맞춰 정확히 매핑) ──
+  // NOTE: 기존 매핑이 Day 주제와 어긋나던 것을 정정. Day 4(양수와 음수)에 최대공약수가
+  // 매핑되어 있던 것 등. 주제 일치 우선, 누락 Day는 추후 다른 채널에서 보강.
   grade1: [
     {
       youtubeVideoId: 'Uzu68a5NBo4',
       title: '수의 개념',
       description: '수학 기초 1도 모르는 자들을 위한 수의 개념',
-      days: [1, 2],
+      // 유리수·수 체계 정리에 적합 (Day 8·10)
+      days: [8, 10],
     },
     {
       youtubeVideoId: 'LWa3JRiASFM',
       title: '최대공약수와 최소공배수',
       description: '가슴 뻥 뚫리는 최대공약수와 최소공배수 완벽 정리',
-      days: [3, 4],
+      days: [3],
     },
     {
       youtubeVideoId: 'HJUUcTyWXKw',
       title: '양수와 음수',
       description: '양수와 음수 개념 끝내기 (수의 체계)',
-      days: [5, 6],
+      // Day 4 주제가 "양수와 음수의 탄생" 이라 정확히 일치
+      days: [4],
     },
     {
       youtubeVideoId: 'wVayYzfT0Fo',
       title: '정수와 유리수의 사칙연산',
       description: '쉽고 간단하게 끝내는 정수와 유리수의 사칙연산',
-      days: [7, 8, 9],
+      // Day 5 덧뺄셈, Day 6 곱나눗셈, Day 9 유리수 사칙연산까지 커버
+      days: [5, 6, 9],
     },
     {
       youtubeVideoId: 'I1xUUV3lVAQ',
       title: '지수법칙',
       description: '지수법칙을 이해하는 법칙은 바로 정승제',
-      days: [10, 11],
+      // 소수와 소인수분해 (거듭제곱) 에 맞춤. 중2 지수법칙 맛보기로도 활용 가능.
+      days: [2],
     },
     {
       youtubeVideoId: 'AbOSkFWlZrM',
@@ -144,13 +150,150 @@ export const videoMappings: Record<string, VideoMapping[]> = {
       youtubeVideoId: 'TI75fW6w71k',
       title: '함수의 기본 개념',
       description: '함수가 되려면 필요한 두 가지 조건',
-      days: [21, 22],
+      // 좌표평면·그래프·정비례·반비례 전반 (Day 21~25)
+      days: [21, 22, 23, 24, 25],
     },
     {
       youtubeVideoId: 'N5hFCBekUlk',
       title: '삼각형과 평행선',
       description: '너무 중요한 삼각형과 평행선 완벽정리',
-      days: [27, 28, 29],
+      // 평행선 동위각·엇각 (Day 29)
+      days: [29],
+    },
+
+    // ── 정승제의50일수학 (신규 발견 - 중1 전용 영상) ──
+    {
+      youtubeVideoId: 'r-bIFWGmf9k',
+      title: '방정식 개념 종결 — 일차방정식 풀이',
+      description: '정승제의50일수학 · 재밌는 거 왔다! 중1 수학 · 수포자 탈출',
+      days: [17],
+    },
+
+    // ── EBS 수학의 답 (공식 중1 교과 시리즈) ──
+    {
+      youtubeVideoId: '6RER1_-9n0w',
+      title: '일차식의 덧셈과 뺄셈',
+      description: 'EBS 수학의 답 · 동류항 정리로 일차식 덧뺄셈 정복',
+      days: [14],
+    },
+    {
+      youtubeVideoId: 'uMls_t2lj3o',
+      title: '일차식과 수의 곱셈·나눗셈',
+      description: 'EBS 수학의 답 · 분배법칙으로 일차식 곱셈과 나눗셈',
+      days: [15],
+    },
+    {
+      youtubeVideoId: 'QKsVgnARexU',
+      title: '등식의 성질',
+      description: 'EBS 수학의 답 · 등식의 양변에 같은 수를 더하거나 곱하거나',
+      days: [16],
+    },
+    {
+      youtubeVideoId: 'ScpCoL8luwc',
+      title: '일차방정식의 활용 — 나이 문제',
+      description: 'EBS 수학의 답 · 나이 문제로 배우는 일차방정식 활용',
+      days: [18],
+    },
+    {
+      youtubeVideoId: 'd_BezE15byI',
+      title: '일차방정식의 활용 — 소금물(농도) 문제',
+      description: 'EBS 수학의 답 · 농도 문제 완벽 정리',
+      days: [19],
+    },
+
+    // ── 수악중독중학수학 (@SAJDJS, 중등 전용 채널) ──
+    {
+      youtubeVideoId: '1edwauXgGOM',
+      title: '삼각형의 작도',
+      description: '수악중독중학수학 · 자와 컴퍼스로 삼각형 그리기',
+      days: [30],
+    },
+    {
+      youtubeVideoId: 'gBI4DZV3AB8',
+      title: '삼각형의 합동 조건 (SSS·SAS·ASA)',
+      description: '수악중독중학수학 · 합동조건 3가지 완벽 정리',
+      days: [31],
+    },
+    {
+      youtubeVideoId: 'YjxpU1uYtTk',
+      title: 'n각형 대각선의 개수',
+      description: '수악중독중학수학 · 다각형 대각선 총 개수 공식 유도',
+      days: [33],
+    },
+    {
+      youtubeVideoId: 'zLi9UYfkAuI',
+      title: 'n각형의 내각과 외각',
+      description: '수악중독중학수학 · 내각 합 · 외각 합 공식',
+      days: [34],
+    },
+    {
+      youtubeVideoId: '4xl9VRoOcQI',
+      title: '원과 부채꼴',
+      description: '수악중독중학수학 · 호, 현, 활꼴, 부채꼴, 중심각',
+      days: [35],
+    },
+    {
+      youtubeVideoId: '-r2-ulO0GM4',
+      title: '부채꼴의 호의 길이와 넓이',
+      description: '수악중독중학수학 · 중심각으로 호와 넓이 구하기',
+      days: [36],
+    },
+    {
+      youtubeVideoId: 'e05G2YJ8QRg',
+      title: '정다면체와 다면체',
+      description: '수악중독중학수학 · 각기둥 · 각뿔 · 정다면체 5종',
+      days: [38],
+    },
+    {
+      youtubeVideoId: 'ZESpmQNmiEQ',
+      title: '회전체',
+      description: '수악중독중학수학 · 회전체의 종류와 단면',
+      days: [39],
+    },
+    {
+      youtubeVideoId: 'FSSuhoraPyM',
+      title: '기둥의 겉넓이와 부피',
+      description: '수악중독중학수학 · 각기둥 · 원기둥의 겉넓이와 부피',
+      days: [40],
+    },
+    {
+      youtubeVideoId: 'x04SB4k5aC0',
+      title: '뿔의 겉넓이와 부피',
+      description: '수악중독중학수학 · 각뿔 · 원뿔의 겉넓이와 부피',
+      days: [41],
+    },
+    {
+      youtubeVideoId: 'GdAm-MReoIg',
+      title: '구의 겉넓이와 부피',
+      description: '수악중독중학수학 · S = 4πr², V = (4/3)πr³',
+      days: [42],
+    },
+    {
+      youtubeVideoId: '7Klf0khPMnQ',
+      title: '줄기와 잎 그림',
+      description: '수악중독중학수학 · 자료를 줄기·잎으로 정리',
+      days: [44],
+    },
+    {
+      youtubeVideoId: 'dwSZZ8jOuzs',
+      title: '도수분포표·히스토그램·도수분포다각형',
+      description: '수악중독중학수학 · 3가지 자료 정리법을 한번에',
+      // Day 45 도수분포표+히스토그램, Day 46 도수분포다각형까지 한 영상 커버
+      days: [45, 46],
+    },
+    {
+      youtubeVideoId: 'CR4HRmhC3Mg',
+      title: '상대도수',
+      description: '수악중독중학수학 · 상대도수와 도수분포표 활용',
+      days: [47],
+    },
+
+    // ── EBS Learning (대푯값 보강, 수악중독에 없는 주제) ──
+    {
+      youtubeVideoId: 'sv0eCvKa16s',
+      title: '대푯값 — 평균',
+      description: 'EBS 수학의 답 · 자료의 대푯값으로서 평균',
+      days: [47],
     },
   ],
 

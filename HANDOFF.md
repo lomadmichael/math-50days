@@ -1,112 +1,181 @@
 # math-50days (50일 수학) 작업 인수인계
 
-> 생성일: 2026-04-21
-> 이전 채팅 마지막 커밋: `16a1318` feat: AI 튜터 모델을 Sonnet 4.5로 업그레이드
-> 브랜치: `master`
+> 최근 업데이트: 2026-04-21 (심야 세션)
 > 라이브 URL: https://math-50days.vercel.app
+> GitHub: https://github.com/lomadmichael/math-50days
+> 브랜치: `master` (최신 커밋 `ec637bd`)
 
 ## 프로젝트 개요
-중학교 1학년 아들을 위한 "50일 수학" 웹 앱. Next.js 16 + Vercel 배포.
-4개 독립 코스 (기초탄탄, 중1, 중2, 중3) × 각 50일 = 총 200 Day.
-정승제 선생님의 EBS "50일 수학" 커리큘럼 기반.
+중학교 1학년 아들(2012년 7월생, 캐나다 BC주 Surrey교육청 Grandview Heights Secondary Grade 8)을 위한 "50일 수학" 웹 앱.
+Next.js 16 + Vercel 배포. 4개 독립 코스 (기초탄탄, 중1, 중2, 중3) × 각 50일.
 
-## 지금 하던 일
-이번 세션에서 AI 튜터 기능 추가 + EBS 강의 번호 안내 UI + 영상 버그 수정까지 일단락.
-라이브 배포 완료된 상태로 사용자가 아들과 실제 사용 테스트할 차례.
+---
 
-## 이번 세션 주요 작업 (모두 배포 완료)
+## 이번 세션 완료 작업 (심야, 사용자 취침 중 Auto mode)
 
-### 1. YouTube 영상 ID 11개 수정 (`af20d68`)
-- 플레이리스트에서 삭제/비공개 전환된 영상 IDs를 실제 ID로 교체
-- grade3: 5개, grade2: 2개, grade1: 1개, foundation: 3개
-- 파일: `src/data/videoMappings.ts`
+### 1. 이번 주 학습 대비 페이지 `/this-week` (커밋 `c455d36`)
+학교 선생님 주간 메일 기반으로 다음 주 학습 대비 페이지 신설.
+- `src/data/thisWeek.ts`: 주간 메일 데이터 (이번 주: Slope/Intercepts/Cuboid Volume/Spatial Reasoning)
+- `src/app/this-week/page.tsx`: Quiz 대비 + 새 주제 예습 섹션
+- `src/lib/types.ts`: `WeeklySchedule`, `WeeklyPrepItem` 타입 추가
+- 홈 상단에 /this-week 배너 카드 (NEW 뱃지)
+- 아들 프로필(영어 수업·Grade 8)을 AI 튜터 샘에 전달 → 영어/한국어 용어 매칭 답변
 
-### 2. Day 잠금 기능 해제 (`bb864ad`)
-- 기존: Day1 완료해야 Day2 볼 수 있던 순차 잠금
-- 변경: 모든 Day 자유롭게 접근 가능 (테스트 기간 탐색 자유도 ↑)
-- 파일: `src/app/[grade]/page.tsx`, `src/app/[grade]/day/[dayNumber]/page.tsx`
+**매주 업데이트 방법**: 새 학교 메일 → Claude Code에 복붙 → `src/data/thisWeek.ts` 갱신 → 커밋·배포
 
-### 3. AI 튜터 "샘(Sam)" 추가 (`0d4edf1`, `a57713a`, `16a1318`)
-- 정리 탭에 중학생 눈높이 Q&A 채팅 기능 추가
-- **모델**: `claude-sonnet-4-5` (초기 haiku-4-5 → 업그레이드 완료)
-- Day별 맥락(제목, 개념) 자동 전달 → 컨텍스트 있는 답변
-- KaTeX 수식 렌더링 (`$...$`, `$$...$$`) + 마크다운 bold
-- 제안 질문 4개, 스트리밍 UI, 로딩 애니메이션
-- 파일:
-  - `src/app/api/ai-tutor/route.ts` (API 엔드포인트)
-  - `src/components/AITutor.tsx` (UI 컴포넌트)
-  - `src/components/MathRenderer.tsx` (재사용)
+### 2. 샘(AI 튜터) → 플로팅 버튼 (커밋 `17f7065`)
+기존 인라인 챗 → 우측 하단 플로팅 버블로 전환.
+- `src/components/FloatingAITutor.tsx` 신설: 버블 + 패널 래퍼
+  - 데스크탑: 420px 폭, 최대 640px 높이 플로팅 패널
+  - 모바일: 바텀시트 + 백드롭 + body 스크롤 잠금
+  - ESC 키 닫기, 첫 사용 전 펄스 링
+- `src/components/AITutor.tsx`: `embedded` 프롭 추가
+- `/this-week`, `/[grade]/day/[dayNumber]` 양쪽에서 플로팅 샘 사용
 
-### 4. EBS 강의 번호 안내 UI (`22e1a47`)
-- 기존: "EBS 풀강의 보러가기" 버튼만 있어서 69강 중 어떤 강인지 모름
-- 변경: Day별로 추천 EBS 강의 번호+제목 표시
-  - 예: "🎯 이 주제는 EBS 42강을 보세요 — 함수 [유형05-24~유형05-25]"
-- 69강 카탈로그 + 200 Day 매핑 완성
-- 파일:
-  - `src/data/ebsLectures.ts` (신규)
-  - `src/components/YouTubePlayer.tsx` (UI 업데이트)
+### 3. 문제 풀이 상황 자동 공유 (커밋 `e8ad442`)
+샘이 "어떤 문제였어?" 되묻지 않고 바로 틀린 문제 분석하도록.
+- `src/hooks/useProblemAttempts.tsx`: Context API로 풀이 기록 공유
+  - `recordAttempt()`: 문제 채점 시 저장
+  - `formatAttemptsForTutor()`: 시스템 프롬프트용 요약 생성
+- `Problem.tsx`: 채점 시 context에 기록
+- `AITutor.tsx`: dayContext에 풀이 상황 자동 포함
+  - 헤더 아래 `📋 샘이 보고 있어요: ✓N ✗M / 총 K` 배지
+  - 제안 질문이 풀이 상황 따라 3가지 버전 동적 변경
+- API 시스템 프롬프트: 풀이 상황 처리 지침 추가 ("되묻지 말고 바로 분석")
+
+### 4. 샘 채팅 스크롤 수정 (커밋 `a553241`)
+flexbox 높이 계산 체인 문제. 패널 고정 높이 + flex-1 min-h-0 로 해결.
+
+### 5. grade1 영상 매핑 대대적 확장 (커밋 `ec637bd`)
+**기존 8개 → 25개 영상**으로 확대. 중1 교과 과정 거의 전 영역 커버.
+
+#### 정정
+Day 4(양수와 음수)에 최대공약수 영상이 잘못 매핑 등 오매핑 수정.
+
+#### 신규 발견 채널 & 영상 (17개 추가)
+- **정승제의50일수학 중1 영상** 추가 발견: `r-bIFWGmf9k` (일차방정식) → Day 17
+- **EBS 수학의 답** (공식 중1 교과 시리즈): 일차식·등식·방정식 활용·대푯값
+- **수악중독중학수학 (@SAJDJS)**: 삼각형 작도/합동, 다각형, 원·부채꼴, 입체도형, 통계 — 13개
+
+#### 최종 Day별 영상 커버리지
+- 50 Days 중 **38 Days**에 영상 매핑 (기존 14 Days)
+- 영상 없는 12 Days: 미니테스트 8개 + 초기 기초(약수배수 등) 4개
+- 모든 영상 ID는 WebSearch 검증 완료 (추측 없음)
+
+#### 서브에이전트 활용
+3개 병렬 디스패치 (Sonnet):
+1. 일차방정식 영상 검색 → EBS/정승제 7개 영상
+2. 도형 영상 검색 → 수악중독중학수학 11개 영상
+3. 통계 영상 검색 → 수악중독/EBS 6개 영상
+
+---
+
+## 누적 영상 인벤토리
+
+### grade1 영상 25개 매핑
+```
+Day 2   지수법칙 (정승제)                    I1xUUV3lVAQ
+Day 3   최대공약수 (정승제)                  LWa3JRiASFM
+Day 4   양수와 음수 (정승제)                 HJUUcTyWXKw
+Day 5-6,9 정수·유리수 사칙연산 (정승제)       wVayYzfT0Fo
+Day 8,10 수의 개념 (정승제)                 Uzu68a5NBo4
+Day 12-13 문자를 사용한 식 (정승제)          AbOSkFWlZrM
+Day 14  일차식 덧뺄셈 (EBS)                 6RER1_-9n0w
+Day 15  일차식 곱나눗셈 (EBS)               uMls_t2lj3o
+Day 16  등식의 성질 (EBS)                   QKsVgnARexU
+Day 17  방정식 개념 종결 (정승제)            r-bIFWGmf9k
+Day 18  일차방정식 활용(나이) (EBS)          ScpCoL8luwc
+Day 19  일차방정식 활용(농도) (EBS)          d_BezE15byI
+Day 21-25 함수의 기본 개념 (정승제)          TI75fW6w71k
+Day 29  삼각형과 평행선 (정승제)             N5hFCBekUlk
+Day 30  삼각형 작도 (수악중독)               1edwauXgGOM
+Day 31  삼각형 합동조건 (수악중독)           gBI4DZV3AB8
+Day 33  다각형 대각선 (수악중독)             YjxpU1uYtTk
+Day 34  내각과 외각 (수악중독)               zLi9UYfkAuI
+Day 35  원과 부채꼴 (수악중독)               4xl9VRoOcQI
+Day 36  부채꼴 호·넓이 (수악중독)            -r2-ulO0GM4
+Day 38  정다면체 (수악중독)                  e05G2YJ8QRg
+Day 39  회전체 (수악중독)                    ZESpmQNmiEQ
+Day 40  기둥 겉넓이 부피 (수악중독)          FSSuhoraPyM
+Day 41  뿔 겉넓이 부피 (수악중독)            x04SB4k5aC0
+Day 42  구 겉넓이 부피 (수악중독)            GdAm-MReoIg
+Day 44  줄기와 잎 그림 (수악중독)            7Klf0khPMnQ
+Day 45-46 도수분포표·히스토그램 (수악중독)   dwSZZ8jOuzs
+Day 47  상대도수 (수악중독) + 평균 (EBS)    CR4HRmhC3Mg, sv0eCvKa16s
+```
+
+### 영상 없는 12 Days
+Day 1 (약수와 배수 복습), 7 (미니테스트), 11 (미니테스트),
+Day 20 (미니테스트), 26 (미니테스트), 27 (점선면각), 28 (위치관계),
+Day 32, 37, 43, 48 (미니테스트), 49 (종합테스트), 50 (총정리)
+
+---
 
 ## 다음 할 일
 
-### 사용자 테스트 피드백 대기
-- [ ] 아들이 실제로 샘(Sam)에게 질문해보고 답변 품질 피드백
-- [ ] Sonnet 4.5 품질이 충분한지, Opus까지 올릴 필요 있는지 판단
-- [ ] EBS 강의 번호 매핑이 실제 주제와 잘 맞는지 검증 (특히 중1/중2 매핑은 EBS가 고1 레벨이라 완벽하게 맞진 않음)
+### 즉시 (아들 사용 검증)
+- [ ] 아들이 실제로 /this-week에서 Quiz 대비 문제 풀어보고 샘에게 질문 (영어/한국어 용어 매칭 답변 확인)
+- [ ] Day 14~19 (일차방정식 단원)에서 EBS 수학의 답 영상 품질 체크
+- [ ] Day 30~47 (도형·통계)에서 수악중독중학수학 영상 품질 체크
+- [ ] 샘 플로팅 버튼 UX 피드백 (위치, 크기, 알림 정도)
 
-### 잠재 개선 항목 (우선순위 낮음)
-- [ ] 제안 질문을 Day 주제에 맞게 동적으로 생성 (현재는 고정 4개)
-- [ ] AI 답변 기록 저장 기능 (지금은 페이지 이동 시 초기화)
-- [ ] 틀린 문제를 샘에게 "이거 어떻게 풀어?" 바로 물어볼 수 있는 딥링크
-- [ ] 통계/확률 Part 처럼 EBS 대응 강의 없는 Day에 대체 자료 추가
-- [ ] 유튜브 영상 없는 Day에 embed 가능한 대체 영상 추가 (EBS는 iframe 불가)
+### 다음 주 메일 도착 시
+1. `src/data/thisWeek.ts` 갱신 (Claude에게 복붙하면 자동 업데이트)
+2. `git commit && vercel --prod`
 
-### 장기 (별도 프로젝트 가능성)
-- [ ] 별도 도메인에 YouTube 일부공개 영상으로 더 풍부한 강의 제공 (MEMORY 참고)
+### 잠재 개선 (우선순위 낮음)
+- [ ] grade2 (중2), foundation 영상 매핑도 grade1과 같은 방식으로 확장
+  - 주로 수악중독중학수학·EBS 수학의 답 활용 가능
+- [ ] 틀린 문제 → 샘에게 "이거 설명해줘" 원클릭 딥링크
+- [ ] 이번 주 학습 대비 아카이브 (지난 주 리포트 모아보기)
+- [ ] AI 답변 기록 localStorage 저장
 
-## 결정/합의사항 (이번 세션)
+### 장기
+- [ ] 중2, 중3 영상 매핑 확장
+- [ ] 별도 도메인에 YouTube 비공개 영상으로 풍부한 강의
 
-- **AI 튜터 모델은 Sonnet 4.5**: Haiku보다 3배 비싸지만 개인 사용엔 무시 가능($1~$3/월), 교사 역할에서 품질 차이 체감 큼. Opus는 과도함.
-- **KaTeX 렌더링 필수**: AI가 `$x^2$` 같은 수식 보내면 교과서처럼 보여야 중학생이 이해. 기존 `MathRenderer` 컴포넌트 재사용 (ConceptNote와 일관성).
-- **Day 잠금 해제 유지**: 테스트 기간/개인 사용이라 순차 학습 강제하지 않음.
-- **EBS 딥링크 불가 → 강의 번호 명시 방식**: EBS 페이지가 `popupLectureMedia()` JS 팝업이라 직접 링크 불가. 대신 "N강" 명확히 표시해서 학생이 목록에서 바로 찾게 함.
-- **시스템 프롬프트 지침 고정**: 중1 눈높이 / 쉬운 말 / 한 번에 한 개념 / 200~400자 / 일상 비유 / 친절한 존댓말 ("괜찮아요, 어려운 게 당연해요" 톤).
+---
 
-## 막혔던 지점 / 주의할 점
+## 비용 모니터링
+- 첫날 사용량: 약 **200원/일**
+- 월 환산 예상: **약 6,000원 ($4~5)**
+- Sonnet 4.5 모델, prompt caching 적용
+- 모니터링: https://console.anthropic.com/usage
 
-- **EBS 프레임 차단**: `X-Frame-Options`로 iframe embed 불가 → 외부 링크 + 번호 안내로 우회.
-- **EBS 강의 직접 링크 불가**: 각 강의가 JS 팝업 함수(`popupLectureMedia('LS000000XXX')`)로 열려서 딥링크 URL 없음.
-- **YouTube 영상 삭제 가능성**: 정승제 플레이리스트 영상도 시간 지나면 삭제될 수 있음. 주기적 검증 필요 (이번에 11개 발견).
-- **중1·foundation 레벨은 EBS 대응 적음**: EBS 50일 수학은 고1 완성 과정이라 중학 초기 주제(분수, 약수 등)는 직접 대응 강의가 없거나 제한적.
+### 비용 폭증 방지 안전장치 (이미 적용)
+- 페이지 이동 시 대화 자동 초기화
+- max_tokens 1024 제한
+- 시스템 프롬프트 캐싱 (2번째 턴부터 90% 절감)
 
-## 관련 파일 (주요 수정 대상)
+---
 
-### 핵심 데이터
+## 핵심 파일
+
+### 데이터
 - `src/data/curriculum.ts` — 4개 코스 PART 구조
-- `src/data/videoMappings.ts` — YouTube 영상 → Day 매핑 (32개)
-- `src/data/ebsLectures.ts` — EBS 69강 카탈로그 + Day 매핑 (신규, 이번 세션)
+- `src/data/videoMappings.ts` — YouTube 영상 매핑 **(이번에 대폭 확장)**
+- `src/data/ebsLectures.ts` — EBS 69강 카탈로그 + Day 매핑 **(이번에 재조정)**
+- `src/data/thisWeek.ts` — 이번 주 학교 메일 기반 학습 대비 데이터 **(신규)**
 - `src/data/{grade}/days/dayXX.ts` — 200개 Day 콘텐츠
 
-### 핵심 UI
-- `src/app/[grade]/day/[dayNumber]/page.tsx` — Day 학습 페이지 (3탭: 강의/연습/정리)
-- `src/app/[grade]/page.tsx` — 코스 대시보드
-- `src/components/YouTubePlayer.tsx` — 영상+EBS 링크 (4-state 렌더)
-- `src/components/AITutor.tsx` — AI 튜터 채팅 (신규, 이번 세션)
-- `src/components/MathRenderer.tsx` — KaTeX + 마크다운 파서
-- `src/components/ConceptNote.tsx` — 핵심 정리 카드
+### UI
+- `src/app/this-week/page.tsx` — 이번 주 학습 대비 페이지 **(신규)**
+- `src/app/[grade]/day/[dayNumber]/page.tsx` — Day 학습 페이지 (3탭)
+- `src/components/FloatingAITutor.tsx` — 플로팅 샘 버튼 **(신규)**
+- `src/components/AITutor.tsx` — 샘 챗 (embedded 프롭 지원)
+- `src/components/Problem.tsx` — 문제 + context 기록
+
+### Hooks & Context
+- `src/hooks/useProblemAttempts.tsx` — 풀이 상황 공유 Context **(신규)**
+- `src/hooks/useProgress.ts` — 기존 학습 진도
+- `src/hooks/useLocalStorage.ts` — 기존
 
 ### API
-- `src/app/api/ai-tutor/route.ts` — Claude Sonnet 4.5 스트리밍 엔드포인트 (신규)
+- `src/app/api/ai-tutor/route.ts` — 샘 API (Sonnet 4.5 스트리밍, 풀이 상황 처리 지침 포함)
 
-## 배포/빌드 상태
+---
 
-**✅ Production Ready**
-
-- 라이브: https://math-50days.vercel.app
-- 마지막 배포: 2026-04-21, `vercel --prod` 수동 트리거
-- GitHub: https://github.com/lomadmichael/math-50days (master 브랜치)
-- Vercel 환경변수: `ANTHROPIC_API_KEY` 설정 완료 (사용자 확인)
-
-## 새 채팅 첫 메시지 (이것만 복사해서 붙여넣으면 됨)
+## 새 채팅 첫 메시지
 
 ```
 C:\Users\hongk\Desktop\ClaudeCode\math-50days\HANDOFF.md 읽고 이어서 작업해줘

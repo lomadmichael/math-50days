@@ -25,7 +25,7 @@ const dayContent: DayContent = {
       id: 'f10d47-c3',
       title: '수직과 평행',
       content:
-        '수직($\\\\perp$): 두 직선이 $90°$로 만남\\n평행($\\\\parallel$): 두 직선이 만나지 않음 (같은 평면 위에서)\\n\\n점과 직선 사이의 거리: 점에서 직선에 내린 수선의 길이 (최단 거리)',
+        '수직($\\perp$): 두 직선이 $90°$로 만남\\n평행($\\parallel$): 두 직선이 만나지 않음 (같은 평면 위에서)\\n\\n점과 직선 사이의 거리: 점에서 직선에 내린 수선의 길이 (최단 거리)',
       type: 'definition',
     },
   ],
@@ -83,7 +83,7 @@ const dayContent: DayContent = {
       options: ['사각형', '오각형', '육각형', '칠각형'],
       answer: '육각형',
       explanation:
-        '$n$각형의 내각의 합 = $(n-2) \\\\times 180°$이므로 $(n-2) \\\\times 180 = 720$ → $n-2 = 4$ → $n = 6$ (육각형)',
+        '$n$각형의 내각의 합 = $(n-2) \\times 180°$이므로 $(n-2) \\times 180 = 720$ → $n-2 = 4$ → $n = 6$ (육각형)',
     },
   ],
   realLifeExample:

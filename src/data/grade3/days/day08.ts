@@ -34,7 +34,7 @@ const dayContent: DayContent = {
       question: '$(x+4)^2$을 전개하면?',
       options: ['$x^2 + 16$', '$x^2 + 4x + 16$', '$x^2 + 8x + 16$', '$x^2 + 8x + 8$'],
       answer: '$x^2 + 8x + 16$',
-      explanation: '$(x+4)^2 = x^2 + 2 \\\\times x \\\\times 4 + 4^2 = x^2 + 8x + 16$입니다.',
+      explanation: '$(x+4)^2 = x^2 + 2 \\times x \\times 4 + 4^2 = x^2 + 8x + 16$입니다.',
     },
     {
       id: 'g3d8-p2',
@@ -43,7 +43,7 @@ const dayContent: DayContent = {
       question: '$(x-6)^2$을 전개하면?',
       options: ['$x^2 - 36$', '$x^2 - 6x + 36$', '$x^2 - 12x + 36$', '$x^2 + 12x + 36$'],
       answer: '$x^2 - 12x + 36$',
-      explanation: '$(x-6)^2 = x^2 - 2 \\\\times x \\\\times 6 + 6^2 = x^2 - 12x + 36$입니다.',
+      explanation: '$(x-6)^2 = x^2 - 2 \\times x \\times 6 + 6^2 = x^2 - 12x + 36$입니다.',
     },
     {
       id: 'g3d8-p3',
@@ -52,7 +52,7 @@ const dayContent: DayContent = {
       question: '$(2x+5)^2$을 전개하면?',
       options: ['$4x^2 + 10x + 25$', '$4x^2 + 20x + 25$', '$2x^2 + 20x + 25$', '$4x^2 + 25$'],
       answer: '$4x^2 + 20x + 25$',
-      explanation: '$(2x+5)^2 = (2x)^2 + 2 \\\\times 2x \\\\times 5 + 5^2 = 4x^2 + 20x + 25$입니다.',
+      explanation: '$(2x+5)^2 = (2x)^2 + 2 \\times 2x \\times 5 + 5^2 = 4x^2 + 20x + 25$입니다.',
     },
     {
       id: 'g3d8-p4',
@@ -61,16 +61,16 @@ const dayContent: DayContent = {
       question: '$101^2$을 곱셈공식으로 계산하면?',
       options: ['$10000$', '$10201$', '$10101$', '$10200$'],
       answer: '$10201$',
-      explanation: '$101^2 = (100+1)^2 = 100^2 + 2 \\\\times 100 \\\\times 1 + 1^2 = 10000 + 200 + 1 = 10201$입니다.',
+      explanation: '$101^2 = (100+1)^2 = 100^2 + 2 \\times 100 \\times 1 + 1^2 = 10000 + 200 + 1 = 10201$입니다.',
     },
     {
       id: 'g3d8-p5',
       type: 'multiple-choice',
       difficulty: 'challenge',
-      question: '$(\\\\sqrt{3}+\\\\sqrt{2})^2$의 값은?',
-      options: ['$5$', '$5 + 2\\\\sqrt{6}$', '$5 + \\\\sqrt{6}$', '$7$'],
-      answer: '$5 + 2\\\\sqrt{6}$',
-      explanation: '$(\\\\sqrt{3}+\\\\sqrt{2})^2 = 3 + 2\\\\sqrt{3}\\\\cdot\\\\sqrt{2} + 2 = 5 + 2\\\\sqrt{6}$입니다.',
+      question: '$(\\sqrt{3}+\\sqrt{2})^2$의 값은?',
+      options: ['$5$', '$5 + 2\\sqrt{6}$', '$5 + \\sqrt{6}$', '$7$'],
+      answer: '$5 + 2\\sqrt{6}$',
+      explanation: '$(\\sqrt{3}+\\sqrt{2})^2 = 3 + 2\\sqrt{3}\\cdot\\sqrt{2} + 2 = 5 + 2\\sqrt{6}$입니다.',
     },
     {
       id: 'g3d8-p6',

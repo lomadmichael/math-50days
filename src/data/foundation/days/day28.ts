@@ -11,14 +11,14 @@ const dayContent: DayContent = {
       id: 'f6d28-c1',
       title: '삼각형의 넓이',
       content:
-        '삼각형의 넓이 = $\\\\frac{밑변 \\\\times 높이}{2}$\\n\\n직사각형을 대각선으로 자르면 삼각형 2개가 되므로, 삼각형의 넓이는 직사각형 넓이의 절반입니다.',
+        '삼각형의 넓이 = $\\frac{밑변 \\times 높이}{2}$\\n\\n직사각형을 대각선으로 자르면 삼각형 2개가 되므로, 삼각형의 넓이는 직사각형 넓이의 절반입니다.',
       type: 'formula',
     },
     {
       id: 'f6d28-c2',
       title: '사각형의 넓이',
       content:
-        '• 직사각형: 가로 $\\\\times$ 세로\\n• 정사각형: 한 변 $\\\\times$ 한 변\\n• 평행사변형: 밑변 $\\\\times$ 높이\\n• 사다리꼴: $\\\\frac{(윗변 + 아랫변) \\\\times 높이}{2}$\\n• 마름모: $\\\\frac{대각선1 \\\\times 대각선2}{2}$',
+        '• 직사각형: 가로 $\\times$ 세로\\n• 정사각형: 한 변 $\\times$ 한 변\\n• 평행사변형: 밑변 $\\times$ 높이\\n• 사다리꼴: $\\frac{(윗변 + 아랫변) \\times 높이}{2}$\\n• 마름모: $\\frac{대각선1 \\times 대각선2}{2}$',
       type: 'formula',
     },
     {
@@ -38,7 +38,7 @@ const dayContent: DayContent = {
       options: ['$16cm^2$', '$30cm^2$', '$60cm^2$', '$36cm^2$'],
       answer: '$30cm^2$',
       explanation:
-        '삼각형 넓이 = $\\\\frac{10 \\\\times 6}{2} = 30cm^2$입니다.',
+        '삼각형 넓이 = $\\frac{10 \\times 6}{2} = 30cm^2$입니다.',
     },
     {
       id: 'fd28-p2',
@@ -46,7 +46,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '가로 8cm, 세로 5cm인 직사각형의 넓이는 몇 $cm^2$인가요?',
       answer: '40',
-      explanation: '$8 \\\\times 5 = 40cm^2$입니다.',
+      explanation: '$8 \\times 5 = 40cm^2$입니다.',
     },
     {
       id: 'fd28-p3',
@@ -56,7 +56,7 @@ const dayContent: DayContent = {
       options: ['$20cm^2$', '$30cm^2$', '$40cm^2$', '$60cm^2$'],
       answer: '$30cm^2$',
       explanation:
-        '사다리꼴 넓이 = $\\\\frac{(4 + 8) \\\\times 5}{2} = \\\\frac{60}{2} = 30cm^2$',
+        '사다리꼴 넓이 = $\\frac{(4 + 8) \\times 5}{2} = \\frac{60}{2} = 30cm^2$',
     },
     {
       id: 'fd28-p4',
@@ -66,7 +66,7 @@ const dayContent: DayContent = {
         '평행사변형의 넓이가 $48cm^2$이고 밑변이 8cm일 때, 높이는 몇 cm인가요?',
       answer: '6',
       explanation:
-        '넓이 = 밑변 $\\\\times$ 높이이므로 $48 = 8 \\\\times$ 높이, 높이 = $48 \\\\div 8 = 6$cm',
+        '넓이 = 밑변 $\\times$ 높이이므로 $48 = 8 \\times$ 높이, 높이 = $48 \\div 8 = 6$cm',
     },
     {
       id: 'fd28-p5',
@@ -77,7 +77,7 @@ const dayContent: DayContent = {
       options: ['$22cm^2$', '$60cm^2$', '$120cm^2$', '$30cm^2$'],
       answer: '$60cm^2$',
       explanation:
-        '마름모 넓이 = $\\\\frac{12 \\\\times 10}{2} = 60cm^2$',
+        '마름모 넓이 = $\\frac{12 \\times 10}{2} = 60cm^2$',
     },
   ],
   realLifeExample:

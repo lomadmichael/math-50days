@@ -12,7 +12,7 @@ const dayContent: DayContent = {
       id: 'f8d39-c1',
       title: '규칙과 식 핵심 정리',
       content:
-        '• 수의 규칙: 등차(+일정), 등비($\\\\times$일정), 계차(차이가 변함)\\n• 문자 식: 곱셈 기호 생략, 나눗셈은 분수로\\n• 등식 풀기: $x$를 한쪽에, 숫자를 다른 쪽에 모으기\\n• 검산: 답을 대입하여 확인',
+        '• 수의 규칙: 등차(+일정), 등비($\\times$일정), 계차(차이가 변함)\\n• 문자 식: 곱셈 기호 생략, 나눗셈은 분수로\\n• 등식 풀기: $x$를 한쪽에, 숫자를 다른 쪽에 모으기\\n• 검산: 답을 대입하여 확인',
       type: 'tip',
     },
   ],
@@ -38,7 +38,7 @@ const dayContent: DayContent = {
       id: 'fd39-p3',
       type: 'multiple-choice',
       difficulty: 'applied',
-      question: '$b \\\\times b$를 간단히 나타내면?',
+      question: '$b \\times b$를 간단히 나타내면?',
       options: ['$2b$', '$b + b$', '$b^2$', '$bb$'],
       answer: '$b^2$',
       explanation: '같은 문자를 두 번 곱하면 지수로 나타냅니다. $b^2$',

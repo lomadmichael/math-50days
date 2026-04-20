@@ -10,13 +10,13 @@ const dayContent: DayContent = {
     {
       id: 'g3d25-c1',
       title: '일반형을 표준형으로 변환',
-      content: '$y = ax^2 + bx + c$를 $y = a(x-p)^2 + q$로 변환\\n\\n방법: 완전제곱식 만들기\\n$y = a\\\\left(x^2 + \\\\frac{b}{a}x\\\\right) + c$\\n$= a\\\\left(x + \\\\frac{b}{2a}\\\\right)^2 - \\\\frac{b^2}{4a} + c$\\n$= a\\\\left(x + \\\\frac{b}{2a}\\\\right)^2 + \\\\frac{4ac - b^2}{4a}$\\n\\n꼭짓점: $\\\\left(-\\\\frac{b}{2a}, \\\\frac{4ac-b^2}{4a}\\\\right)$',
+      content: '$y = ax^2 + bx + c$를 $y = a(x-p)^2 + q$로 변환\\n\\n방법: 완전제곱식 만들기\\n$y = a\\left(x^2 + \\frac{b}{a}x\\right) + c$\\n$= a\\left(x + \\frac{b}{2a}\\right)^2 - \\frac{b^2}{4a} + c$\\n$= a\\left(x + \\frac{b}{2a}\\right)^2 + \\frac{4ac - b^2}{4a}$\\n\\n꼭짓점: $\\left(-\\frac{b}{2a}, \\frac{4ac-b^2}{4a}\\right)$',
       type: 'formula',
     },
     {
       id: 'g3d25-c2',
       title: '일반형 그래프의 성질 읽기',
-      content: '$y = ax^2 + bx + c$에서:\\n\\n$a$의 부호: 그래프의 방향 (볼록 방향)\\n$c$의 값: $y$절편 ($x=0$일 때 $y$값)\\n대칭축: $x = -\\\\frac{b}{2a}$\\n$x$절편: $ax^2 + bx + c = 0$의 해',
+      content: '$y = ax^2 + bx + c$에서:\\n\\n$a$의 부호: 그래프의 방향 (볼록 방향)\\n$c$의 값: $y$절편 ($x=0$일 때 $y$값)\\n대칭축: $x = -\\frac{b}{2a}$\\n$x$절편: $ax^2 + bx + c = 0$의 해',
       type: 'formula',
     },
     {
@@ -67,7 +67,7 @@ const dayContent: DayContent = {
       question: '$y = 2x^2 - 8x + 6$의 대칭축은?',
       options: ['$x = 2$', '$x = -2$', '$x = 4$', '$x = -4$'],
       answer: '$x = 2$',
-      explanation: '대칭축: $x = -\\\\frac{b}{2a} = -\\\\frac{-8}{4} = 2$입니다.',
+      explanation: '대칭축: $x = -\\frac{b}{2a} = -\\frac{-8}{4} = 2$입니다.',
     },
     {
       id: 'g3d25-p5',
@@ -76,7 +76,7 @@ const dayContent: DayContent = {
       question: '$y = x^2 - 2x - 3$이 $x$축과 만나는 두 점의 $x$좌표의 합은?',
       options: ['$-2$', '$0$', '$2$', '$4$'],
       answer: '$2$',
-      explanation: '$x^2 - 2x - 3 = 0$, $(x-3)(x+1) = 0$에서 $x = 3, -1$. 합은 $3 + (-1) = 2$입니다. (또는 근과 계수의 관계: $-\\\\frac{b}{a} = 2$)',
+      explanation: '$x^2 - 2x - 3 = 0$, $(x-3)(x+1) = 0$에서 $x = 3, -1$. 합은 $3 + (-1) = 2$입니다. (또는 근과 계수의 관계: $-\\frac{b}{a} = 2$)',
     },
     {
       id: 'g3d25-p6',

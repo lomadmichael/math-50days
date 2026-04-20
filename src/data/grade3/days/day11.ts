@@ -22,7 +22,7 @@ const dayContent: DayContent = {
     {
       id: 'g3d11-c3',
       title: '완전제곱식으로 인수분해',
-      content: '$a^2 + 2ab + b^2 = (a+b)^2$\\n$a^2 - 2ab + b^2 = (a-b)^2$\\n\\n예: $x^2 + 10x + 25 = (x+5)^2$\\n$4x^2 - 12x + 9 = (2x-3)^2$\\n\\n판별법: 양 끝이 완전제곱수이고, 가운데가 $2 \\\\times$(양 끝의 제곱근의 곱)',
+      content: '$a^2 + 2ab + b^2 = (a+b)^2$\\n$a^2 - 2ab + b^2 = (a-b)^2$\\n\\n예: $x^2 + 10x + 25 = (x+5)^2$\\n$4x^2 - 12x + 9 = (2x-3)^2$\\n\\n판별법: 양 끝이 완전제곱수이고, 가운데가 $2 \\times$(양 끝의 제곱근의 곱)',
       type: 'formula',
     },
     {
@@ -49,7 +49,7 @@ const dayContent: DayContent = {
       question: '$x^2 + 6x + 9$를 인수분해하면?',
       options: ['$(x+3)^2$', '$(x+9)(x+1)$', '$(x+3)(x-3)$', '$(x-3)^2$'],
       answer: '$(x+3)^2$',
-      explanation: '$x^2 + 6x + 9 = x^2 + 2 \\\\times 3 \\\\times x + 3^2 = (x+3)^2$입니다.',
+      explanation: '$x^2 + 6x + 9 = x^2 + 2 \\times 3 \\times x + 3^2 = (x+3)^2$입니다.',
     },
     {
       id: 'g3d11-p3',
@@ -67,7 +67,7 @@ const dayContent: DayContent = {
       question: '$4x^2 - 20x + 25$를 인수분해하면?',
       options: ['$(2x-5)^2$', '$(2x+5)^2$', '$(4x-5)(x-5)$', '$(2x-5)(2x+5)$'],
       answer: '$(2x-5)^2$',
-      explanation: '$4x^2 - 20x + 25 = (2x)^2 - 2 \\\\times 2x \\\\times 5 + 5^2 = (2x-5)^2$입니다.',
+      explanation: '$4x^2 - 20x + 25 = (2x)^2 - 2 \\times 2x \\times 5 + 5^2 = (2x-5)^2$입니다.',
     },
     {
       id: 'g3d11-p5',

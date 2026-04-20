@@ -16,7 +16,7 @@ const dayContent: DayContent = {
     {
       id: 'g3d27-c2',
       title: '일반형에서 최댓값/최솟값 구하기',
-      content: '$y = ax^2 + bx + c$를 꼭짓점 형태로 변환:\\n$y = a\\\\left(x + \\\\frac{b}{2a}\\\\right)^2 - \\\\frac{b^2 - 4ac}{4a}$\\n\\n최댓값 또는 최솟값: $-\\\\frac{b^2 - 4ac}{4a}$\\n이때 $x = -\\\\frac{b}{2a}$',
+      content: '$y = ax^2 + bx + c$를 꼭짓점 형태로 변환:\\n$y = a\\left(x + \\frac{b}{2a}\\right)^2 - \\frac{b^2 - 4ac}{4a}$\\n\\n최댓값 또는 최솟값: $-\\frac{b^2 - 4ac}{4a}$\\n이때 $x = -\\frac{b}{2a}$',
       type: 'formula',
     },
     {
@@ -67,10 +67,10 @@ const dayContent: DayContent = {
       id: 'g3d27-p5',
       type: 'multiple-choice',
       difficulty: 'challenge',
-      question: '$y = x^2 - 4x + 1$ ($0 \\\\leq x \\\\leq 5$)에서 최댓값과 최솟값의 합은?',
+      question: '$y = x^2 - 4x + 1$ ($0 \\leq x \\leq 5$)에서 최댓값과 최솟값의 합은?',
       options: ['$3$', '$5$', '$6$', '$-3$'],
       answer: '$3$',
-      explanation: '$y = (x-2)^2 - 3$. 범위 $0 \\\\leq x \\\\leq 5$에서 꼭짓점 $x = 2$일 때 최솟값 $-3$. 끝점: $x = 0$일 때 $1$, $x = 5$일 때 $6$. 최댓값 $6$. 합: $6 + (-3) = 3$.',
+      explanation: '$y = (x-2)^2 - 3$. 범위 $0 \\leq x \\leq 5$에서 꼭짓점 $x = 2$일 때 최솟값 $-3$. 끝점: $x = 0$일 때 $1$, $x = 5$일 때 $6$. 최댓값 $6$. 합: $6 + (-3) = 3$.',
     },
   ],
   realLifeExample: '야구에서 공을 던지면 공의 높이는 이차함수로 나타낼 수 있습니다. 이차함수의 최댓값은 공이 도달하는 최고 높이를 의미하며, 이를 통해 홈런 여부를 판단할 수 있습니다.',

@@ -22,7 +22,7 @@ const dayContent: DayContent = {
     {
       id: 'g2d24-c3',
       title: '$x$절편과 $y$절편',
-      content: '**$y$절편**: 그래프가 $y$축과 만나는 점의 $y$ 좌표 ($x = 0$일 때의 $y$ 값)\n→ $y = ax + b$에서 $y$절편은 $b$\n\n**$x$절편**: 그래프가 $x$축과 만나는 점의 $x$ 좌표 ($y = 0$일 때의 $x$ 값)\n→ $y = ax + b$에서 $0 = ax + b$이므로 $x = -\\\\frac{b}{a}$',
+      content: '**$y$절편**: 그래프가 $y$축과 만나는 점의 $y$ 좌표 ($x = 0$일 때의 $y$ 값)\n→ $y = ax + b$에서 $y$절편은 $b$\n\n**$x$절편**: 그래프가 $x$축과 만나는 점의 $x$ 좌표 ($y = 0$일 때의 $x$ 값)\n→ $y = ax + b$에서 $0 = ax + b$이므로 $x = -\\frac{b}{a}$',
       type: 'definition',
     },
     {
@@ -74,7 +74,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '일차함수 $y = -3x + 6$의 그래프와 $x$축, $y$축으로 둘러싸인 삼각형의 넓이를 구하시오.',
       answer: '6',
-      explanation: '$y$절편: 6 → 점 $(0, 6)$\n$x$절편: $0 = -3x + 6$ → $x = 2$ → 점 $(2, 0)$\n\n밑변 = 2, 높이 = 6\n넓이 = $\\\\frac{1}{2} \\\\times 2 \\\\times 6 = 6$',
+      explanation: '$y$절편: 6 → 점 $(0, 6)$\n$x$절편: $0 = -3x + 6$ → $x = 2$ → 점 $(2, 0)$\n\n밑변 = 2, 높이 = 6\n넓이 = $\\frac{1}{2} \\times 2 \\times 6 = 6$',
     },
     {
       id: 'g2d24-p6',

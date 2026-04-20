@@ -25,7 +25,7 @@ const dayContent: DayContent = {
       id: 'f8d38-c3',
       title: '검산하기',
       content:
-        '구한 답을 원래 식에 대입하여 양변이 같은지 확인합니다.\\n예) $x = 4$를 $2x + 3 = 11$에 대입 → $2 \\\\times 4 + 3 = 8 + 3 = 11$ ✓',
+        '구한 답을 원래 식에 대입하여 양변이 같은지 확인합니다.\\n예) $x = 4$를 $2x + 3 = 11$에 대입 → $2 \\times 4 + 3 = 8 + 3 = 11$ ✓',
       type: 'tip',
     },
   ],
@@ -44,7 +44,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '$4x = 24$일 때, $x$의 값은?',
       answer: '6',
-      explanation: '$x = 24 \\\\div 4 = 6$',
+      explanation: '$x = 24 \\div 4 = 6$',
     },
     {
       id: 'fd38-p3',
@@ -54,7 +54,7 @@ const dayContent: DayContent = {
       options: ['5', '6', '7', '8'],
       answer: '7',
       explanation:
-        '$3x = 16 + 5 = 21$, $x = 21 \\\\div 3 = 7$',
+        '$3x = 16 + 5 = 21$, $x = 21 \\div 3 = 7$',
     },
     {
       id: 'fd38-p4',
@@ -80,14 +80,14 @@ const dayContent: DayContent = {
       id: 'fd38-p6',
       type: 'short-answer',
       difficulty: 'challenge',
-      question: '$\\\\frac{x}{3} + 2 = 6$일 때, $x$의 값은?',
+      question: '$\\frac{x}{3} + 2 = 6$일 때, $x$의 값은?',
       answer: '12',
       explanation:
-        '$\\\\frac{x}{3} = 4$ → $x = 4 \\\\times 3 = 12$',
+        '$\\frac{x}{3} = 4$ → $x = 4 \\times 3 = 12$',
     },
   ],
   realLifeExample:
-    '"과자 몇 봉지를 사서 5명이 나눠 먹으면 한 사람당 3개씩이다"를 식으로 쓰면 $\\\\frac{x}{5} = 3$, 즉 $x = 15$봉지예요. 이처럼 방정식은 모르는 것을 찾을 때 사용합니다!',
+    '"과자 몇 봉지를 사서 5명이 나눠 먹으면 한 사람당 3개씩이다"를 식으로 쓰면 $\\frac{x}{5} = 3$, 즉 $x = 15$봉지예요. 이처럼 방정식은 모르는 것을 찾을 때 사용합니다!',
 };
 
 export default dayContent;

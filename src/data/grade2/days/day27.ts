@@ -10,7 +10,7 @@ const dayContent: DayContent = {
     {
       id: 'g2d27-c1',
       title: '일차방정식과 일차함수의 관계',
-      content: '일차방정식 $ax + by + c = 0$ ($b \\\\neq 0$)을 $y$에 대해 풀면\\n$$y = -\\\\frac{a}{b}x - \\\\frac{c}{b}$$\\n이것은 기울기 $-\\\\frac{a}{b}$, $y$절편 $-\\\\frac{c}{b}$인 일차함수입니다.\\n\\n즉, **일차방정식의 해의 집합 = 일차함수의 그래프**',
+      content: '일차방정식 $ax + by + c = 0$ ($b \\neq 0$)을 $y$에 대해 풀면\\n$$y = -\\frac{a}{b}x - \\frac{c}{b}$$\\n이것은 기울기 $-\\frac{a}{b}$, $y$절편 $-\\frac{c}{b}$인 일차함수입니다.\\n\\n즉, **일차방정식의 해의 집합 = 일차함수의 그래프**',
       type: 'definition',
     },
     {
@@ -22,7 +22,7 @@ const dayContent: DayContent = {
     {
       id: 'g2d27-c3',
       title: 'y = k 꼴의 그래프',
-      content: '$y = k$ (상수)의 그래프는 점 $(0, k)$를 지나고 **$x$축에 평행한 직선**입니다.\\n\\n• 이 직선 위의 모든 점은 $y$좌표가 $k$로 같음\\n• 기울기가 $0$인 직선\\n• $y = 0 \\\\cdot x + k$이므로 일차함수(상수함수)에 해당',
+      content: '$y = k$ (상수)의 그래프는 점 $(0, k)$를 지나고 **$x$축에 평행한 직선**입니다.\\n\\n• 이 직선 위의 모든 점은 $y$좌표가 $k$로 같음\\n• 기울기가 $0$인 직선\\n• $y = 0 \\cdot x + k$이므로 일차함수(상수함수)에 해당',
       type: 'definition',
     },
     {
@@ -57,7 +57,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '일차방정식 $3x + 2y - 12 = 0$의 그래프의 $x$절편을 구하시오.',
       answer: '4',
-      explanation: '$x$절편은 $y = 0$을 대입:\\n$3x + 2 \\\\times 0 - 12 = 0$\\n$3x = 12$ → $x = 4$\\n\\n따라서 $x$절편은 $4$',
+      explanation: '$x$절편은 $y = 0$을 대입:\\n$3x + 2 \\times 0 - 12 = 0$\\n$3x = 12$ → $x = 4$\\n\\n따라서 $x$절편은 $4$',
     },
     {
       id: 'g2d27-p4',
@@ -65,7 +65,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '직선 $ax + 2y - 8 = 0$이 점 $(2, 1)$을 지날 때, 상수 $a$의 값을 구하시오.',
       answer: '3',
-      explanation: '점 $(2, 1)$을 대입:\\n$a \\\\times 2 + 2 \\\\times 1 - 8 = 0$\\n$2a + 2 - 8 = 0$\\n$2a = 6$ → $a = 3$',
+      explanation: '점 $(2, 1)$을 대입:\\n$a \\times 2 + 2 \\times 1 - 8 = 0$\\n$2a + 2 - 8 = 0$\\n$2a = 6$ → $a = 3$',
     },
     {
       id: 'g2d27-p5',
@@ -74,7 +74,7 @@ const dayContent: DayContent = {
       question: '직선 $2x - 3y + 6 = 0$과 $x$축, $y$축으로 둘러싸인 삼각형의 넓이는?',
       options: ['$3$', '$4$', '$6$', '$9$'],
       answer: '$3$',
-      explanation: '$x$절편: $y = 0$ 대입 → $2x + 6 = 0$ → $x = -3$\\n$y$절편: $x = 0$ 대입 → $-3y + 6 = 0$ → $y = 2$\\n\\n밑변 $= |-3| = 3$, 높이 $= |2| = 2$\\n넓이 $= \\\\frac{1}{2} \\\\times 3 \\\\times 2 = 3$',
+      explanation: '$x$절편: $y = 0$ 대입 → $2x + 6 = 0$ → $x = -3$\\n$y$절편: $x = 0$ 대입 → $-3y + 6 = 0$ → $y = 2$\\n\\n밑변 $= |-3| = 3$, 높이 $= |2| = 2$\\n넓이 $= \\frac{1}{2} \\times 3 \\times 2 = 3$',
     },
   ],
   realLifeExample: '온도 단위 변환식 F = 1.8C + 32는 섭씨(C)와 화씨(F)의 관계를 나타내는 일차함수예요. 이것을 일차방정식으로 쓰면 1.8C - F + 32 = 0이 됩니다. 방정식과 함수는 같은 관계를 다른 방식으로 표현한 것이죠!',

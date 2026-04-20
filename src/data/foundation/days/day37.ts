@@ -18,7 +18,7 @@ const dayContent: DayContent = {
       id: 'f8d37-c2',
       title: '곱하기 기호 생략 규칙',
       content:
-        '문자가 포함된 곱셈에서 $\\\\times$ 기호를 생략합니다.\\n• $3 \\\\times x = 3x$\\n• $x \\\\times y = xy$\\n• $1 \\\\times x = x$ (1은 생략)\\n• $x \\\\times x = x^2$\\n\\n나눗셈은 분수로 씁니다: $x \\\\div 3 = \\\\frac{x}{3}$',
+        '문자가 포함된 곱셈에서 $\\times$ 기호를 생략합니다.\\n• $3 \\times x = 3x$\\n• $x \\times y = xy$\\n• $1 \\times x = x$ (1은 생략)\\n• $x \\times x = x^2$\\n\\n나눗셈은 분수로 씁니다: $x \\div 3 = \\frac{x}{3}$',
       type: 'formula',
     },
     {
@@ -35,7 +35,7 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'basic',
       question: '"어떤 수 $x$에 5를 더한 것"을 식으로 나타내면?',
-      options: ['$5x$', '$x + 5$', '$x - 5$', '$\\\\frac{x}{5}$'],
+      options: ['$5x$', '$x + 5$', '$x - 5$', '$\\frac{x}{5}$'],
       answer: '$x + 5$',
       explanation: '"~에 5를 더한 것"이므로 $x + 5$입니다.',
     },
@@ -43,11 +43,11 @@ const dayContent: DayContent = {
       id: 'fd37-p2',
       type: 'multiple-choice',
       difficulty: 'basic',
-      question: '$a \\\\times 7$을 간단히 나타내면?',
-      options: ['$a + 7$', '$a7$', '$7a$', '$\\\\frac{a}{7}$'],
+      question: '$a \\times 7$을 간단히 나타내면?',
+      options: ['$a + 7$', '$a7$', '$7a$', '$\\frac{a}{7}$'],
       answer: '$7a$',
       explanation:
-        '문자와 숫자의 곱에서 숫자를 앞에 쓰고 $\\\\times$를 생략합니다. $7a$',
+        '문자와 숫자의 곱에서 숫자를 앞에 쓰고 $\\times$를 생략합니다. $7a$',
     },
     {
       id: 'fd37-p3',
@@ -65,7 +65,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question:
         '"형의 나이는 동생보다 4살 많다. 동생의 나이를 $x$세라 할 때 형의 나이는?"',
-      options: ['$4x$세', '$(x + 4)$세', '$(x - 4)$세', '$\\\\frac{x}{4}$세'],
+      options: ['$4x$세', '$(x + 4)$세', '$(x - 4)$세', '$\\frac{x}{4}$세'],
       answer: '$(x + 4)$세',
       explanation:
         '형은 동생보다 4살 많으므로 동생 나이에 4를 더합니다. $x + 4$',

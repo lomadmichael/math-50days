@@ -133,7 +133,7 @@ export default function Problem({ problem, index, onCorrect, onWrong, sectionLab
           />
           {showResult && !isCorrect && (
             <p className="text-xs text-emerald-400 mt-2">
-              정답: <MathRenderer content={problem.answer} className="inline" />
+              정답: <MathRenderer content={problem.answer} inline />
             </p>
           )}
         </div>

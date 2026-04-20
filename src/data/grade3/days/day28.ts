@@ -52,7 +52,7 @@ const dayContent: DayContent = {
       question: '$y = 2x^2 + kx + 8$의 그래프가 $x$축에 접할 때, 양수 $k$의 값은?',
       options: ['$4$', '$8$', '$16$', '$6$'],
       answer: '$8$',
-      explanation: '접할 조건: $D = k^2 - 4(2)(8) = k^2 - 64 = 0$. $k^2 = 64$, $k = \\\\pm 8$. 양수이므로 $k = 8$.',
+      explanation: '접할 조건: $D = k^2 - 4(2)(8) = k^2 - 64 = 0$. $k^2 = 64$, $k = \\pm 8$. 양수이므로 $k = 8$.',
     },
     {
       id: 'g3d28-p4',

@@ -12,7 +12,7 @@ const dayContent: DayContent = {
       id: 'f6d31-c1',
       title: '도형 넓이 공식 모음',
       content:
-        '• 삼각형: $\\\\frac{밑변 \\\\times 높이}{2}$\\n• 직사각형: 가로 $\\\\times$ 세로\\n• 평행사변형: 밑변 $\\\\times$ 높이\\n• 사다리꼴: $\\\\frac{(윗변+아랫변) \\\\times 높이}{2}$\\n• 마름모: $\\\\frac{대각선1 \\\\times 대각선2}{2}$\\n• 원: $\\\\pi \\\\times r^2$',
+        '• 삼각형: $\\frac{밑변 \\times 높이}{2}$\\n• 직사각형: 가로 $\\times$ 세로\\n• 평행사변형: 밑변 $\\times$ 높이\\n• 사다리꼴: $\\frac{(윗변+아랫변) \\times 높이}{2}$\\n• 마름모: $\\frac{대각선1 \\times 대각선2}{2}$\\n• 원: $\\pi \\times r^2$',
       type: 'tip',
     },
     {
@@ -39,7 +39,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '밑변 12cm, 높이 7cm인 평행사변형의 넓이는 몇 $cm^2$인가요?',
       answer: '84',
-      explanation: '평행사변형 넓이 = $12 \\\\times 7 = 84cm^2$',
+      explanation: '평행사변형 넓이 = $12 \\times 7 = 84cm^2$',
     },
     {
       id: 'fd31-p3',
@@ -48,7 +48,7 @@ const dayContent: DayContent = {
       question: '반지름 3cm인 원의 넓이는? (원주율 = 3.14)',
       options: ['$9.42cm^2$', '$18.84cm^2$', '$28.26cm^2$', '$6.28cm^2$'],
       answer: '$28.26cm^2$',
-      explanation: '원 넓이 = $3.14 \\\\times 3 \\\\times 3 = 28.26cm^2$',
+      explanation: '원 넓이 = $3.14 \\times 3 \\times 3 = 28.26cm^2$',
     },
     {
       id: 'fd31-p4',
@@ -59,7 +59,7 @@ const dayContent: DayContent = {
       options: ['$20cm^2$', '$28cm^2$', '$36cm^2$', '$56cm^2$'],
       answer: '$28cm^2$',
       explanation:
-        '사다리꼴 넓이 = $\\\\frac{(5+9) \\\\times 4}{2} = \\\\frac{56}{2} = 28cm^2$',
+        '사다리꼴 넓이 = $\\frac{(5+9) \\times 4}{2} = \\frac{56}{2} = 28cm^2$',
     },
     {
       id: 'fd31-p5',
@@ -69,7 +69,7 @@ const dayContent: DayContent = {
         '두 대각선의 길이가 8cm, 14cm인 마름모의 넓이는 몇 $cm^2$인가요?',
       answer: '56',
       explanation:
-        '마름모 넓이 = $\\\\frac{8 \\\\times 14}{2} = 56cm^2$',
+        '마름모 넓이 = $\\frac{8 \\times 14}{2} = 56cm^2$',
     },
     {
       id: 'fd31-p6',

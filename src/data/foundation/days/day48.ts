@@ -40,7 +40,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '$5a - 3b$에 $a = 2, b = 4$를 대입한 값은?',
       answer: '-2',
-      explanation: '$5 \\\\times 2 - 3 \\\\times 4 = 10 - 12 = -2$',
+      explanation: '$5 \\times 2 - 3 \\times 4 = 10 - 12 = -2$',
     },
     {
       id: 'fd48-p4',
@@ -59,7 +59,7 @@ const dayContent: DayContent = {
       question: '$(-2)^3$의 값은?',
       answer: '-8',
       explanation:
-        '$(-2)^3 = (-2) \\\\times (-2) \\\\times (-2) = 4 \\\\times (-2) = -8$',
+        '$(-2)^3 = (-2) \\times (-2) \\times (-2) = 4 \\times (-2) = -8$',
     },
     {
       id: 'fd48-p6',
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       options: ['제1사분면', '제2사분면', '제3사분면', '제4사분면'],
       answer: '제2사분면',
       explanation:
-        '$y = -3 \\\\times (-2) = 6$이므로 점 $(-2, 6)$ → $x < 0, y > 0$ → 제2사분면',
+        '$y = -3 \\times (-2) = 6$이므로 점 $(-2, 6)$ → $x < 0, y > 0$ → 제2사분면',
     },
   ],
   realLifeExample:

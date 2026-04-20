@@ -22,7 +22,7 @@ const dayContent: DayContent = {
     {
       id: 'g3d16-c3',
       title: '다양한 유형',
-      content: '$x^2 = 3x$ → $x^2 - 3x = 0$ → $x(x-3) = 0$ → $x = 0$ 또는 $x = 3$\\n$2x^2 + 5x - 3 = 0$ → $(2x-1)(x+3) = 0$ → $x = \\\\frac{1}{2}$ 또는 $x = -3$\\n\\n양변을 $x$로 나누면 $x=0$인 해를 잃어버릴 수 있으니 주의!',
+      content: '$x^2 = 3x$ → $x^2 - 3x = 0$ → $x(x-3) = 0$ → $x = 0$ 또는 $x = 3$\\n$2x^2 + 5x - 3 = 0$ → $(2x-1)(x+3) = 0$ → $x = \\frac{1}{2}$ 또는 $x = -3$\\n\\n양변을 $x$로 나누면 $x=0$인 해를 잃어버릴 수 있으니 주의!',
       type: 'example',
     },
   ],
@@ -50,8 +50,8 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'applied',
       question: '$x^2 - 9 = 0$의 해는?',
-      options: ['$x = 3$', '$x = -3$', '$x = \\\\pm 3$', '$x = 9$'],
-      answer: '$x = \\\\pm 3$',
+      options: ['$x = 3$', '$x = -3$', '$x = \\pm 3$', '$x = 9$'],
+      answer: '$x = \\pm 3$',
       explanation: '$(x+3)(x-3) = 0$이므로 $x = 3$ 또는 $x = -3$입니다.',
     },
     {
@@ -59,9 +59,9 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'applied',
       question: '$2x^2 - x - 3 = 0$의 해는?',
-      options: ['$x = 1, -\\\\frac{3}{2}$', '$x = -1, \\\\frac{3}{2}$', '$x = \\\\frac{1}{2}, -3$', '$x = 3, -\\\\frac{1}{2}$'],
-      answer: '$x = -1, \\\\frac{3}{2}$',
-      explanation: '$2x^2 - x - 3 = (2x-3)(x+1) = 0$이므로 $x = \\\\frac{3}{2}$ 또는 $x = -1$입니다.',
+      options: ['$x = 1, -\\frac{3}{2}$', '$x = -1, \\frac{3}{2}$', '$x = \\frac{1}{2}, -3$', '$x = 3, -\\frac{1}{2}$'],
+      answer: '$x = -1, \\frac{3}{2}$',
+      explanation: '$2x^2 - x - 3 = (2x-3)(x+1) = 0$이므로 $x = \\frac{3}{2}$ 또는 $x = -1$입니다.',
     },
     {
       id: 'g3d16-p5',

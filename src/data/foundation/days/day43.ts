@@ -12,7 +12,7 @@ const dayContent: DayContent = {
       id: 'f9d43-c1',
       title: '자료와 가능성 핵심 정리',
       content:
-        '• 평균 = $\\\\frac{합계}{개수}$\\n• 중앙값: 크기순 나열 후 가운데 값\\n• 최빈값: 가장 자주 나타나는 값\\n• 확률 = $\\\\frac{원하는 경우의 수}{전체 경우의 수}$\\n• 경우의 수 곱의 법칙: 동시에 일어날 때 곱함',
+        '• 평균 = $\\frac{합계}{개수}$\\n• 중앙값: 크기순 나열 후 가운데 값\\n• 최빈값: 가장 자주 나타나는 값\\n• 확률 = $\\frac{원하는 경우의 수}{전체 경우의 수}$\\n• 경우의 수 곱의 법칙: 동시에 일어날 때 곱함',
       type: 'tip',
     },
   ],
@@ -24,7 +24,7 @@ const dayContent: DayContent = {
       question: '70, 80, 90의 평균은?',
       answer: '80',
       explanation:
-        '$\\\\frac{70 + 80 + 90}{3} = \\\\frac{240}{3} = 80$',
+        '$\\frac{70 + 80 + 90}{3} = \\frac{240}{3} = 80$',
     },
     {
       id: 'fd43-p2',
@@ -32,14 +32,14 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '주사위를 던져서 5 이상이 나올 확률은?',
       options: [
-        '$\\\\frac{1}{6}$',
-        '$\\\\frac{2}{6}$',
-        '$\\\\frac{1}{3}$',
-        '$\\\\frac{5}{6}$',
+        '$\\frac{1}{6}$',
+        '$\\frac{2}{6}$',
+        '$\\frac{1}{3}$',
+        '$\\frac{5}{6}$',
       ],
-      answer: '$\\\\frac{1}{3}$',
+      answer: '$\\frac{1}{3}$',
       explanation:
-        '5 이상: 5, 6 → 2가지, 확률 = $\\\\frac{2}{6} = \\\\frac{1}{3}$',
+        '5 이상: 5, 6 → 2가지, 확률 = $\\frac{2}{6} = \\frac{1}{3}$',
     },
     {
       id: 'fd43-p3',
@@ -60,7 +60,7 @@ const dayContent: DayContent = {
       options: ['$20°$', '$36°$', '$72°$', '$90°$'],
       answer: '$72°$',
       explanation:
-        '$360° \\\\times 0.2 = 72°$',
+        '$360° \\times 0.2 = 72°$',
     },
     {
       id: 'fd43-p5',
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
         '음식 3종류와 음료 4종류가 있습니다. 세트 메뉴(음식 1 + 음료 1)를 고르는 경우의 수는?',
       answer: '12',
       explanation:
-        '곱의 법칙: $3 \\\\times 4 = 12$가지',
+        '곱의 법칙: $3 \\times 4 = 12$가지',
     },
     {
       id: 'fd43-p6',
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       options: ['84점', '86점', '88점', '90점'],
       answer: '90점',
       explanation:
-        '기존 합 = 330, 목표 합 = $84 \\\\times 5 = 420$, 새 점수 = $420 - 330 = 90$점',
+        '기존 합 = 330, 목표 합 = $84 \\times 5 = 420$, 새 점수 = $420 - 330 = 90$점',
     },
   ],
   realLifeExample:

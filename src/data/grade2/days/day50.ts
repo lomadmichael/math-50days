@@ -22,7 +22,7 @@ const dayContent: DayContent = {
     {
       id: 'g2d50-c3',
       title: '중3에서 배울 내용 미리보기',
-      content: '**중3 주요 단원:**\\n• **제곱근과 실수**: $\\\\sqrt{2}$, 무리수의 세계\\n• **다항식의 곱셈과 인수분해**: 전개, 인수분해 공식\\n• **이차방정식**: $ax^2 + bx + c = 0$의 풀이\\n• **이차함수**: $y = ax^2 + bx + c$의 그래프\\n• **삼각비**: $\\\\sin$, $\\\\cos$, $\\\\tan$\\n• **원의 성질**: 원주각, 접선 등\\n• **통계**: 대푯값, 산포도',
+      content: '**중3 주요 단원:**\\n• **제곱근과 실수**: $\\sqrt{2}$, 무리수의 세계\\n• **다항식의 곱셈과 인수분해**: 전개, 인수분해 공식\\n• **이차방정식**: $ax^2 + bx + c = 0$의 풀이\\n• **이차함수**: $y = ax^2 + bx + c$의 그래프\\n• **삼각비**: $\\sin$, $\\cos$, $\\tan$\\n• **원의 성질**: 원주각, 접선 등\\n• **통계**: 대푯값, 산포도',
       type: 'tip',
     },
     {
@@ -38,9 +38,9 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'basic',
       question: '다음 중 일차함수인 것은?',
-      options: ['$y = x^2 + 1$', '$y = \\\\frac{3}{x}$', '$y = -5x + 2$', '$xy = 6$'],
+      options: ['$y = x^2 + 1$', '$y = \\frac{3}{x}$', '$y = -5x + 2$', '$xy = 6$'],
       answer: '$y = -5x + 2$',
-      explanation: '일차함수: $y = ax + b$ ($a \\\\neq 0$) 형태\\n$y = -5x + 2$만 이 형태에 해당합니다.',
+      explanation: '일차함수: $y = ax + b$ ($a \\neq 0$) 형태\\n$y = -5x + 2$만 이 형태에 해당합니다.',
     },
     {
       id: 'g2d50-p2',
@@ -48,7 +48,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '이등변삼각형에서 꼭지각이 $40°$일 때, 밑각의 크기를 구하시오.',
       answer: '70',
-      explanation: '밑각 $= \\\\frac{180° - 40°}{2} = \\\\frac{140°}{2} = 70°$',
+      explanation: '밑각 $= \\frac{180° - 40°}{2} = \\frac{140°}{2} = 70°$',
     },
     {
       id: 'g2d50-p3',
@@ -56,7 +56,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '두 점 $(0, -2)$, $(3, 4)$를 지나는 일차함수의 식을 구하시오.',
       answer: 'y = 2x - 2',
-      explanation: '기울기 $= \\\\frac{4-(-2)}{3-0} = \\\\frac{6}{3} = 2$\\n$y$절편 $= -2$\\n$y = 2x - 2$',
+      explanation: '기울기 $= \\frac{4-(-2)}{3-0} = \\frac{6}{3} = 2$\\n$y$절편 $= -2$\\n$y = 2x - 2$',
     },
     {
       id: 'g2d50-p4',
@@ -73,7 +73,7 @@ const dayContent: DayContent = {
       difficulty: 'challenge',
       question: '동전 $2$개와 주사위 $1$개를 동시에 던질 때, 동전은 모두 앞면이고 주사위는 $3$의 배수가 나올 확률을 기약분수로 구하시오.',
       answer: '1/12',
-      explanation: '동전 모두 앞면: $\\\\frac{1}{2} \\\\times \\\\frac{1}{2} = \\\\frac{1}{4}$\\n주사위 $3$의 배수: $\\\\frac{2}{6} = \\\\frac{1}{3}$\\n\\n독립사건이므로: $\\\\frac{1}{4} \\\\times \\\\frac{1}{3} = \\\\frac{1}{12}$',
+      explanation: '동전 모두 앞면: $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$\\n주사위 $3$의 배수: $\\frac{2}{6} = \\frac{1}{3}$\\n\\n독립사건이므로: $\\frac{1}{4} \\times \\frac{1}{3} = \\frac{1}{12}$',
     },
   ],
   realLifeExample: '축하합니다! 중2 수학 50일 과정을 모두 마쳤어요! 일차함수로 세상의 변화를 읽고, 도형의 성질로 구조를 이해하며, 닮음과 피타고라스로 측정하고, 확률로 미래를 예측하는 능력을 갖추었습니다. 이 모든 것이 중3 수학의 든든한 기초가 될 거예요. 중3 코스에서 또 만나요!',

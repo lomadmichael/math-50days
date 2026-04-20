@@ -10,7 +10,7 @@ const dayContent: DayContent = {
     {
       id: 'g3d22-c1',
       title: 'PART 3 핵심 요약',
-      content: '① 이차방정식: $ax^2 + bx + c = 0$ ($a \\\\neq 0$)\\n② 인수분해: $AB = 0 \\\\Rightarrow A = 0$ 또는 $B = 0$\\n③ 완전제곱식: $(x+p)^2 = q$ → $x = -p \\\\pm \\\\sqrt{q}$\\n④ 근의 공식: $x = \\\\frac{-b \\\\pm \\\\sqrt{b^2-4ac}}{2a}$\\n⑤ 판별식: $D = b^2 - 4ac$로 근의 개수 판단\\n⑥ 활용: 미지수 설정 → 방정식 수립 → 풀이 → 검증',
+      content: '① 이차방정식: $ax^2 + bx + c = 0$ ($a \\neq 0$)\\n② 인수분해: $AB = 0 \\Rightarrow A = 0$ 또는 $B = 0$\\n③ 완전제곱식: $(x+p)^2 = q$ → $x = -p \\pm \\sqrt{q}$\\n④ 근의 공식: $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$\\n⑤ 판별식: $D = b^2 - 4ac$로 근의 개수 판단\\n⑥ 활용: 미지수 설정 → 방정식 수립 → 풀이 → 검증',
       type: 'formula',
     },
     {
@@ -45,13 +45,13 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '$x^2 - 3x - 1 = 0$의 해는?',
       options: [
-        '$x = \\\\frac{3 \\\\pm \\\\sqrt{13}}{2}$',
-        '$x = \\\\frac{3 \\\\pm \\\\sqrt{5}}{2}$',
-        '$x = \\\\frac{-3 \\\\pm \\\\sqrt{13}}{2}$',
-        '$x = 3 \\\\pm \\\\sqrt{13}$',
+        '$x = \\frac{3 \\pm \\sqrt{13}}{2}$',
+        '$x = \\frac{3 \\pm \\sqrt{5}}{2}$',
+        '$x = \\frac{-3 \\pm \\sqrt{13}}{2}$',
+        '$x = 3 \\pm \\sqrt{13}$',
       ],
-      answer: '$x = \\\\frac{3 \\\\pm \\\\sqrt{13}}{2}$',
-      explanation: '근의 공식: $x = \\\\frac{3 \\\\pm \\\\sqrt{9+4}}{2} = \\\\frac{3 \\\\pm \\\\sqrt{13}}{2}$입니다.',
+      answer: '$x = \\frac{3 \\pm \\sqrt{13}}{2}$',
+      explanation: '근의 공식: $x = \\frac{3 \\pm \\sqrt{9+4}}{2} = \\frac{3 \\pm \\sqrt{13}}{2}$입니다.',
     },
     {
       id: 'g3d22-p4',
@@ -60,7 +60,7 @@ const dayContent: DayContent = {
       question: '$x^2 + mx + 9 = 0$이 중근을 가질 때, 양수 $m$의 값은?',
       options: ['$3$', '$6$', '$9$', '$18$'],
       answer: '$6$',
-      explanation: '$D = m^2 - 36 = 0$에서 $m = \\\\pm 6$. 양수이므로 $m = 6$입니다.',
+      explanation: '$D = m^2 - 36 = 0$에서 $m = \\pm 6$. 양수이므로 $m = 6$입니다.',
     },
     {
       id: 'g3d22-p5',
@@ -76,7 +76,7 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'challenge',
       question: '이차방정식 $x^2 - (a+1)x + a = 0$의 한 근이 1일 때, 다른 한 근은?',
-      options: ['$a$', '$a+1$', '$a-1$', '$\\\\frac{a}{a+1}$'],
+      options: ['$a$', '$a+1$', '$a-1$', '$\\frac{a}{a+1}$'],
       answer: '$a$',
       explanation: '$x=1$ 대입: $1 - (a+1) + a = 0$ ✓ (항등식). 인수분해하면 $(x-1)(x-a) = 0$이므로 다른 한 근은 $a$입니다.',
     },

@@ -6,10 +6,12 @@ import katex from 'katex';
 interface MathRendererProps {
   content: string;
   className?: string;
+  /** true 면 <span>으로 렌더 (인라인 사용시). 기본 false → <div>. */
+  inline?: boolean;
 }
 
-export default function MathRenderer({ content, className = '' }: MathRendererProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+export default function MathRenderer({ content, className = '', inline = false }: MathRendererProps) {
+  const containerRef = useRef<HTMLDivElement | HTMLSpanElement>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -17,9 +19,9 @@ export default function MathRenderer({ content, className = '' }: MathRendererPr
     // Replace $...$ with rendered KaTeX
     const html = content.replace(
       /\$\$(.*?)\$\$|\$(.*?)\$/g,
-      (match, display, inline) => {
+      (match, display, inlineTex) => {
         try {
-          const tex = display || inline;
+          const tex = display || inlineTex;
           const isDisplay = !!display;
           return katex.renderToString(tex, {
             displayMode: isDisplay,
@@ -33,7 +35,7 @@ export default function MathRenderer({ content, className = '' }: MathRendererPr
     );
 
     // Handle markdown-like formatting
-    let formatted = html
+    const formatted = html
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/\n/g, '<br />');
@@ -41,5 +43,18 @@ export default function MathRenderer({ content, className = '' }: MathRendererPr
     containerRef.current.innerHTML = formatted;
   }, [content]);
 
-  return <div ref={containerRef} className={`math-content ${className}`} />;
+  if (inline) {
+    return (
+      <span
+        ref={containerRef as React.RefObject<HTMLSpanElement>}
+        className={`math-content ${className}`}
+      />
+    );
+  }
+  return (
+    <div
+      ref={containerRef as React.RefObject<HTMLDivElement>}
+      className={`math-content ${className}`}
+    />
+  );
 }

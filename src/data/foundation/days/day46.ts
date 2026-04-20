@@ -67,7 +67,7 @@ const dayContent: DayContent = {
         '$y = 2x$에서 $x = 3$일 때 $y$의 값은?',
       options: ['$2$', '$3$', '$5$', '$6$'],
       answer: '$6$',
-      explanation: '$y = 2 \\\\times 3 = 6$',
+      explanation: '$y = 2 \\times 3 = 6$',
     },
     {
       id: 'fd46-p5',

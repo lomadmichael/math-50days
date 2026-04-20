@@ -12,6 +12,7 @@ import YouTubePlayer from '@/components/YouTubePlayer';
 import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
 import FloatingAITutor from '@/components/FloatingAITutor';
+import MathRenderer from '@/components/MathRenderer';
 import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
 
 const tabs = [
@@ -133,7 +134,12 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
             </Link>
             <div className="flex-1">
               <h1 className="text-base font-bold text-foreground">
-                Day {dayNumber}: {dayContent?.title || part?.title || '학습'}
+                Day {dayNumber}:{' '}
+                {dayContent?.title ? (
+                  <MathRenderer content={dayContent.title} inline />
+                ) : (
+                  part?.title || '학습'
+                )}
               </h1>
               <p className="text-xs text-muted-foreground">
                 PART {partNumber}: {part?.title}
@@ -264,9 +270,9 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
                   <h3 className="text-sm font-semibold text-foreground mb-2 flex items-center gap-2">
                     🌍 실생활 연결
                   </h3>
-                  <p className="text-sm text-foreground/80 leading-relaxed">
-                    {dayContent.realLifeExample}
-                  </p>
+                  <div className="text-sm text-foreground/80 leading-relaxed">
+                    <MathRenderer content={dayContent.realLifeExample} />
+                  </div>
                 </div>
               )}
 

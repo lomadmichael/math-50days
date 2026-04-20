@@ -11,7 +11,7 @@ const dayContent: DayContent = {
       id: 'f9d41-c1',
       title: '평균(산술평균)',
       content:
-        '평균 = $\\\\frac{모든 값의 합}{값의 개수}$\\n\\n예) 시험 점수 80, 90, 70, 100의 평균\\n$\\\\frac{80 + 90 + 70 + 100}{4} = \\\\frac{340}{4} = 85$점',
+        '평균 = $\\frac{모든 값의 합}{값의 개수}$\\n\\n예) 시험 점수 80, 90, 70, 100의 평균\\n$\\frac{80 + 90 + 70 + 100}{4} = \\frac{340}{4} = 85$점',
       type: 'formula',
     },
     {
@@ -37,7 +37,7 @@ const dayContent: DayContent = {
       question: '4, 6, 8, 10, 12의 평균은?',
       answer: '8',
       explanation:
-        '$\\\\frac{4 + 6 + 8 + 10 + 12}{5} = \\\\frac{40}{5} = 8$',
+        '$\\frac{4 + 6 + 8 + 10 + 12}{5} = \\frac{40}{5} = 8$',
     },
     {
       id: 'fd41-p2',
@@ -57,7 +57,7 @@ const dayContent: DayContent = {
         '5번의 시험에서 평균이 82점이 되려면 총 몇 점이어야 하나요?',
       answer: '410',
       explanation:
-        '평균 $\\\\times$ 개수 = 합계이므로 $82 \\\\times 5 = 410$점',
+        '평균 $\\times$ 개수 = 합계이므로 $82 \\times 5 = 410$점',
     },
     {
       id: 'fd41-p4',
@@ -77,7 +77,7 @@ const dayContent: DayContent = {
         '4번의 시험 평균이 85점입니다. 5번째 시험에서 몇 점을 받아야 전체 평균이 88점이 되나요?',
       answer: '100',
       explanation:
-        '4번 합계 = $85 \\\\times 4 = 340$점, 5번 합계 목표 = $88 \\\\times 5 = 440$점, 5번째 점수 = $440 - 340 = 100$점',
+        '4번 합계 = $85 \\times 4 = 340$점, 5번 합계 목표 = $88 \\times 5 = 440$점, 5번째 점수 = $440 - 340 = 100$점',
     },
   ],
   realLifeExample:

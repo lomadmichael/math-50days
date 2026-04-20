@@ -11,14 +11,14 @@ const dayContent: DayContent = {
       id: 'f7d32-c1',
       title: '길이 단위 환산',
       content:
-        '1km = 1000m\\n1m = 100cm\\n1cm = 10mm\\n\\n큰 단위 → 작은 단위: $\\\\times$\\n작은 단위 → 큰 단위: $\\\\div$',
+        '1km = 1000m\\n1m = 100cm\\n1cm = 10mm\\n\\n큰 단위 → 작은 단위: $\\times$\\n작은 단위 → 큰 단위: $\\div$',
       type: 'formula',
     },
     {
       id: 'f7d32-c2',
       title: '넓이 단위 환산',
       content:
-        '넓이는 길이를 두 번 곱하므로 환산 배수가 제곱됩니다.\\n$1m^2 = 10000cm^2$ ($100 \\\\times 100$)\\n$1km^2 = 1000000m^2$ ($1000 \\\\times 1000$)\\n$1ha = 10000m^2$, $1a = 100m^2$',
+        '넓이는 길이를 두 번 곱하므로 환산 배수가 제곱됩니다.\\n$1m^2 = 10000cm^2$ ($100 \\times 100$)\\n$1km^2 = 1000000m^2$ ($1000 \\times 1000$)\\n$1ha = 10000m^2$, $1a = 100m^2$',
       type: 'formula',
     },
     {
@@ -44,7 +44,7 @@ const dayContent: DayContent = {
       question: '3.5m는 몇 cm인가요?',
       options: ['35cm', '350cm', '3500cm', '0.35cm'],
       answer: '350cm',
-      explanation: '$1m = 100cm$이므로 $3.5 \\\\times 100 = 350cm$',
+      explanation: '$1m = 100cm$이므로 $3.5 \\times 100 = 350cm$',
     },
     {
       id: 'fd32-p2',
@@ -53,7 +53,7 @@ const dayContent: DayContent = {
       question: '$2m^2$는 몇 $cm^2$인가요?',
       answer: '20000',
       explanation:
-        '$1m^2 = 10000cm^2$이므로 $2 \\\\times 10000 = 20000cm^2$',
+        '$1m^2 = 10000cm^2$이므로 $2 \\times 10000 = 20000cm^2$',
     },
     {
       id: 'fd32-p3',
@@ -62,7 +62,7 @@ const dayContent: DayContent = {
       question: '5000mL는 몇 L인가요?',
       options: ['0.5L', '5L', '50L', '500L'],
       answer: '5L',
-      explanation: '$1L = 1000mL$이므로 $5000 \\\\div 1000 = 5L$',
+      explanation: '$1L = 1000mL$이므로 $5000 \\div 1000 = 5L$',
     },
     {
       id: 'fd32-p4',
@@ -71,7 +71,7 @@ const dayContent: DayContent = {
       question: '$0.5m^3$는 몇 L인가요?',
       answer: '500',
       explanation:
-        '$1m^3 = 1000L$이므로 $0.5 \\\\times 1000 = 500L$',
+        '$1m^3 = 1000L$이므로 $0.5 \\times 1000 = 500L$',
     },
     {
       id: 'fd32-p5',
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       options: ['$400cm^2$', '$4000cm^2$', '$40000cm^2$', '$400000cm^2$'],
       answer: '$40000cm^2$',
       explanation:
-        '넓이 = $2 \\\\times 2 = 4m^2$, $4 \\\\times 10000 = 40000cm^2$',
+        '넓이 = $2 \\times 2 = 4m^2$, $4 \\times 10000 = 40000cm^2$',
     },
   ],
   realLifeExample:

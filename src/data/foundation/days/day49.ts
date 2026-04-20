@@ -25,7 +25,7 @@ const dayContent: DayContent = {
       options: ['40%', '45%', '80%', '125%'],
       answer: '80%',
       explanation:
-        '$\\\\frac{4}{5} \\\\times 100 = 80$%',
+        '$\\frac{4}{5} \\times 100 = 80$%',
     },
     {
       id: 'fd49-p2',
@@ -35,7 +35,7 @@ const dayContent: DayContent = {
         '밑변 14cm, 높이 6cm인 삼각형의 넓이는 몇 $cm^2$인가요? (PART 6)',
       answer: '42',
       explanation:
-        '$\\\\frac{14 \\\\times 6}{2} = 42cm^2$',
+        '$\\frac{14 \\times 6}{2} = 42cm^2$',
     },
     {
       id: 'fd49-p3',
@@ -44,7 +44,7 @@ const dayContent: DayContent = {
       question: '$4.5L$는 몇 $cm^3$인가요? (PART 7)',
       options: ['$45$', '$450$', '$4500$', '$45000$'],
       answer: '$4500$',
-      explanation: '$1L = 1000cm^3$이므로 $4.5 \\\\times 1000 = 4500cm^3$',
+      explanation: '$1L = 1000cm^3$이므로 $4.5 \\times 1000 = 4500cm^3$',
     },
     {
       id: 'fd49-p4',
@@ -63,7 +63,7 @@ const dayContent: DayContent = {
       options: ['70', '75', '80', '85'],
       answer: '80',
       explanation:
-        '$\\\\frac{60+70+80+90+100}{5} = \\\\frac{400}{5} = 80$',
+        '$\\frac{60+70+80+90+100}{5} = \\frac{400}{5} = 80$',
     },
     {
       id: 'fd49-p6',
@@ -84,7 +84,7 @@ const dayContent: DayContent = {
       options: ['$94cm^2$', '$120cm^2$', '$148cm^2$', '$240cm^2$'],
       answer: '$148cm^2$',
       explanation:
-        '$2(6 \\\\times 4 + 4 \\\\times 5 + 6 \\\\times 5) = 2(24 + 20 + 30) = 2 \\\\times 74 = 148cm^2$',
+        '$2(6 \\times 4 + 4 \\times 5 + 6 \\times 5) = 2(24 + 20 + 30) = 2 \\times 74 = 148cm^2$',
     },
     {
       id: 'fd49-p8',
@@ -94,7 +94,7 @@ const dayContent: DayContent = {
         '주사위를 던져 3 이하가 나올 확률을 기약분수로 나타내세요. (PART 9) (예: 1/2)',
       answer: '1/2',
       explanation:
-        '3 이하: 1, 2, 3 → 3가지, 확률 = $\\\\frac{3}{6} = \\\\frac{1}{2}$',
+        '3 이하: 1, 2, 3 → 3가지, 확률 = $\\frac{3}{6} = \\frac{1}{2}$',
     },
   ],
   realLifeExample:

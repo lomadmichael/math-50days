@@ -16,13 +16,13 @@ const dayContent: DayContent = {
     {
       id: 'g2d23-c2',
       title: '함숫값',
-      content: '함수 $f(x)$에서 $x = a$일 때의 $y$ 값을 **함숫값** $f(a)$라 합니다.\n\n$f(x) = 3x - 1$일 때:\n- $f(2) = 3 \\\\times 2 - 1 = 5$\n- $f(-1) = 3 \\\\times (-1) - 1 = -4$\n- $f(0) = 3 \\\\times 0 - 1 = -1$',
+      content: '함수 $f(x)$에서 $x = a$일 때의 $y$ 값을 **함숫값** $f(a)$라 합니다.\n\n$f(x) = 3x - 1$일 때:\n- $f(2) = 3 \\times 2 - 1 = 5$\n- $f(-1) = 3 \\times (-1) - 1 = -4$\n- $f(0) = 3 \\times 0 - 1 = -1$',
       type: 'definition',
     },
     {
       id: 'g2d23-c3',
       title: '일차함수란?',
-      content: '$y = ax + b$ ($a \\\\neq 0$) 꼴로 나타낼 수 있는 함수를 **일차함수**라 합니다.\n\n일차함수: $y = 2x + 3$, $y = -x$, $y = \\\\frac{1}{2}x - 4$\n\n일차함수가 아닌 것:\n- $y = 3$ (상수함수, $a = 0$)\n- $y = x^2 + 1$ ($x$의 2차)\n- $y = \\\\frac{1}{x}$ ($x$가 분모)',
+      content: '$y = ax + b$ ($a \\neq 0$) 꼴로 나타낼 수 있는 함수를 **일차함수**라 합니다.\n\n일차함수: $y = 2x + 3$, $y = -x$, $y = \\frac{1}{2}x - 4$\n\n일차함수가 아닌 것:\n- $y = 3$ (상수함수, $a = 0$)\n- $y = x^2 + 1$ ($x$의 2차)\n- $y = \\frac{1}{x}$ ($x$가 분모)',
       type: 'definition',
     },
     {
@@ -55,9 +55,9 @@ const dayContent: DayContent = {
       type: 'multiple-choice',
       difficulty: 'basic',
       question: '다음 중 일차함수인 것은?',
-      options: ['$y = x^2 + 1$', '$y = \\\\frac{3}{x}$', '$y = 7$', '$y = -4x + 3$'],
+      options: ['$y = x^2 + 1$', '$y = \\frac{3}{x}$', '$y = 7$', '$y = -4x + 3$'],
       answer: '$y = -4x + 3$',
-      explanation: '일차함수는 $y = ax + b$ ($a \\\\neq 0$) 꼴이어야 합니다.\n$y = -4x + 3$에서 $a = -4 \\\\neq 0$이므로 일차함수입니다.',
+      explanation: '일차함수는 $y = ax + b$ ($a \\neq 0$) 꼴이어야 합니다.\n$y = -4x + 3$에서 $a = -4 \\neq 0$이므로 일차함수입니다.',
     },
     {
       id: 'g2d23-p4',

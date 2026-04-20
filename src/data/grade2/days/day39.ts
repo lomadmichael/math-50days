@@ -16,7 +16,7 @@ const dayContent: DayContent = {
     {
       id: 'g2d39-c2',
       title: '피타고라스 정리의 증명 (넓이 이용)',
-      content: '한 변의 길이가 $(a + b)$인 정사각형 안에 빗변 $c$인 직각삼각형 4개를 배치하면:\\n\\n큰 정사각형 넓이 $= (a+b)^2$\\n안쪽 정사각형 넓이 + 삼각형 4개 넓이\\n$= c^2 + 4 \\\\times \\\\frac{1}{2}ab$\\n\\n$(a+b)^2 = c^2 + 2ab$\\n$a^2 + 2ab + b^2 = c^2 + 2ab$\\n$$a^2 + b^2 = c^2$$',
+      content: '한 변의 길이가 $(a + b)$인 정사각형 안에 빗변 $c$인 직각삼각형 4개를 배치하면:\\n\\n큰 정사각형 넓이 $= (a+b)^2$\\n안쪽 정사각형 넓이 + 삼각형 4개 넓이\\n$= c^2 + 4 \\times \\frac{1}{2}ab$\\n\\n$(a+b)^2 = c^2 + 2ab$\\n$a^2 + 2ab + b^2 = c^2 + 2ab$\\n$$a^2 + b^2 = c^2$$',
       type: 'example',
     },
     {
@@ -39,7 +39,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '직각삼각형에서 두 변의 길이가 $3$cm, $4$cm일 때, 빗변의 길이를 구하시오.',
       answer: '5',
-      explanation: '$c^2 = 3^2 + 4^2 = 9 + 16 = 25$\\n$c = \\\\sqrt{25} = 5$(cm)',
+      explanation: '$c^2 = 3^2 + 4^2 = 9 + 16 = 25$\\n$c = \\sqrt{25} = 5$(cm)',
     },
     {
       id: 'g2d39-p2',
@@ -47,7 +47,7 @@ const dayContent: DayContent = {
       difficulty: 'basic',
       question: '직각삼각형에서 빗변이 $13$cm, 한 변이 $5$cm일 때, 나머지 한 변의 길이를 구하시오.',
       answer: '12',
-      explanation: '$b^2 = 13^2 - 5^2 = 169 - 25 = 144$\\n$b = \\\\sqrt{144} = 12$(cm)',
+      explanation: '$b^2 = 13^2 - 5^2 = 169 - 25 = 144$\\n$b = \\sqrt{144} = 12$(cm)',
     },
     {
       id: 'g2d39-p3',
@@ -64,7 +64,7 @@ const dayContent: DayContent = {
       difficulty: 'applied',
       question: '직각삼각형에서 두 변의 길이가 $6$cm, $8$cm이다. 이 삼각형의 넓이를 구하시오. (단, 두 변이 직각을 끼는 변이다)',
       answer: '24',
-      explanation: '두 변이 직각을 끼는 변이므로:\\n넓이 $= \\\\frac{1}{2} \\\\times 6 \\\\times 8 = 24$(cm$^2$)',
+      explanation: '두 변이 직각을 끼는 변이므로:\\n넓이 $= \\frac{1}{2} \\times 6 \\times 8 = 24$(cm$^2$)',
     },
     {
       id: 'g2d39-p5',
@@ -73,7 +73,7 @@ const dayContent: DayContent = {
       question: '다음 중 직각삼각형의 세 변이 될 수 없는 것은?',
       options: ['$9, 12, 15$', '$5, 12, 13$', '$8, 15, 17$', '$7, 12, 15$'],
       answer: '$7, 12, 15$',
-      explanation: '$7^2 + 12^2 = 49 + 144 = 193$\\n$15^2 = 225$\\n$193 \\\\neq 225$이므로 직각삼각형이 아닙니다.\\n\\n나머지는 모두 $a^2 + b^2 = c^2$ 성립!',
+      explanation: '$7^2 + 12^2 = 49 + 144 = 193$\\n$15^2 = 225$\\n$193 \\neq 225$이므로 직각삼각형이 아닙니다.\\n\\n나머지는 모두 $a^2 + b^2 = c^2$ 성립!',
     },
   ],
   realLifeExample: '목수가 벽과 바닥이 직각인지 확인할 때 3-4-5 법칙을 써요! 한 변을 3m, 다른 변을 4m로 재고 대각선이 정확히 5m면 직각! 건설 현장에서 2000년 넘게 사용되어 온 피타고라스 정리의 실전 응용이랍니다.',

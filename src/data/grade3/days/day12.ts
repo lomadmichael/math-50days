@@ -10,7 +10,7 @@ const dayContent: DayContent = {
     {
       id: 'g3d12-c1',
       title: '$x^2 + (a+b)x + ab$ 인수분해',
-      content: '$x^2 + (a+b)x + ab = (x+a)(x+b)$\\n\\n합이 $x$의 계수, 곱이 상수항인 두 수를 찾으면 됩니다.\\n\\n예: $x^2 + 7x + 12$에서 합이 7, 곱이 12인 두 수 → 3, 4\\n$\\\\therefore x^2 + 7x + 12 = (x+3)(x+4)$',
+      content: '$x^2 + (a+b)x + ab = (x+a)(x+b)$\\n\\n합이 $x$의 계수, 곱이 상수항인 두 수를 찾으면 됩니다.\\n\\n예: $x^2 + 7x + 12$에서 합이 7, 곱이 12인 두 수 → 3, 4\\n$\\therefore x^2 + 7x + 12 = (x+3)(x+4)$',
       type: 'formula',
     },
     {

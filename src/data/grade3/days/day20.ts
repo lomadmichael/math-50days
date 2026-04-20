@@ -67,7 +67,7 @@ const dayContent: DayContent = {
       id: 'g3d20-p5',
       type: 'multiple-choice',
       difficulty: 'challenge',
-      question: '1부터 $n$까지 자연수의 합이 $\\\\frac{n(n+1)}{2} = 78$일 때, $n$의 값은?',
+      question: '1부터 $n$까지 자연수의 합이 $\\frac{n(n+1)}{2} = 78$일 때, $n$의 값은?',
       options: ['$10$', '$11$', '$12$', '$13$'],
       answer: '$12$',
       explanation: '$n(n+1) = 156$, $n^2 + n - 156 = 0$, $(n+13)(n-12) = 0$에서 $n = 12$ (자연수)입니다.',
@@ -82,7 +82,7 @@ const dayContent: DayContent = {
       explanation: '$2n(2n+2) = 168$, $4n^2 + 4n - 168 = 0$, $n^2 + n - 42 = 0$, $(n+7)(n-6) = 0$에서 $n=6$. 두 수는 12, 14이고 큰 수는 14입니다.',
     },
   ],
-  realLifeExample: '학교 운동장에 학생들이 모여 악수를 합니다. 모든 사람이 다른 모든 사람과 한 번씩 악수하여 총 45번의 악수가 이루어졌다면, $\\\\frac{n(n-1)}{2} = 45$에서 $n^2 - n - 90 = 0$, $(n-10)(n+9) = 0$으로 학생 수는 10명입니다.',
+  realLifeExample: '학교 운동장에 학생들이 모여 악수를 합니다. 모든 사람이 다른 모든 사람과 한 번씩 악수하여 총 45번의 악수가 이루어졌다면, $\\frac{n(n-1)}{2} = 45$에서 $n^2 - n - 90 = 0$, $(n-10)(n+9) = 0$으로 학생 수는 10명입니다.',
 };
 
 export default dayContent;

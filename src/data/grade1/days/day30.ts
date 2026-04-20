@@ -3,25 +3,25 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 30,
   part: 5,
-  title: '삼각형의 작도',
-  subtitle: '컴퍼스와 자만으로 삼각형을 그릴 수 있을까? 작도의 원리를 배워보자!',
+  title: '삼각형(Triangle)의 작도(Construction)',
+  subtitle: '컴퍼스(Compass)와 자(Ruler)만으로 삼각형(Triangle)을 그릴 수 있을까? 작도(Construction)의 원리를 배워보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d30-c1',
-      title: '작도의 기본',
-      content: '**작도**: 눈금 없는 자와 컴퍼스만을 사용하여 도형을 그리는 것\n• **자**: 두 점을 잇는 직선(선분)을 긋는 데 사용\n• **컴퍼스**: 원(호)을 그리거나 길이를 옮기는 데 사용\n\n기본 작도:\n• 주어진 선분의 길이 옮기기\n• 주어진 각의 크기 옮기기\n• 선분의 수직이등분선 작도\n• 각의 이등분선 작도',
+      title: '작도(Construction)의 기본',
+      content: '**작도(Construction)**: 눈금 없는 자(Ruler)와 컴퍼스(Compass)만을 사용하여 도형을 그리는 것\n• **자(Ruler)**: 두 점을 잇는 직선(선분(Line Segment))을 긋는 데 사용\n• **컴퍼스(Compass)**: 원(호)을 그리거나 길이를 옮기는 데 사용\n\n기본 작도(Construction):\n• 주어진 선분(Line Segment)의 길이 옮기기\n• 주어진 각(Angle)의 크기 옮기기\n• 선분(Line Segment)의 수직이등분선 작도\n• 각(Angle)의 이등분선 작도',
       type: 'definition',
     },
     {
       id: 'g1d30-c2',
-      title: '삼각형의 작도 조건',
-      content: '삼각형을 하나로 결정하려면 다음 중 하나를 알아야 합니다:\n• **SSS** (세 변): 세 변의 길이가 주어질 때\n• **SAS** (두 변과 끼인각): 두 변의 길이와 그 사이의 각\n• **ASA** (한 변과 양 끝각): 한 변의 길이와 양 끝 두 각\n\n⚠️ 삼각형이 만들어지지 않는 경우:\n세 변의 길이 $a, b, c$에서 가장 긴 변이 나머지 두 변의 합보다 크거나 같으면 삼각형 불가!',
+      title: '삼각형(Triangle)의 작도(Construction) 조건',
+      content: '삼각형(Triangle)을 하나로 결정하려면 다음 중 하나를 알아야 합니다:\n• **SSS(Side-Side-Side)** (세 변(Side)): 세 변의 길이가 주어질 때\n• **SAS(Side-Angle-Side)** (두 변(Side)과 끼인각(Angle)): 두 변의 길이와 그 사이의 각\n• **ASA(Angle-Side-Angle)** (한 변(Side)과 양 끝각(Angle)): 한 변의 길이와 양 끝 두 각\n\n⚠️ 삼각형(Triangle)이 만들어지지 않는 경우:\n세 변의 길이 $a, b, c$에서 가장 긴 변이 나머지 두 변의 합보다 크거나 같으면 삼각형 불가!',
       type: 'formula',
     },
     {
       id: 'g1d30-c3',
-      title: '삼각형의 결정 조건 (세 변의 관계)',
+      title: '삼각형(Triangle)의 결정 조건 (세 변(Side)의 관계)',
       content: '삼각형의 세 변 $a, b, c$에 대해:\n• $a + b > c$\n• $b + c > a$\n• $c + a > b$\n\n**가장 긴 변 < 나머지 두 변의 합**이면 삼각형이 만들어집니다!\n\n예) 3, 4, 8 → $3 + 4 = 7 < 8$ → 삼각형 불가 ✗\n예) 3, 4, 5 → $3 + 4 = 7 > 5$ → 삼각형 가능 ✓',
       type: 'formula',
     },
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       explanation: '세 변의 길이를 $a, b, c$라 하면 ($a$가 가장 긴 변):\n$a + b + c = 20$이고, $a < b + c$\n\n$b + c = 20 - a$이므로:\n$a < 20 - a$\n$2a < 20$\n$a < 10$\n\n자연수 중 최댓값: $a = 9$\n\n검산: $a = 9$이면 $b + c = 11$이고, $9 < 11$ ✓',
     },
   ],
-  realLifeExample: '고대 그리스인들은 컴퍼스와 자만으로 정삼각형, 정오각형 등을 작도했습니다. 현대에도 건축 설계, 기계 부품 제작, 로고 디자인 등에서 정확한 삼각형 작도의 원리가 활용됩니다!',
+  realLifeExample: '고대 그리스인들은 컴퍼스(Compass)와 자(Ruler)만으로 정삼각형(Triangle), 정오각형 등을 작도(Construction)했습니다. 현대에도 건축 설계, 기계 부품 제작, 로고 디자인 등에서 정확한 삼각형(Triangle) 작도(Construction)의 원리가 활용됩니다!',
 };
 
 export default dayContent;

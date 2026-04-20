@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 35,
   part: 6,
-  title: '원과 부채꼴',
-  subtitle: '원의 구성 요소와 부채꼴의 개념을 알아보자!',
+  title: '원(Circle)과 부채꼴(Sector)',
+  subtitle: '원(Circle)의 구성 요소와 부채꼴(Sector)의 개념을 알아보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d35-c1',
-      title: '원의 구성 요소',
-      content: '• **원**: 한 점(중심)에서 같은 거리에 있는 점들의 집합\n• **중심(O)**: 원의 가운데 점\n• **반지름(r)**: 중심에서 원 위의 한 점까지의 거리 (모두 같음)\n• **지름(d)**: 원 위의 두 점을 중심을 지나도록 이은 선분 → $d = 2r$\n• **현**: 원 위의 두 점을 이은 선분 (지름은 가장 긴 현)\n• **호**: 원 위의 두 점 사이의 원의 일부분',
+      title: '원(Circle)의 구성 요소',
+      content: '• **원(Circle)**: 한 점(중심(Center))에서 같은 거리에 있는 점들의 집합\n• **중심(Center)(O)**: 원(Circle)의 가운데 점\n• **반지름(Radius)(r)**: 중심(Center)에서 원(Circle) 위의 한 점까지의 거리 (모두 같음)\n• **지름(Diameter)(d)**: 원(Circle) 위의 두 점을 중심(Center)을 지나도록 이은 선분 → $d = 2r$\n• **현(Chord)**: 원(Circle) 위의 두 점을 이은 선분 (지름(Diameter)은 가장 긴 현(Chord))\n• **호(Arc)**: 원(Circle) 위의 두 점 사이의 원의 일부분',
       type: 'definition',
     },
     {
       id: 'g1d35-c2',
-      title: '부채꼴',
-      content: '• **부채꼴**: 두 반지름과 호로 이루어진 도형\n• **중심각**: 부채꼴에서 두 반지름이 이루는 각\n• 중심각이 클수록 호의 길이와 부채꼴의 넓이가 커짐\n• 중심각이 $360°$이면 부채꼴 = 원 전체\n• 중심각이 $180°$이면 부채꼴 = 반원',
+      title: '부채꼴(Sector)',
+      content: '• **부채꼴(Sector)**: 두 반지름(Radius)과 호(Arc)로 이루어진 도형\n• **중심각(Central Angle)**: 부채꼴(Sector)에서 두 반지름(Radius)이 이루는 각\n• 중심각(Central Angle)이 클수록 호(Arc)의 길이와 부채꼴(Sector)의 넓이(Area)가 커짐\n• 중심각(Central Angle)이 $360°$이면 부채꼴(Sector) = 원(Circle) 전체\n• 중심각(Central Angle)이 $180°$이면 부채꼴(Sector) = 반원',
       type: 'definition',
     },
     {
       id: 'g1d35-c3',
-      title: '원과 부채꼴의 성질',
-      content: '• 한 원에서 반지름의 길이는 모두 같다\n• 한 원에서 지름의 길이는 모두 같다\n• **지름은 가장 긴 현**이다\n• 한 호에 대한 중심각의 크기는 하나로 정해진다\n• 중심각의 크기가 같으면 호의 길이도 같다\n• **호의 길이와 부채꼴의 넓이는 중심각의 크기에 정비례**한다',
+      title: '원(Circle)과 부채꼴(Sector)의 성질',
+      content: '• 한 원(Circle)에서 반지름(Radius)의 길이는 모두 같다\n• 한 원(Circle)에서 지름(Diameter)의 길이는 모두 같다\n• **지름(Diameter)은 가장 긴 현(Chord)** 이다\n• 한 호(Arc)에 대한 중심각(Central Angle)의 크기는 하나로 정해진다\n• 중심각(Central Angle)의 크기가 같으면 호(Arc)의 길이도 같다\n• **호(Arc)의 길이(Arc Length)와 부채꼴(Sector)의 넓이(Area)는 중심각(Central Angle)의 크기에 정비례**한다',
       type: 'definition',
     },
   ],
@@ -76,7 +76,7 @@ const dayContent: DayContent = {
       explanation: '반지름 $r = 10\\text{cm}$, 중심에서 현까지의 거리 $d = 6\\text{cm}$\n\n중심에서 현에 수선을 내리면 현을 이등분하므로:\n\n현의 반 = $\\sqrt{r^2 - d^2} = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\text{cm}$\n\n현의 길이 = $2 \\times 8 = 16\\text{cm}$',
     },
   ],
-  realLifeExample: '피자를 자를 때 만들어지는 조각이 바로 부채꼴입니다! 8등분하면 중심각이 45°인 부채꼴, 6등분하면 60°인 부채꼴이 됩니다. 시계의 분침이 움직이는 영역도 부채꼴이에요!',
+  realLifeExample: '피자를 자를 때 만들어지는 조각이 바로 부채꼴(Sector)입니다! 8등분하면 중심각(Central Angle)이 45°인 부채꼴(Sector), 6등분하면 60°인 부채꼴(Sector)이 됩니다. 시계의 분침이 움직이는 영역도 부채꼴(Sector)이에요!',
 };
 
 export default dayContent;

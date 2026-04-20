@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 41,
   part: 7,
-  title: '뿔의 겉넓이와 부피',
-  subtitle: '각뿔과 원뿔의 겉넓이와 부피를 구해 보자!',
+  title: '뿔의 겉넓이(Surface Area)와 부피(Volume)',
+  subtitle: '각뿔(Pyramid)과 원뿔(Cone)의 겉넓이(Surface Area)와 부피(Volume)를 구해 보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d41-c1',
-      title: '각뿔의 겉넓이와 부피',
-      content: '**각뿔의 겉넓이**\n$\\text{(겉넓이)} = \\text{(밑넓이)} + \\text{(옆넓이)}$\n\n• 옆면은 삼각형 → 각 옆면의 넓이를 더함\n\n**각뿔의 부피**\n$V = \\frac{1}{3} \\times \\text{(밑넓이)} \\times \\text{(높이)}$\n\n🔑 **핵심 포인트**: 뿔의 부피는 같은 밑면, 같은 높이의 **기둥 부피의 $\\frac{1}{3}$**',
+      title: '각뿔(Pyramid)의 겉넓이(Surface Area)와 부피(Volume)',
+      content: '**각뿔(Pyramid)의 겉넓이(Surface Area)**\n$\\text{(겉넓이)} = \\text{(밑넓이)} + \\text{(옆넓이)}$\n\n• 옆면(Lateral Face)은 삼각형 → 각 옆면(Lateral Face)의 넓이를 더함\n\n**각뿔(Pyramid)의 부피(Volume)**\n$V = \\frac{1}{3} \\times \\text{(밑넓이)} \\times \\text{(높이)}$\n\n🔑 **핵심 포인트**: 뿔의 부피(Volume)는 같은 밑면(Base), 같은 높이의 **기둥 부피(Volume)의 $\\frac{1}{3}$**',
       type: 'formula',
     },
     {
       id: 'g1d41-c2',
-      title: '원뿔의 겉넓이와 부피',
-      content: '밑면의 반지름 $r$, 모선의 길이 $l$, 높이 $h$인 **원뿔**\n\n**겉넓이**\n$\\text{(겉넓이)} = \\pi r^2 + \\pi rl = \\pi r(r + l)$\n\n• 밑넓이 = $\\pi r^2$\n• 옆넓이 = $\\pi rl$ (부채꼴)\n\n**부피**\n$V = \\frac{1}{3} \\pi r^2 h$\n\n• **모선의 길이**: 꼭짓점에서 밑면 둘레까지의 거리\n• 피타고라스: $l^2 = r^2 + h^2$',
+      title: '원뿔(Cone)의 겉넓이(Surface Area)와 부피(Volume)',
+      content: '밑면(Base)의 반지름 $r$, 모선의 길이 $l$, 높이 $h$인 **원뿔(Cone)**\n\n**겉넓이(Surface Area)**\n$\\text{(겉넓이)} = \\pi r^2 + \\pi rl = \\pi r(r + l)$\n\n• 밑넓이 = $\\pi r^2$\n• 옆넓이(Lateral Face Area) = $\\pi rl$ (부채꼴)\n\n**부피(Volume)**\n$V = \\frac{1}{3} \\pi r^2 h$\n\n• **모선의 길이**: 꼭짓점(Vertex)에서 밑면(Base) 둘레까지의 거리\n• 피타고라스: $l^2 = r^2 + h^2$',
       type: 'formula',
     },
   ],

@@ -3,8 +3,8 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 1,
   part: 1,
-  title: '약수와 배수 복습',
-  subtitle: '초등에서 배운 약수와 배수를 다시 한번 정리하고, 소인수분해로 가는 첫걸음!',
+  title: '약수(Divisor)와 배수(Multiple) 복습',
+  subtitle: '초등에서 배운 약수(Divisor)와 배수(Multiple)를 다시 한번 정리하고, 소인수분해(Prime Factorization)로 가는 첫걸음!',
   lectures: [
     {
       lectureNumber: 1,
@@ -16,26 +16,26 @@ const dayContent: DayContent = {
   concepts: [
     {
       id: 'g1d1-c1',
-      title: '약수란?',
-      content: '어떤 수를 나누어 떨어지게 하는 수를 **약수**라고 합니다.\n\n예: 12의 약수 → 1, 2, 3, 4, 6, 12\n\n$12 \\div 1 = 12$, $12 \\div 2 = 6$, $12 \\div 3 = 4$\n$12 \\div 4 = 3$, $12 \\div 6 = 2$, $12 \\div 12 = 1$\n\n약수는 항상 **짝**으로 나옵니다!',
+      title: '약수(Divisor)란?',
+      content: '어떤 수를 나누어 떨어지게 하는 수를 **약수(Divisor / Factor)**라고 합니다.\n\n예: 12의 약수(Divisor) → 1, 2, 3, 4, 6, 12\n\n$12 \\div 1 = 12$, $12 \\div 2 = 6$, $12 \\div 3 = 4$\n$12 \\div 4 = 3$, $12 \\div 6 = 2$, $12 \\div 12 = 1$\n\n약수는 항상 **짝**으로 나옵니다!',
       type: 'definition',
     },
     {
       id: 'g1d1-c2',
-      title: '배수란?',
-      content: '어떤 수에 1, 2, 3, 4, ... 를 곱한 수를 **배수**라고 합니다.\n\n예: 3의 배수 → 3, 6, 9, 12, 15, 18, ...\n\n$3 \\times 1 = 3$, $3 \\times 2 = 6$, $3 \\times 3 = 9$, ...\n\n배수는 **무한히** 많습니다!',
+      title: '배수(Multiple)란?',
+      content: '어떤 수에 1, 2, 3, 4, ... 를 곱한 수를 **배수(Multiple)**라고 합니다.\n\n예: 3의 배수(Multiple) → 3, 6, 9, 12, 15, 18, ...\n\n$3 \\times 1 = 3$, $3 \\times 2 = 6$, $3 \\times 3 = 9$, ...\n\n배수는 **무한히** 많습니다!',
       type: 'definition',
     },
     {
       id: 'g1d1-c3',
-      title: '약수 빠르게 찾기',
-      content: '약수를 찾을 때는 작은 수부터 나누어보면서 **짝**으로 찾으세요.\n\n예: 24의 약수 찾기\n$1 \\times 24$, $2 \\times 12$, $3 \\times 8$, $4 \\times 6$\n\n→ 약수: 1, 2, 3, 4, 6, 8, 12, 24 (총 8개)',
+      title: '약수(Divisor) 빠르게 찾기',
+      content: '약수를 찾을 때는 작은 수부터 나누어보면서 **짝**으로 찾으세요.\n\n예: 24의 약수(Divisor) 찾기\n$1 \\times 24$, $2 \\times 12$, $3 \\times 8$, $4 \\times 6$\n\n→ 약수: 1, 2, 3, 4, 6, 8, 12, 24 (총 8개)',
       type: 'tip',
     },
     {
       id: 'g1d1-c4',
-      title: '약수와 배수의 관계',
-      content: '$12 = 3 \\times 4$일 때,\n\n- 3은 12의 **약수**, 12는 3의 **배수**\n- 4는 12의 **약수**, 12는 4의 **배수**\n\n약수와 배수는 동전의 앞뒷면 같은 관계!',
+      title: '약수(Divisor)와 배수(Multiple)의 관계',
+      content: '$12 = 3 \\times 4$일 때,\n\n- 3은 12의 **약수(Divisor)**, 12는 3의 **배수(Multiple)**\n- 4는 12의 **약수**, 12는 4의 **배수**\n\n약수와 배수는 동전의 앞뒷면 같은 관계!',
       type: 'formula',
     },
   ],
@@ -104,7 +104,7 @@ const dayContent: DayContent = {
       relatedConcept: 'g1d1-c3',
     },
   ],
-  realLifeExample: '마트에서 과자 18개를 친구들에게 똑같이 나눠줄 때, 몇 명에게 나눠줄 수 있을까요? 18의 약수만큼의 인원에게 나눠줄 수 있습니다! (1명, 2명, 3명, 6명, 9명, 18명)',
+  realLifeExample: '마트에서 과자 18개를 친구들에게 똑같이 나눠줄 때, 몇 명에게 나눠줄 수 있을까요? 18의 약수(Divisor)만큼의 인원에게 나눠줄 수 있습니다! (1명, 2명, 3명, 6명, 9명, 18명)',
 };
 
 export default dayContent;

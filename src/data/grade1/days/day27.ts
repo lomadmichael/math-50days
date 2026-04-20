@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 27,
   part: 5,
-  title: '점, 선, 면, 각',
-  subtitle: '도형의 가장 기본이 되는 요소들! 점, 선, 면, 그리고 각의 세계로 들어가 보자.',
+  title: '점(Point), 선(Line), 면(Plane), 각(Angle)',
+  subtitle: '도형의 가장 기본이 되는 요소들! 점(Point), 선(Line), 면(Plane), 그리고 각(Angle)의 세계로 들어가 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d27-c1',
-      title: '점, 선, 면의 정의',
-      content: '• **점**: 위치만 있고 크기가 없는 것 (점 A)\n• **선**: 점이 움직인 자취, 곧은 정도에 따라 직선·반직선·선분으로 구분\n• **직선**: 양쪽으로 끝없이 뻗은 곧은 선 → $\\overleftrightarrow{AB}$\n• **반직선**: 한 점에서 시작하여 한쪽으로 끝없이 뻗은 선 → $\\overrightarrow{AB}$\n• **선분**: 두 점을 잇는 가장 짧은 직선 부분 → $\\overline{AB}$\n• **면**: 선이 움직인 자취, 평평한 면을 **평면**이라 함',
+      title: '점(Point), 선(Line), 면(Plane)의 정의',
+      content: '• **점(Point)**: 위치만 있고 크기가 없는 것 (점 A)\n• **선(Line)**: 점이 움직인 자취, 곧은 정도에 따라 직선·반직선·선분으로 구분\n• **직선(Line)**: 양쪽으로 끝없이 뻗은 곧은 선 → $\\overleftrightarrow{AB}$\n• **반직선(Ray)**: 한 점에서 시작하여 한쪽으로 끝없이 뻗은 선 → $\\overrightarrow{AB}$\n• **선분(Line Segment)**: 두 점을 잇는 가장 짧은 직선 부분 → $\\overline{AB}$\n• **면(Plane)**: 선이 움직인 자취, 평평한 면을 **평면**이라 함',
       type: 'definition',
     },
     {
       id: 'g1d27-c2',
-      title: '각의 정의와 종류',
-      content: '• **각**: 한 점(꼭짓점)에서 시작하는 두 반직선이 이루는 도형 → $\\angle AOB$\n• **예각**: $0° < \\angle < 90°$\n• **직각**: $\\angle = 90°$ (기호: ㄱ)\n• **둔각**: $90° < \\angle < 180°$\n• **평각**: $\\angle = 180°$ (일직선)\n• **맞꼭지각**: 두 직선이 만날 때 마주 보는 각 → 항상 같다!',
+      title: '각(Angle)의 정의와 종류',
+      content: '• **각(Angle)**: 한 점(꼭짓점(Vertex))에서 시작하는 두 반직선(Ray)이 이루는 도형 → $\\angle AOB$\n• **예각(Acute Angle)**: $0° < \\angle < 90°$\n• **직각(Right Angle)**: $\\angle = 90°$ (기호: ㄱ)\n• **둔각(Obtuse Angle)**: $90° < \\angle < 180°$\n• **평각(Straight Angle)**: $\\angle = 180°$ (일직선)\n• **맞꼭지각(Vertical Angles)**: 두 직선이 만날 때 마주 보는 각 → 항상 같다!',
       type: 'formula',
     },
     {
       id: 'g1d27-c3',
-      title: '맞꼭지각의 성질',
-      content: '두 직선이 한 점에서 만나면 **4개의 각**이 생깁니다.\n• **맞꼭지각**은 서로 같다: $\\angle a = \\angle c$, $\\angle b = \\angle d$\n• 이웃한 두 각의 합은 $180°$: $\\angle a + \\angle b = 180°$\n• 이 성질을 이용해 한 각만 알면 나머지 세 각을 모두 구할 수 있습니다!',
+      title: '맞꼭지각(Vertical Angles)의 성질',
+      content: '두 직선이 한 점에서 만나면 **4개의 각**이 생깁니다.\n• **맞꼭지각(Vertical Angles)** 은 서로 같다: $\\angle a = \\angle c$, $\\angle b = \\angle d$\n• 이웃한 두 각의 합은 $180°$: $\\angle a + \\angle b = 180°$\n• 이 성질을 이용해 한 각만 알면 나머지 세 각을 모두 구할 수 있습니다!',
       type: 'formula',
     },
   ],
@@ -71,7 +71,7 @@ const dayContent: DayContent = {
       explanation: '3시 30분일 때:\n• 분침: 6을 가리킴 → $180°$ 위치\n• 시침: 3과 4 사이의 정가운데 → $105°$ 위치\n  (시침은 1시간에 $30°$, 30분이면 $15°$ 이동 → $90° + 15° = 105°$)\n\n작은 쪽 각도 = $180° - 105° = 75°$',
     },
   ],
-  realLifeExample: '건축가는 건물을 설계할 때 점, 선, 면, 각을 모두 사용합니다. 시계 바늘이 이루는 각도, 도로의 교차 각도, 지붕의 기울기 등 일상에서 각도는 매우 중요한 역할을 합니다!',
+  realLifeExample: '건축가는 건물을 설계할 때 점(Point), 선(Line), 면(Plane), 각(Angle)을 모두 사용합니다. 시계 바늘이 이루는 각도, 도로의 교차 각도, 지붕의 기울기 등 일상에서 각도는 매우 중요한 역할을 합니다!',
 };
 
 export default dayContent;

@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 44,
   part: 8,
-  title: '줄기와 잎 그림',
-  subtitle: '데이터를 한눈에! 줄기와 잎 그림으로 자료를 정리해 보자.',
+  title: '줄기와 잎 그림(Stem-and-Leaf Plot)',
+  subtitle: '데이터를 한눈에! 줄기와 잎 그림(Stem-and-Leaf Plot)으로 자료(Data)를 정리해 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d44-c1',
-      title: '줄기와 잎 그림이란?',
-      content: '**줄기와 잎 그림**은 자료를 줄기(십의 자리)와 잎(일의 자리)으로 나누어 정리하는 방법입니다.\n\n예: 자료 23, 25, 31, 34, 37\n\n| 줄기 | 잎 |\n|------|------|\n| 2 | 3 5 |\n| 3 | 1 4 7 |\n\n• **줄기**: 보통 십의 자리 숫자\n• **잎**: 일의 자리 숫자 (작은 수부터 순서대로 나열)\n• 잎의 개수 = 자료의 개수',
+      title: '줄기와 잎 그림(Stem-and-Leaf Plot)이란?',
+      content: '**줄기와 잎 그림(Stem-and-Leaf Plot)**은 자료(Data)를 줄기(Stem, 십의 자리)와 잎(Leaf, 일의 자리)으로 나누어 정리하는 방법입니다.\n\n예: 자료(Data) 23, 25, 31, 34, 37\n\n| 줄기(Stem) | 잎(Leaf) |\n|------|------|\n| 2 | 3 5 |\n| 3 | 1 4 7 |\n\n• **줄기(Stem)**: 보통 십의 자리 숫자\n• **잎(Leaf)**: 일의 자리 숫자 (작은 수부터 순서대로 나열)\n• 잎(Leaf)의 개수 = 자료(Data)의 개수',
       type: 'definition',
     },
     {
       id: 'g1d44-c2',
-      title: '줄기와 잎 그림 읽기와 비교',
-      content: '줄기와 잎 그림에서 알 수 있는 것:\n• **자료의 개수**: 잎의 총 개수\n• **최솟값·최댓값**: 가장 작은/큰 잎\n• **분포 모양**: 자료가 어디에 집중되어 있는지\n\n**두 집단 비교** (양쪽 줄기와 잎 그림):\n줄기를 가운데 두고 양쪽에 잎을 나열하면 두 집단의 분포를 한눈에 비교할 수 있습니다.',
+      title: '줄기와 잎 그림(Stem-and-Leaf Plot) 읽기와 비교',
+      content: '줄기와 잎 그림(Stem-and-Leaf Plot)에서 알 수 있는 것:\n• **자료(Data)의 개수**: 잎(Leaf)의 총 개수\n• **최솟값·최댓값**: 가장 작은/큰 잎(Leaf)\n• **분포 모양**: 자료(Data)가 어디에 집중되어 있는지\n\n**두 집단 비교** (양쪽 줄기와 잎 그림):\n줄기(Stem)를 가운데 두고 양쪽에 잎(Leaf)을 나열하면 두 집단의 분포를 한눈에 비교할 수 있습니다.',
       type: 'definition',
     },
   ],
@@ -65,7 +65,7 @@ const dayContent: DayContent = {
       explanation: 'A반 60점 이상: 61, 63, 69, 70, 74 → 5명\nB반 60점 이상: 60, 62, 65, 68, 73, 76 → 6명\n\n합계: $5 + 6 = 11$명',
     },
   ],
-  realLifeExample: '줄기와 잎 그림은 시험 점수 분석, 키/몸무게 분포 파악 등에 활용됩니다. 원래 데이터 값을 모두 보존하면서도 분포를 한눈에 볼 수 있어 통계 분석의 첫 단계로 자주 사용돼요!',
+  realLifeExample: '줄기와 잎 그림(Stem-and-Leaf Plot)은 시험 점수 분석, 키/몸무게 분포 파악 등에 활용됩니다. 원래 자료(Data) 값을 모두 보존하면서도 분포를 한눈에 볼 수 있어 통계 분석의 첫 단계로 자주 사용돼요!',
 };
 
 export default dayContent;

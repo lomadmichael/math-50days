@@ -9,14 +9,14 @@ const dayContent: DayContent = {
   concepts: [
     {
       id: 'g1d7-c1',
-      title: 'PART 1 핵심 요약: 약수와 배수',
-      content: '• **약수**: 어떤 수를 나누어 떨어지게 하는 수\n• **소수**: 약수가 1과 자기 자신뿐인 수 (1은 소수 ✗)\n• **소인수분해**: 자연수를 소수의 곱으로 나타내기\n• 약수의 개수: $a^p \\times b^q$ → $(p+1)(q+1)$\n• **최대공약수**: 공통 소인수의 **낮은** 거듭제곱의 곱\n• **최소공배수**: 모든 소인수의 **높은** 거듭제곱의 곱',
+      title: 'PART 1 핵심 요약: 약수(Divisor)와 배수(Multiple)',
+      content: '• **약수(Divisor / Factor)**: 어떤 수를 나누어 떨어지게 하는 수\n• **소수(Prime Number)**: 약수가 1과 자기 자신뿐인 수 (1은 소수 ✗)\n• **소인수분해(Prime Factorization)**: 자연수(Natural Number)를 소수의 곱으로 나타내기\n• 약수의 개수: $a^p \\times b^q$ → $(p+1)(q+1)$\n• **최대공약수(GCD, Greatest Common Divisor)**: 공통 소인수의 **낮은** 거듭제곱(Power)의 곱\n• **최소공배수(LCM, Least Common Multiple)**: 모든 소인수의 **높은** 거듭제곱의 곱',
       type: 'formula',
     },
     {
       id: 'g1d7-c2',
-      title: 'PART 1 핵심 요약: 정수와 연산',
-      content: '• **정수**: ..., -2, -1, 0, 1, 2, ... (0은 양수도 음수도 아님)\n• **절댓값**: 수직선에서 0까지의 거리 → 항상 ≥ 0\n• 덧셈: 같은 부호 → 절댓값 더하기 / 다른 부호 → 절댓값 빼기\n• 뺄셈: 부호 바꿔서 더하기! $a - b = a + (-b)$\n• 곱셈·나눗셈 부호: 같으면 +, 다르면 -\n• 음수 거듭제곱: 짝수 개 → +, 홀수 개 → -',
+      title: 'PART 1 핵심 요약: 정수(Integer)와 연산',
+      content: '• **정수(Integer)**: ..., -2, -1, 0, 1, 2, ... (0은 양수도 음수도 아님)\n• **절댓값(Absolute Value)**: 수직선(Number Line)에서 0까지의 거리 → 항상 ≥ 0\n• 덧셈(Addition): 같은 부호 → 절댓값 더하기 / 다른 부호 → 절댓값 빼기\n• 뺄셈(Subtraction): 부호 바꿔서 더하기! $a - b = a + (-b)$\n• 곱셈(Multiplication)·나눗셈(Division) 부호: 같으면 +, 다르면 -\n• 음수 거듭제곱(Power): 짝수 개 → +, 홀수 개 → -',
       type: 'formula',
     },
   ],
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       explanation: '$|a| = 3$ → $a = 3$ 또는 $a = -3$\n$|b| = 5$ → $b = 5$ 또는 $b = -5$\n\n$a + b < 0$이 되려면:\n• $a = 3, b = -5$ → $a + b = -2 < 0$ ✓ → $a \\times b = -15$\n• $a = -3, b = -5$ → $a + b = -8 < 0$ ✓ → $a \\times b = 15$\n• $a = -3, b = 5$ → $a + b = 2 > 0$ ✗\n\n최댓값: $15$',
     },
   ],
-  realLifeExample: 'PART 1 총정리! 소인수분해는 비밀번호 보안에, 정수의 연산은 은행 입출금/온도 변화/해발고도 계산에 사용됩니다. 수학은 일상 곳곳에 숨어있어요!',
+  realLifeExample: 'PART 1 총정리! 소인수분해(Prime Factorization)는 비밀번호 보안에, 정수(Integer)의 연산은 은행 입출금/온도 변화/해발고도 계산에 사용됩니다. 수학은 일상 곳곳에 숨어있어요!',
 };
 
 export default dayContent;

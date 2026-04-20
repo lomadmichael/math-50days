@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 24,
   part: 4,
-  title: '반비례 관계',
-  subtitle: '한쪽이 커지면 다른 쪽은 작아지는 반비례를 알아보자!',
+  title: '반비례(Inverse Proportion) 관계',
+  subtitle: '한쪽이 커지면 다른 쪽은 작아지는 반비례(Inverse Proportion)를 알아보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d24-c1',
-      title: '반비례란?',
-      content: '• **반비례**: $x$가 2배, 3배, ...가 되면 $y$는 $\\frac{1}{2}$배, $\\frac{1}{3}$배, ...가 되는 관계\n• 식: $y = \\frac{a}{x}$ ($a \\neq 0$인 상수)\n• $a$를 **비례상수**라 한다\n• $x \\times y = a$로 곱이 항상 일정!',
+      title: '반비례(Inverse Proportion)란?',
+      content: '• **반비례(Inverse Proportion)**: $x$가 2배, 3배, ...가 되면 $y$는 $\\frac{1}{2}$배, $\\frac{1}{3}$배, ...가 되는 관계\n• 식: $y = \\frac{a}{x}$ ($a \\neq 0$인 상수)\n• $a$를 **비례상수(Constant of Proportionality)**라 한다\n• $x \\times y = a$로 곱이 항상 일정!',
       type: 'definition',
     },
     {
       id: 'g1d24-c2',
-      title: '반비례 그래프',
+      title: '반비례(Inverse Proportion) 그래프(Graph)',
       content: '• $y = \\frac{a}{x}$의 그래프는 **쌍곡선** (매끄러운 곡선 한 쌍)\n• $a > 0$: 제1사분면과 제3사분면에 곡선\n• $a < 0$: 제2사분면과 제4사분면에 곡선\n• 그래프는 x축과 y축에 **한없이 가까워지지만 만나지 않는다**\n• $|a|$가 클수록 원점에서 **멀리** 떨어진 곡선',
       type: 'formula',
     },
     {
       id: 'g1d24-c3',
-      title: '반비례 비례상수 구하기',
-      content: '• $y = \\frac{a}{x}$에 한 점의 좌표를 대입하면 $a = x \\times y$\n• 예: 점 $(3, 4)$를 지나면 $a = 3 \\times 4 = 12$\n• 따라서 $y = \\frac{12}{x}$',
+      title: '반비례(Inverse Proportion) 비례상수(Constant of Proportionality) 구하기',
+      content: '• $y = \\frac{a}{x}$에 한 점의 좌표(Coordinates)를 대입하면 $a = x \\times y$\n• 예: 점 $(3, 4)$를 지나면 $a = 3 \\times 4 = 12$\n• 따라서 $y = \\frac{12}{x}$',
       type: 'formula',
     },
   ],
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       explanation: '$a = 2 \\times (-5) = -10$\n$y = \\frac{-10}{x}$\n\n$x = -2$ 대입:\n$y = \\frac{-10}{-2} = 5$',
     },
   ],
-  realLifeExample: '속력과 시간은 반비례 관계입니다! 거리가 120km일 때, 시속 60km면 2시간, 시속 40km면 3시간이 걸려요. $\\text{속력} \\times \\text{시간} = 120$으로 항상 일정하죠.',
+  realLifeExample: '속력과 시간은 반비례(Inverse Proportion) 관계입니다! 거리가 120km일 때, 시속 60km면 2시간, 시속 40km면 3시간이 걸려요. $\\text{속력} \\times \\text{시간} = 120$으로 항상 일정하죠.',
 };
 
 export default dayContent;

@@ -3,14 +3,14 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 12,
   part: 3,
-  title: '왜 문자를 쓸까?',
-  subtitle: '수학에서 문자를 사용하는 이유를 알아보고, 문자로 수량을 나타내는 방법을 배워보자.',
+  title: '왜 문자를 쓸까? — 문자식(Algebraic Expression)의 시작',
+  subtitle: '수학에서 문자를 사용하는 이유를 알아보고, 문자식(Algebraic Expression)으로 수량을 나타내는 방법을 배워보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d12-c1',
-      title: '문자의 사용',
-      content: '수학에서 **문자**를 사용하면 다양한 상황을 **하나의 식**으로 간결하게 나타낼 수 있습니다.\n\n예: "어떤 수에 3을 더하면 10이다"\n→ $x + 3 = 10$\n\n문자를 쓰면 **일반적인 관계**를 표현할 수 있어 훨씬 편리합니다!',
+      title: '문자의 사용 — 문자식(Algebraic Expression)',
+      content: '수학에서 **문자**를 사용하면 다양한 상황을 **하나의 식**으로 간결하게 나타낼 수 있습니다.\n\n예: "어떤 수에 3을 더하면 10이다"\n→ $x + 3 = 10$\n\n문자를 쓰면 **일반적인 관계**를 표현할 수 있어 훨씬 편리합니다! 이런 식을 **문자식(Algebraic Expression)**이라 합니다.',
       type: 'definition',
     },
     {
@@ -21,8 +21,8 @@ const dayContent: DayContent = {
     },
     {
       id: 'g1d12-c3',
-      title: '항, 계수, 상수항',
-      content: '식 $3x + 5$에서:\n• **항**: 식을 이루는 각각의 부분 → $3x$와 $5$\n• **계수**: 문자에 곱해진 수 → $3x$에서 **3**이 $x$의 계수\n• **상수항**: 문자를 포함하지 않는 항 → **5**\n\n예: $-2a + 4b - 7$에서\n→ $a$의 계수: $-2$, $b$의 계수: $4$, 상수항: $-7$',
+      title: '항(Term), 계수(Coefficient), 상수항(Constant Term)',
+      content: '식 $3x + 5$에서:\n• **항(Term)**: 식을 이루는 각각의 부분 → $3x$와 $5$\n• **계수(Coefficient)**: 문자에 곱해진 수 → $3x$에서 **3**이 $x$의 계수(Coefficient)\n• **상수항(Constant Term)**: 문자를 포함하지 않는 항 → **5**\n\n예: $-2a + 4b - 7$에서\n→ $a$의 계수: $-2$, $b$의 계수: $4$, 상수항: $-7$',
       type: 'definition',
     },
   ],
@@ -71,7 +71,7 @@ const dayContent: DayContent = {
       explanation: '$\\frac{2x - 3y + 6}{4} = \\frac{2x}{4} - \\frac{3y}{4} + \\frac{6}{4}$\n$= \\frac{1}{2}x - \\frac{3}{4}y + \\frac{3}{2}$\n\n$x$의 계수: $\\frac{1}{2}$\n$y$의 계수: $-\\frac{3}{4}$\n상수항: $\\frac{3}{2}$',
     },
   ],
-  realLifeExample: '문자를 사용하면 복잡한 관계를 간단히 표현할 수 있어요! 예를 들어, 택시 기본요금이 4800원이고 추가 요금이 거리 $x$ km마다 1000원이라면, 총 요금은 $4800 + 1000x$(원)으로 나타낼 수 있습니다. 거리만 알면 바로 요금을 계산할 수 있죠!',
+  realLifeExample: '문자식(Algebraic Expression)을 사용하면 복잡한 관계를 간단히 표현할 수 있어요! 예를 들어, 택시 기본요금이 4800원이고 추가 요금이 거리 $x$ km마다 1000원이라면, 총 요금은 $4800 + 1000x$(원)으로 나타낼 수 있습니다. 거리만 알면 바로 요금을 계산할 수 있죠!',
 };
 
 export default dayContent;

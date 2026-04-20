@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 46,
   part: 8,
-  title: '도수분포다각형',
-  subtitle: '히스토그램을 선으로 연결하면? 도수분포다각형으로 분포를 비교하자!',
+  title: '도수분포다각형(Frequency Polygon)',
+  subtitle: '히스토그램(Histogram)을 선으로 연결하면? 도수분포다각형(Frequency Polygon)으로 분포를 비교하자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d46-c1',
-      title: '도수분포다각형이란?',
-      content: '**도수분포다각형**은 히스토그램의 각 막대 윗변의 **가운데 점(계급값)**을 선분으로 연결한 그래프입니다.\n\n그리는 방법:\n1. 각 계급의 **계급값**을 가로축에 표시\n2. 해당 계급값 위에 **도수**를 점으로 찍기\n3. 점들을 **선분으로 연결**\n4. 양 끝은 도수가 0인 계급값까지 연장 (그래프가 가로축에 닿도록)\n\n도수분포다각형과 가로축 사이의 넓이 = 히스토그램 전체 넓이',
+      title: '도수분포다각형(Frequency Polygon)이란?',
+      content: '**도수분포다각형(Frequency Polygon)**은 히스토그램(Histogram)의 각 막대 윗변의 **가운데 점(계급값(Class Value / Midpoint))**을 선분으로 연결한 그래프입니다.\n\n그리는 방법:\n1. 각 계급(Class / Interval)의 **계급값(Class Value / Midpoint)**을 가로축에 표시\n2. 해당 계급값 위에 **도수(Frequency)**를 점으로 찍기\n3. 점들을 **선분으로 연결**\n4. 양 끝은 도수(Frequency)가 0인 계급값까지 연장 (그래프가 가로축에 닿도록)\n\n도수분포다각형(Frequency Polygon)과 가로축 사이의 넓이 = 히스토그램(Histogram) 전체 넓이',
       type: 'definition',
     },
     {
       id: 'g1d46-c2',
-      title: '도수분포다각형으로 분포 비교',
-      content: '도수분포다각형의 장점:\n• 두 개 이상의 자료를 **한 그래프에 겹쳐** 그릴 수 있음\n• 분포의 모양을 쉽게 비교 가능\n\n비교 포인트:\n• **꼭짓점이 높은 곳**: 도수가 가장 큰 계급 (최빈 계급)\n• **그래프가 오른쪽에 치우침**: 큰 값이 많음\n• **그래프가 왼쪽에 치우침**: 작은 값이 많음\n• **그래프가 좁고 뾰족함**: 자료가 한곳에 집중\n• **그래프가 넓고 평평함**: 자료가 골고루 분포',
+      title: '도수분포다각형(Frequency Polygon)으로 분포 비교',
+      content: '도수분포다각형(Frequency Polygon)의 장점:\n• 두 개 이상의 자료(Data)를 **한 그래프에 겹쳐** 그릴 수 있음\n• 분포의 모양을 쉽게 비교 가능\n\n비교 포인트:\n• **꼭짓점이 높은 곳**: 도수(Frequency)가 가장 큰 계급(Class / Interval) (최빈 계급)\n• **그래프가 오른쪽에 치우침**: 큰 값이 많음\n• **그래프가 왼쪽에 치우침**: 작은 값이 많음\n• **그래프가 좁고 뾰족함**: 자료(Data)가 한곳에 집중\n• **그래프가 넓고 평평함**: 자료(Data)가 골고루 분포',
       type: 'definition',
     },
   ],
@@ -75,7 +75,7 @@ const dayContent: DayContent = {
       explanation: '도수분포다각형이 좁고 뾰족하면 자료가 특정 구간에 집중되어 있다는 뜻이고, 넓고 평평하면 자료가 여러 구간에 골고루 퍼져 있다는 뜻입니다.\n\n그래프의 모양만으로 평균의 크기나 자료의 수는 비교할 수 없습니다.',
     },
   ],
-  realLifeExample: '도수분포다각형은 두 그룹의 시험 성적을 비교하거나, 올해와 작년의 기온 분포를 겹쳐 보여줄 때 유용합니다. 뉴스에서 코로나 확진자 분포를 연령대별로 비교할 때도 이 그래프가 쓰였답니다!',
+  realLifeExample: '도수분포다각형(Frequency Polygon)은 두 그룹의 시험 성적을 비교하거나, 올해와 작년의 기온 분포를 겹쳐 보여줄 때 유용합니다. 뉴스에서 코로나 확진자 분포를 연령대별로 비교할 때도 이 그래프가 쓰였답니다!',
 };
 
 export default dayContent;

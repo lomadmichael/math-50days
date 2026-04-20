@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 13,
   part: 3,
-  title: '식의 값 구하기',
-  subtitle: '문자에 수를 대입하여 식의 값을 구하는 방법을 익혀보자.',
+  title: '식의 값(Value of Expression) 구하기',
+  subtitle: '문자에 수를 대입(Substitution)하여 식의 값(Value of Expression)을 구하는 방법을 익혀보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d13-c1',
-      title: '대입과 식의 값',
-      content: '**대입**: 문자 대신 수를 넣는 것\n**식의 값**: 문자에 수를 대입하여 계산한 결과\n\n예: $2x + 3$에서 $x = 4$일 때\n$$2 \\times 4 + 3 = 8 + 3 = 11$$\n\n주의: 대입할 때 **곱셈 기호**를 다시 써야 합니다!\n$2x$에 $x = 4$ → $2 \\times 4$ (○) / $24$ (✗)',
+      title: '대입(Substitution)과 식의 값(Value of Expression)',
+      content: '**대입(Substitution)**: 문자 대신 수를 넣는 것\n**식의 값(Value of Expression)**: 문자에 수를 대입하여 계산한 결과\n\n예: $2x + 3$에서 $x = 4$일 때\n$$2 \\times 4 + 3 = 8 + 3 = 11$$\n\n주의: 대입(Substitution)할 때 **곱셈(Multiplication) 기호**를 다시 써야 합니다!\n$2x$에 $x = 4$ → $2 \\times 4$ (○) / $24$ (✗)',
       type: 'definition',
     },
     {
       id: 'g1d13-c2',
-      title: '음수 대입 시 주의점',
-      content: '음수를 대입할 때는 반드시 **괄호**를 사용합니다!\n\n$x^2$에 $x = -3$ 대입:\n$$(-3)^2 = 9$$ ✓\n$$-3^2 = -9$$ ✗ (이건 $-(3^2)$의 의미)\n\n$2x$에 $x = -5$ 대입:\n$$2 \\times (-5) = -10$$ ✓',
+      title: '음수(Negative Number) 대입(Substitution) 시 주의점',
+      content: '음수(Negative Number)를 대입할 때는 반드시 **괄호**를 사용합니다!\n\n$x^2$에 $x = -3$ 대입(Substitution):\n$$(-3)^2 = 9$$ ✓\n$$-3^2 = -9$$ ✗ (이건 $-(3^2)$의 의미)\n\n$2x$에 $x = -5$ 대입:\n$$2 \\times (-5) = -10$$ ✓',
       type: 'formula',
     },
     {
       id: 'g1d13-c3',
-      title: '여러 문자가 있는 식의 값',
-      content: '문자가 2개 이상인 식도 각 문자에 값을 대입하면 됩니다.\n\n예: $3a - 2b + 1$에서 $a = 2$, $b = -1$일 때\n$$3 \\times 2 - 2 \\times (-1) + 1$$\n$$= 6 + 2 + 1 = 9$$\n\n대입 후에는 **연산 순서**(괄호 → 거듭제곱 → 곱셈/나눗셈 → 덧셈/뺄셈)를 지켜 계산합니다.',
+      title: '여러 문자가 있는 식의 값(Value of Expression)',
+      content: '문자가 2개 이상인 식도 각 문자에 값을 대입(Substitution)하면 됩니다.\n\n예: $3a - 2b + 1$에서 $a = 2$, $b = -1$일 때\n$$3 \\times 2 - 2 \\times (-1) + 1$$\n$$= 6 + 2 + 1 = 9$$\n\n대입 후에는 **연산 순서**(괄호 → 거듭제곱(Power) → 곱셈(Multiplication)/나눗셈(Division) → 덧셈(Addition)/뺄셈(Subtraction))를 지켜 계산합니다.',
       type: 'formula',
     },
   ],
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       explanation: '$a^2b = (-2)^2 \\times \\frac{1}{3} = 4 \\times \\frac{1}{3} = \\frac{4}{3}$\n\n$ab^2 = (-2) \\times (\\frac{1}{3})^2 = (-2) \\times \\frac{1}{9} = -\\frac{2}{9}$\n\n$a^2b - ab^2 = \\frac{4}{3} - (-\\frac{2}{9}) = \\frac{12}{9} + \\frac{2}{9} = \\frac{14}{9}$',
     },
   ],
-  realLifeExample: '식의 값 구하기는 실생활 곳곳에서 쓰입니다! 예를 들어, 원의 넓이 공식 $S = \\pi r^2$에서 반지름 $r = 5$ cm를 대입하면 넓이를 바로 구할 수 있어요. 공식에 값만 넣으면 되니까 매번 새로 유도할 필요가 없죠!',
+  realLifeExample: '식의 값(Value of Expression) 구하기는 실생활 곳곳에서 쓰입니다! 예를 들어, 원의 넓이 공식 $S = \\pi r^2$에서 반지름 $r = 5$ cm를 대입(Substitution)하면 넓이를 바로 구할 수 있어요. 공식에 값만 넣으면 되니까 매번 새로 유도할 필요가 없죠!',
 };
 
 export default dayContent;

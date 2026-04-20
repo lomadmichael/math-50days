@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 25,
   part: 4,
-  title: '정비례/반비례 활용',
-  subtitle: '정비례와 반비례를 실생활 문제에 적용해 보자!',
+  title: '정비례(Direct Proportion)/반비례(Inverse Proportion) 활용',
+  subtitle: '정비례(Direct Proportion)와 반비례(Inverse Proportion)를 실생활 문제에 적용해 보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d25-c1',
-      title: '정비례 활용 패턴',
+      title: '정비례(Direct Proportion) 활용 패턴',
       content: '• **$y = ax$ 형태를 찾아라!**\n• 속력 일정 → 거리 = 속력 $\\times$ 시간 (거리와 시간이 정비례)\n• 단가 일정 → 가격 = 단가 $\\times$ 개수 (가격과 개수가 정비례)\n• 비율 일정 → 한 양이 커지면 다른 양도 같은 비율로 커짐',
       type: 'definition',
     },
     {
       id: 'g1d25-c2',
-      title: '반비례 활용 패턴',
+      title: '반비례(Inverse Proportion) 활용 패턴',
       content: '• **$y = \\frac{a}{x}$ 또는 $xy = a$ 형태를 찾아라!**\n• 거리 일정 → 속력 $\\times$ 시간 = 거리 (속력과 시간이 반비례)\n• 넓이 일정 → 가로 $\\times$ 세로 = 넓이 (가로와 세로가 반비례)\n• 총량 일정 → 인원 $\\times$ 1인당 몫 = 총량',
       type: 'definition',
     },
     {
       id: 'g1d25-c3',
-      title: '정비례 vs 반비례 구별법',
-      content: '• **정비례**: 하나가 커지면 다른 것도 커짐 → $\\frac{y}{x} = a$ (비가 일정)\n• **반비례**: 하나가 커지면 다른 것은 작아짐 → $x \\times y = a$ (곱이 일정)\n• 문제 풀이 순서: ① 관계 파악 → ② 비례상수 구하기 → ③ 식 세우기 → ④ 답 구하기',
+      title: '정비례(Direct Proportion) vs 반비례(Inverse Proportion) 구별법',
+      content: '• **정비례(Direct Proportion)**: 하나가 커지면 다른 것도 커짐 → $\\frac{y}{x} = a$ (비가 일정)\n• **반비례(Inverse Proportion)**: 하나가 커지면 다른 것은 작아짐 → $x \\times y = a$ (곱이 일정)\n• 문제 풀이 순서: ① 관계 파악 → ② 비례상수(Constant of Proportionality) 구하기 → ③ 식 세우기 → ④ 답 구하기',
       type: 'formula',
     },
   ],
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       explanation: '사람 수와 일수는 반비례 (총 작업량 일정)\n\n$a = 6 \\times 10 = 60$\n$y = \\frac{60}{x}$\n\n$x = 15$ 대입:\n$y = \\frac{60}{15} = 4$\n\n15명이 하면 **4일**이 걸립니다.',
     },
   ],
-  realLifeExample: '요리할 때 레시피를 2배로 늘리면 재료도 2배 필요한 것은 정비례! 피자를 나눠 먹을 때 사람이 많아지면 1인당 양이 줄어드는 것은 반비례! 일상 속에서 정비례와 반비례를 찾아보세요.',
+  realLifeExample: '요리할 때 레시피를 2배로 늘리면 재료도 2배 필요한 것은 정비례(Direct Proportion)! 피자를 나눠 먹을 때 사람이 많아지면 1인당 양이 줄어드는 것은 반비례(Inverse Proportion)! 일상 속에서 정비례와 반비례를 찾아보세요.',
 };
 
 export default dayContent;

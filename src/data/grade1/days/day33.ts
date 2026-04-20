@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 33,
   part: 6,
-  title: '다각형의 성질',
-  subtitle: '삼각형부터 십각형까지! 다각형의 이름과 성질, 대각선의 개수를 알아보자.',
+  title: '다각형(Polygon)의 성질',
+  subtitle: '삼각형(Triangle)부터 십각형까지! 다각형(Polygon)의 이름과 성질, 대각선(Diagonal)의 개수를 알아보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d33-c1',
-      title: '다각형의 정의와 이름',
-      content: '• **다각형**: 세 개 이상의 선분으로 둘러싸인 평면도형\n• **꼭짓점**: 두 변이 만나는 점\n• **변**: 다각형을 이루는 각 선분\n• 이름: 삼각형(3), 사각형(4), 오각형(5), 육각형(6), 칠각형(7), 팔각형(8), 구각형(9), 십각형(10)\n• **$n$각형**의 꼭짓점, 변, 내각의 수는 모두 $n$개',
+      title: '다각형(Polygon)의 정의와 이름',
+      content: '• **다각형(Polygon)**: 세 개 이상의 선분으로 둘러싸인 평면도형\n• **꼭짓점(Vertex)**: 두 변이 만나는 점\n• **변(Side)**: 다각형을 이루는 각 선분\n• 이름: 삼각형(Triangle)(3), 사각형(Quadrilateral)(4), 오각형(Pentagon)(5), 육각형(Hexagon)(6), 칠각형(7), 팔각형(8), 구각형(9), 십각형(10)\n• **$n$각형(n-gon)** 의 꼭짓점(Vertex), 변(Side), 내각(Interior Angle)의 수는 모두 $n$개',
       type: 'definition',
     },
     {
       id: 'g1d33-c2',
-      title: '정다각형',
-      content: '• **정다각형**: 모든 변의 길이가 같고, 모든 내각의 크기가 같은 다각형\n• 정삼각형, 정사각형, 정오각형, 정육각형 등\n• 주의: 변의 길이만 같다고 정다각형이 아님 → **내각도 모두 같아야** 함\n• 예) 마름모는 변의 길이가 모두 같지만 내각이 다를 수 있으므로 정다각형이 아닐 수 있음',
+      title: '정다각형(Regular Polygon)',
+      content: '• **정다각형(Regular Polygon)**: 모든 변(Side)의 길이가 같고, 모든 내각(Interior Angle)의 크기가 같은 다각형(Polygon)\n• 정삼각형(Regular Triangle), 정사각형(Regular Quadrilateral), 정오각형(Regular Pentagon), 정육각형(Regular Hexagon) 등\n• 주의: 변(Side)의 길이만 같다고 정다각형(Regular Polygon)이 아님 → **내각(Interior Angle)도 모두 같아야** 함\n• 예) 마름모는 변(Side)의 길이가 모두 같지만 내각(Interior Angle)이 다를 수 있으므로 정다각형(Regular Polygon)이 아닐 수 있음',
       type: 'definition',
     },
     {
       id: 'g1d33-c3',
-      title: '대각선의 개수',
-      content: '• **대각선**: 다각형에서 이웃하지 않는 두 꼭짓점을 이은 선분\n• 한 꼭짓점에서 그을 수 있는 대각선의 수: $n - 3$개\n• **$n$각형의 대각선의 총 개수**: $\\dfrac{n(n-3)}{2}$\n• 예) 오각형: $\\dfrac{5 \\times 2}{2} = 5$개\n• 예) 육각형: $\\dfrac{6 \\times 3}{2} = 9$개',
+      title: '대각선(Diagonal)의 개수',
+      content: '• **대각선(Diagonal)**: 다각형(Polygon)에서 이웃하지 않는 두 꼭짓점(Vertex)을 이은 선분\n• 한 꼭짓점(Vertex)에서 그을 수 있는 대각선(Diagonal)의 수: $n - 3$개\n• **$n$각형(n-gon)의 대각선(Diagonal)의 총 개수**: $\\dfrac{n(n-3)}{2}$\n• 예) 오각형(Pentagon): $\\dfrac{5 \\times 2}{2} = 5$개\n• 예) 육각형(Hexagon): $\\dfrac{6 \\times 3}{2} = 9$개',
       type: 'formula',
     },
   ],
@@ -75,7 +75,7 @@ const dayContent: DayContent = {
       explanation: '한 꼭짓점에서의 대각선 수: $n - 3 = 7$\n\n$n = 10$ (십각형)\n\n대각선의 총 개수: $\\dfrac{10 \\times 7}{2} = 35$개',
     },
   ],
-  realLifeExample: '축구공은 정오각형과 정육각형으로 이루어져 있고, 벌집은 정육각형 구조입니다. 건축에서도 다각형의 성질을 이용해 튼튼하고 아름다운 구조물을 설계합니다!',
+  realLifeExample: '축구공은 정오각형(Regular Pentagon)과 정육각형(Regular Hexagon)으로 이루어져 있고, 벌집은 정육각형(Regular Hexagon) 구조입니다. 건축에서도 다각형(Polygon)의 성질을 이용해 튼튼하고 아름다운 구조물을 설계합니다!',
 };
 
 export default dayContent;

@@ -4,19 +4,19 @@ const dayContent: DayContent = {
   dayNumber: 26,
   part: 4,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 4 좌표와 그래프 총정리! 지금까지 배운 내용을 확인해 보자.',
+  subtitle: 'PART 4 좌표(Coordinates)와 그래프(Graph) 총정리! 지금까지 배운 내용을 확인해 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d26-c1',
-      title: 'PART 4 핵심 요약: 좌표평면과 그래프',
-      content: '• **좌표평면**: x축(가로)과 y축(세로)이 원점 $O(0,0)$에서 만남\n• **사분면**: 제1(+,+), 제2(-,+), 제3(-,-), 제4(+,-)\n• 축 위의 점은 사분면에 속하지 않음\n• 그래프 올라감 → 증가, 내려감 → 감소, 수평 → 일정\n• 가파를수록 변화 속도가 빠름',
+      title: 'PART 4 핵심 요약: 좌표평면(Coordinate Plane)과 그래프(Graph)',
+      content: '• **좌표평면(Coordinate Plane)**: x축(x-axis, 가로)과 y축(y-axis, 세로)이 원점(Origin) $O(0,0)$에서 만남\n• **사분면(Quadrant)**: 제1(1st, +,+), 제2(2nd, -,+), 제3(3rd, -,-), 제4(4th, +,-)\n• 축 위의 점은 사분면에 속하지 않음\n• 그래프(Graph) 올라감 → 증가, 내려감 → 감소, 수평 → 일정\n• 가파를수록 변화 속도가 빠름',
       type: 'formula',
     },
     {
       id: 'g1d26-c2',
-      title: 'PART 4 핵심 요약: 정비례와 반비례',
-      content: '• **정비례**: $y = ax$ → 원점을 지나는 직선, $\\frac{y}{x} = a$ 일정\n  - $a > 0$: 제1, 3사분면 / $a < 0$: 제2, 4사분면\n• **반비례**: $y = \\frac{a}{x}$ → 쌍곡선, $xy = a$ 일정\n  - $a > 0$: 제1, 3사분면 / $a < 0$: 제2, 4사분면\n• 비례상수 구하기: 한 점의 좌표를 식에 대입!',
+      title: 'PART 4 핵심 요약: 정비례(Direct Proportion)와 반비례(Inverse Proportion)',
+      content: '• **정비례(Direct Proportion)**: $y = ax$ → 원점(Origin)을 지나는 직선, $\\frac{y}{x} = a$ 일정\n  - $a > 0$: 제1, 3사분면 / $a < 0$: 제2, 4사분면\n• **반비례(Inverse Proportion)**: $y = \\frac{a}{x}$ → 쌍곡선, $xy = a$ 일정\n  - $a > 0$: 제1, 3사분면 / $a < 0$: 제2, 4사분면\n• 비례상수(Constant of Proportionality) 구하기: 한 점의 좌표(Coordinates)를 식에 대입!',
       type: 'formula',
     },
   ],
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       explanation: '$y = \\frac{a}{x}$에 $(2, 3)$ 대입:\n$3 = \\frac{a}{2}$ → $a = 6$\n\n$y = bx$에 $(2, 3)$ 대입:\n$3 = 2b$ → $b = \\frac{3}{2}$\n\n$a + b = 6 + \\frac{3}{2} = \\frac{15}{2}$',
     },
   ],
-  realLifeExample: 'PART 4 총정리! 좌표평면은 지도 앱과 GPS에, 그래프 해석은 뉴스 데이터 분석에, 정비례는 환율 계산에, 반비례는 속력과 시간 관계에 활용됩니다. 좌표와 그래프는 세상을 읽는 도구예요!',
+  realLifeExample: 'PART 4 총정리! 좌표평면(Coordinate Plane)은 지도 앱과 GPS에, 그래프(Graph) 해석은 뉴스 데이터 분석에, 정비례(Direct Proportion)는 환율 계산에, 반비례(Inverse Proportion)는 속력과 시간 관계에 활용됩니다. 좌표(Coordinates)와 그래프는 세상을 읽는 도구예요!',
 };
 
 export default dayContent;

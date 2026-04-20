@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 29,
   part: 5,
-  title: '평행선의 성질 (동위각/엇각)',
-  subtitle: '평행선을 한 직선이 만날 때 생기는 특별한 각의 관계를 알아보자!',
+  title: '평행선(Parallel Lines)의 성질 (동위각(Corresponding Angles)/엇각(Alternate Angles))',
+  subtitle: '평행선(Parallel Lines)을 한 직선이 만날 때 생기는 특별한 각(Angle)의 관계를 알아보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d29-c1',
-      title: '동위각과 엇각',
-      content: '두 직선을 한 직선(횡단선)이 만날 때 생기는 8개의 각에서:\n• **동위각**: 같은 위치에 있는 각의 쌍 (4쌍)\n  → 예: 위쪽 직선의 오른쪽 위 각 & 아래쪽 직선의 오른쪽 위 각\n• **엇각(교대각)**: 횡단선 기준으로 엇갈린 위치의 각 (2쌍)\n  → 안쪽에서 엇갈린 각: **엇각**\n• **동측내각**: 횡단선 같은 쪽의 안쪽 각 (2쌍)',
+      title: '동위각(Corresponding Angles)과 엇각(Alternate Angles)',
+      content: '두 직선을 한 직선(횡단선)이 만날 때 생기는 8개의 각(Angle)에서:\n• **동위각(Corresponding Angles)**: 같은 위치에 있는 각의 쌍 (4쌍)\n  → 예: 위쪽 직선의 오른쪽 위 각 & 아래쪽 직선의 오른쪽 위 각\n• **엇각(Alternate Angles)(교대각)**: 횡단선 기준으로 엇갈린 위치의 각 (2쌍)\n  → 안쪽에서 엇갈린 각: **엇각(Alternate Angles)**\n• **동측내각**: 횡단선 같은 쪽의 안쪽 각 (2쌍)',
       type: 'definition',
     },
     {
       id: 'g1d29-c2',
-      title: '평행선의 성질',
-      content: '두 직선이 **평행**할 때 ($l \\parallel m$):\n• **동위각**의 크기는 서로 **같다**\n• **엇각**의 크기는 서로 **같다**\n• **동측내각**의 크기의 합은 $180°$\n\n역도 성립합니다:\n동위각이 같거나, 엇각이 같거나, 동측내각의 합이 $180°$이면 → 두 직선은 **평행**!',
+      title: '평행선(Parallel Lines)의 성질',
+      content: '두 직선이 **평행(Parallel)** 할 때 ($l \\parallel m$):\n• **동위각(Corresponding Angles)** 의 크기는 서로 **같다**\n• **엇각(Alternate Angles)** 의 크기는 서로 **같다**\n• **동측내각**의 크기의 합은 $180°$\n\n역도 성립합니다:\n동위각이 같거나, 엇각이 같거나, 동측내각의 합이 $180°$이면 → 두 직선은 **평행(Parallel)**!',
       type: 'formula',
     },
     {
       id: 'g1d29-c3',
-      title: '평행선 성질의 활용',
-      content: '평행선의 성질을 이용한 각도 구하기 전략:\n1. 평행선과 횡단선 찾기\n2. 동위각 또는 엇각 관계 파악하기\n3. 보조선(평행선)을 그어서 해결하기\n\n보조선 Tip: 꺾인 점을 지나는 평행선을 그으면 엇각 관계가 만들어집니다!',
+      title: '평행선(Parallel Lines) 성질의 활용',
+      content: '평행선(Parallel Lines)의 성질을 이용한 각도 구하기 전략:\n1. 평행선(Parallel Lines)과 횡단선 찾기\n2. 동위각(Corresponding Angles) 또는 엇각(Alternate Angles) 관계 파악하기\n3. 보조선(평행선)을 그어서 해결하기\n\n보조선 Tip: 꺾인 점을 지나는 평행선(Parallel Line)을 그으면 엇각(Alternate Angles) 관계가 만들어집니다!',
       type: 'tip',
     },
   ],
@@ -75,7 +75,7 @@ const dayContent: DayContent = {
       explanation: '꺾인 점을 지나는 $l$에 평행한 보조선을 긋습니다.\n\n보조선과 $l$이 평행하므로:\n• 엇각에 의해 윗부분 = $35°$\n\n보조선과 $m$이 평행하므로:\n• 엇각에 의해 아랫부분 = $45°$\n\n$\\angle x = 35° + 45° = 80°$',
     },
   ],
-  realLifeExample: '에스컬레이터의 손잡이와 계단 면은 평행한 직선과 같습니다. 횡단보도의 줄무늬도 평행선이죠. 건축에서 창문틀, 타일 패턴 등에서 평행선과 동위각/엇각의 원리가 활용됩니다!',
+  realLifeExample: '에스컬레이터의 손잡이와 계단 면은 평행(Parallel)한 직선과 같습니다. 횡단보도의 줄무늬도 평행선(Parallel Lines)이죠. 건축에서 창문틀, 타일 패턴 등에서 평행선(Parallel Lines)과 동위각(Corresponding Angles)/엇각(Alternate Angles)의 원리가 활용됩니다!',
 };
 
 export default dayContent;

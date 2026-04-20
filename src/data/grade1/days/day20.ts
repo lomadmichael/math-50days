@@ -4,19 +4,19 @@ const dayContent: DayContent = {
   dayNumber: 20,
   part: 3,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 3 문자와 식 총정리!',
+  subtitle: 'PART 3 문자와 식(Expressions with Variables) 총정리!',
   lectures: [],
   concepts: [
     {
       id: 'g1d20-c1',
-      title: 'PART 3 핵심 요약: 문자와 식, 등식',
-      content: '• **문자 사용**: $a \\times b = ab$, $a \\div b = \\dfrac{a}{b}$, $a \\times 1 = a$\n• **다항식**: 항의 합, **차수**는 가장 높은 항의 차수\n• **동류항**: 문자와 차수가 같은 항 → 계수끼리 계산\n• **등식의 성질**: 양변에 같은 수를 더하기/빼기/곱하기/나누기(≠0) 가능\n• **이항**: 부호를 바꾸어 반대편으로 옮기기',
+      title: 'PART 3 핵심 요약: 문자와 식, 등식(Equation)',
+      content: '• **문자 사용**: $a \\times b = ab$, $a \\div b = \\dfrac{a}{b}$, $a \\times 1 = a$\n• **다항식**: 항의 합, **차수**는 가장 높은 항의 차수\n• **동류항(Like Terms)**: 문자와 차수가 같은 항 → 계수(Coefficient)끼리 계산\n• **등식의 성질(Properties of Equality)**: 양변에 같은 수를 더하기/빼기/곱하기/나누기(≠0) 가능\n• **이항(Transposition)**: 부호를 바꾸어 반대편으로 옮기기',
       type: 'formula',
     },
     {
       id: 'g1d20-c2',
-      title: 'PART 3 핵심 요약: 일차방정식과 활용',
-      content: '• **일차방정식**: $ax + b = 0$ ($a \\neq 0$) 꼴의 방정식\n• **풀이 순서**: 괄호 풀기 → 이항 → 동류항 정리 → 계수로 나누기\n• **활용 4단계**: 미지수 정하기 → 방정식 세우기 → 풀기 → 확인\n• **거리 공식**: 거리 = 속력 $\\times$ 시간\n• **퍼센트**: $a$의 $p$% = $a \\times \\dfrac{p}{100}$\n• **농도**: $\\dfrac{\\text{소금}}{\\text{소금물}} \\times 100$%',
+      title: 'PART 3 핵심 요약: 일차방정식(Linear Equation)과 활용',
+      content: '• **일차방정식(Linear Equation)**: $ax + b = 0$ ($a \\neq 0$) 꼴의 방정식\n• **풀이 순서**: 괄호 풀기 → 이항(Transposition) → 동류항 정리 → 계수로 나누기\n• **활용 4단계**: 미지수(Unknown) 정하기 → 방정식 세우기 → 풀기 → 확인\n• **거리 공식**: 거리 = 속력 $\\times$ 시간\n• **퍼센트**: $a$의 $p$% = $a \\times \\dfrac{p}{100}$\n• **농도**: $\\dfrac{\\text{소금}}{\\text{소금물}} \\times 100$%',
       type: 'formula',
     },
   ],
@@ -81,7 +81,7 @@ const dayContent: DayContent = {
       explanation: '원가를 $x$원이라 하면:\n정가 = $x \\times 1.4 = 1.4x$\n판매가 = $1.4x \\times 0.8 = 1.12x$\n\n이익 = 판매가 - 원가:\n$1.12x - x = 2400$\n$0.12x = 2400$\n$x = 20000$\n\n**확인**: 원가 20,000원 → 정가 28,000원 → 판매가 22,400원\n이익: $22400 - 20000 = 2400$원 ✓',
     },
   ],
-  realLifeExample: 'PART 3 총정리! 문자와 식은 프로그래밍의 변수 개념과 같고, 일차방정식은 가격 비교, 여행 계획, 요리 레시피 조절 등 일상의 "모르는 값 찾기" 문제를 해결하는 강력한 도구입니다!',
+  realLifeExample: 'PART 3 총정리! 문자와 식은 프로그래밍의 변수 개념과 같고, 일차방정식(Linear Equation)은 가격 비교, 여행 계획, 요리 레시피 조절 등 일상의 "모르는 값 찾기" 문제를 해결하는 강력한 도구입니다!',
 };
 
 export default dayContent;

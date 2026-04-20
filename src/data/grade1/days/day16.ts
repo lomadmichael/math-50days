@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 16,
   part: 3,
-  title: '등식의 성질',
-  subtitle: '등식이란 무엇이고, 양변에 같은 연산을 하면 어떻게 될까?',
+  title: '등식(Equation)의 성질(Properties of Equality)',
+  subtitle: '등식(Equation)이란 무엇이고, 양변에 같은 연산을 하면 어떻게 될까?',
   lectures: [],
   concepts: [
     {
       id: 'g1d16-c1',
-      title: '등식이란?',
-      content: '**등식**이란 등호(=)를 사용하여 두 식이 같음을 나타낸 식입니다.\n\n• $3 + 5 = 8$ → 등식 ✓\n• $2x + 1 = 7$ → 등식 ✓ (미지수 포함)\n• $x + 3 > 5$ → 등식 ✗ (부등식)\n\n등호 왼쪽을 **좌변**, 오른쪽을 **우변**, 둘을 합쳐 **양변**이라 합니다.',
+      title: '등식(Equation)이란?',
+      content: '**등식(Equation)**: 등호(=)를 사용하여 두 식이 같음을 나타낸 식입니다.\n\n• $3 + 5 = 8$ → 등식 ✓\n• $2x + 1 = 7$ → 등식 ✓ (미지수(Unknown) 포함)\n• $x + 3 > 5$ → 등식 ✗ (부등식)\n\n등호 왼쪽을 **좌변**, 오른쪽을 **우변**, 둘을 합쳐 **양변**이라 합니다.',
       type: 'definition',
     },
     {
       id: 'g1d16-c2',
-      title: '등식의 성질',
+      title: '등식의 성질(Properties of Equality)',
       content: '$a = b$일 때 다음이 성립합니다.\n\n① **양변에 같은 수를 더해도** 등식은 성립: $a + c = b + c$\n② **양변에서 같은 수를 빼도** 등식은 성립: $a - c = b - c$\n③ **양변에 같은 수를 곱해도** 등식은 성립: $a \\times c = b \\times c$\n④ **양변을 0이 아닌 같은 수로 나누어도** 등식은 성립: $\\dfrac{a}{c} = \\dfrac{b}{c}$ (단, $c \\neq 0$)',
       type: 'formula',
     },
     {
       id: 'g1d16-c3',
-      title: '등식의 성질 활용',
-      content: '등식의 성질을 이용하면 미지수의 값을 구할 수 있습니다.\n\n**예시**: $x + 5 = 12$\n→ 양변에서 5를 빼면: $x + 5 - 5 = 12 - 5$\n→ $x = 7$\n\n**예시**: $3x = 15$\n→ 양변을 3으로 나누면: $\\dfrac{3x}{3} = \\dfrac{15}{3}$\n→ $x = 5$',
+      title: '등식의 성질(Properties of Equality) 활용',
+      content: '등식의 성질을 이용하면 미지수(Unknown)의 값을 구할 수 있습니다.\n\n**예시**: $x + 5 = 12$\n→ 양변에서 5를 빼면: $x + 5 - 5 = 12 - 5$\n→ $x = 7$\n\n**예시**: $3x = 15$\n→ 양변을 3으로 나누면: $\\dfrac{3x}{3} = \\dfrac{15}{3}$\n→ $x = 5$',
       type: 'example',
     },
   ],

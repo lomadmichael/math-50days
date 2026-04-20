@@ -4,13 +4,13 @@ const dayContent: DayContent = {
   dayNumber: 11,
   part: 2,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 2 유리수 총정리! 유리수의 개념, 연산, 수의 체계를 확인하자.',
+  subtitle: 'PART 2 유리수(Rational Number) 총정리! 유리수의 개념, 연산, 수의 체계를 확인하자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d11-c1',
       title: 'PART 2 핵심 요약',
-      content: '• **유리수**: $\\frac{a}{b}$ 꼴 (b≠0)로 나타낼 수 있는 수\n• 자연수 ⊂ 정수 ⊂ 유리수\n• 유리수 = 유한소수 또는 순환소수\n• 유한소수: 분모의 소인수가 2, 5만\n• 분수 계산: 통분(±), 분자×분자/분모×분모(×), 역수로 곱하기(÷)\n• 혼합 계산 순서: 괄호 → 거듭제곱 → ×÷ → ±\n• 0은 양수도 음수도 자연수도 아니지만 정수이자 유리수',
+      content: '• **유리수(Rational Number)**: $\\frac{a}{b}$ 꼴 (b≠0)로 나타낼 수 있는 수\n• 자연수(Natural Number) ⊂ 정수(Integer) ⊂ 유리수(Rational Number)\n• 유리수 = 유한소수 또는 순환소수\n• 유한소수: 분모의 소인수(Prime Factor)가 2, 5만\n• 분수 계산: 통분(±), 분자×분자/분모×분모(×), 역수(Reciprocal)로 곱하기(÷)\n• 혼합 계산 순서: 괄호 → 거듭제곱(Power) → ×÷ → ±\n• 0은 양수(Positive Number)도 음수(Negative Number)도 자연수도 아니지만 정수이자 유리수',
       type: 'formula',
     },
   ],
@@ -67,7 +67,7 @@ const dayContent: DayContent = {
       explanation: '$(a-b)^2 = (a+b)^2 - 4ab$\n$= (\\frac{1}{2})^2 - 4 \\times (-\\frac{1}{4})$\n$= \\frac{1}{4} + 1 = \\frac{5}{4}$\n\n하지만 선택지 중 직접 확인:\n$a + b = \\frac{1}{2}$, $a - b = 1$이면\n$a = \\frac{3}{4}$, $b = -\\frac{1}{4}$\n$ab = \\frac{3}{4} \\times (-\\frac{1}{4}) = -\\frac{3}{16} \\neq -\\frac{1}{4}$\n\n실제로 $(a-b)^2 = \\frac{5}{4}$이므로 $a-b = \\frac{\\sqrt{5}}{2}$\n선택지에 정확한 답이 없으나, 가장 가까운 값은 1입니다.',
     },
   ],
-  realLifeExample: 'PART 2 완료! 유리수의 연산은 일상 속 할인 계산, 레시피 조절, 환율 변환 등에서 매일 사용됩니다. 중학교 수학의 기초가 되는 유리수, 잘 다져두면 이후 문자식과 방정식이 훨씬 쉬워집니다!',
+  realLifeExample: 'PART 2 완료! 유리수(Rational Number)의 연산은 일상 속 할인 계산, 레시피 조절, 환율 변환 등에서 매일 사용됩니다. 중학교 수학의 기초가 되는 유리수, 잘 다져두면 이후 문자식(Algebraic Expression)과 방정식이 훨씬 쉬워집니다!',
 };
 
 export default dayContent;

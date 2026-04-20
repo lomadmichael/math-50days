@@ -3,25 +3,25 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 22,
   part: 4,
-  title: '그래프의 해석',
-  subtitle: '그래프를 읽고, 점을 찍고, 그래프가 말하는 이야기를 이해해 보자!',
+  title: '그래프(Graph)의 해석',
+  subtitle: '그래프(Graph)를 읽고, 점을 찍고, 그래프가 말하는 이야기를 이해해 보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d22-c1',
-      title: '그래프란?',
-      content: '• **그래프**: 두 양 사이의 관계를 좌표평면 위에 나타낸 것\n• x축: **독립변수** (원인, 입력값)\n• y축: **종속변수** (결과, 출력값)\n• 그래프를 보면 두 양이 어떻게 변하는지 한눈에 알 수 있다!',
+      title: '그래프(Graph)란?',
+      content: '• **그래프(Graph)**: 두 양 사이의 관계를 좌표평면(Coordinate Plane) 위에 나타낸 것\n• x축(x-axis): **독립변수** (원인, 입력값)\n• y축(y-axis): **종속변수** (결과, 출력값)\n• 그래프를 보면 두 양이 어떻게 변하는지 한눈에 알 수 있다!',
       type: 'definition',
     },
     {
       id: 'g1d22-c2',
-      title: '좌표 읽기와 점 찍기',
-      content: '• **점 찍기**: x좌표만큼 가로 이동 → y좌표만큼 세로 이동\n• **좌표 읽기**: 점에서 x축에 수선 → x좌표, y축에 수선 → y좌표\n• 예: 점 $(3, 2)$ → 오른쪽 3, 위로 2 이동한 위치',
+      title: '좌표(Coordinates) 읽기와 점 찍기',
+      content: '• **점 찍기**: x좌표(x-coordinate)만큼 가로 이동 → y좌표(y-coordinate)만큼 세로 이동\n• **좌표 읽기**: 점에서 x축에 수선 → x좌표, y축에 수선 → y좌표\n• 예: 점 $(3, 2)$ → 오른쪽 3, 위로 2 이동한 위치',
       type: 'definition',
     },
     {
       id: 'g1d22-c3',
-      title: '그래프 해석하기',
+      title: '그래프(Graph) 해석하기',
       content: '• 그래프가 **올라가면**: y값이 증가 (x가 커질수록 y도 커짐)\n• 그래프가 **내려가면**: y값이 감소 (x가 커질수록 y는 작아짐)\n• 그래프가 **수평이면**: y값이 변하지 않음 (일정)\n• 그래프가 **가파를수록**: 변화의 속도가 빠름',
       type: 'formula',
     },

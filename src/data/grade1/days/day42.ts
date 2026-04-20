@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 42,
   part: 7,
-  title: '구의 겉넓이와 부피',
-  subtitle: '가장 완벽한 입체도형, 구의 겉넓이와 부피를 배워 보자!',
+  title: '구(Sphere)의 겉넓이(Surface Area)와 부피(Volume)',
+  subtitle: '가장 완벽한 입체도형, 구(Sphere)의 겉넓이(Surface Area)와 부피(Volume)를 배워 보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d42-c1',
-      title: '구의 겉넓이',
-      content: '반지름이 $r$인 **구의 겉넓이**\n\n$S = 4\\pi r^2$\n\n• 구의 겉넓이 = 대원 넓이($\\pi r^2$)의 **4배**\n• 대원: 구의 중심을 지나는 평면으로 자른 단면 (가장 큰 원)\n\n예) 반지름 $5\\text{cm}$인 구의 겉넓이\n$S = 4\\pi \\times 5^2 = 100\\pi\\text{cm}^2$',
+      title: '구(Sphere)의 겉넓이(Surface Area)',
+      content: '반지름이 $r$인 **구(Sphere)의 겉넓이(Surface Area)**\n\n$S = 4\\pi r^2$\n\n• 구(Sphere)의 겉넓이(Surface Area) = 대원 넓이($\\pi r^2$)의 **4배**\n• 대원: 구의 중심을 지나는 평면으로 자른 단면(Cross Section) (가장 큰 원)\n\n예) 반지름 $5\\text{cm}$인 구(Sphere)의 겉넓이\n$S = 4\\pi \\times 5^2 = 100\\pi\\text{cm}^2$',
       type: 'formula',
     },
     {
       id: 'g1d42-c2',
-      title: '구의 부피와 반구',
-      content: '반지름이 $r$인 **구의 부피**\n\n$V = \\frac{4}{3}\\pi r^3$\n\n**반구** (구를 반으로 자른 도형)\n• 반구의 부피 = $\\frac{1}{2} \\times \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi r^3$\n• 반구의 겉넓이 = 곡면 + 단면 = $2\\pi r^2 + \\pi r^2 = 3\\pi r^2$\n\n예) 반지름 $3\\text{cm}$인 구의 부피\n$V = \\frac{4}{3}\\pi \\times 3^3 = \\frac{4}{3}\\pi \\times 27 = 36\\pi\\text{cm}^3$',
+      title: '구(Sphere)의 부피(Volume)와 반구',
+      content: '반지름이 $r$인 **구(Sphere)의 부피(Volume)**\n\n$V = \\frac{4}{3}\\pi r^3$\n\n**반구** (구를 반으로 자른 도형)\n• 반구의 부피(Volume) = $\\frac{1}{2} \\times \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi r^3$\n• 반구의 겉넓이(Surface Area) = 곡면 + 단면(Cross Section) = $2\\pi r^2 + \\pi r^2 = 3\\pi r^2$\n\n예) 반지름 $3\\text{cm}$인 구(Sphere)의 부피\n$V = \\frac{4}{3}\\pi \\times 3^3 = \\frac{4}{3}\\pi \\times 27 = 36\\pi\\text{cm}^3$',
       type: 'formula',
     },
   ],

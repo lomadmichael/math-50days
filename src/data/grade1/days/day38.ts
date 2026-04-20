@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 38,
   part: 7,
-  title: '다면체의 종류',
-  subtitle: '각기둥, 각뿔, 정다면체까지! 입체도형의 세계로 들어가 보자.',
+  title: '다면체(Polyhedron)의 종류',
+  subtitle: '각기둥(Prism), 각뿔(Pyramid), 정다면체(Regular Polyhedron)까지! 입체도형의 세계로 들어가 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d38-c1',
-      title: '다면체란?',
-      content: '**다면체**는 다각형인 면으로만 둘러싸인 입체도형입니다.\n\n• **각기둥**: 두 밑면이 서로 평행하고 합동인 다각형, 옆면은 직사각형\n  - 삼각기둥, 사각기둥, 오각기둥, ...\n  - $n$각기둥: 꼭짓점 $2n$개, 모서리 $3n$개, 면 $(n+2)$개\n• **각뿔**: 밑면이 다각형이고, 옆면이 삼각형으로 한 꼭짓점에서 만남\n  - 삼각뿔, 사각뿔, 오각뿔, ...\n  - $n$각뿔: 꼭짓점 $(n+1)$개, 모서리 $2n$개, 면 $(n+1)$개',
+      title: '다면체(Polyhedron)란?',
+      content: '**다면체(Polyhedron)**는 다각형인 면(Face)으로만 둘러싸인 입체도형입니다.\n\n• **각기둥(Prism)**: 두 밑면(Base)이 서로 평행하고 합동인 다각형, 옆면(Lateral Face)은 직사각형\n  - 삼각기둥, 사각기둥, 오각기둥, ...\n  - $n$각기둥: 꼭짓점(Vertex) $2n$개, 모서리(Edge) $3n$개, 면(Face) $(n+2)$개\n• **각뿔(Pyramid)**: 밑면(Base)이 다각형이고, 옆면(Lateral Face)이 삼각형으로 한 꼭짓점에서 만남\n  - 삼각뿔, 사각뿔, 오각뿔, ...\n  - $n$각뿔: 꼭짓점(Vertex) $(n+1)$개, 모서리(Edge) $2n$개, 면(Face) $(n+1)$개',
       type: 'definition',
     },
     {
       id: 'g1d38-c2',
-      title: '정다면체와 오일러 공식',
-      content: '**정다면체**: 각 면이 모두 합동인 정다각형이고, 각 꼭짓점에 모이는 면의 수가 같은 다면체\n\n정다면체는 **5가지**뿐:\n| 이름 | 면의 모양 | 면 | 꼭짓점 | 모서리 |\n|---|---|---|---|---|\n| 정사면체 | 정삼각형 | 4 | 4 | 6 |\n| 정육면체 | 정사각형 | 6 | 8 | 12 |\n| 정팔면체 | 정삼각형 | 8 | 6 | 12 |\n| 정십이면체 | 정오각형 | 12 | 20 | 30 |\n| 정이십면체 | 정삼각형 | 20 | 12 | 30 |\n\n**오일러 공식**: $V - E + F = 2$ (꼭짓점 - 모서리 + 면 = 2)',
+      title: '정다면체(Regular Polyhedron)와 오일러 공식',
+      content: '**정다면체(Regular Polyhedron / Platonic Solid)**: 각 면이 모두 합동인 정다각형이고, 각 꼭짓점(Vertex)에 모이는 면(Face)의 수가 같은 다면체\n\n정다면체는 **5가지**뿐:\n| 이름 | 면의 모양 | 면 | 꼭짓점 | 모서리 |\n|---|---|---|---|---|\n| 정사면체(Tetrahedron) | 정삼각형 | 4 | 4 | 6 |\n| 정육면체(Cube) | 정사각형 | 6 | 8 | 12 |\n| 정팔면체(Octahedron) | 정삼각형 | 8 | 6 | 12 |\n| 정십이면체(Dodecahedron) | 정오각형 | 12 | 20 | 30 |\n| 정이십면체(Icosahedron) | 정삼각형 | 20 | 12 | 30 |\n\n**오일러 공식**: $V - E + F = 2$ (꼭짓점(Vertex) - 모서리(Edge) + 면(Face) = 2)',
       type: 'formula',
     },
   ],
@@ -65,7 +65,7 @@ const dayContent: DayContent = {
       explanation: '$n$각뿔에서 $n = 6$일 때:\n\n• 꼭짓점: $n + 1 = 6 + 1 = 7$개\n• 모서리: $2n = 2 \\times 6 = 12$개\n\n$7 + 12 = 19$',
     },
   ],
-  realLifeExample: '다면체는 건축과 디자인에서 많이 활용됩니다. 축구공은 정오각형 12개와 정육각형 20개로 이루어진 깎은 정이십면체이고, 주사위는 정육면체입니다!',
+  realLifeExample: '다면체(Polyhedron)는 건축과 디자인에서 많이 활용됩니다. 축구공은 정오각형 12개와 정육각형 20개로 이루어진 깎은 정이십면체(Icosahedron)이고, 주사위는 정육면체(Cube)입니다!',
 };
 
 export default dayContent;

@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 47,
   part: 8,
-  title: '상대도수와 대푯값',
-  subtitle: '비율로 비교하고, 자료를 대표하는 값을 찾아보자!',
+  title: '상대도수(Relative Frequency)와 대푯값(Representative Value)',
+  subtitle: '비율로 비교하고, 자료(Data)를 대표하는 값을 찾아보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d47-c1',
-      title: '상대도수',
-      content: '**상대도수**는 각 계급의 도수가 전체에서 차지하는 비율입니다.\n\n$$\\text{상대도수} = \\frac{\\text{그 계급의 도수}}{\\text{도수의 합(전체 자료 수)}}$$\n\n특징:\n• $0 \\leq$ 상대도수 $\\leq 1$\n• 모든 계급의 상대도수의 합 $= 1$\n• **전체 자료 수가 다른 두 집단**을 비교할 때 유용!\n\n예: 전체 40명 중 A계급 도수가 8명이면\n상대도수 $= \\frac{8}{40} = 0.2$ (또는 20%)',
+      title: '상대도수(Relative Frequency)',
+      content: '**상대도수(Relative Frequency)**는 각 계급(Class / Interval)의 도수(Frequency)가 전체에서 차지하는 비율입니다.\n\n$$\\text{상대도수(Relative Frequency)} = \\frac{\\text{그 계급의 도수(Frequency)}}{\\text{도수의 합(전체 자료 수)}}$$\n\n특징:\n• $0 \\leq$ 상대도수(Relative Frequency) $\\leq 1$\n• 모든 계급의 상대도수(Relative Frequency)의 합 $= 1$\n• **전체 자료(Data) 수가 다른 두 집단**을 비교할 때 유용!\n\n예: 전체 40명 중 A계급 도수(Frequency)가 8명이면\n상대도수(Relative Frequency) $= \\frac{8}{40} = 0.2$ (또는 20%)',
       type: 'formula',
     },
     {
       id: 'g1d47-c2',
-      title: '대푯값: 평균, 중앙값, 최빈값',
-      content: '자료를 대표하는 하나의 값을 **대푯값**이라 합니다.\n\n• **평균**: 모든 자료의 합 $\\div$ 자료의 수\n$$\\text{평균} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}$$\n\n• **중앙값**: 자료를 크기순으로 나열했을 때 **가운데** 값\n  - 자료 수가 홀수: 가운데 1개\n  - 자료 수가 짝수: 가운데 2개의 평균\n\n• **최빈값**: 가장 **자주 나타나는** 값 (2개 이상일 수도 있음)\n\n극단적인 값이 있으면 평균보다 **중앙값**이 더 적절한 대푯값!',
+      title: '대푯값(Representative Value): 평균, 중앙값, 최빈값',
+      content: '자료(Data)를 대표하는 하나의 값을 **대푯값(Representative Value)**이라 합니다.\n\n• **평균(Mean / Average)**: 모든 자료(Data)의 합 $\\div$ 자료(Data)의 수\n$$\\text{평균(Mean)} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}$$\n\n• **중앙값(Median)**: 자료(Data)를 크기순으로 나열했을 때 **가운데** 값\n  - 자료(Data) 수가 홀수: 가운데 1개\n  - 자료(Data) 수가 짝수: 가운데 2개의 평균\n\n• **최빈값(Mode)**: 가장 **자주 나타나는** 값 (2개 이상일 수도 있음)\n\n극단적인 값이 있으면 평균(Mean)보다 **중앙값(Median)**이 더 적절한 대푯값(Representative Value)!',
       type: 'formula',
     },
   ],
@@ -69,7 +69,7 @@ const dayContent: DayContent = {
       explanation: '평균 = $\\frac{200+200+250+300+3000}{5} = \\frac{3950}{5} = 790$만 원\n\n3000만 원이라는 극단적인 값 때문에 평균이 크게 올라갔습니다.\n대부분의 사람 월급은 200~300만 원대이므로, 평균 790만 원은 자료를 대표하기 어렵습니다.\n\n이런 경우 **중앙값(250만 원)**이 가장 적절한 대푯값입니다.',
     },
   ],
-  realLifeExample: '뉴스에서 "평균 연봉"이 높아 보이는 이유는 소수의 고소득자 때문입니다. 실제 대부분의 사람들의 소득을 보려면 중앙값이 더 정확해요. 국가에서도 소득 통계를 발표할 때 평균과 중앙값을 함께 제시합니다!',
+  realLifeExample: '뉴스에서 "평균(Mean / Average) 연봉"이 높아 보이는 이유는 소수의 고소득자 때문입니다. 실제 대부분의 사람들의 소득을 보려면 중앙값(Median)이 더 정확해요. 국가에서도 소득 통계를 발표할 때 평균(Mean)과 중앙값(Median)을 함께 제시합니다!',
 };
 
 export default dayContent;

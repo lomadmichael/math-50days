@@ -4,19 +4,19 @@ const dayContent: DayContent = {
   dayNumber: 43,
   part: 7,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 7 입체도형 총정리! 다면체부터 구까지 모두 확인해 보자.',
+  subtitle: 'PART 7 입체도형 총정리! 다면체(Polyhedron)부터 구(Sphere)까지 모두 확인해 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d43-c1',
       title: 'PART 7 핵심 요약: 입체도형의 종류',
-      content: '• **다면체**: 다각형 면으로 둘러싸인 입체도형\n  - 각기둥($n$각기둥): 꼭짓점 $2n$, 모서리 $3n$, 면 $n+2$\n  - 각뿔($n$각뿔): 꼭짓점 $n+1$, 모서리 $2n$, 면 $n+1$\n• **정다면체**: 5가지 (정사면체, 정육면체, 정팔면체, 정십이면체, 정이십면체)\n• **오일러 공식**: $V - E + F = 2$\n• **회전체**: 원기둥(직사각형 회전), 원뿔(직각삼각형 회전), 구(반원 회전)',
+      content: '• **다면체(Polyhedron)**: 다각형 면(Face)으로 둘러싸인 입체도형\n  - 각기둥(Prism, $n$각기둥): 꼭짓점(Vertex) $2n$, 모서리(Edge) $3n$, 면(Face) $n+2$\n  - 각뿔(Pyramid, $n$각뿔): 꼭짓점(Vertex) $n+1$, 모서리(Edge) $2n$, 면(Face) $n+1$\n• **정다면체(Regular Polyhedron / Platonic Solid)**: 5가지 (정사면체(Tetrahedron), 정육면체(Cube), 정팔면체(Octahedron), 정십이면체(Dodecahedron), 정이십면체(Icosahedron))\n• **오일러 공식**: $V - E + F = 2$\n• **회전체(Solid of Revolution)**: 원기둥(Cylinder, 직사각형 회전), 원뿔(Cone, 직각삼각형 회전), 구(Sphere, 반원 회전)',
       type: 'formula',
     },
     {
       id: 'g1d43-c2',
-      title: 'PART 7 핵심 요약: 겉넓이와 부피 공식',
-      content: '| 도형 | 겉넓이 | 부피 |\n|---|---|---|\n| 각기둥 | $2 \\times$ 밑넓이 $+$ 옆넓이 | 밑넓이 $\\times h$ |\n| 원기둥 | $2\\pi r(r+h)$ | $\\pi r^2 h$ |\n| 각뿔 | 밑넓이 $+$ 옆넓이 | $\\frac{1}{3} \\times$ 밑넓이 $\\times h$ |\n| 원뿔 | $\\pi r(r+l)$ | $\\frac{1}{3}\\pi r^2 h$ |\n| 구 | $4\\pi r^2$ | $\\frac{4}{3}\\pi r^3$ |\n\n🔑 **뿔 = 기둥의 $\\frac{1}{3}$**, 모선 $l = \\sqrt{r^2 + h^2}$',
+      title: 'PART 7 핵심 요약: 겉넓이(Surface Area)와 부피(Volume) 공식',
+      content: '| 도형 | 겉넓이(Surface Area) | 부피(Volume) |\n|---|---|---|\n| 각기둥(Prism) | $2 \\times$ 밑넓이 $+$ 옆넓이 | 밑넓이 $\\times h$ |\n| 원기둥(Cylinder) | $2\\pi r(r+h)$ | $\\pi r^2 h$ |\n| 각뿔(Pyramid) | 밑넓이 $+$ 옆넓이 | $\\frac{1}{3} \\times$ 밑넓이 $\\times h$ |\n| 원뿔(Cone) | $\\pi r(r+l)$ | $\\frac{1}{3}\\pi r^2 h$ |\n| 구(Sphere) | $4\\pi r^2$ | $\\frac{4}{3}\\pi r^3$ |\n\n🔑 **뿔 = 기둥의 $\\frac{1}{3}$**, 모선 $l = \\sqrt{r^2 + h^2}$',
       type: 'formula',
     },
   ],

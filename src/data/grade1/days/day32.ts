@@ -4,19 +4,19 @@ const dayContent: DayContent = {
   dayNumber: 32,
   part: 5,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 5 기본도형 총정리! 점·선·면부터 삼각형의 합동까지 확인해 보자.',
+  subtitle: 'PART 5 기본도형 총정리! 점(Point)·선(Line)·면(Plane)부터 삼각형(Triangle)의 합동(Congruence)까지 확인해 보자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d32-c1',
-      title: 'PART 5 핵심 요약: 기본도형과 위치 관계',
-      content: '• **직선·반직선·선분**: 양쪽 무한 / 한쪽 무한 / 두 점 사이\n• **맞꼭지각**: 크기가 같다\n• **평행**: $l \\parallel m$ → 만나지 않는 두 직선\n• **수직**: $l \\perp m$ → 만나서 $90°$\n• **동위각**: 평행선에서 같은 위치의 각 → 크기 같다\n• **엇각**: 평행선에서 엇갈린 위치의 각 → 크기 같다\n• **동측내각**: 합이 $180°$',
+      title: 'PART 5 핵심 요약: 기본도형과 위치관계(Positional Relationship)',
+      content: '• **직선(Line)·반직선(Ray)·선분(Line Segment)**: 양쪽 무한 / 한쪽 무한 / 두 점 사이\n• **맞꼭지각(Vertical Angles)**: 크기가 같다\n• **평행(Parallel)**: $l \\parallel m$ → 만나지 않는 두 직선\n• **수직(Perpendicular)**: $l \\perp m$ → 만나서 $90°$\n• **동위각(Corresponding Angles)**: 평행선에서 같은 위치의 각 → 크기 같다\n• **엇각(Alternate Angles)**: 평행선에서 엇갈린 위치의 각 → 크기 같다\n• **동측내각**: 합이 $180°$',
       type: 'formula',
     },
     {
       id: 'g1d32-c2',
-      title: 'PART 5 핵심 요약: 작도와 합동',
-      content: '• **작도 도구**: 눈금 없는 자 + 컴퍼스\n• **삼각형 결정 조건**: SSS, SAS, ASA (AAA는 ✗)\n• **삼각형 성립 조건**: 가장 긴 변 < 나머지 두 변의 합\n• **합동 기호**: $\\triangle ABC \\equiv \\triangle DEF$ (꼭짓점 순서 주의!)\n• **합동 조건**: SSS, SAS, ASA\n• 합동이면 대응변의 길이, 대응각의 크기가 각각 같다',
+      title: 'PART 5 핵심 요약: 작도(Construction)와 합동(Congruence)',
+      content: '• **작도(Construction) 도구**: 눈금 없는 자(Ruler) + 컴퍼스(Compass)\n• **삼각형(Triangle) 결정 조건**: SSS(Side-Side-Side), SAS(Side-Angle-Side), ASA(Angle-Side-Angle) (AAA는 ✗)\n• **삼각형(Triangle) 성립 조건**: 가장 긴 변(Side) < 나머지 두 변의 합\n• **합동(Congruence) 기호**: $\\triangle ABC \\equiv \\triangle DEF$ (꼭짓점(Vertex) 순서 주의!)\n• **합동 조건(Congruence Conditions)**: SSS(Side-Side-Side), SAS(Side-Angle-Side), ASA(Angle-Side-Angle)\n• 합동(Congruence)이면 대응변(Side)의 길이, 대응각(Angle)의 크기가 각각 같다',
       type: 'formula',
     },
   ],
@@ -82,7 +82,7 @@ const dayContent: DayContent = {
       explanation: '꺾인 점을 지나는 평행선 보조선을 긋습니다.\n\n보조선과 $l$이 평행 → 엇각으로 윗부분 = $40°$\n보조선과 $m$이 평행 → 엇각으로 아랫부분 = $55°$\n\n꺾인 점의 각 = $40° + 55° = 95°$',
     },
   ],
-  realLifeExample: 'PART 5 총정리! 기본도형의 성질은 건축, 디자인, 공학의 기초입니다. GPS 위치 측정에 삼각측량법이, 건물 구조에 삼각형의 안정성이, 도로 설계에 평행선과 각도가 활용됩니다!',
+  realLifeExample: 'PART 5 총정리! 기본도형의 성질은 건축, 디자인, 공학의 기초입니다. GPS 위치 측정에 삼각측량법이, 건물 구조에 삼각형(Triangle)의 안정성이, 도로 설계에 평행선(Parallel Lines)과 각(Angle)도가 활용됩니다!',
 };
 
 export default dayContent;

@@ -3,26 +3,26 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 28,
   part: 5,
-  title: '위치 관계 (평행/수직)',
-  subtitle: '직선과 직선, 직선과 점 사이의 위치 관계를 알아보자!',
+  title: '위치관계(Positional Relationship) (평행(Parallel)/수직(Perpendicular))',
+  subtitle: '직선(Line)과 직선(Line), 직선(Line)과 점(Point) 사이의 위치관계(Positional Relationship)를 알아보자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d28-c1',
-      title: '두 직선의 위치 관계',
-      content: '같은 평면 위의 두 직선은 다음 세 가지 관계 중 하나입니다.\n• **만난다** (한 점에서 교차): 교점이 1개\n• **평행하다**: 만나지 않는다 → 기호: $l \\parallel m$\n• **일치한다**: 완전히 겹친다 (같은 직선)\n\n※ 공간에서는 **꼬인 위치** (만나지도, 평행하지도 않는 관계)도 있습니다.',
+      title: '두 직선(Line)의 위치관계(Positional Relationship)',
+      content: '같은 평면(Plane) 위의 두 직선(Line)은 다음 세 가지 관계 중 하나입니다.\n• **만난다** (한 점(Point)에서 교차): 교점이 1개\n• **평행(Parallel)하다**: 만나지 않는다 → 기호: $l \\parallel m$\n• **일치한다**: 완전히 겹친다 (같은 직선)\n\n※ 공간에서는 **꼬인 위치(Skew)** (만나지도, 평행하지도 않는 관계)도 있습니다.',
       type: 'definition',
     },
     {
       id: 'g1d28-c2',
-      title: '수직과 수선',
-      content: '• **수직**: 두 직선이 만나서 이루는 각이 $90°$ (직각)일 때 → 기호: $l \\perp m$\n• **수선**: 직선에 수직인 선\n• **수선의 발**: 수선과 직선이 만나는 점\n• **점과 직선 사이의 거리**: 점에서 직선에 내린 **수선의 길이** (최단 거리!)',
+      title: '수직(Perpendicular)과 수선(Perpendicular Line)',
+      content: '• **수직(Perpendicular)**: 두 직선이 만나서 이루는 각이 $90°$ (직각(Right Angle))일 때 → 기호: $l \\perp m$\n• **수선(Perpendicular Line)**: 직선에 수직인 선\n• **수선의 발**: 수선(Perpendicular Line)과 직선이 만나는 점(Point)\n• **점과 직선 사이의 거리**: 점에서 직선에 내린 **수선(Perpendicular Line)의 길이** (최단 거리!)',
       type: 'formula',
     },
     {
       id: 'g1d28-c3',
-      title: '평행선 사이의 거리',
-      content: '• **평행선 사이의 거리**: 한 직선 위의 점에서 다른 직선에 내린 수선의 길이\n• 평행한 두 직선 사이의 거리는 **어디서 재든 항상 같다!**\n• 이 성질을 이용하면 평행선 사이의 넓이 문제를 쉽게 풀 수 있습니다.',
+      title: '평행선(Parallel Lines) 사이의 거리',
+      content: '• **평행선(Parallel Lines) 사이의 거리**: 한 직선 위의 점에서 다른 직선에 내린 수선(Perpendicular Line)의 길이\n• 평행(Parallel)한 두 직선 사이의 거리는 **어디서 재든 항상 같다!**\n• 이 성질을 이용하면 평행선 사이의 넓이 문제를 쉽게 풀 수 있습니다.',
       type: 'definition',
     },
   ],
@@ -76,7 +76,7 @@ const dayContent: DayContent = {
       explanation: '서로 다른 5개의 직선이 모두 다른 점에서 만날 때 교점이 최대입니다.\n\n5개의 직선에서 2개를 뽑는 조합:\n$_5C_2 = \\frac{5 \\times 4}{2 \\times 1} = 10$\n\n따라서 교점의 최대 개수는 **10개**입니다.',
     },
   ],
-  realLifeExample: '도로의 교차로는 직선의 위치 관계를 보여줍니다. 평행한 도로(고속도로 차선), 수직으로 만나는 사거리, 비스듬히 만나는 삼거리 등 다양한 위치 관계가 도시 설계에 활용됩니다!',
+  realLifeExample: '도로의 교차로는 직선(Line)의 위치관계(Positional Relationship)를 보여줍니다. 평행(Parallel)한 도로(고속도로 차선), 수직(Perpendicular)으로 만나는 사거리, 비스듬히 만나는 삼거리 등 다양한 위치관계가 도시 설계에 활용됩니다!',
 };
 
 export default dayContent;

@@ -4,19 +4,19 @@ const dayContent: DayContent = {
   dayNumber: 48,
   part: 8,
   title: '미니테스트 + 복습',
-  subtitle: 'PART 8 자료의 정리 총정리! 통계의 기본기를 확인하자.',
+  subtitle: 'PART 8 자료(Data)의 정리 총정리! 통계의 기본기를 확인하자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d48-c1',
-      title: 'PART 8 핵심 요약: 자료 정리 방법',
-      content: '• **줄기와 잎 그림**: 원래 데이터를 보존하며 분포 파악\n• **도수분포표**: 계급(구간)별 도수 정리, 계급값 = $\\frac{\\text{위 끝 + 아래 끝}}{2}$\n• **히스토그램**: 도수분포표를 막대그래프로 (막대 사이 빈틈 없음)\n• **도수분포다각형**: 계급값 위에 점 찍고 선분 연결, 두 집단 비교에 유리\n• **상대도수**: $\\frac{\\text{그 계급의 도수}}{\\text{전체 도수}}$, 합 = 1\n• **대푯값**: 평균, 중앙값(가운데 값), 최빈값(가장 많은 값)',
+      title: 'PART 8 핵심 요약: 자료(Data) 정리 방법',
+      content: '• **줄기와 잎 그림(Stem-and-Leaf Plot)**: 원래 자료(Data)를 보존하며 분포 파악\n• **도수분포표(Frequency Distribution Table)**: 계급(Class / Interval)(구간)별 도수(Frequency) 정리, 계급값(Class Value / Midpoint) = $\\frac{\\text{위 끝 + 아래 끝}}{2}$\n• **히스토그램(Histogram)**: 도수분포표를 막대그래프로 (막대 사이 빈틈 없음)\n• **도수분포다각형(Frequency Polygon)**: 계급값(Class Value / Midpoint) 위에 점 찍고 선분 연결, 두 집단 비교에 유리\n• **상대도수(Relative Frequency)**: $\\frac{\\text{그 계급의 도수(Frequency)}}{\\text{전체 도수}}$, 합 = 1\n• **대푯값(Representative Value)**: 평균(Mean / Average), 중앙값(Median, 가운데 값), 최빈값(Mode, 가장 많은 값)',
       type: 'formula',
     },
     {
       id: 'g1d48-c2',
       title: 'PART 8 핵심 요약: 주의할 점',
-      content: '• 도수분포표에서는 **원래 자료의 정확한 값**을 알 수 없음\n• 상대도수는 **자료 수가 다른 두 집단 비교**에 필수\n• **극단값**이 있으면 평균보다 중앙값이 적절\n• 도수분포다각형의 넓이 = 히스토그램의 넓이 = 계급의 크기 $\\times$ 도수의 합',
+      content: '• 도수분포표(Frequency Distribution Table)에서는 **원래 자료(Data)의 정확한 값**을 알 수 없음\n• 상대도수(Relative Frequency)는 **자료(Data) 수가 다른 두 집단 비교**에 필수\n• **극단값**이 있으면 평균(Mean)보다 중앙값(Median)이 적절\n• 도수분포다각형(Frequency Polygon)의 넓이 = 히스토그램(Histogram)의 넓이 = 계급의 크기(Class Width) $\\times$ 도수(Frequency)의 합',
       type: 'definition',
     },
   ],
@@ -92,7 +92,7 @@ const dayContent: DayContent = {
       explanation: '상대도수의 합은 항상 **1**입니다.\n\n넓이 $= 150$이고 계급의 크기 $= 5$이므로\n도수의 합 $= \\frac{150}{5} = 30$\n\n하지만 상대도수의 합은 도수나 넓이에 관계없이 항상 $1$입니다.',
     },
   ],
-  realLifeExample: '통계는 모든 분야의 기초입니다! 병원에서 환자 데이터를 분석할 때, 회사에서 매출 추이를 볼 때, 선거 여론조사를 할 때 모두 오늘 배운 도수분포표와 대푯값을 사용합니다. 데이터를 읽는 능력은 21세기 필수 역량이에요!',
+  realLifeExample: '통계는 모든 분야의 기초입니다! 병원에서 환자 자료(Data)를 분석할 때, 회사에서 매출 추이를 볼 때, 선거 여론조사를 할 때 모두 오늘 배운 도수분포표(Frequency Distribution Table)와 대푯값(Representative Value)을 사용합니다. 데이터를 읽는 능력은 21세기 필수 역량이에요!',
 };
 
 export default dayContent;

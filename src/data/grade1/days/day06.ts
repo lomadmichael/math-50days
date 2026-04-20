@@ -3,14 +3,14 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 6,
   part: 1,
-  title: '정수의 곱셈과 나눗셈',
-  subtitle: '부호 규칙만 알면 끝! 곱셈과 나눗셈에서 부호가 어떻게 결정되는지 배우자.',
+  title: '정수(Integer)의 곱셈(Multiplication)과 나눗셈(Division)',
+  subtitle: '부호(Sign) 규칙만 알면 끝! 곱셈(Multiplication)과 나눗셈(Division)에서 부호가 어떻게 결정되는지 배우자.',
   lectures: [],
   concepts: [
     {
       id: 'g1d6-c1',
-      title: '정수의 곱셈 - 부호 규칙',
-      content: '**같은 부호끼리 곱하면 → 양수(+)**\n$(+) \\times (+) = (+)$\n$(-) \\times (-) = (+)$\n\n**다른 부호끼리 곱하면 → 음수(-)**\n$(+) \\times (-) = (-)$\n$(-) \\times (+) = (-)$\n\n예:\n$(+3) \\times (+4) = +12$\n$(-3) \\times (-4) = +12$\n$(-3) \\times (+4) = -12$\n$(+3) \\times (-4) = -12$',
+      title: '정수(Integer)의 곱셈(Multiplication) - 부호(Sign) 규칙',
+      content: '**같은 부호끼리 곱하면 → 양수(Positive Number, +)**\n$(+) \\times (+) = (+)$\n$(-) \\times (-) = (+)$\n\n**다른 부호끼리 곱하면 → 음수(Negative Number, -)**\n$(+) \\times (-) = (-)$\n$(-) \\times (+) = (-)$\n\n예:\n$(+3) \\times (+4) = +12$\n$(-3) \\times (-4) = +12$\n$(-3) \\times (+4) = -12$\n$(+3) \\times (-4) = -12$',
       type: 'formula',
     },
     {
@@ -21,14 +21,14 @@ const dayContent: DayContent = {
     },
     {
       id: 'g1d6-c3',
-      title: '정수의 나눗셈',
-      content: '나눗셈도 곱셈과 **같은 부호 규칙**!\n\n$(+) \\div (+) = (+)$, $(-) \\div (-) = (+)$\n$(+) \\div (-) = (-)$, $(-) \\div (+) = (-)$\n\n예:\n$(+12) \\div (+3) = +4$\n$(-12) \\div (-3) = +4$\n$(+12) \\div (-3) = -4$\n$(-12) \\div (+3) = -4$',
+      title: '정수(Integer)의 나눗셈(Division)',
+      content: '나눗셈(Division)도 곱셈(Multiplication)과 **같은 부호(Sign) 규칙**!\n\n$(+) \\div (+) = (+)$, $(-) \\div (-) = (+)$\n$(+) \\div (-) = (-)$, $(-) \\div (+) = (-)$\n\n예:\n$(+12) \\div (+3) = +4$\n$(-12) \\div (-3) = +4$\n$(+12) \\div (-3) = -4$\n$(-12) \\div (+3) = -4$',
       type: 'formula',
     },
     {
       id: 'g1d6-c4',
-      title: '곱셈의 법칙들',
-      content: '곱셈에서도 성립하는 법칙:\n\n**교환법칙**: $a \\times b = b \\times a$\n**결합법칙**: $(a \\times b) \\times c = a \\times (b \\times c)$\n**분배법칙**: $a \\times (b + c) = a \\times b + a \\times c$\n\n분배법칙은 앞으로 문자식에서 아주 많이 사용됩니다!',
+      title: '곱셈(Multiplication)의 법칙들',
+      content: '곱셈에서도 성립하는 법칙:\n\n**교환법칙(Commutative Property)**: $a \\times b = b \\times a$\n**결합법칙(Associative Property)**: $(a \\times b) \\times c = a \\times (b \\times c)$\n**분배법칙(Distributive Property)**: $a \\times (b + c) = a \\times b + a \\times c$\n\n분배법칙(Distributive Property)은 앞으로 문자식에서 아주 많이 사용됩니다!',
       type: 'formula',
     },
   ],

@@ -3,13 +3,13 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 19,
   part: 3,
-  title: '일차방정식 활용 (2)',
-  subtitle: '거리·속력·시간 문제, 퍼센트 문제, 농도 문제를 정복하자!',
+  title: '일차방정식(Linear Equation) 활용 (2)',
+  subtitle: '거리·속력·시간 문제(Speed / Rate Problem), 퍼센트 문제, 농도 문제(Concentration / Mixture Problem)를 정복하자!',
   lectures: [],
   concepts: [
     {
       id: 'g1d19-c1',
-      title: '거리·속력·시간 문제',
+      title: '거리·속력·시간 문제(Speed / Rate Problem)',
       content: '**기본 공식**: $\\text{거리} = \\text{속력} \\times \\text{시간}$\n\n• 속력 = $\\dfrac{\\text{거리}}{\\text{시간}}$, 시간 = $\\dfrac{\\text{거리}}{\\text{속력}}$\n\n**자주 나오는 유형**:\n• 만남 문제: 두 사람이 마주 보고 출발 → 거리의 합 = 전체 거리\n• 따라잡기 문제: 같은 방향 출발 → 거리의 차 = 처음 차이\n• 왕복 문제: 갈 때와 올 때의 거리가 같음',
       type: 'formula',
     },
@@ -21,7 +21,7 @@ const dayContent: DayContent = {
     },
     {
       id: 'g1d19-c3',
-      title: '농도(혼합) 문제',
+      title: '농도(Concentration / Mixture Problem) 문제',
       content: '**소금물 농도 공식**:\n$\\text{농도}(\\%) = \\dfrac{\\text{소금의 양}}{\\text{소금물의 양}} \\times 100$\n\n**핵심 원리**: 섞기 전후 **소금의 양**은 변하지 않는다!\n\n**예시**: 5% 소금물 200g과 10% 소금물 $x$g을 섞어 8% 소금물을 만들 때\n소금: $200 \\times 0.05 + x \\times 0.1 = (200 + x) \\times 0.08$\n$10 + 0.1x = 16 + 0.08x$\n$0.02x = 6$, $x = 300$g',
       type: 'example',
     },
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       explanation: '넣을 소금의 양을 $x$g이라 하면:\n기존 소금: $300 \\times 0.08 = 24$g\n새 소금물: $(300 + x)$g, 소금: $(24 + x)$g\n\n$\\dfrac{24 + x}{300 + x} = 0.12$\n$24 + x = 0.12(300 + x)$\n$24 + x = 36 + 0.12x$\n$0.88x = 12$\n$x = \\dfrac{12}{0.88} \\approx 13.6$g',
     },
   ],
-  realLifeExample: '거리-속력-시간 공식은 내비게이션의 도착 예정 시간 계산에, 퍼센트는 할인 쇼핑과 세금 계산에, 농도 문제는 요리에서 양념 비율을 맞추거나 세제를 희석할 때 사용됩니다!',
+  realLifeExample: '거리-속력-시간 문제(Speed / Rate Problem)는 내비게이션의 도착 예정 시간 계산에, 퍼센트는 할인 쇼핑과 세금 계산에, 농도 문제(Concentration / Mixture Problem)는 요리에서 양념 비율을 맞추거나 세제를 희석할 때 사용됩니다!',
 };
 
 export default dayContent;

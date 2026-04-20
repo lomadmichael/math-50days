@@ -3,20 +3,20 @@ import { DayContent } from '@/lib/types';
 const dayContent: DayContent = {
   dayNumber: 39,
   part: 7,
-  title: '회전체',
+  title: '회전체(Solid of Revolution)',
   subtitle: '평면도형을 회전시키면 어떤 입체도형이 될까?',
   lectures: [],
   concepts: [
     {
       id: 'g1d39-c1',
-      title: '회전체란?',
-      content: '**회전체**는 평면도형을 한 직선(회전축)을 중심으로 1회전 시킬 때 생기는 입체도형입니다.\n\n• **원기둥**: 직사각형을 한 변을 축으로 회전\n• **원뿔**: 직각삼각형을 직각을 낀 한 변을 축으로 회전\n• **구**: 반원을 지름을 축으로 회전\n\n회전체의 특징:\n- 회전축을 포함하는 평면으로 자르면 항상 **대칭**인 도형\n- 회전축에 수직인 평면으로 자르면 항상 **원**',
+      title: '회전체(Solid of Revolution)란?',
+      content: '**회전체(Solid of Revolution)**는 평면도형을 한 직선(회전축, Axis of Rotation)을 중심으로 1회전 시킬 때 생기는 입체도형입니다.\n\n• **원기둥(Cylinder)**: 직사각형을 한 변을 축으로 회전\n• **원뿔(Cone)**: 직각삼각형을 직각을 낀 한 변을 축으로 회전\n• **구(Sphere)**: 반원을 지름을 축으로 회전\n\n회전체의 특징:\n- 회전축(Axis of Rotation)을 포함하는 평면으로 자르면 항상 **대칭**인 도형\n- 회전축에 수직인 평면으로 자르면 항상 **원**',
       type: 'definition',
     },
     {
       id: 'g1d39-c2',
-      title: '회전체의 단면',
-      content: '회전체를 평면으로 잘랐을 때 나타나는 단면:\n\n| 회전체 | 회전축 포함 단면 | 회전축 수직 단면 |\n|---|---|---|\n| 원기둥 | 직사각형 | 원 (합동) |\n| 원뿔 | 이등변삼각형 | 원 (크기 변화) |\n| 구 | 원 | 원 (크기 변화) |\n\n• 구를 중심을 지나는 평면으로 자른 단면이 **가장 큰 원** (대원)',
+      title: '회전체의 단면(Cross Section)',
+      content: '회전체를 평면으로 잘랐을 때 나타나는 단면(Cross Section):\n\n| 회전체 | 회전축 포함 단면 | 회전축 수직 단면 |\n|---|---|---|\n| 원기둥(Cylinder) | 직사각형 | 원 (합동) |\n| 원뿔(Cone) | 이등변삼각형 | 원 (크기 변화) |\n| 구(Sphere) | 원 | 원 (크기 변화) |\n\n• 구(Sphere)를 중심을 지나는 평면으로 자른 단면(Cross Section)이 **가장 큰 원** (대원)',
       type: 'definition',
     },
   ],
@@ -70,7 +70,7 @@ const dayContent: DayContent = {
       explanation: '세로(긴 변) $7\\text{cm}$를 축으로 회전하면:\n\n• 원기둥의 높이 = 축의 길이 = $7\\text{cm}$\n• 원기둥의 밑면의 반지름 = 가로의 길이 = $3\\text{cm}$\n\n따라서 밑면의 반지름은 $3\\text{cm}$',
     },
   ],
-  realLifeExample: '회전체는 일상에서 매우 흔합니다. 음료수 캔은 원기둥, 아이스크림 콘은 원뿔, 공은 구입니다. 도자기를 만들 때 물레를 돌리는 것도 회전체의 원리를 이용한 것이에요!',
+  realLifeExample: '회전체(Solid of Revolution)는 일상에서 매우 흔합니다. 음료수 캔은 원기둥(Cylinder), 아이스크림 콘은 원뿔(Cone), 공은 구(Sphere)입니다. 도자기를 만들 때 물레를 돌리는 것도 회전체의 원리를 이용한 것이에요!',
 };
 
 export default dayContent;

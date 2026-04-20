@@ -10,7 +10,7 @@ const dayContent: DayContent = {
     {
       id: 'g1d49-c1',
       title: '중1 수학 전체 요약',
-      content: '**PART 1** 수와 연산: 소인수분해, 최대공약수·최소공배수, 정수와 유리수의 사칙연산\n**PART 2** 문자와 식: 문자 사용, 다항식의 덧셈·뺄셈, 일차식 계산\n**PART 3** 일차방정식: 등식의 성질, 일차방정식 풀이, 활용 문제\n**PART 4** 좌표평면과 그래프: 좌표평면, 정비례·반비례 관계와 그래프\n**PART 5** 기본 도형: 점·선·면, 각, 위치 관계, 평행선의 성질\n**PART 6** 작도와 합동: 삼각형의 작도, 합동 조건 (SSS, SAS, ASA)\n**PART 7** 평면도형·입체도형: 다각형, 원, 부채꼴, 다면체·회전체, 겉넓이·부피\n**PART 8** 자료의 정리: 줄기와 잎 그림, 도수분포표, 히스토그램, 상대도수, 대푯값',
+      content: '**PART 1** 수와 연산: 소인수분해, 최대공약수·최소공배수, 정수와 유리수의 사칙연산\n**PART 2** 문자와 식: 문자 사용, 다항식의 덧셈·뺄셈, 일차식 계산\n**PART 3** 일차방정식: 등식의 성질, 일차방정식 풀이, 활용 문제\n**PART 4** 좌표평면과 그래프: 좌표평면, 정비례·반비례 관계와 그래프\n**PART 5** 기본 도형: 점·선·면, 각, 위치 관계, 평행선의 성질\n**PART 6** 작도와 합동: 삼각형의 작도, 합동 조건 (SSS, SAS, ASA)\n**PART 7** 평면도형·입체도형: 다각형, 원, 부채꼴, 다면체(Polyhedron)·회전체(Solid of Revolution), 겉넓이(Surface Area)·부피(Volume)\n**PART 8** 자료의 정리: 줄기와 잎 그림(Stem-and-Leaf Plot), 도수분포표(Frequency Distribution Table), 히스토그램(Histogram), 상대도수(Relative Frequency), 대푯값(Representative Value)',
       type: 'definition',
     },
   ],
@@ -106,7 +106,7 @@ const dayContent: DayContent = {
       explanation: '$y = -2x$에서 비례상수가 $-2 < 0$이므로\n\n• $x > 0$이면 $y < 0$ → 제4사분면\n• $x < 0$이면 $y > 0$ → 제2사분면\n\n따라서 **제2사분면과 제4사분면**을 지납니다.',
     },
   ],
-  realLifeExample: '중1 수학 전 범위를 총정리했습니다! 수와 연산부터 통계까지, 중1에서 배운 내용은 중2, 중3은 물론 고등학교 수학의 기초가 됩니다. 이 종합 테스트에서 틀린 부분이 있다면 해당 PART를 다시 복습해 보세요!',
+  realLifeExample: '중1 수학 전 범위를 총정리했습니다! 수와 연산부터 통계까지, 중1에서 배운 내용은 중2, 중3은 물론 고등학교 수학의 기초가 됩니다. 특히 다면체(Polyhedron), 회전체(Solid of Revolution), 겉넓이(Surface Area)·부피(Volume), 히스토그램(Histogram), 대푯값(Representative Value) 등은 캐나다 학교 수업에서도 같은 영어 용어로 배우게 됩니다. 이 종합 테스트에서 틀린 부분이 있다면 해당 PART를 다시 복습해 보세요!',
 };
 
 export default dayContent;

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { courses, getPartForDay } from '@/data/curriculum';
 import { getVideosForDay, EBS_COURSE_URL } from '@/data/videoMappings';
+import { getEbsLecturesForDay } from '@/data/ebsLectures';
 import { useProgress } from '@/hooks/useProgress';
 import { GradeId, DayContent, LectureMapping } from '@/lib/types';
 import YouTubePlayer from '@/components/YouTubePlayer';
@@ -189,7 +190,11 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
             <div className="space-y-6">
               {dayContent?.lectures && dayContent.lectures.length > 0 ? (
                 dayContent.lectures.map((lecture, i) => (
-                  <YouTubePlayer key={i} lecture={lecture} />
+                  <YouTubePlayer
+                    key={i}
+                    lecture={lecture}
+                    ebsLectures={getEbsLecturesForDay(gradeId, dayNumber)}
+                  />
                 ))
               ) : (
                 <div className="rounded-xl bg-muted/20 border border-white/5 p-8 text-center">

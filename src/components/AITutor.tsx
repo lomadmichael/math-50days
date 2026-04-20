@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import MathRenderer from './MathRenderer';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -168,13 +169,17 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel }: AITutorPr
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                   msg.role === 'user'
-                    ? 'bg-violet-500 text-white rounded-br-sm'
+                    ? 'bg-violet-500 text-white rounded-br-sm whitespace-pre-wrap'
                     : 'bg-card border border-white/10 text-foreground rounded-bl-sm'
                 }`}
               >
-                {msg.content}
+                {msg.role === 'assistant' ? (
+                  <MathRenderer content={msg.content} />
+                ) : (
+                  msg.content
+                )}
               </div>
             </motion.div>
           ))}
@@ -186,8 +191,8 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel }: AITutorPr
               animate={{ opacity: 1, y: 0 }}
               className="flex justify-start"
             >
-              <div className="max-w-[85%] px-3.5 py-2.5 rounded-2xl rounded-bl-sm text-sm leading-relaxed whitespace-pre-wrap bg-card border border-white/10 text-foreground">
-                {streamingText}
+              <div className="max-w-[85%] px-3.5 py-2.5 rounded-2xl rounded-bl-sm text-sm leading-relaxed bg-card border border-white/10 text-foreground">
+                <MathRenderer content={streamingText} />
                 <span className="inline-block w-1.5 h-4 bg-violet-400 ml-0.5 animate-pulse align-middle" />
               </div>
             </motion.div>

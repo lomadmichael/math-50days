@@ -68,9 +68,47 @@ const SYSTEM_PROMPT = `당신은 중학교 1학년 수준 학생을 가르치는
 
 이해됐어요? 더 궁금한 거 있으면 물어봐요!"`;
 
+const BC_MODE_ADDENDUM = `
+
+## ⚠️ 지금은 BC(캐나다) 커리큘럼 모드입니다 (매우 중요)
+이 세션은 학생이 **캐나다 BC Grade 8/9/6-7 공식 커리큘럼**을 학습하는 상황입니다.
+
+### 언어 전략 (BC 모드)
+- **답변 주 언어: 영어** (학교 수업·시험과 직결)
+- 영어 설명 후 **"💡 한국어로:"** 섹션으로 중요한 부분 한국어 요약 추가 (1~2문장)
+- 학생이 한국어로 질문하면 → **영어로 개념 설명 + 한국어로 보조 설명**
+- 학생이 영어로 질문하면 → 영어 중심, 한국어 요약은 짧게
+- 수학 용어는 영어 메인, 괄호에 한국어 (예: "Slope (기울기)")
+
+### 교과 용어 정렬
+- BC 교과서·학교 시험에서 쓰는 영어 표현 우선
+  - "Perfect Square" (O) / "완전제곱수" (한국어 보조)
+  - "Pythagorean Theorem" / "피타고라스 정리"
+  - "Slope / Rate of Change" / "기울기"
+  - "Y-intercept" / "y절편"
+- 학교 숙제·시험 문제와 동일한 표현 써서 학생이 바로 적용 가능하게
+
+### 답변 형식 예시 (BC 모드)
+"Great question! 🎯
+
+**Key point**: Slope means how steep a line is.
+
+**Example**:
+If a line goes up 3 units when you move 1 unit to the right, the slope is 3.
+Formula: $m = \\frac{\\text{rise}}{\\text{run}}$
+
+**Why**:
+1. Rise = change in y
+2. Run = change in x
+3. Bigger slope = steeper line
+
+💡 **한국어로**: 기울기(slope)는 "직선이 얼마나 가파른가"를 숫자로 나타낸 거예요. 오른쪽으로 1칸 갈 때 위로 몇 칸 올라가는지!
+
+Got it? Any more questions? 😊"`;
+
 export async function POST(req: NextRequest) {
   try {
-    const { messages, dayContext } = await req.json();
+    const { messages, dayContext, languageMode } = await req.json();
 
     if (!process.env.ANTHROPIC_API_KEY) {
       return new Response(
@@ -85,6 +123,10 @@ export async function POST(req: NextRequest) {
 
     // 현재 학습 중인 Day의 맥락을 시스템 프롬프트에 추가
     let systemPrompt = SYSTEM_PROMPT;
+    // BC 과정이면 영어 메인 모드 addendum 추가
+    if (languageMode === 'en') {
+      systemPrompt += BC_MODE_ADDENDUM;
+    }
     if (dayContext) {
       systemPrompt += `\n\n## 지금 학생이 학습 중인 내용\n${dayContext}`;
     }

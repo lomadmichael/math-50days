@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 8,
+  part: 2,
+  title: 'Surface Area of Rectangular Prisms',
+  subtitle: 'Adding up all six faces of a box: $SA = 2lw + 2lh + 2wh$',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d8-c1',
+      title: 'What is Surface Area?',
+      content: '**Surface area** (겉넓이) is the total area of all the **faces** (면) on the outside of a 3D shape.\n\nImagine **unfolding** a cardboard box flat — the total area of that flat shape is the surface area.\n\n**Units:** Surface area is measured in **square units**: $\\text{cm}^2$, $\\text{m}^2$, $\\text{mm}^2$\n\nA **rectangular prism** (직육면체, also called a cuboid) looks like a box. It has:\n- **6 faces** (6개 면): top, bottom, front, back, left side, right side\n- **12 edges** (12개 모서리)\n- **8 vertices** (8개 꼭짓점)\n\n**팁**: 선물 포장을 생각해 보세요. 박스를 완전히 싸려면 얼마나 많은 종이가 필요할까요? 그게 겉넓이예요!',
+      type: 'definition',
+    },
+    {
+      id: 'bcg8-d8-c2',
+      title: 'The Net of a Rectangular Prism',
+      content: 'The **net** (전개도) is what you get when you unfold a rectangular prism flat.\n\nFor a box with **length** $l$, **width** $w$, and **height** $h$:\n\nThe 6 faces come in **3 pairs** of identical rectangles:\n- **Top and Bottom**: each has area $l \\times w$ → total $2lw$\n- **Front and Back**: each has area $l \\times h$ → total $2lh$\n- **Left and Right sides**: each has area $w \\times h$ → total $2wh$\n\n$$\\boxed{SA = 2lw + 2lh + 2wh}$$\n\nOr factored: $SA = 2(lw + lh + wh)$\n\n**팁**: 전개도를 머릿속에 그리면 어떤 면이 있는지 쉽게 파악해요!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d8-c3',
+      title: 'Worked Example',
+      content: '**Find the surface area of a box that is 5 cm long, 3 cm wide, and 4 cm tall.**\n\nIdentify: $l = 5$ cm, $w = 3$ cm, $h = 4$ cm\n\n**Calculate each pair:**\n- Top + Bottom: $2 \\times (l \\times w) = 2 \\times (5 \\times 3) = 2 \\times 15 = 30 \\text{ cm}^2$\n- Front + Back: $2 \\times (l \\times h) = 2 \\times (5 \\times 4) = 2 \\times 20 = 40 \\text{ cm}^2$\n- Left + Right: $2 \\times (w \\times h) = 2 \\times (3 \\times 4) = 2 \\times 12 = 24 \\text{ cm}^2$\n\n**Total:**\n$$SA = 30 + 40 + 24 = 94 \\text{ cm}^2$$\n\n**팁**: 세 쌍을 각각 계산하고 더하면 실수가 줄어요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d8-c4',
+      title: 'Special Case: The Cube',
+      content: 'A **cube** (정육면체) is a special rectangular prism where $l = w = h = s$.\n\nAll 6 faces are identical squares:\n$$SA_{\\text{cube}} = 6s^2$$\n\n**Example:** A cube with side 7 cm:\n$$SA = 6 \\times 7^2 = 6 \\times 49 = 294 \\text{ cm}^2$$\n\n**Another shortcut for prisms:** You can also calculate surface area as:\n$$SA = 2 \\times (\\text{base area}) + (\\text{perimeter of base}) \\times h$$\n\nFor a rectangular base:\n$$SA = 2lw + (2l + 2w)h$$\n\n**팁**: 정육면체는 공식이 더 간단해요 — 한 면의 넓이 × 6!',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d8-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the surface area of a rectangular prism with length 6 cm, width 4 cm, and height 3 cm.',
+      answer: '$108 \\text{ cm}^2$',
+      explanation: '$SA = 2lw + 2lh + 2wh$\n$= 2(6)(4) + 2(6)(3) + 2(4)(3)$\n$= 48 + 36 + 24$\n$= 108 \\text{ cm}^2$\n\n**팁**: 각 쌍을 따로 계산하면 실수를 줄일 수 있어요.',
+      relatedConcept: 'bcg8-d8-c2',
+    },
+    {
+      id: 'bcg8-d8-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the surface area of a cube with side length 5 cm?',
+      options: ['$25 \\text{ cm}^2$', '$100 \\text{ cm}^2$', '$125 \\text{ cm}^2$', '$150 \\text{ cm}^2$'],
+      answer: '$150 \\text{ cm}^2$',
+      explanation: '$SA_{\\text{cube}} = 6s^2 = 6 \\times 5^2 = 6 \\times 25 = 150 \\text{ cm}^2$\n\n**힌트**: 정육면체는 6개 면 × 한 면의 넓이예요.',
+      relatedConcept: 'bcg8-d8-c4',
+    },
+    {
+      id: 'bcg8-d8-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A rectangular box is 10 m long, 2 m wide, and 3 m tall. What is the area of just the top face?',
+      options: ['$6 \\text{ m}^2$', '$20 \\text{ m}^2$', '$30 \\text{ m}^2$', '$60 \\text{ m}^2$'],
+      answer: '$20 \\text{ m}^2$',
+      explanation: 'The top face has dimensions $l \\times w = 10 \\times 2 = 20 \\text{ m}^2$.\n\n**힌트**: 위쪽 면은 길이 × 너비예요.',
+      relatedConcept: 'bcg8-d8-c1',
+    },
+    {
+      id: 'bcg8-d8-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'You want to wrap a gift box that is 25 cm long, 15 cm wide, and 10 cm tall. How much wrapping paper do you need (in cm²)?',
+      answer: '$1550 \\text{ cm}^2$',
+      explanation: '$SA = 2lw + 2lh + 2wh$\n$= 2(25)(15) + 2(25)(10) + 2(15)(10)$\n$= 750 + 500 + 300$\n$= 1550 \\text{ cm}^2$\n\n**힌트**: 선물 포장지의 양 = 직육면체의 겉넓이!',
+      relatedConcept: 'bcg8-d8-c3',
+    },
+    {
+      id: 'bcg8-d8-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A rectangular fish tank (open top) is 60 cm long, 30 cm wide, and 40 cm tall. How much glass is needed to make the tank (excluding the top)?',
+      options: ['$7200 \\text{ cm}^2$', '$9000 \\text{ cm}^2$', '$9600 \\text{ cm}^2$', '$10800 \\text{ cm}^2$'],
+      answer: '$9000 \\text{ cm}^2$',
+      explanation: 'Open top means we exclude the top face and include only 5 faces.\n\nBottom: $60 \\times 30 = 1800 \\text{ cm}^2$\nFront + Back: $2 \\times (60 \\times 40) = 4800 \\text{ cm}^2$\nLeft + Right: $2 \\times (30 \\times 40) = 2400 \\text{ cm}^2$\n\nTotal: $1800 + 4800 + 2400 = 9000 \\text{ cm}^2$\n\n**힌트**: 뚜껑 없는 어항 → 위쪽 면 제외하고 나머지 5면의 넓이 합!',
+      relatedConcept: 'bcg8-d8-c2',
+    },
+    {
+      id: 'bcg8-d8-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A cube has a surface area of $216 \\text{ cm}^2$. What is the side length of the cube?',
+      answer: '6 cm',
+      explanation: '$SA = 6s^2 = 216$\n$s^2 = 216 \\div 6 = 36$\n$s = \\sqrt{36} = 6$ cm\n\nVerify: $6 \\times 6^2 = 6 \\times 36 = 216 \\text{ cm}^2$ ✓\n\n**팁**: 겉넓이를 6으로 나누면 한 면의 넓이, 제곱근 하면 한 변!',
+      relatedConcept: 'bcg8-d8-c4',
+    },
+  ],
+  realLifeExample: 'Shipping companies calculate surface area to figure out how much cardboard is needed to make boxes. A box 30 cm × 20 cm × 15 cm needs $SA = 2(600+450+300) = 2700\\text{ cm}^2$ of cardboard. 택배 박스 만드는 데 필요한 골판지 양을 계산할 때 겉넓이가 쓰여요!',
+};
+
+export default dayContent;

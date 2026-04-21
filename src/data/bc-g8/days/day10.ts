@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 10,
+  part: 2,
+  title: 'Surface Area of Cylinders',
+  subtitle: 'Two circular bases + a curved side: $SA = 2\\pi r^2 + 2\\pi r h$',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d10-c1',
+      title: 'Parts of a Cylinder',
+      content: 'A **cylinder** (원기둥) is a 3D shape with:\n- **2 circular bases** (원형 밑면) — identical circles, one on top and one on bottom\n- **1 curved lateral surface** (곡면, 옆면) — the curved side connecting the two circles\n\nKey measurements:\n- **Radius** $r$ (반지름): the radius of the circular base\n- **Height** $h$ (높이): the perpendicular distance between the two bases\n- **Diameter** $d = 2r$ (지름)\n\n**팁**: 음료수 캔을 생각해보세요 — 위아래 원 + 둥근 옆면이 원기둥이에요!',
+      type: 'definition',
+    },
+    {
+      id: 'bcg8-d10-c2',
+      title: 'Unrolling a Cylinder — The Net',
+      content: 'If you cut a cylinder along its side and unroll it, you get:\n- **2 circles** (top and bottom)\n- **1 rectangle** (the curved side unrolled)\n\nThe rectangle has:\n- **Width** = circumference of the circle $= 2\\pi r$\n- **Height** = height of the cylinder $= h$\n- **Area** = $2\\pi r \\times h = 2\\pi r h$\n\nSo the **net** (전개도) of a cylinder consists of:\n$$\\text{2 circles} + \\text{1 rectangle}$$\n\n**시각화**: 음료수 캔의 라벨을 떼어내면 직사각형이 돼요. 그 가로가 바로 원의 둘레($2\\pi r$)예요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d10-c3',
+      title: 'Surface Area Formula',
+      content: 'Putting it together:\n\n$$\\boxed{SA = 2\\pi r^2 + 2\\pi r h}$$\n\nWhere:\n- $2\\pi r^2$: area of the **two circles** (each circle $= \\pi r^2$)\n- $2\\pi r h$: area of the **curved side** (rectangle with width $2\\pi r$ and height $h$)\n\n**Factored form:** $SA = 2\\pi r(r + h)$\n\n**Use $\\pi \\approx 3.14$** unless told otherwise.\n\n**Example:** $r = 3$ cm, $h = 10$ cm:\n$$SA = 2\\pi(3)^2 + 2\\pi(3)(10) = 18\\pi + 60\\pi = 78\\pi \\approx 245.0 \\text{ cm}^2$$\n\n**팁**: 원 두 개 + 직사각형 — 이 구조만 기억하면 공식을 스스로 유도할 수 있어요!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d10-c4',
+      title: 'Open vs. Closed Cylinders',
+      content: 'Watch for whether the cylinder is **open** or **closed**!\n\n**Closed cylinder** (both circles included): $SA = 2\\pi r^2 + 2\\pi r h$\n\n**Open cylinder** (one circle only, like a cup):\n$$SA = \\pi r^2 + 2\\pi r h$$\n\n**Open cylinder** (no circles, like a pipe):\n$$SA = 2\\pi r h \\quad (\\text{lateral surface only})$$\n\n**Example — Cup (open top):** $r = 4$ cm, $h = 12$ cm\n$$SA = \\pi(4)^2 + 2\\pi(4)(12) = 16\\pi + 96\\pi = 112\\pi \\approx 351.9 \\text{ cm}^2$$\n\n**경고**: 문제에서 "open top", "open bottom", "no lid" 등의 표현을 꼭 확인하세요!',
+      type: 'warning',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d10-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the surface area of a closed cylinder with radius 5 cm and height 8 cm. Use $\\pi \\approx 3.14$ and round to one decimal place.',
+      answer: '$408.2 \\text{ cm}^2$',
+      explanation: '$SA = 2\\pi r^2 + 2\\pi r h$\n$= 2\\pi(5)^2 + 2\\pi(5)(8)$\n$= 2\\pi(25) + 2\\pi(40)$\n$= 50\\pi + 80\\pi$\n$= 130\\pi$\n$\\approx 130 \\times 3.14159 \\approx 408.4 \\text{ cm}^2$\n\nUsing $\\pi = 3.14$: $130 \\times 3.14 = 408.2 \\text{ cm}^2$\n\n**팁**: $2\\pi r^2 + 2\\pi rh = 2\\pi r(r+h) = 2\\pi(5)(13) = 130\\pi$로 인수분해하면 빨라요!',
+      relatedConcept: 'bcg8-d10-c3',
+    },
+    {
+      id: 'bcg8-d10-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the area of the curved lateral surface (side) of a cylinder with radius 6 cm and height 10 cm? Use $\\pi \\approx 3.14$.',
+      options: ['$113.0 \\text{ cm}^2$', '$226.1 \\text{ cm}^2$', '$376.8 \\text{ cm}^2$', '$452.2 \\text{ cm}^2$'],
+      answer: '$376.8 \\text{ cm}^2$',
+      explanation: 'Lateral surface area $= 2\\pi r h = 2\\pi(6)(10) = 120\\pi$\n$\\approx 120 \\times 3.14 = 376.8 \\text{ cm}^2$\n\n**힌트**: 옆면만 구할 때는 $2\\pi rh$만 사용해요 (원 두 개 제외).',
+      relatedConcept: 'bcg8-d10-c3',
+    },
+    {
+      id: 'bcg8-d10-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A cylinder has diameter 8 cm and height 15 cm. What is the radius?',
+      options: ['4 cm', '8 cm', '15 cm', '16 cm'],
+      answer: '4 cm',
+      explanation: 'Radius $= \\frac{\\text{diameter}}{2} = \\frac{8}{2} = 4$ cm\n\n**경고**: 문제에서 지름(diameter)을 반지름(radius)으로 착각하는 실수가 많아요! $r = d \\div 2$.',
+      relatedConcept: 'bcg8-d10-c1',
+    },
+    {
+      id: 'bcg8-d10-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A soup can has a diameter of 7.6 cm and a height of 11.4 cm. What is the total surface area of the can? Use $\\pi \\approx 3.14$ and round to the nearest whole number.',
+      answer: '$363 \\text{ cm}^2$',
+      explanation: 'First, find the radius: $r = 7.6 \\div 2 = 3.8$ cm\n\n$SA = 2\\pi r^2 + 2\\pi r h$\n$= 2(3.14)(3.8)^2 + 2(3.14)(3.8)(11.4)$\n$= 2(3.14)(14.44) + 2(3.14)(43.32)$\n$= 90.68 + 272.05$\n$= 362.73$\n$\\approx 363 \\text{ cm}^2$\n\n**힌트**: 지름 → 반지름으로 변환하는 것을 잊지 마세요!',
+      relatedConcept: 'bcg8-d10-c3',
+    },
+    {
+      id: 'bcg8-d10-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A cylindrical drinking glass (open top) has a radius of 4 cm and a height of 14 cm. How much glass material is needed to make it? Use $\\pi \\approx 3.14$ and round to the nearest whole number.',
+      options: ['$251 \\text{ cm}^2$', '$402 \\text{ cm}^2$', '$452 \\text{ cm}^2$', '$602 \\text{ cm}^2$'],
+      answer: '$402 \\text{ cm}^2$',
+      explanation: 'Open top cylinder: one base (bottom) + curved side.\n\n$SA = \\pi r^2 + 2\\pi r h$\n$= \\pi(4)^2 + 2\\pi(4)(14)$\n$= 16\\pi + 112\\pi$\n$= 128\\pi$\n$\\approx 128 \\times 3.14$\n$= 401.92 \\approx 402 \\text{ cm}^2$\n\n**힌트**: 뚜껑(top) 없는 컵 → 바닥 원 1개 + 옆면만!',
+      relatedConcept: 'bcg8-d10-c4',
+    },
+    {
+      id: 'bcg8-d10-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A cylinder has a total surface area of $168\\pi \\text{ cm}^2$ and a height of 8 cm. Find the radius.',
+      answer: '$r = 6$ cm',
+      explanation: 'Set up the equation using $SA = 2\\pi r^2 + 2\\pi rh$:\n\n$2\\pi r^2 + 2\\pi r(8) = 168\\pi$\n\nDivide both sides by $2\\pi$:\n$r^2 + 8r = 84$\n$r^2 + 8r - 84 = 0$\n$(r + 14)(r - 6) = 0$\n\n$r = 6$ (since $r > 0$, we reject $r = -14$)\n\nVerify: $2\\pi(6)^2 + 2\\pi(6)(8) = 72\\pi + 96\\pi = 168\\pi$ ✓\n\n**팁**: 양변을 $2\\pi$로 나누면 이차방정식이 돼요. 인수분해 또는 근의 공식 사용!',
+      relatedConcept: 'bcg8-d10-c3',
+    },
+  ],
+  realLifeExample: 'When factories design labels for cans, they calculate the lateral surface area $2\\pi rh$ to know how large the label should be. A standard 355 mL pop can (r ≈ 3.3 cm, h ≈ 12.2 cm) needs about $2\\pi(3.3)(12.2) \\approx 253 \\text{ cm}^2$ of label material. 음료수 캔 라벨 크기도 수학으로 계산해요!',
+};
+
+export default dayContent;

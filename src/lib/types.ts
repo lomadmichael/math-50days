@@ -1,5 +1,17 @@
 // ===== 코스 타입 =====
-export type GradeId = 'foundation' | 'grade1' | 'grade2' | 'grade3';
+// 한국 과정: foundation/grade1/grade2/grade3
+// 캐나다 BC 과정: bc-g67 (Grade 6-7), bc-g8 (Grade 8), bc-g9 (Grade 9)
+export type GradeId =
+  | 'foundation'
+  | 'grade1'
+  | 'grade2'
+  | 'grade3'
+  | 'bc-g67'
+  | 'bc-g8'
+  | 'bc-g9';
+
+/** 코스가 속한 커리큘럼 권역 */
+export type CourseRegion = 'kr' | 'ca';
 
 export interface CourseInfo {
   id: GradeId;
@@ -11,6 +23,10 @@ export interface CourseInfo {
   icon: string;         // emoji
   totalDays: number;
   parts: PartInfo[];
+  /** 'kr' 한국 과정, 'ca' 캐나다 BC 과정 */
+  region?: CourseRegion;
+  /** BC 과정은 영어 메인 + 한국어 보조라 AI 튜터가 영어 수업 문맥으로 답변해야 함 */
+  primaryLanguage?: 'ko' | 'en';
 }
 
 export interface PartInfo {

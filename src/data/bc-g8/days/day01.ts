@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 1,
+  part: 1,
+  title: 'Perfect Squares',
+  subtitle: 'Numbers you get by multiplying an integer by itself — 1, 4, 9, 16, 25...',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d1-c1',
+      title: 'What is a Perfect Square?',
+      content: 'A **perfect square** (완전제곱수) is a number you get by multiplying an **integer** (정수) by itself.\n\nFor example:\n- $1 = 1 \\times 1 = 1^2$\n- $4 = 2 \\times 2 = 2^2$\n- $9 = 3 \\times 3 = 3^2$\n- $16 = 4 \\times 4 = 4^2$\n- $25 = 5 \\times 5 = 5^2$\n\nThe notation $n^2$ means "n **squared**" (n의 제곱). So $6^2 = 36$, $7^2 = 49$, $8^2 = 64$.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg8-d1-c2',
+      title: 'The First 15 Perfect Squares',
+      content: 'Memorizing these will help you a lot in Grade 8 and beyond!\n\n$$\\begin{array}{c|c}\nn & n^2 \\\\ \\hline\n1 & 1 \\\\\n2 & 4 \\\\\n3 & 9 \\\\\n4 & 16 \\\\\n5 & 25 \\\\\n6 & 36 \\\\\n7 & 49 \\\\\n8 & 64 \\\\\n9 & 81 \\\\\n10 & 100 \\\\\n11 & 121 \\\\\n12 & 144 \\\\\n13 & 169 \\\\\n14 & 196 \\\\\n15 & 225 \\\\\n\\end{array}$$\n\n**팁**: $10^2 = 100$부터는 백의 자리가 있어요. $11^2 = 121$, $12^2 = 144$는 자주 나오니 꼭 기억하세요!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d1-c3',
+      title: 'Patterns in Perfect Squares',
+      content: 'There are some cool patterns in perfect squares:\n\n**Pattern 1 — Differences between consecutive squares:**\n$4 - 1 = 3$, $9 - 4 = 5$, $16 - 9 = 7$, $25 - 16 = 9$...\nThe differences are always **odd numbers**: 3, 5, 7, 9, 11...\n\n**Pattern 2 — Last digits:**\nPerfect squares always end in **0, 1, 4, 5, 6, or 9**.\nA number ending in 2, 3, 7, or 8 is **never** a perfect square!\n\nFor example, 37 ends in 7 → not a perfect square.',
+      type: 'tip',
+    },
+    {
+      id: 'bcg8-d1-c4',
+      title: 'Checking if a Number is a Perfect Square',
+      content: 'To check if a number is a perfect square:\n1. Try dividing by small perfect squares\n2. Ask: "Is there an integer I can square to get this number?"\n\n**Example:** Is 144 a perfect square?\n$12 \\times 12 = 144$ ✓ Yes! $144 = 12^2$\n\n**Example:** Is 50 a perfect square?\n$7^2 = 49$, $8^2 = 64$. Since 50 is between these and is not equal to any integer squared → **No**.\n\n**경고 (Warning)**: $0$ is also a perfect square because $0 = 0^2$!',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d1-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which of the following is a perfect square?',
+      options: ['18', '25', '32', '50'],
+      answer: '25',
+      explanation: '$25 = 5 \\times 5 = 5^2$, so 25 is a perfect square.\n\n$18$: between $4^2=16$ and $5^2=25$ — not a perfect square.\n$32$: between $5^2=25$ and $6^2=36$ — not a perfect square.\n$50$: between $7^2=49$ and $8^2=64$ — not a perfect square.\n\n**힌트**: 정수를 제곱해서 나오는 숫자인지 확인하세요.',
+      relatedConcept: 'bcg8-d1-c1',
+    },
+    {
+      id: 'bcg8-d1-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Calculate $13^2$.',
+      answer: '169',
+      explanation: '$13^2 = 13 \\times 13 = 169$\n\nYou can break it down: $13 \\times 13 = (10 + 3)(10 + 3) = 100 + 30 + 30 + 9 = 169$\n\n**힌트**: $13^2 = 169$는 외워두면 편해요!',
+      relatedConcept: 'bcg8-d1-c2',
+    },
+    {
+      id: 'bcg8-d1-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'How many perfect squares are there between 1 and 100 (inclusive)?',
+      options: ['8', '9', '10', '11'],
+      answer: '10',
+      explanation: 'The perfect squares from 1 to 100 are:\n$1^2=1$, $2^2=4$, $3^2=9$, $4^2=16$, $5^2=25$, $6^2=36$, $7^2=49$, $8^2=64$, $9^2=81$, $10^2=100$\n\nThat is **10** perfect squares.\n\n**힌트**: 1부터 100까지는 $1^2$에서 $10^2$까지예요.',
+      relatedConcept: 'bcg8-d1-c2',
+    },
+    {
+      id: 'bcg8-d1-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A square garden has an area of 196 square metres. What is the side length of the garden?',
+      options: ['12 m', '13 m', '14 m', '15 m'],
+      answer: '14 m',
+      explanation: 'Area of a square $= \\text{side}^2$\n\n$\\text{side}^2 = 196$\n$\\text{side} = 14$ because $14 \\times 14 = 196$\n\nThe side length is **14 metres**.\n\n**힌트**: 정사각형 넓이 = 한 변 × 한 변이에요.',
+      relatedConcept: 'bcg8-d1-c1',
+    },
+    {
+      id: 'bcg8-d1-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A number $n$ is a perfect square. The next perfect square after $n$ is $n + 17$. What is $n$?',
+      answer: '64',
+      explanation: 'Consecutive perfect squares differ by an odd number. We need two consecutive perfect squares that differ by 17.\n\n$n^2$ and $(n+1)^2$ differ by $2n + 1$.\n\nSet $2n + 1 = 17$, so $n = 8$.\nTherefore the two squares are $8^2 = 64$ and $9^2 = 81$.\n$81 - 64 = 17$ ✓\n\n$n = \\mathbf{64}$\n\n**힌트**: 연속한 완전제곱수의 차 = $2k+1$ (홀수)임을 활용해요.',
+      relatedConcept: 'bcg8-d1-c3',
+    },
+    {
+      id: 'bcg8-d1-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Which of the following numbers CANNOT be a perfect square, based on its last digit?',
+      options: ['441', '256', '324', '137'],
+      answer: '137',
+      explanation: 'Perfect squares can only end in 0, 1, 4, 5, 6, or 9.\n\n$441$ ends in 1 → possible ($21^2 = 441$ ✓)\n$256$ ends in 6 → possible ($16^2 = 256$ ✓)\n$324$ ends in 4 → possible ($18^2 = 324$ ✓)\n$137$ ends in **7** → impossible! Numbers ending in 2, 3, 7, or 8 are never perfect squares.\n\n**힌트**: 완전제곱수의 끝자리는 0, 1, 4, 5, 6, 9 중 하나예요.',
+      relatedConcept: 'bcg8-d1-c3',
+    },
+  ],
+  realLifeExample: 'Tiles on a bathroom floor are often arranged in a square pattern. If you use 81 tiles in a square grid, it\'s $9 \\times 9 = 9^2 = 81$ — a perfect square! 정사각형 타일 배열에서 완전제곱수를 찾을 수 있어요.',
+};
+
+export default dayContent;

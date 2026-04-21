@@ -27,6 +27,9 @@ const gradeGradients: Record<GradeId, string> = {
   foundation: 'from-orange-500 to-amber-500',
   grade1: 'from-blue-500 to-cyan-500',
   grade2: 'from-purple-500 to-violet-500',
+  'bc-g67': 'from-sky-500 to-cyan-500',
+  'bc-g8': 'from-rose-500 to-pink-500',
+  'bc-g9': 'from-amber-500 to-yellow-500',
   grade3: 'from-emerald-500 to-teal-500',
 };
 
@@ -345,6 +348,7 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
           content: c.content,
         }))}
         gradeLabel={course?.title}
+        languageMode={course?.primaryLanguage === 'en' ? 'en' : 'ko'}
       />
     </div>
     </ProblemAttemptsProvider>

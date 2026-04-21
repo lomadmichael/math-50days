@@ -343,6 +343,207 @@ export const videoMappings: Record<string, VideoMapping[]> = {
     },
   ],
 
+  // ── BC Grade 8: Khan Academy 29개 + 정승제 재활용 ──
+  'bc-g8': [
+    // PART 1: Number (Squares, Roots, Pythagorean)
+    {
+      youtubeVideoId: 'mbc3_e5lWw0',
+      title: 'Introduction to square roots (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · Perfect squares and square root symbol',
+      days: [1, 2],
+    },
+    {
+      youtubeVideoId: 'Lh7NMBPFVZw',
+      title: 'How to approximate square roots (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · Estimating non-perfect square roots',
+      days: [3],
+    },
+    {
+      youtubeVideoId: 'gWuykLl6auk',
+      title: '루트 특강 (정승제)',
+      description: '정승제 · 루트가 뭔지, 제곱근 정복 20분 완성 (한국어 보조)',
+      days: [2, 3],
+    },
+    {
+      youtubeVideoId: 's9t7rNhaBp8',
+      title: 'Introduction to the Pythagorean theorem (Khan Academy)',
+      description: 'Khan Academy · Geometry · a² + b² = c² intro',
+      days: [4, 5],
+    },
+    {
+      youtubeVideoId: '6JgRGuT4ItE',
+      title: '피타고라스 정리 (정승제)',
+      description: '정승제 · 반드시 알아야 하는 피타고라스 정리 10분 (한국어 보조)',
+      days: [4, 5, 6, 7],
+    },
+    {
+      youtubeVideoId: 'O64YFlX1_aI',
+      title: 'Pythagorean theorem: Finding a leg (Khan Academy)',
+      description: 'Khan Academy · Find unknown leg using a²+b²=c²',
+      days: [6],
+    },
+    {
+      youtubeVideoId: 'q-crbytGCoE',
+      title: 'Pythagorean theorem word problems (Khan Academy)',
+      description: 'Khan Academy · Real-world applications',
+      days: [7],
+    },
+    // PART 2: Measurement (Surface Area, Volume)
+    {
+      youtubeVideoId: 'EeaSMjBKRcA',
+      title: 'Surface area of rectangular prisms (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · Lateral and total surface area',
+      days: [8],
+    },
+    {
+      youtubeVideoId: 'zFPCdP_zaa8',
+      title: 'Surface area of triangular prisms (Khan Academy)',
+      description: 'Khan Academy · Grade 8',
+      days: [9],
+    },
+    {
+      youtubeVideoId: 'QJ69ms9xLU8',
+      title: 'Surface area of cylinders (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · 2πr² + 2πrh',
+      days: [10],
+    },
+    {
+      youtubeVideoId: 'I9efKVtLCf4',
+      title: 'Volume of rectangular prisms (Khan Academy)',
+      description: 'Khan Academy · Pre-Algebra · V = l × w × h',
+      days: [11],
+    },
+    {
+      youtubeVideoId: 'ZqzAOZ9pP9Q',
+      title: 'Volume of triangular prism (Khan Academy)',
+      description: 'Khan Academy · Geometry · base area × length',
+      days: [12],
+    },
+    {
+      youtubeVideoId: 'gL3HxBQyeg0',
+      title: 'Cylinder volume and surface area (Khan Academy)',
+      description: 'Khan Academy · Geometry · V = πr²h',
+      days: [13],
+    },
+    // PART 3: Number Operations
+    {
+      youtubeVideoId: 'd8lP5tR2R3Q',
+      title: 'Multiplying and dividing negative numbers (Khan Academy)',
+      description: 'Khan Academy · Pre-Algebra · Sign rules',
+      days: [14],
+    },
+    {
+      youtubeVideoId: 'm-pRnFIeoNA',
+      title: 'Dividing fractions example (Khan Academy)',
+      description: 'Khan Academy · Pre-Algebra · KCF / reciprocals',
+      days: [15],
+    },
+    {
+      youtubeVideoId: '-lUEWEEpmIo',
+      title: 'Percentage of a whole number (Khan Academy)',
+      description: 'Khan Academy · Decimals & percents',
+      days: [16],
+    },
+    {
+      youtubeVideoId: 'X2jVap1YgwI',
+      title: 'Growing by a percentage — increase/decrease (Khan Academy)',
+      description: 'Khan Academy · Algebra I · Markups, discounts',
+      days: [17],
+    },
+    {
+      youtubeVideoId: 'HpdMJaKaXXc',
+      title: 'Introduction to ratios (Khan Academy)',
+      description: 'Khan Academy · Pre-Algebra · a:b notation',
+      days: [18],
+    },
+    {
+      youtubeVideoId: 'Zm0KaIw-35k',
+      title: 'Solving unit rates problem (Khan Academy)',
+      description: 'Khan Academy · Pre-Algebra · per-unit comparison',
+      days: [19],
+    },
+    {
+      youtubeVideoId: 'GO5ajwbFqVQ',
+      title: 'Solving proportions (Khan Academy)',
+      description: 'Khan Academy · 7th grade · cross multiplication',
+      days: [20],
+    },
+    // PART 4: Linear Relations
+    {
+      youtubeVideoId: 'AZroE4fJqtQ',
+      title: 'Recognizing linear functions (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · Linear vs nonlinear',
+      days: [21],
+    },
+    {
+      youtubeVideoId: 'rgvysb9emcQ',
+      title: 'Graphs of linear equations (Khan Academy)',
+      description: 'Khan Academy · Grade 8 · Plotting on coordinate plane',
+      days: [22],
+    },
+    {
+      youtubeVideoId: 'TI75fW6w71k',
+      title: '함수의 기본 개념 (정승제)',
+      description: '정승제 · 함수가 되려면 필요한 두 가지 조건 (한국어 보조)',
+      days: [21, 22],
+    },
+    {
+      youtubeVideoId: 'Iqws-qzyZwc',
+      title: 'Slope and rate of change (Khan Academy)',
+      description: 'Khan Academy · Algebra Basics · rise over run',
+      days: [23],
+    },
+    {
+      youtubeVideoId: 'IL3UCuXrUzE',
+      title: 'Slope-intercept form (Khan Academy)',
+      description: 'Khan Academy · Algebra I · y = mx + b',
+      days: [24],
+    },
+    {
+      youtubeVideoId: '5Yo8mkqnk_w',
+      title: '일차함수와 일차방정식 (정승제)',
+      description: '정승제 · 머릿속이 환해지는 일차함수 10분 끝내기 (한국어 보조)',
+      days: [23, 24],
+    },
+    {
+      youtubeVideoId: 'kbqO0YTUyAY',
+      title: 'Intuition for solving one-step equations (Khan Academy)',
+      description: 'Khan Academy · Algebra I · Balance principle',
+      days: [25],
+    },
+    {
+      youtubeVideoId: 'tuVd355R-OQ',
+      title: 'Two-step equations example (Khan Academy)',
+      description: 'Khan Academy · Algebra I · Multi-step solving',
+      days: [26],
+    },
+    {
+      youtubeVideoId: 'r-bIFWGmf9k',
+      title: '방정식 개념 종결 (정승제)',
+      description: '정승제 · 일차방정식 풀이 (한국어 보조)',
+      days: [25, 26],
+    },
+    // PART 5: Probability & Data
+    {
+      youtubeVideoId: 'xSc4oLA9e8o',
+      title: 'Compound probability of independent events (Khan Academy)',
+      description: 'Khan Academy · Probability · P(A and B) = P(A) × P(B)',
+      days: [27],
+    },
+    {
+      youtubeVideoId: 'Zxvc6iPKdec',
+      title: 'Count outcomes using tree diagram (Khan Academy)',
+      description: 'Khan Academy · Grade 7 · Compound outcomes',
+      days: [28],
+    },
+    {
+      youtubeVideoId: 'h8EYEJ32oQ8',
+      title: 'Mean, median, and mode (Khan Academy)',
+      description: 'Khan Academy · Grade 6 · Measures of central tendency',
+      days: [29],
+    },
+  ],
+
   // ── 기초탄탄 코스: 3개 영상 ──
   foundation: [
     {

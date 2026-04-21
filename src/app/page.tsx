@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { courses, courseOrder } from '@/data/curriculum';
+import { courses, krCourses, caCourses } from '@/data/curriculum';
 import { useProgress } from '@/hooks/useProgress';
 import { GradeId } from '@/lib/types';
 
@@ -11,6 +11,9 @@ const gradeGradients: Record<GradeId, string> = {
   grade1: 'from-blue-500 to-cyan-500',
   grade2: 'from-purple-500 to-violet-500',
   grade3: 'from-emerald-500 to-teal-500',
+  'bc-g67': 'from-sky-500 to-cyan-500',
+  'bc-g8': 'from-rose-500 to-pink-500',
+  'bc-g9': 'from-amber-500 to-yellow-500',
 };
 
 const gradeGlows: Record<GradeId, string> = {
@@ -18,6 +21,9 @@ const gradeGlows: Record<GradeId, string> = {
   grade1: 'hover:shadow-blue-500/20',
   grade2: 'hover:shadow-purple-500/20',
   grade3: 'hover:shadow-emerald-500/20',
+  'bc-g67': 'hover:shadow-sky-500/20',
+  'bc-g8': 'hover:shadow-rose-500/20',
+  'bc-g9': 'hover:shadow-amber-500/20',
 };
 
 const gradeBorders: Record<GradeId, string> = {
@@ -25,6 +31,9 @@ const gradeBorders: Record<GradeId, string> = {
   grade1: 'border-blue-500/20',
   grade2: 'border-purple-500/20',
   grade3: 'border-emerald-500/20',
+  'bc-g67': 'border-sky-500/20',
+  'bc-g8': 'border-rose-500/20',
+  'bc-g9': 'border-amber-500/20',
 };
 
 export default function HomePage() {
@@ -115,94 +124,38 @@ export default function HomePage() {
           </Link>
         </motion.section>
 
-        {/* Course Cards */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {courseOrder.map((gradeId, index) => {
-            const course = courses[gradeId];
-            const completed = isLoaded ? getCompletedDaysCount(gradeId) : 0;
-            const progress = isLoaded ? getCourseProgress(gradeId) : null;
-            const percentage = Math.round((completed / course.totalDays) * 100);
-            const hasStarted = completed > 0;
+        {/* 한국 과정 */}
+        <section className="mb-8">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-2xl">🇰🇷</span>
+            <div>
+              <h3 className="text-lg font-bold text-foreground">한국 과정</h3>
+              <p className="text-xs text-muted-foreground">EBS 정승제 50일 수학 기반 · 초등 기초~중3 완성</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {krCourses.map((gradeId, index) => renderCourseCard(gradeId, index, {
+              courses, isLoaded, getCompletedDaysCount, getCourseProgress,
+              gradeGradients, gradeGlows, gradeBorders,
+            }))}
+          </div>
+        </section>
 
-            return (
-              <motion.div
-                key={gradeId}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Link href={`/${gradeId}`}>
-                  <div
-                    className={`group relative overflow-hidden rounded-2xl border ${gradeBorders[gradeId]} bg-card hover:shadow-2xl ${gradeGlows[gradeId]} transition-all duration-300 hover:-translate-y-1`}
-                  >
-                    {/* Gradient top bar */}
-                    <div className={`h-1.5 bg-gradient-to-r ${gradeGradients[gradeId]}`} />
-
-                    <div className="p-6">
-                      {/* Course header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-2xl">{course.icon}</span>
-                            <h3 className="text-xl font-bold text-foreground">
-                              {course.title}
-                            </h3>
-                          </div>
-                          <p className="text-sm text-muted-foreground">{course.subtitle}</p>
-                        </div>
-                        {hasStarted && progress && (
-                          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-sm font-medium">
-                            <span>🔥</span>
-                            <span>{progress.streak}일</span>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-sm text-muted-foreground mb-5 line-clamp-2">
-                        {course.description}
-                      </p>
-
-                      {/* Progress */}
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between text-sm mb-2">
-                          <span className="text-muted-foreground">
-                            Day {completed}/{course.totalDays}
-                          </span>
-                          <span className="font-medium text-foreground">{percentage}%</span>
-                        </div>
-                        <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-                          <motion.div
-                            className={`h-full rounded-full bg-gradient-to-r ${gradeGradients[gradeId]}`}
-                            initial={{ width: 0 }}
-                            animate={{ width: `${percentage}%` }}
-                            transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
-                          />
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          {hasStarted && progress && (
-                            <span className="text-xs text-muted-foreground">
-                              Lv.{progress.level} · {progress.xp} XP
-                            </span>
-                          )}
-                        </div>
-                        <span className={`text-sm font-medium bg-gradient-to-r ${gradeGradients[gradeId]} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity flex items-center gap-1`}>
-                          {hasStarted ? '이어서 학습' : '시작하기'}
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                          </svg>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
+        {/* 캐나다 BC 과정 */}
+        <section className="mb-12">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-2xl">🇨🇦</span>
+            <div>
+              <h3 className="text-lg font-bold text-foreground">캐나다 BC 과정</h3>
+              <p className="text-xs text-muted-foreground">Surrey 교육청 공식 커리큘럼 · 학교 수업·시험 대비 (영어 메인 + 한국어 보조)</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {caCourses.map((gradeId, index) => renderCourseCard(gradeId, index, {
+              courses, isLoaded, getCompletedDaysCount, getCourseProgress,
+              gradeGradients, gradeGlows, gradeBorders,
+            }))}
+          </div>
         </section>
 
         {/* Info Banner */}
@@ -251,8 +204,97 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 py-6 text-center text-xs text-muted-foreground">
-        <p>EBS 정승제 선생님의 50일 수학을 기반으로 제작되었습니다</p>
+        <p>EBS 정승제 선생님 50일 수학 + BC 교육청 공식 커리큘럼 기반</p>
       </footer>
     </div>
+  );
+}
+
+// ─── 코스 카드 렌더러 (한국·캐나다 공용) ───
+type CourseCardDeps = {
+  courses: typeof import('@/data/curriculum').courses;
+  isLoaded: boolean;
+  getCompletedDaysCount: (g: GradeId) => number;
+  getCourseProgress: (g: GradeId) => { level: number; xp: number; streak: number } | null;
+  gradeGradients: Record<GradeId, string>;
+  gradeGlows: Record<GradeId, string>;
+  gradeBorders: Record<GradeId, string>;
+};
+
+function renderCourseCard(gradeId: GradeId, index: number, deps: CourseCardDeps) {
+  const { courses, isLoaded, getCompletedDaysCount, getCourseProgress,
+          gradeGradients, gradeGlows, gradeBorders } = deps;
+  const course = courses[gradeId];
+  const completed = isLoaded ? getCompletedDaysCount(gradeId) : 0;
+  const progress = isLoaded ? getCourseProgress(gradeId) : null;
+  const percentage = Math.round((completed / course.totalDays) * 100);
+  const hasStarted = completed > 0;
+
+  return (
+    <motion.div
+      key={gradeId}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <Link href={`/${gradeId}`}>
+        <div
+          className={`group relative overflow-hidden rounded-2xl border ${gradeBorders[gradeId]} bg-card hover:shadow-2xl ${gradeGlows[gradeId]} transition-all duration-300 hover:-translate-y-1`}
+        >
+          <div className={`h-1.5 bg-gradient-to-r ${gradeGradients[gradeId]}`} />
+          <div className="p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-2xl">{course.icon}</span>
+                  <h3 className="text-xl font-bold text-foreground">{course.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">{course.subtitle}</p>
+              </div>
+              {hasStarted && progress && (
+                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-sm font-medium">
+                  <span>🔥</span>
+                  <span>{progress.streak}일</span>
+                </div>
+              )}
+            </div>
+            <p className="text-sm text-muted-foreground mb-5 line-clamp-2">
+              {course.description}
+            </p>
+            <div className="mb-4">
+              <div className="flex items-center justify-between text-sm mb-2">
+                <span className="text-muted-foreground">
+                  Day {completed}/{course.totalDays}
+                </span>
+                <span className="font-medium text-foreground">{percentage}%</span>
+              </div>
+              <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
+                <motion.div
+                  className={`h-full rounded-full bg-gradient-to-r ${gradeGradients[gradeId]}`}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${percentage}%` }}
+                  transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                {hasStarted && progress && (
+                  <span className="text-xs text-muted-foreground">
+                    Lv.{progress.level} · {progress.xp} XP
+                  </span>
+                )}
+              </div>
+              <span className={`text-sm font-medium bg-gradient-to-r ${gradeGradients[gradeId]} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity flex items-center gap-1`}>
+                {hasStarted ? '이어서 학습' : '시작하기'}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </motion.div>
   );
 }

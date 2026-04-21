@@ -1,0 +1,102 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 6,
+  part: 1,
+  title: 'Finding a Leg',
+  subtitle: 'Rearranging the Pythagorean theorem to find a missing leg: $b = \\sqrt{c^2 - a^2}$',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d6-c1',
+      title: 'Rearranging the Pythagorean Theorem',
+      content: 'When you know the **hypotenuse** $c$ and one **leg** $a$, you can find the other leg $b$:\n\nStart with:\n$$a^2 + b^2 = c^2$$\n\nSubtract $a^2$ from both sides:\n$$b^2 = c^2 - a^2$$\n\nTake the square root:\n$$\\boxed{b = \\sqrt{c^2 - a^2}}$$\n\n**Important:** $c$ is always the **hypotenuse** (빗변) — the largest side. You must subtract the smaller square from the larger!\n\n**경고**: $c$ 자리에 반드시 가장 큰 변(빗변)이 와야 해요!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d6-c2',
+      title: 'Step-by-Step: Finding a Missing Leg',
+      content: '**Example:** A right triangle has hypotenuse $c = 13$ and leg $a = 5$. Find leg $b$.\n\n**Step 1:** Write the formula: $b^2 = c^2 - a^2$\n\n**Step 2:** Substitute: $b^2 = 13^2 - 5^2$\n\n**Step 3:** Calculate squares: $b^2 = 169 - 25$\n\n**Step 4:** Subtract: $b^2 = 144$\n\n**Step 5:** Square root: $b = \\sqrt{144} = 12$\n\nAnswer: $b = 12$\n\nVerify: $5^2 + 12^2 = 25 + 144 = 169 = 13^2$ ✓\n\n**팁**: 항상 마지막에 검산하는 습관을 들이세요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d6-c3',
+      title: 'How to Identify Which Side is Missing',
+      content: 'In word problems, look for clues:\n\n| Given info | What you know | What to find |\n|-----------|--------------|-------------|\n| "hypotenuse is 10" | $c = 10$ | leg (use $b = \\sqrt{c^2 - a^2}$) |\n| "legs are 6 and ?" | one leg, need other | could be any setup |\n| "longest side is..." | $c$ is given | leg |\n\n**Key question to ask:** "Is the missing side the hypotenuse or a leg?"\n- If hypotenuse is missing → add: $c = \\sqrt{a^2 + b^2}$\n- If a leg is missing → subtract: $b = \\sqrt{c^2 - a^2}$\n\n**힌트**: 빗변이 없으면 더하고, 다리가 없으면 빼요!',
+      type: 'tip',
+    },
+    {
+      id: 'bcg8-d6-c4',
+      title: 'Common Mistake: Wrong Side as Hypotenuse',
+      content: '**NEVER** put a leg in the $c$ position!\n\nWrong: $c = 5$, $a = 13$ → $b^2 = 5^2 - 13^2 = 25 - 169 = -144$ ✗\n\nYou cannot take the square root of a negative number! This error tells you that $13$ is actually the hypotenuse.\n\n**Check:** The hypotenuse is always the largest number.\n$5 < 13$ → so $c = 13$, not $5$.\n\n**Correct:** $b^2 = 13^2 - 5^2 = 169 - 25 = 144$, $b = 12$ ✓\n\n**경고**: $c^2 - a^2$의 결과가 음수면 → 빗변을 잘못 설정한 거예요!',
+      type: 'warning',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d6-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A right triangle has hypotenuse $c = 10$ and leg $a = 6$. Find the other leg $b$.',
+      answer: '8',
+      explanation: '$b^2 = c^2 - a^2 = 10^2 - 6^2 = 100 - 36 = 64$\n$b = \\sqrt{64} = 8$\n\nVerify: $6^2 + 8^2 = 36 + 64 = 100 = 10^2$ ✓\n\nThis is the 6-8-10 triangle (double of 3-4-5)!\n\n**팁**: 결과가 딱 떨어지면 피타고라스 수일 가능성이 높아요.',
+      relatedConcept: 'bcg8-d6-c2',
+    },
+    {
+      id: 'bcg8-d6-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A right triangle has hypotenuse $c = 17$ and one leg $a = 8$. Which expression gives the other leg $b$?',
+      options: [
+        '$b = \\sqrt{17^2 + 8^2}$',
+        '$b = \\sqrt{17^2 - 8^2}$',
+        '$b = \\sqrt{8^2 - 17^2}$',
+        '$b = 17^2 - 8^2$',
+      ],
+      answer: '$b = \\sqrt{17^2 - 8^2}$',
+      explanation: 'When finding a missing leg: $b^2 = c^2 - a^2$, so $b = \\sqrt{c^2 - a^2} = \\sqrt{17^2 - 8^2}$\n\n$= \\sqrt{289 - 64} = \\sqrt{225} = 15$\n\n(8-15-17 is a Pythagorean triple!)\n\n**힌트**: 다리를 구할 때는 빼기를 사용해요!',
+      relatedConcept: 'bcg8-d6-c1',
+    },
+    {
+      id: 'bcg8-d6-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the missing leg. Hypotenuse $= 26$ m, one leg $= 24$ m.',
+      answer: '10 m',
+      explanation: '$b^2 = 26^2 - 24^2 = 676 - 576 = 100$\n$b = \\sqrt{100} = 10$ m\n\nVerify: $10^2 + 24^2 = 100 + 576 = 676 = 26^2$ ✓\n\nThis is the 10-24-26 Pythagorean triple (double of 5-12-13)!\n\n**힌트**: 576 = 24², 676 = 26²를 계산해보세요.',
+      relatedConcept: 'bcg8-d6-c2',
+    },
+    {
+      id: 'bcg8-d6-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A 15 m cable stretches from the top of a pole to a point on the ground 9 m from the base of the pole. How tall is the pole?',
+      options: ['6 m', '12 m', '$\\sqrt{306}$ m', '18 m'],
+      answer: '12 m',
+      explanation: 'The cable is the hypotenuse ($c = 15$ m). The ground distance is a leg ($a = 9$ m). Find the pole height $b$:\n\n$b^2 = 15^2 - 9^2 = 225 - 81 = 144$\n$b = \\sqrt{144} = 12$ m\n\nVerify: $9^2 + 12^2 = 81 + 144 = 225 = 15^2$ ✓ (9-12-15, triple of 3-4-5)\n\n**힌트**: 전선줄이 빗변, 바닥 거리가 한 다리, 전봇대 높이가 다른 다리!',
+      relatedConcept: 'bcg8-d6-c3',
+    },
+    {
+      id: 'bcg8-d6-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A TV screen has a diagonal of 50 inches and a width of 40 inches. What is the height of the screen? Round to one decimal place if needed.',
+      answer: '30 inches',
+      explanation: 'Diagonal is the hypotenuse ($c = 50$). Width is one leg ($a = 40$). Find height $b$:\n\n$b^2 = 50^2 - 40^2 = 2500 - 1600 = 900$\n$b = \\sqrt{900} = 30$ inches\n\nVerify: $30^2 + 40^2 = 900 + 1600 = 2500 = 50^2$ ✓ (30-40-50, 10× the 3-4-5!)\n\n**팁**: TV 화면 크기를 대각선으로 표시하는 이유가 여기서 나와요!',
+      relatedConcept: 'bcg8-d6-c3',
+    },
+    {
+      id: 'bcg8-d6-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'In a right triangle, the hypotenuse is $\\sqrt{45}$ and one leg is 3. Find the other leg.',
+      options: ['$\\sqrt{36} = 6$', '$\\sqrt{54}$', '$3\\sqrt{4} = 6$', '$\\sqrt{54} = 3\\sqrt{6}$'],
+      answer: '$\\sqrt{36} = 6$',
+      explanation: '$b^2 = c^2 - a^2 = (\\sqrt{45})^2 - 3^2 = 45 - 9 = 36$\n\n$b = \\sqrt{36} = 6$\n\n$(\\sqrt{n})^2 = n$임을 이용해요!\n\nVerify: $3^2 + 6^2 = 9 + 36 = 45 = (\\sqrt{45})^2$ ✓\n\n**팁**: 제곱근을 제곱하면 원래 수가 돼요: $(\\sqrt{45})^2 = 45$.',
+      relatedConcept: 'bcg8-d6-c1',
+    },
+  ],
+  realLifeExample: 'Baseball diamonds use the Pythagorean theorem! The bases are 90 feet apart. The distance from home plate to second base is $\\sqrt{90^2 + 90^2} = 90\\sqrt{2} \\approx 127.3$ feet. If you know the diagonal and one side, you can find the other! 야구장에서도 피타고라스 정리가 쓰여요.',
+};
+
+export default dayContent;

@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 7,
+  part: 1,
+  title: 'Pythagorean Applications',
+  subtitle: 'Solve real-world word problems with ladders, distances, and diagonals',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d7-c1',
+      title: 'Problem-Solving Strategy for Pythagorean Problems',
+      content: 'Word problems with the Pythagorean theorem follow a pattern. Use this strategy:\n\n**Step 1 — Draw a diagram** (그림 그리기)\nSketch the situation. Label legs and hypotenuse.\n\n**Step 2 — Identify what you know and what you need**\nWhich sides are given? Which is missing?\n\n**Step 3 — Is the missing side the hypotenuse or a leg?**\n- Missing hypotenuse: $c = \\sqrt{a^2 + b^2}$\n- Missing leg: $b = \\sqrt{c^2 - a^2}$\n\n**Step 4 — Solve and check units**\nDon\'t forget units! (metres, feet, cm...)\n\n**Step 5 — Check your answer makes sense**\nThe hypotenuse must be the longest side!\n\n**팁**: 그림을 먼저 그리면 문제가 훨씬 쉬워져요!',
+      type: 'tip',
+    },
+    {
+      id: 'bcg8-d7-c2',
+      title: 'Ladder Problems',
+      content: 'A classic application: a **ladder** (사다리) leaning against a wall.\n\nThe triangle formed has:\n- **Hypotenuse** = ladder length\n- One **leg** = height up the wall\n- Other **leg** = distance from wall along ground\n\n**Example:** A 13 m ladder leans against a wall. Its foot is 5 m from the wall. How high does it reach?\n\n$$b^2 = 13^2 - 5^2 = 169 - 25 = 144$$\n$$b = \\sqrt{144} = 12 \\text{ m}$$\n\n**시각화**: 사다리, 벽, 바닥이 직각삼각형을 만들어요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d7-c3',
+      title: 'Distance Problems',
+      content: 'Finding the **shortest distance** (최단 거리) between two points often uses the Pythagorean theorem.\n\n**Example:** Two ships leave a harbour. Ship A sails 30 km north. Ship B sails 40 km east. How far apart are the ships?\n\n- North = one leg ($a = 30$ km)\n- East = other leg ($b = 40$ km)\n- Distance apart = hypotenuse $c$\n\n$$c = \\sqrt{30^2 + 40^2} = \\sqrt{900 + 1600} = \\sqrt{2500} = 50 \\text{ km}$$\n\n**팁**: 북쪽/남쪽과 동쪽/서쪽은 서로 수직이에요 → 직각삼각형!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d7-c4',
+      title: 'Diagonal Problems',
+      content: 'The **diagonal** (대각선) of a rectangle or a room creates a right triangle:\n\n$$\\text{diagonal} = \\sqrt{\\text{length}^2 + \\text{width}^2}$$\n\n**Example:** A room is 8 m long and 6 m wide. How long is the diagonal?\n$$d = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10 \\text{ m}$$\n\n**3D Application:** For a rectangular box (직육면체):\n$$\\text{space diagonal} = \\sqrt{l^2 + w^2 + h^2}$$\n\n**팁**: 방의 대각선, TV 화면 크기, 직사각형 운동장 — 모두 이 공식 사용!',
+      type: 'formula',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d7-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A 20 m ladder leans against a wall. The base of the ladder is 12 m from the wall. How high up the wall does the ladder reach?',
+      answer: '16 m',
+      explanation: 'Ladder = hypotenuse ($c = 20$ m), base = leg ($a = 12$ m), height = leg ($b$):\n\n$b^2 = 20^2 - 12^2 = 400 - 144 = 256$\n$b = \\sqrt{256} = 16$ m\n\nVerify: $12^2 + 16^2 = 144 + 256 = 400 = 20^2$ ✓\n\n**팁**: 12-16-20은 3-4-5의 4배예요.',
+      relatedConcept: 'bcg8-d7-c2',
+    },
+    {
+      id: 'bcg8-d7-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A rectangular park is 45 m long and 60 m wide. What is the length of the diagonal path across the park?',
+      options: ['75 m', '85 m', '105 m', '$\\sqrt{5625}$ m'],
+      answer: '75 m',
+      explanation: '$d = \\sqrt{45^2 + 60^2} = \\sqrt{2025 + 3600} = \\sqrt{5625} = 75$ m\n\n$75^2 = 5625$ ✓\n\nThis is the 45-60-75 triple (15× the 3-4-5 triple)!\n\n**힌트**: 대각선 = 직사각형 두 변을 다리로 하는 직각삼각형의 빗변이에요.',
+      relatedConcept: 'bcg8-d7-c4',
+    },
+    {
+      id: 'bcg8-d7-p3',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Mina walks 7 km east and then 24 km north. How far is she from her starting point?',
+      options: ['17 km', '25 km', '31 km', '$\\sqrt{31}$ km'],
+      answer: '25 km',
+      explanation: 'East (7 km) and North (24 km) are perpendicular, forming two legs of a right triangle:\n\n$c = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$ km\n\n(7-24-25 is a Pythagorean triple!)\n\n**힌트**: 동쪽과 북쪽은 직각이에요 → 직각삼각형 형성!',
+      relatedConcept: 'bcg8-d7-c3',
+    },
+    {
+      id: 'bcg8-d7-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A fence post is 2.4 m tall and is supported by a wire attached to the top of the post and to a point on the ground 1.8 m from the base of the post. How long is the wire? Round to one decimal place if needed.',
+      answer: '3.0 m',
+      explanation: 'Post = vertical leg ($a = 2.4$ m), ground distance = horizontal leg ($b = 1.8$ m), wire = hypotenuse $c$:\n\n$c = \\sqrt{2.4^2 + 1.8^2} = \\sqrt{5.76 + 3.24} = \\sqrt{9} = 3.0$ m\n\nVerify: $1.8^2 + 2.4^2 = 3.24 + 5.76 = 9 = 3^2$ ✓\n\nThis is the 1.8-2.4-3.0 triangle (0.6× of 3-4-5)!\n\n**팁**: 작은 소수도 피타고라스 수의 배수일 수 있어요.',
+      relatedConcept: 'bcg8-d7-c2',
+    },
+    {
+      id: 'bcg8-d7-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A TV screen has a 55-inch diagonal. If the height of the screen is 27 inches, what is the width?',
+      options: ['About 44 inches', 'About 47 inches', 'About 50 inches', 'About 52 inches'],
+      answer: 'About 47 inches',
+      explanation: 'Diagonal = hypotenuse ($c = 55$), height = leg ($a = 27$), width = leg ($b$):\n\n$b^2 = 55^2 - 27^2 = 3025 - 729 = 2296$\n$b = \\sqrt{2296} \\approx 47.9 \\approx 47$ inches\n\n(Actual 16:9 ratio screens: height = diagonal × 9/√337 ≈ 0.49×)\n\n**힌트**: $\\sqrt{2296}$은 48에 가까워요 ($48^2 = 2304$).',
+      relatedConcept: 'bcg8-d7-c4',
+    },
+    {
+      id: 'bcg8-d7-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A hiker walks 5 km north, then 12 km east, then 3 km north again. How far is the hiker from the starting point (straight-line distance)? Round to one decimal place.',
+      answer: 'About 13.0 km',
+      explanation: 'Add the north components: $5 + 3 = 8$ km north.\nEast component: $12$ km east.\n\nStraight-line distance:\n$c = \\sqrt{8^2 + 12^2} = \\sqrt{64 + 144} = \\sqrt{208}$\n$= \\sqrt{4 \\times 52} = 2\\sqrt{52} \\approx 2 \\times 7.21 \\approx 14.4$ km\n\nWait — let me recalculate: $\\sqrt{208} = \\sqrt{4 \\cdot 52} = 2\\sqrt{52}$. $\\sqrt{52} \\approx 7.21$, so $2 \\times 7.21 = 14.4$ km.\n\n**팁**: 방향이 같으면 먼저 더한 다음 피타고라스 정리를 적용해요!',
+      relatedConcept: 'bcg8-d7-c3',
+    },
+  ],
+  realLifeExample: 'Firefighters use the Pythagorean theorem to figure out how long their ladder needs to be before climbing a building. If the building is 8 m tall and they stand 6 m back, they need a ladder of at least $\\sqrt{8^2+6^2} = 10$ m. 소방관들도 피타고라스 정리를 써요!',
+};
+
+export default dayContent;

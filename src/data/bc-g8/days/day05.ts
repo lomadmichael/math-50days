@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 5,
+  part: 1,
+  title: 'Finding the Hypotenuse',
+  subtitle: 'Use $c = \\sqrt{a^2 + b^2}$ to find the longest side of a right triangle',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d5-c1',
+      title: 'Formula for the Hypotenuse',
+      content: 'When you know both **legs** (다리) of a right triangle, you can find the **hypotenuse** (빗변) $c$:\n\n$$\\boxed{c = \\sqrt{a^2 + b^2}}$$\n\n**Step-by-step process:**\n1. Identify the two legs: $a$ and $b$\n2. Square each leg: $a^2$ and $b^2$\n3. Add them: $a^2 + b^2$\n4. Take the square root: $c = \\sqrt{a^2 + b^2}$\n\n**Example:** $a = 5$, $b = 12$\n$$c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$$\n\n**팁**: 순서를 기억하세요 — 제곱 → 더하기 → 제곱근!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d5-c2',
+      title: 'When the Answer is Not a Whole Number',
+      content: 'Often, $a^2 + b^2$ is not a perfect square. Leave the answer as a **simplified square root**.\n\n**Example:** Find $c$ when $a = 3$ and $b = 5$:\n$$c = \\sqrt{3^2 + 5^2} = \\sqrt{9 + 25} = \\sqrt{34}$$\n\n$34$ is not a perfect square, so $c = \\sqrt{34} \\approx 5.83$ cm.\n\n**Simplifying:** Sometimes you can simplify:\n$$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$$\n\nBut for BC Grade 8, a decimal approximation (to 1 decimal place) is usually acceptable.\n\n**힌트**: 계산기 없이 어림값을 쓸 때는 "≈"를 사용해요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d5-c3',
+      title: 'Identifying Which Side is the Hypotenuse',
+      content: 'Before applying the theorem, you must identify the hypotenuse!\n\n**Rule:** The hypotenuse $c$ is:\n- Always the **longest** side\n- Always **opposite** the right angle (90° angle)\n- The side **not touching** the right angle\n\n**Common mistake:** Students sometimes square all three sides and add any two — this is wrong!\n\nAlways set up: $\\text{(shorter side)}^2 + \\text{(shorter side)}^2 = \\text{(longest side)}^2$\n\n**경고**: 빗변 자리에 다리를 넣으면 완전히 틀린 식이 돼요!',
+      type: 'warning',
+    },
+    {
+      id: 'bcg8-d5-c4',
+      title: 'Setting Up Problems from Diagrams',
+      content: 'In diagrams, look for the right angle marker (□) to identify legs and hypotenuse:\n\n**Typical diagram setup:**\n```\n        |\n    b   |  (leg b is vertical)\n        |\n        └──────\n           a      c (diagonal)\n```\n- $a$ = horizontal leg\n- $b$ = vertical leg  \n- $c$ = diagonal (hypotenuse)\n\n$$c = \\sqrt{a^2 + b^2}$$\n\n**실생활 예시**: 사다리, 빌딩의 대각선, 공원 지름길 등에서 빗변을 구해요.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d5-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the hypotenuse of a right triangle with legs $a = 8$ cm and $b = 6$ cm.',
+      answer: '10 cm',
+      explanation: '$c = \\sqrt{a^2 + b^2} = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$ cm\n\nThis is the famous **6-8-10** triangle (double of 3-4-5)!\n\n**팁**: 결과가 깔끔한 정수면 피타고라스 수일 가능성이 높아요.',
+      relatedConcept: 'bcg8-d5-c1',
+    },
+    {
+      id: 'bcg8-d5-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A right triangle has legs of 5 m and 5 m. What is the hypotenuse?',
+      options: ['$\\sqrt{10}$ m', '$5\\sqrt{2}$ m', '$10$ m', '$25$ m'],
+      answer: '$5\\sqrt{2}$ m',
+      explanation: '$c = \\sqrt{5^2 + 5^2} = \\sqrt{25 + 25} = \\sqrt{50}$\n\nSimplify: $\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2} \\approx 7.07$ m\n\n**힌트**: 두 다리가 같은 이등변직각삼각형이에요. 빗변 = 다리 × $\\sqrt{2}$!',
+      relatedConcept: 'bcg8-d5-c2',
+    },
+    {
+      id: 'bcg8-d5-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the hypotenuse of a right triangle with legs $a = 9$ and $b = 40$. Give the exact answer.',
+      answer: '41',
+      explanation: '$c = \\sqrt{9^2 + 40^2} = \\sqrt{81 + 1600} = \\sqrt{1681} = 41$\n\n$41^2 = 1681$ ✓\n\nThis is the **9-40-41** Pythagorean triple!\n\n**팁**: $\\sqrt{1681}$을 계산하려면 $40^2=1600$에 가까운 제곱수를 찾으면 돼요.',
+      relatedConcept: 'bcg8-d5-c1',
+    },
+    {
+      id: 'bcg8-d5-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A ladder 10 m long leans against a wall. Its base is 6 m from the wall. How high up the wall does it reach?',
+      options: ['4 m', '8 m', '64 m', '$\\sqrt{64}$ m'],
+      answer: '8 m',
+      explanation: 'The ladder is the **hypotenuse** ($c = 10$ m). The base is a **leg** ($a = 6$ m). Find the other leg $b$ (height on wall).\n\nWait — this is "find a leg," not the hypotenuse! But we can use $c^2 = a^2 + b^2$:\n$10^2 = 6^2 + b^2$\n$100 = 36 + b^2$\n$b^2 = 64$\n$b = 8$ m\n\n**힌트**: 사다리 길이가 빗변, 바닥 거리가 다리예요.',
+      relatedConcept: 'bcg8-d5-c3',
+    },
+    {
+      id: 'bcg8-d5-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A rectangular field is 24 m wide and 10 m long. What is the length of the diagonal path across the field? Round to one decimal place if needed.',
+      answer: '26 m',
+      explanation: 'The diagonal is the hypotenuse of a right triangle with legs 24 m and 10 m:\n\n$c = \\sqrt{24^2 + 10^2} = \\sqrt{576 + 100} = \\sqrt{676} = 26$ m\n\n$26^2 = 676$ ✓ This is a **10-24-26** triple (double of 5-12-13)!\n\n**힌트**: 직사각형의 대각선 = 두 변을 다리로 하는 직각삼각형의 빗변이에요.',
+      relatedConcept: 'bcg8-d5-c4',
+    },
+    {
+      id: 'bcg8-d5-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'An equilateral triangle has side length 6 cm. What is its height? Round to one decimal place.',
+      options: ['3.0 cm', '4.2 cm', '5.2 cm', '6.0 cm'],
+      answer: '5.2 cm',
+      explanation: 'The height of an equilateral triangle splits it into two right triangles.\n- Hypotenuse (whole side) $= 6$ cm\n- One leg (half the base) $= 3$ cm\n- Other leg $=$ height $h$\n\n$6^2 = 3^2 + h^2$\n$36 = 9 + h^2$\n$h^2 = 27$\n$h = \\sqrt{27} = 3\\sqrt{3} \\approx 5.196 \\approx 5.2$ cm\n\n**팁**: 정삼각형의 높이 = $\\frac{\\sqrt{3}}{2} \\times \\text{변}$이에요.',
+      relatedConcept: 'bcg8-d5-c2',
+    },
+  ],
+  realLifeExample: 'GPS systems calculate distances using the Pythagorean theorem. If you walk 3 blocks east and 4 blocks north, the straight-line distance from start to finish is $\\sqrt{3^2 + 4^2} = 5$ blocks! 도시의 블록 거리도 피타고라스 정리로 계산해요.',
+};
+
+export default dayContent;

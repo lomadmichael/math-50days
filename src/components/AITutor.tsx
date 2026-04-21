@@ -16,6 +16,8 @@ interface AITutorProps {
   gradeLabel?: string;
   /** true 이면 자체 헤더·카드 테두리를 숨김 (플로팅 패널 안에 임베드할 때 사용) */
   embedded?: boolean;
+  /** 'en' 면 BC 커리큘럼 모드 (영어 메인 + 한국어 보조). 기본 'ko'. */
+  languageMode?: 'ko' | 'en';
 }
 
 const SUGGESTED_QUESTIONS_DEFAULT = [
@@ -39,7 +41,35 @@ const SUGGESTED_QUESTIONS_ALL_CORRECT = [
   '다음엔 어떤 개념을 배우면 좋을까?',
 ];
 
-export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = false }: AITutorProps) {
+// BC 모드 (영어 메인) 용 제안 질문
+const BC_SUGGESTED_DEFAULT = [
+  "Can you explain this concept in simpler words?",
+  "Give me a real-life example",
+  "Walk me through an example problem",
+  "쉽게 한국어로도 설명해줘",
+];
+
+const BC_SUGGESTED_WITH_WRONG = [
+  "Why did I get these wrong? Explain each one",
+  "Let's redo the wrong problems step by step",
+  "I'm confused about this concept — help?",
+  "Give me one more practice problem",
+];
+
+const BC_SUGGESTED_ALL_CORRECT = [
+  "I got them all right! Give me a harder challenge",
+  "Summarize what I learned today",
+  "How is this used in the real world?",
+  "What's the next topic I should learn?",
+];
+
+export default function AITutor({
+  dayTitle,
+  dayConcepts,
+  gradeLabel,
+  embedded = false,
+  languageMode = 'ko',
+}: AITutorProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -50,13 +80,17 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
   const attempts = attemptsCtx?.attempts ?? [];
   const wrongCount = attempts.filter((a) => !a.isCorrect).length;
 
-  // 문제 풀이 상황에 따라 제안 질문 달라지게
-  const suggestedQuestions =
-    attempts.length === 0
-      ? SUGGESTED_QUESTIONS_DEFAULT
-      : wrongCount > 0
-        ? SUGGESTED_QUESTIONS_WITH_WRONG
-        : SUGGESTED_QUESTIONS_ALL_CORRECT;
+  // 문제 풀이 상황 + 언어 모드에 따라 제안 질문 달라지게
+  const suggestedQuestions = (() => {
+    const isBC = languageMode === 'en';
+    if (attempts.length === 0) {
+      return isBC ? BC_SUGGESTED_DEFAULT : SUGGESTED_QUESTIONS_DEFAULT;
+    }
+    if (wrongCount > 0) {
+      return isBC ? BC_SUGGESTED_WITH_WRONG : SUGGESTED_QUESTIONS_WITH_WRONG;
+    }
+    return isBC ? BC_SUGGESTED_ALL_CORRECT : SUGGESTED_QUESTIONS_ALL_CORRECT;
+  })();
 
   // Auto scroll on new messages
   useEffect(() => {
@@ -104,6 +138,7 @@ export default function AITutor({ dayTitle, dayConcepts, gradeLabel, embedded = 
         body: JSON.stringify({
           messages: nextMessages,
           dayContext: buildDayContext(),
+          languageMode,
         }),
       });
 

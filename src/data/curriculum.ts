@@ -10,6 +10,8 @@ export const courses: Record<GradeId, CourseInfo> = {
     colorHex: '#F97316',
     icon: '🧱',
     totalDays: 50,
+    region: 'kr',
+    primaryLanguage: 'ko',
     parts: [
       { partNumber: 1, title: '수 감각', startDay: 1, endDay: 5 },
       { partNumber: 2, title: '분수', startDay: 6, endDay: 11 },
@@ -32,6 +34,8 @@ export const courses: Record<GradeId, CourseInfo> = {
     colorHex: '#3B82F6',
     icon: '📘',
     totalDays: 50,
+    region: 'kr',
+    primaryLanguage: 'ko',
     parts: [
       { partNumber: 1, title: '수와 연산', startDay: 1, endDay: 11 },
       { partNumber: 2, title: '문자와 식', startDay: 12, endDay: 20 },
@@ -51,6 +55,8 @@ export const courses: Record<GradeId, CourseInfo> = {
     colorHex: '#8B5CF6',
     icon: '📙',
     totalDays: 50,
+    region: 'kr',
+    primaryLanguage: 'ko',
     parts: [
       { partNumber: 1, title: '수와 식', startDay: 1, endDay: 9 },
       { partNumber: 2, title: '부등식', startDay: 10, endDay: 16 },
@@ -70,6 +76,8 @@ export const courses: Record<GradeId, CourseInfo> = {
     colorHex: '#10B981',
     icon: '📗',
     totalDays: 50,
+    region: 'kr',
+    primaryLanguage: 'ko',
     parts: [
       { partNumber: 1, title: '제곱근과 실수', startDay: 1, endDay: 7 },
       { partNumber: 2, title: '다항식', startDay: 8, endDay: 14 },
@@ -80,9 +88,83 @@ export const courses: Record<GradeId, CourseInfo> = {
       { partNumber: 7, title: '통계', startDay: 47, endDay: 50 },
     ],
   },
+
+  // ============ 캐나다 BC Curriculum ============
+  'bc-g67': {
+    id: 'bc-g67',
+    title: 'BC Grade 6-7',
+    subtitle: 'Intermediate Math',
+    description:
+      'BC 교육청 Grade 6-7 과정. Fractions, Decimals, Percents, Ratios, Circle, Probability 기초. 중학교 수학의 발판.',
+    color: 'sky',
+    colorHex: '#0EA5E9',
+    icon: '🍁',
+    totalDays: 30,
+    region: 'ca',
+    primaryLanguage: 'en',
+    parts: [
+      { partNumber: 1, title: 'Number Sense & Operations', startDay: 1, endDay: 8 },
+      { partNumber: 2, title: 'Fractions, Decimals & Percents', startDay: 9, endDay: 14 },
+      { partNumber: 3, title: 'Ratios, Rates & Proportions', startDay: 15, endDay: 18 },
+      { partNumber: 4, title: 'Geometry & Measurement', startDay: 19, endDay: 24 },
+      { partNumber: 5, title: 'Data & Probability', startDay: 25, endDay: 30 },
+    ],
+  },
+  'bc-g8': {
+    id: 'bc-g8',
+    title: 'BC Grade 8',
+    subtitle: 'Canadian Curriculum',
+    description:
+      'BC 교육청 Grade 8 공식 커리큘럼. Pythagorean Theorem, Linear Relations, Surface Area/Volume 등. 아들이 지금 다니는 학년.',
+    color: 'rose',
+    colorHex: '#F43F5E',
+    icon: '🍁',
+    totalDays: 30,
+    region: 'ca',
+    primaryLanguage: 'en',
+    parts: [
+      { partNumber: 1, title: 'Number: Squares & Pythagorean', startDay: 1, endDay: 7 },
+      { partNumber: 2, title: 'Measurement: Surface Area & Volume', startDay: 8, endDay: 13 },
+      { partNumber: 3, title: 'Number Operations', startDay: 14, endDay: 19 },
+      { partNumber: 4, title: 'Linear Relations & Equations', startDay: 20, endDay: 26 },
+      { partNumber: 5, title: 'Probability & Data', startDay: 27, endDay: 30 },
+    ],
+  },
+  'bc-g9': {
+    id: 'bc-g9',
+    title: 'BC Grade 9',
+    subtitle: 'Advanced Math',
+    description:
+      'BC 교육청 Grade 9 과정. Polynomials, Linear Equations & Inequalities, Similarity, Statistics. 고등 수학 진입 준비.',
+    color: 'amber',
+    colorHex: '#F59E0B',
+    icon: '🍁',
+    totalDays: 35,
+    region: 'ca',
+    primaryLanguage: 'en',
+    parts: [
+      { partNumber: 1, title: 'Powers & Exponents', startDay: 1, endDay: 6 },
+      { partNumber: 2, title: 'Polynomials', startDay: 7, endDay: 13 },
+      { partNumber: 3, title: 'Linear Equations & Inequalities', startDay: 14, endDay: 20 },
+      { partNumber: 4, title: 'Linear Relations', startDay: 21, endDay: 26 },
+      { partNumber: 5, title: 'Geometry: Similarity & Composite Solids', startDay: 27, endDay: 30 },
+      { partNumber: 6, title: 'Statistics & Probability', startDay: 31, endDay: 35 },
+    ],
+  },
 };
 
-export const courseOrder: GradeId[] = ['foundation', 'grade1', 'grade2', 'grade3'];
+export const courseOrder: GradeId[] = [
+  'foundation',
+  'grade1',
+  'grade2',
+  'grade3',
+  'bc-g67',
+  'bc-g8',
+  'bc-g9',
+];
+
+export const krCourses: GradeId[] = ['foundation', 'grade1', 'grade2', 'grade3'];
+export const caCourses: GradeId[] = ['bc-g67', 'bc-g8', 'bc-g9'];
 
 // 미니테스트 Day 번호들 (각 PART 마지막)
 export function getTestDays(gradeId: GradeId): number[] {

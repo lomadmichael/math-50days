@@ -1,0 +1,102 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 9,
+  part: 2,
+  title: 'Surface Area of Triangular Prisms',
+  subtitle: 'Two triangular bases + three rectangular faces',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d9-c1',
+      title: 'What is a Triangular Prism?',
+      content: 'A **triangular prism** (삼각기둥) is a 3D shape with:\n- **2 triangular bases** (삼각형 밑면) that are identical and parallel\n- **3 rectangular lateral faces** (직사각형 옆면) connecting the triangles\n- **5 faces** total, **9 edges**, **6 vertices**\n\nThe triangular bases can be any type of triangle:\n- Right triangle (직각삼각형) — most common in problems\n- Equilateral triangle (정삼각형)\n- Isosceles triangle (이등변삼각형)\n\n**팁**: 삼각형 2개 + 직사각형 3개 = 삼각기둥!',
+      type: 'definition',
+    },
+    {
+      id: 'bcg8-d9-c2',
+      title: 'Surface Area Formula',
+      content: 'The surface area (겉넓이) of a triangular prism:\n\n$$\\boxed{SA = 2 \\times (\\text{area of triangle}) + (\\text{perimeter of triangle}) \\times L}$$\n\nwhere $L$ is the **length** (길이) of the prism.\n\n**Breaking it down:**\n- **Two triangular bases:** $2 \\times \\frac{1}{2} \\times b \\times h_{\\triangle} = b \\times h_{\\triangle}$\n  (where $b$ = base of triangle, $h_{\\triangle}$ = height of triangle)\n- **Three rectangular faces:** each rectangle has area = (one side of triangle) × $L$\n\nSo:\n$$SA = b h_{\\triangle} + (s_1 + s_2 + s_3) \\times L$$\n\n**팁**: 삼각형 두 개 면적 + 세 옆면 면적 = 삼각기둥 겉넓이!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d9-c3',
+      title: 'Worked Example — Right Triangle Base',
+      content: '**A triangular prism has a right triangle base with legs 3 cm and 4 cm, hypotenuse 5 cm, and prism length 10 cm. Find the surface area.**\n\n**Step 1: Area of one triangular base**\n$$A_{\\triangle} = \\frac{1}{2} \\times 3 \\times 4 = 6 \\text{ cm}^2$$\n\n**Step 2: Both triangular bases**\n$$2 \\times 6 = 12 \\text{ cm}^2$$\n\n**Step 3: Perimeter of triangle**\n$$P = 3 + 4 + 5 = 12 \\text{ cm}$$\n\n**Step 4: Three rectangular faces**\n$$P \\times L = 12 \\times 10 = 120 \\text{ cm}^2$$\n\n**Step 5: Total surface area**\n$$SA = 12 + 120 = 132 \\text{ cm}^2$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d9-c4',
+      title: 'Finding Triangle Height When Needed',
+      content: 'Sometimes you need to find the triangle\'s height using the **Pythagorean theorem** before calculating surface area!\n\n**Example:** An equilateral triangle with side 6 cm.\n- Split into two right triangles: base $= 3$ cm, hypotenuse $= 6$ cm\n- Height $= \\sqrt{6^2 - 3^2} = \\sqrt{36 - 9} = \\sqrt{27} = 3\\sqrt{3} \\approx 5.2$ cm\n\n**Area** $= \\frac{1}{2} \\times 6 \\times 3\\sqrt{3} = 9\\sqrt{3} \\approx 15.6 \\text{ cm}^2$\n\n**경고**: 이등변삼각형이나 정삼각형 문제에서 높이가 직접 주어지지 않으면 피타고라스 정리로 먼저 구해야 해요!',
+      type: 'warning',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d9-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A triangular prism has a right triangle base with legs 6 cm and 8 cm (hypotenuse 10 cm). The prism length is 12 cm. Find the surface area.',
+      answer: '$336 \\text{ cm}^2$',
+      explanation: '**Triangular bases:**\n$A_{\\triangle} = \\frac{1}{2} \\times 6 \\times 8 = 24 \\text{ cm}^2$\n$2 \\times 24 = 48 \\text{ cm}^2$\n\n**Rectangular faces:**\n$P = 6 + 8 + 10 = 24$ cm\n$P \\times L = 24 \\times 12 = 288 \\text{ cm}^2$\n\n**Total:** $SA = 48 + 288 = 336 \\text{ cm}^2$\n\n**팁**: 삼각형 둘레 × 길이 = 세 옆면 면적의 합!',
+      relatedConcept: 'bcg8-d9-c3',
+    },
+    {
+      id: 'bcg8-d9-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A triangular prism has triangular bases with area $15 \\text{ cm}^2$. The perimeter of the triangle is 18 cm and the prism length is 7 cm. What is the surface area?',
+      options: ['$126 \\text{ cm}^2$', '$156 \\text{ cm}^2$', '$168 \\text{ cm}^2$', '$196 \\text{ cm}^2$'],
+      answer: '$156 \\text{ cm}^2$',
+      explanation: '**Two triangular bases:** $2 \\times 15 = 30 \\text{ cm}^2$\n**Three rectangular faces:** $18 \\times 7 = 126 \\text{ cm}^2$\n\n**Total:** $SA = 30 + 126 = 156 \\text{ cm}^2$\n\n**힌트**: 공식 $SA = 2A_{\\triangle} + P \\times L$을 바로 적용해요!',
+      relatedConcept: 'bcg8-d9-c2',
+    },
+    {
+      id: 'bcg8-d9-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'How many faces does a triangular prism have?',
+      options: ['3', '4', '5', '6'],
+      answer: '5',
+      explanation: 'A triangular prism has:\n- 2 triangular bases (top and bottom)\n- 3 rectangular lateral faces (the three sides)\n\nTotal: **5 faces**\n\n**힌트**: 삼각형 2개 + 직사각형 3개 = 5개 면!',
+      relatedConcept: 'bcg8-d9-c1',
+    },
+    {
+      id: 'bcg8-d9-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A tent is shaped like a triangular prism. The triangular face is an isosceles triangle with a base of 3 m, two equal sides of 2.5 m, and a height of 2 m. The tent is 4 m long. Find the total surface area of the tent (including the floor).',
+      answer: '$38 \\text{ m}^2$',
+      explanation: '**Two triangular bases:**\n$A_{\\triangle} = \\frac{1}{2} \\times 3 \\times 2 = 3 \\text{ m}^2$\n$2 \\times 3 = 6 \\text{ m}^2$\n\n**Perimeter of triangle:** $3 + 2.5 + 2.5 = 8$ m\n**Three rectangular faces** (two slanted sides + floor):\n$P \\times L = 8 \\times 4 = 32 \\text{ m}^2$\n\n**Total:** $SA = 6 + 32 = 38 \\text{ m}^2$\n\n**힌트**: 텐트의 겉넓이 = 방수포의 넓이! 삼각형 2개 + 3개 직사각형.',
+      relatedConcept: 'bcg8-d9-c3',
+    },
+    {
+      id: 'bcg8-d9-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A triangular prism has an equilateral triangle base with side 6 cm and height $3\\sqrt{3}$ cm. The prism is 10 cm long. What is the surface area? (Leave $\\sqrt{3}$ in the answer.)',
+      options: [
+        '$180 + 9\\sqrt{3}$ cm²',
+        '$180 + 18\\sqrt{3}$ cm²',
+        '$180 + 27\\sqrt{3}$ cm²',
+        '$270$ cm²',
+      ],
+      answer: '$180 + 18\\sqrt{3}$ cm²',
+      explanation: '**Triangular base area:**\n$A_{\\triangle} = \\frac{1}{2} \\times 6 \\times 3\\sqrt{3} = 9\\sqrt{3} \\text{ cm}^2$\n$2 \\times 9\\sqrt{3} = 18\\sqrt{3} \\text{ cm}^2$\n\n**Perimeter:** $6 + 6 + 6 = 18$ cm\n**Rectangular faces:** $18 \\times 10 = 180 \\text{ cm}^2$\n\n**Total:** $SA = 180 + 18\\sqrt{3} \\approx 180 + 31.2 = 211.2 \\text{ cm}^2$\n\n**힌트**: 정삼각형의 높이 $h = \\frac{\\sqrt{3}}{2} \\times s = \\frac{\\sqrt{3}}{2} \\times 6 = 3\\sqrt{3}$!',
+      relatedConcept: 'bcg8-d9-c4',
+    },
+    {
+      id: 'bcg8-d9-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A triangular prism has a right triangle base with legs 5 cm and 12 cm (hypotenuse 13 cm). The prism length is 7 cm. Find the surface area.',
+      answer: '$270 \\text{ cm}^2$',
+      explanation: '**Two triangular bases:**\n$A_{\\triangle} = \\frac{1}{2} \\times 5 \\times 12 = 30 \\text{ cm}^2$\n$2 \\times 30 = 60 \\text{ cm}^2$\n\n**Perimeter:** $5 + 12 + 13 = 30$ cm\n**Rectangular faces:** $30 \\times 7 = 210 \\text{ cm}^2$\n\n**Total:** $SA = 60 + 210 = 270 \\text{ cm}^2$\n\n**팁**: 5-12-13 피타고라스 수 — 빗변이 13임을 바로 알 수 있어요!',
+      relatedConcept: 'bcg8-d9-c2',
+    },
+  ],
+  realLifeExample: 'The Toblerone chocolate box is a triangular prism! To make one Toblerone box, the factory needs to calculate the surface area to know how much cardboard to cut. 토블론 초콜릿 상자가 바로 삼각기둥이에요!',
+};
+
+export default dayContent;

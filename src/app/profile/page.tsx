@@ -11,6 +11,9 @@ const gradeGradients: Record<GradeId, string> = {
   grade1: 'from-blue-500 to-cyan-500',
   grade2: 'from-purple-500 to-violet-500',
   grade3: 'from-emerald-500 to-teal-500',
+  'bc-g67': 'from-sky-500 to-cyan-500',
+  'bc-g8': 'from-rose-500 to-pink-500',
+  'bc-g9': 'from-amber-500 to-yellow-500',
 };
 
 const gradeColors: Record<GradeId, string> = {
@@ -18,6 +21,9 @@ const gradeColors: Record<GradeId, string> = {
   grade1: 'text-blue-400',
   grade2: 'text-purple-400',
   grade3: 'text-emerald-400',
+  'bc-g67': 'text-sky-400',
+  'bc-g8': 'text-rose-400',
+  'bc-g9': 'text-amber-400',
 };
 
 const levelTitles: Record<number, string> = {

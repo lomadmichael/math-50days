@@ -10,6 +10,8 @@ interface FloatingAITutorProps {
   gradeLabel?: string;
   /** 버블 위 라벨 (선택). 예: "샘에게 물어보기" */
   label?: string;
+  /** 'en' 면 BC 커리큘럼 모드 (영어 메인 + 한국어 보조). 기본 'ko'. */
+  languageMode?: 'ko' | 'en';
 }
 
 export default function FloatingAITutor(props: FloatingAITutorProps) {
@@ -139,6 +141,7 @@ export default function FloatingAITutor(props: FloatingAITutorProps) {
                 dayTitle={props.dayTitle}
                 dayConcepts={props.dayConcepts}
                 gradeLabel={props.gradeLabel}
+                languageMode={props.languageMode}
                 embedded
               />
             </motion.div>

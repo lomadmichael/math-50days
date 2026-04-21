@@ -1,0 +1,103 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 3,
+  part: 1,
+  title: 'Square Roots — Estimating',
+  subtitle: 'Finding approximate values for square roots of non-perfect squares',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg8-d3-c1',
+      title: 'Square Roots of Non-Perfect Squares',
+      content: 'Most numbers are **not** perfect squares. Their square roots are **irrational numbers** (무리수) — decimals that go on forever without repeating.\n\nFor example:\n- $\\sqrt{2} = 1.41421356...$\n- $\\sqrt{3} = 1.73205080...$\n- $\\sqrt{7} = 2.64575131...$\n\nWe cannot write these as exact fractions or terminating decimals. In Grade 8, we **estimate** their values.\n\n**팁**: $\\sqrt{2}$는 약 1.414, $\\sqrt{3}$은 약 1.732를 기억해두면 유용해요!',
+      type: 'definition',
+    },
+    {
+      id: 'bcg8-d3-c2',
+      title: 'Estimating by Benchmarking',
+      content: 'To estimate $\\sqrt{n}$, find the two **consecutive perfect squares** (연속 완전제곱수) that $n$ is between:\n\n**Steps:**\n1. Find perfect square **below** $n$: call it $a^2$\n2. Find perfect square **above** $n$: call it $b^2$\n3. So $a < \\sqrt{n} < b$\n4. Decide if $\\sqrt{n}$ is closer to $a$ or $b$\n\n**Example:** Estimate $\\sqrt{20}$\n- $4^2 = 16 < 20 < 25 = 5^2$\n- So $4 < \\sqrt{20} < 5$\n- $20$ is closer to $25$ than to $16$, so $\\sqrt{20} \\approx 4.5$\n- (Actual: $\\sqrt{20} \\approx 4.47$)',
+      type: 'formula',
+    },
+    {
+      id: 'bcg8-d3-c3',
+      title: 'Placing Square Roots on a Number Line',
+      content: 'You can place approximate square roots on a number line (수직선):\n\n**Example:** Place $\\sqrt{5}$, $\\sqrt{10}$, and $\\sqrt{15}$ on a number line from 1 to 5.\n\n- $\\sqrt{5}$: between $2$ and $3$ (closer to 2): $\\sqrt{5} \\approx 2.2$\n- $\\sqrt{10}$: between $3$ and $4$ (closer to 3): $\\sqrt{10} \\approx 3.2$\n- $\\sqrt{15}$: between $3$ and $4$ (closer to 4): $\\sqrt{15} \\approx 3.9$\n\n$$1 \\quad 2 \\quad \\underbrace{\\sqrt{5}}_{\\approx 2.2} \\quad 3 \\quad \\underbrace{\\sqrt{10}}_{\\approx 3.2} \\quad \\underbrace{\\sqrt{15}}_{\\approx 3.9} \\quad 4 \\quad 5$$\n\n**팁**: 수직선에서 완전제곱수를 먼저 표시하고, 그 사이에 제곱근 위치를 잡아보세요!',
+      type: 'example',
+    },
+    {
+      id: 'bcg8-d3-c4',
+      title: 'Better Estimation: Linear Interpolation',
+      content: 'For a more accurate estimate, use **linear interpolation** (선형 보간):\n\n$$\\sqrt{n} \\approx a + \\frac{n - a^2}{b^2 - a^2}$$\n\nwhere $a^2 < n < b^2$ and $b = a + 1$.\n\n**Example:** Estimate $\\sqrt{30}$\n- $5^2 = 25 < 30 < 36 = 6^2$, so $a = 5$, $b = 6$\n- $\\sqrt{30} \\approx 5 + \\frac{30 - 25}{36 - 25} = 5 + \\frac{5}{11} \\approx 5 + 0.45 = 5.45$\n- (Actual: $\\sqrt{30} \\approx 5.477$)\n\nThis formula says: "How far is 30 between 25 and 36?" and adds that fraction of the gap.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg8-d3-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Between which two consecutive integers is $\\sqrt{50}$?',
+      options: ['Between 6 and 7', 'Between 7 and 8', 'Between 8 and 9', 'Between 5 and 6'],
+      answer: 'Between 7 and 8',
+      explanation: '$7^2 = 49$ and $8^2 = 64$\n\nSince $49 < 50 < 64$, we have $7 < \\sqrt{50} < 8$.\n\n(Actual: $\\sqrt{50} \\approx 7.07$, very close to 7!)\n\n**힌트**: 49와 64 사이에 50이 있어요.',
+      relatedConcept: 'bcg8-d3-c2',
+    },
+    {
+      id: 'bcg8-d3-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which is the best estimate for $\\sqrt{40}$?',
+      options: ['About 5.5', 'About 6.3', 'About 7.1', 'About 4.5'],
+      answer: 'About 6.3',
+      explanation: '$6^2 = 36 < 40 < 49 = 7^2$, so $6 < \\sqrt{40} < 7$.\n\nUsing interpolation: $6 + \\frac{40-36}{49-36} = 6 + \\frac{4}{13} \\approx 6 + 0.31 = 6.31$\n\n(Actual: $\\sqrt{40} \\approx 6.32$) ✓\n\n**힌트**: 36과 49 사이에 40이 있고, 36에 더 가까워요.',
+      relatedConcept: 'bcg8-d3-c2',
+    },
+    {
+      id: 'bcg8-d3-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Write the integers $a$ and $b$ such that $a < \\sqrt{75} < b$, where $a$ and $b$ are consecutive integers.',
+      answer: '$a = 8$, $b = 9$',
+      explanation: '$8^2 = 64$ and $9^2 = 81$\n\nSince $64 < 75 < 81$, we have $8 < \\sqrt{75} < 9$.\n\n(Actual: $\\sqrt{75} \\approx 8.66$)\n\n**힌트**: $8^2 = 64$, $9^2 = 81$을 먼저 계산해보세요.',
+      relatedConcept: 'bcg8-d3-c2',
+    },
+    {
+      id: 'bcg8-d3-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Place $\\sqrt{18}$ on a number line. It falls closest to which value?',
+      options: ['3.5', '4.0', '4.2', '4.8'],
+      answer: '4.2',
+      explanation: '$4^2 = 16 < 18 < 25 = 5^2$, so $4 < \\sqrt{18} < 5$.\n\nInterpolation: $4 + \\frac{18-16}{25-16} = 4 + \\frac{2}{9} \\approx 4 + 0.22 = 4.22$\n\n(Actual: $\\sqrt{18} \\approx 4.24$) — closest to **4.2**.\n\n**힌트**: 16과 25 사이에 18이 있고, 16에 훨씬 가까워요.',
+      relatedConcept: 'bcg8-d3-c3',
+    },
+    {
+      id: 'bcg8-d3-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Order these from least to greatest: $\\sqrt{7}$, $2.5$, $\\sqrt{3}$, $1.8$',
+      options: [
+        '$1.8, \\sqrt{3}, 2.5, \\sqrt{7}$',
+        '$\\sqrt{3}, 1.8, \\sqrt{7}, 2.5$',
+        '$1.8, \\sqrt{3}, \\sqrt{7}, 2.5$',
+        '$\\sqrt{3}, 1.8, 2.5, \\sqrt{7}$',
+      ],
+      answer: '$1.8, \\sqrt{3}, 2.5, \\sqrt{7}$',
+      explanation: 'Estimate each value:\n- $\\sqrt{3} \\approx 1.73$ (between $1^2=1$ and $2^2=4$, closer to 2)\n- $1.8 = 1.8$\n- $2.5 = 2.5$\n- $\\sqrt{7} \\approx 2.65$ (between $2^2=4$ and $3^2=9$, closer to 3... wait, $2.6^2=6.76$, $2.7^2=7.29$)\n\nOrder: $\\sqrt{3} \\approx 1.73 < 1.8 < 2.5 < \\sqrt{7} \\approx 2.65$\n\nAnswer: $\\sqrt{3}, 1.8, 2.5, \\sqrt{7}$\n\n**힌트**: 각 수의 근삿값을 먼저 계산하세요.',
+      relatedConcept: 'bcg8-d3-c3',
+    },
+    {
+      id: 'bcg8-d3-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'Without a calculator, estimate $\\sqrt{200}$ to one decimal place. Show your reasoning.',
+      answer: 'About 14.1',
+      explanation: '$14^2 = 196$ and $15^2 = 225$\n\n$196 < 200 < 225$, so $14 < \\sqrt{200} < 15$.\n\nInterpolation: $14 + \\frac{200-196}{225-196} = 14 + \\frac{4}{29} \\approx 14 + 0.138 \\approx 14.1$\n\n(Actual: $\\sqrt{200} \\approx 14.142$) ✓\n\n**팁**: $\\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2} \\approx 10 \\times 1.414 = 14.14$로도 구할 수 있어요!',
+      relatedConcept: 'bcg8-d3-c4',
+    },
+  ],
+  realLifeExample: 'Engineers estimate $\\sqrt{2} \\approx 1.414$ when calculating the diagonal of a square. If a square room is 5 m × 5 m, the diagonal is $5\\sqrt{2} \\approx 7.07$ m. 정확한 계산기 없이도 어림값으로 실제 문제를 풀 수 있어요!',
+};
+
+export default dayContent;

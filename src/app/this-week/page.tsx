@@ -12,7 +12,12 @@ import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
 
 export default function ThisWeekPage() {
   return (
-    <ProblemAttemptsProvider>
+    <ProblemAttemptsProvider
+      source={{
+        id: `this-week/${thisWeek.weekOf}`,
+        label: `이번 주 학습 대비 · ${thisWeek.weekOf}`,
+      }}
+    >
       <ThisWeekContent />
     </ProblemAttemptsProvider>
   );

@@ -106,9 +106,23 @@ Formula: $m = \\frac{\\text{rise}}{\\text{run}}$
 
 Got it? Any more questions? 😊"`;
 
+type IncomingMessage = {
+  role: 'user' | 'assistant';
+  content:
+    | string
+    | Array<
+        | { type: 'text'; text: string }
+        | { type: 'image'; source: { type: 'base64'; media_type: string; data: string } }
+      >;
+};
+
 export async function POST(req: NextRequest) {
   try {
-    const { messages, dayContext, languageMode } = await req.json();
+    const { messages, dayContext, languageMode } = await req.json() as {
+      messages: IncomingMessage[];
+      dayContext?: string;
+      languageMode?: 'ko' | 'en';
+    };
 
     if (!process.env.ANTHROPIC_API_KEY) {
       return new Response(
@@ -141,9 +155,10 @@ export async function POST(req: NextRequest) {
           cache_control: { type: 'ephemeral' },
         },
       ],
-      messages: messages.map((m: { role: string; content: string }) => ({
+      messages: messages.map((m) => ({
         role: m.role,
-        content: m.content,
+        // content 가 string 이면 그대로, array (vision) 이면 그대로 전달
+        content: m.content as string | Anthropic.ContentBlockParam[],
       })),
     });
 

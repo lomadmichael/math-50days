@@ -174,30 +174,42 @@ export default function HomePage() {
           </motion.div>
         </section>
 
-        {/* 이번 주 학습 대비 (보조 진입점) */}
+        {/* 보조 진입점들 */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-8"
+          className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-3"
         >
           <Link href="/this-week">
-            <div className="group rounded-2xl border border-violet-500/20 bg-violet-500/5 hover:bg-violet-500/10 hover:border-violet-400/40 transition-all p-5 flex items-center gap-4">
+            <div className="group rounded-2xl border border-violet-500/20 bg-violet-500/5 hover:bg-violet-500/10 hover:border-violet-400/40 transition-all p-5 flex items-center gap-4 h-full">
               <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center text-2xl shrink-0">
                 📬
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <h4 className="text-base font-semibold text-foreground">이번 주 학교 수학 대비</h4>
-                  <span className="text-[10px] uppercase tracking-wider bg-violet-500/20 text-violet-300 px-2 py-0.5 rounded-full font-semibold">
-                    NEW
-                  </span>
-                </div>
+                <h4 className="text-base font-semibold text-foreground mb-0.5">이번 주 학교 수학 대비</h4>
                 <p className="text-xs text-muted-foreground">
-                  학교 주간 메일 기반 · 다음 주 Quiz·새 주제 예습·샘에게 질문
+                  학교 주간 메일 기반 · Quiz·새 주제
                 </p>
               </div>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-violet-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </Link>
+
+          <Link href="/mistakes">
+            <div className="group rounded-2xl border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 hover:border-rose-400/40 transition-all p-5 flex items-center gap-4 h-full">
+              <div className="w-12 h-12 rounded-xl bg-rose-500/20 flex items-center justify-center text-2xl shrink-0">
+                📓
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="text-base font-semibold text-foreground mb-0.5">오답 노트</h4>
+                <p className="text-xs text-muted-foreground">
+                  틀린 문제 모아서 복습
+                </p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-rose-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useCallback, useContext, useState, ReactNode } from 'react';
+import { logMistakeAttempt } from './useMistakeNotebook';
 
 /**
  * 학생의 문제 풀이 시도 기록 — 샘(AI 튜터)에게 풀이 상황을 공유하기 위해 사용.
@@ -33,9 +34,15 @@ interface ProblemAttemptsContextValue {
   reset: () => void;
 }
 
+interface ProviderProps {
+  children: ReactNode;
+  /** 출처 식별 (예: { id: 'bc-g8/day/4', label: 'BC Grade 8 · Day 4' }). 있으면 오답 노트에도 영속 기록됨 */
+  source?: { id: string; label: string };
+}
+
 const Ctx = createContext<ProblemAttemptsContextValue | null>(null);
 
-export function ProblemAttemptsProvider({ children }: { children: ReactNode }) {
+export function ProblemAttemptsProvider({ children, source }: ProviderProps) {
   const [attempts, setAttempts] = useState<ProblemAttempt[]>([]);
 
   const recordAttempt = useCallback(
@@ -50,8 +57,23 @@ export function ProblemAttemptsProvider({ children }: { children: ReactNode }) {
         }
         return [...prev, next];
       });
+      // 오답 노트에도 영속 기록 (source 가 제공된 경우)
+      if (source) {
+        logMistakeAttempt({
+          problemId: a.problemId,
+          question: a.question,
+          studentAnswer: a.studentAnswer,
+          correctAnswer: a.correctAnswer,
+          isCorrect: a.isCorrect,
+          options: a.options,
+          type: a.type,
+          sectionLabel: a.sectionLabel,
+          sourceId: source.id,
+          sourceLabel: source.label,
+        });
+      }
     },
-    []
+    [source]
   );
 
   const reset = useCallback(() => setAttempts([]), []);

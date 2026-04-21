@@ -125,7 +125,12 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
   };
 
   return (
-    <ProblemAttemptsProvider>
+    <ProblemAttemptsProvider
+      source={{
+        id: `${gradeId}/day/${dayNumber}`,
+        label: `${course?.title ?? gradeId} · Day ${dayNumber}${dayContent?.title ? ` - ${dayContent.title}` : ''}`,
+      }}
+    >
     <div className="min-h-screen bg-background pb-20">
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-white/10">

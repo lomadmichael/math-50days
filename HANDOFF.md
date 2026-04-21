@@ -11,6 +11,74 @@ Next.js 16 + Vercel 배포. 4개 독립 코스 (기초탄탄, 중1, 중2, 중3) 
 
 ---
 
+## 2026-04-22 저녁 세션 — Grade 8 대규모 업그레이드 (9개 기능)
+
+3개 서브에이전트 병렬 디스패치 + Phase A·E 직접 구현.
+
+### Phase A (직접 구현)
+- **A1. 이미지 업로드 → 샘 vision (커밋 `6bb9a46`)**
+  - AITutor 에 📷 버튼 + 클립보드 붙여넣기
+  - Claude multimodal content block (text + image)
+  - 최대 3장·5MB
+  - 학교 워크시트·시험지 사진 찍어 바로 풀이 요청
+- **A2. 오답 노트 `/mistakes` (커밋 `6bb9a46`)**
+  - `useMistakeNotebook` localStorage 영속 저장
+  - 필터: 현재 틀림 / 한 번이라도 틀림 / 전체
+  - 출처별 그룹핑, 시도 이력, 해결됨/틀림 시각 구분
+
+### Phase B (에이전트 1, 커밋 `fe6bb09`)
+- **B1. Day 완료 셀러브레이션**: canvas-confetti, 코스별 색상
+- **B2. 북마크**: `useBookmarks`, Day 헤더 별 아이콘, `/bookmarks`
+- **B3. 검색**: `/search` 전체 Day 풀텍스트, 키워드 하이라이트
+
+### Phase C (에이전트 2, 커밋 `fe6bb09`)
+- **C1. 단원평가 모드**: UnitTestMode 컴포넌트
+  - 타이머 (일반 20분 / isTest Day 30분)
+  - 힌트 숨김 → 제출 후 결과 + 오답 해설
+  - 오답 자동 노트 기록
+- **C2. Spaced Repetition**: `useReviewScheduler`
+  - SM-2 변형: 맞힘 간격 2배 (최대 64일) / 틀림 1일 리셋
+  - Day 완료 시 개념 자동 등록
+  - `/review` + 홈 "오늘의 복습" 카드
+
+### Phase D (에이전트 3, 커밋 `fe6bb09`)
+- **D1. 영어 수학 용어 플래시카드 95장**: `/flashcards`
+  - BC G8 + 한국 중1 + both, 8개 주제 분류
+  - 카드 flip 애니메이션, "알아요"/"다시 볼게요"
+- **D2. Day별 프린트 페이지**: `/print/[grade]/[dayNumber]`
+  - @media print 최적화 · A4 한 페이지
+- **D3. 학부모 주간 리포트**: `/parent-report`
+  - 완료 Day · 정답률 · 오답 현황 · 주제별 강약
+
+### Phase E (직접 구현, 커밋 `fe6bb09`)
+- **E. 주간 메일 AI 파서**: `/admin/update-week`
+  - `/api/parse-school-email` Claude Sonnet 4.5 구조화 파싱
+  - 메일 본문 → WeeklySchedule JSON → TS 코드 자동 생성
+  - Gmail API 자동 수신 향후 확장 가이드 포함
+  - 현재는 수동 복붙 → 코드 복사 → thisWeek.ts 덮어쓰기
+
+### 라우트 맵 (총 16개)
+```
+/                       — 랜딩 허브
+/kr , /ca               — 권역별 과정 목록
+/[grade]                — 코스 대시보드 (7종)
+/[grade]/day/[dayNumber]— Day 학습 페이지
+/this-week              — 이번 주 학교 대비
+/mistakes               — 오답 노트
+/bookmarks              — 북마크
+/search                 — 전체 검색
+/review                 — 오늘의 복습
+/flashcards             — 영어 용어 플래시카드
+/parent-report          — 학부모 주간 리포트
+/print/[grade]/[dayNumber] — 프린트용
+/admin/update-week      — 주간 메일 파서
+/profile                — 학습 프로필
+/api/ai-tutor           — 샘 (multimodal)
+/api/parse-school-email — 주간 메일 파서
+```
+
+---
+
 ## 2026-04-22 오후 세션 — 캐나다 BC 커리큘럼 추가
 
 ### 🇨🇦 BC Grade 6-7 / 8 / 9 과정 신설 (커밋 `33fbf42`)

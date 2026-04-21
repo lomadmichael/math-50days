@@ -13,6 +13,7 @@ import ConceptNote from '@/components/ConceptNote';
 import Problem from '@/components/Problem';
 import FloatingAITutor from '@/components/FloatingAITutor';
 import MathRenderer from '@/components/MathRenderer';
+import SummaryEditor from '@/components/SummaryEditor';
 import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
 
 const tabs = [
@@ -284,11 +285,10 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
                 <h3 className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
                   ✍️ 오늘 배운 것 정리
                 </h3>
-                <textarea
+                <SummaryEditor
                   value={summaryText}
-                  onChange={(e) => setSummaryText(e.target.value)}
-                  placeholder="오늘 배운 핵심 내용을 3줄로 정리해보세요..."
-                  className="w-full h-32 px-4 py-3 rounded-xl bg-card border border-white/10 text-foreground text-sm resize-none outline-none focus:border-violet-500/50 transition-colors placeholder:text-muted-foreground/50"
+                  onChange={setSummaryText}
+                  placeholder="오늘 배운 핵심 내용을 3줄로 정리해보세요. 수식은 위 버튼으로 넣거나 $x^2$ 처럼 달러 기호로 감싸세요."
                 />
               </div>
 

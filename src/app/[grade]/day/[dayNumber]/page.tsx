@@ -1,12 +1,14 @@
 'use client';
 
-import { use, useState, useEffect } from 'react';
+import { use, useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import confetti from 'canvas-confetti';
 import { courses, getPartForDay } from '@/data/curriculum';
 import { getVideosForDay, EBS_COURSE_URL } from '@/data/videoMappings';
 import { getEbsLecturesForDay } from '@/data/ebsLectures';
 import { useProgress } from '@/hooks/useProgress';
+import { useBookmarks } from '@/hooks/useBookmarks';
 import { GradeId, DayContent, LectureMapping } from '@/lib/types';
 import YouTubePlayer from '@/components/YouTubePlayer';
 import ConceptNote from '@/components/ConceptNote';
@@ -15,6 +17,8 @@ import FloatingAITutor from '@/components/FloatingAITutor';
 import MathRenderer from '@/components/MathRenderer';
 import SummaryEditor from '@/components/SummaryEditor';
 import { ProblemAttemptsProvider } from '@/hooks/useProblemAttempts';
+import UnitTestMode from '@/components/UnitTestMode';
+import { scheduleConceptsForReview } from '@/hooks/useReviewScheduler';
 
 const tabs = [
   { id: 'lecture', label: '강의', icon: '📺' },
@@ -43,12 +47,14 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
   const part = course?.parts.find(p => p.partNumber === partNumber);
 
   const { isLoaded, getDayStatus, completeDay, addXP } = useProgress();
+  const { isBookmarked, toggleBookmark } = useBookmarks();
   const [activeTab, setActiveTab] = useState<TabId>('lecture');
   const [dayContent, setDayContent] = useState<DayContent | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [summaryText, setSummaryText] = useState('');
   const [isCompleted, setIsCompleted] = useState(false);
+  const [testModeActive, setTestModeActive] = useState(false);
 
   // Load day content dynamically + inject video mappings
   useEffect(() => {
@@ -108,10 +114,64 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
   const dayRecord = isLoaded ? getDayStatus(gradeId, dayNumber) : { status: 'available' as const };
   const totalProblems = dayContent?.problems.length || 0;
 
+  const fireConfetti = useCallback(() => {
+    // 코스별 색상 파레트
+    const palettes: Record<GradeId, string[]> = {
+      foundation: ['#F97316', '#FB923C', '#FCD34D'],
+      grade1:     ['#3B82F6', '#06B6D4', '#93C5FD'],
+      grade2:     ['#8B5CF6', '#7C3AED', '#C4B5FD'],
+      'bc-g67':   ['#0EA5E9', '#38BDF8', '#7DD3FC'],
+      'bc-g8':    ['#F43F5E', '#FB7185', '#FECDD3'],
+      'bc-g9':    ['#F59E0B', '#FCD34D', '#FDE68A'],
+      grade3:     ['#10B981', '#34D399', '#6EE7B7'],
+    };
+    const colors = palettes[gradeId] || ['#8B5CF6', '#EC4899', '#F59E0B'];
+
+    confetti({
+      particleCount: 80,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors,
+      ticks: 50,
+    });
+    setTimeout(() => {
+      confetti({
+        particleCount: 40,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.65 },
+        colors,
+        ticks: 40,
+      });
+      confetti({
+        particleCount: 40,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.65 },
+        colors,
+        ticks: 40,
+      });
+    }, 200);
+  }, [gradeId]);
+
   const handleComplete = () => {
     if (isCompleted) return;
     setIsCompleted(true);
     completeDay(gradeId, dayNumber, totalProblems > 0 ? Math.round((correctCount / totalProblems) * 100) : undefined);
+    fireConfetti();
+    // 개념들을 복습 스케줄러에 자동 등록 (1일 후 재복습)
+    if (dayContent?.concepts && dayContent.concepts.length > 0) {
+      scheduleConceptsForReview({
+        sourceId: `${gradeId}/day/${dayNumber}`,
+        sourceLabel: `${course?.title ?? gradeId} · Day ${dayNumber}`,
+        concepts: dayContent.concepts.map((c) => ({
+          id: c.id,
+          title: c.title,
+          content: c.content,
+        })),
+        problemIds: dayContent.problems.map((p) => p.id),
+      });
+    }
   };
 
   const handleCorrect = () => {
@@ -154,6 +214,49 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
                 PART {partNumber}: {part?.title}
               </p>
             </div>
+            {/* 북마크 버튼 */}
+            <button
+              onClick={() =>
+                toggleBookmark(
+                  gradeId,
+                  dayNumber,
+                  dayContent?.title || part?.title || `Day ${dayNumber}`
+                )
+              }
+              className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:bg-white/10 ${
+                isBookmarked(gradeId, dayNumber)
+                  ? 'text-amber-400'
+                  : 'text-muted-foreground'
+              }`}
+              title={isBookmarked(gradeId, dayNumber) ? '북마크 제거' : '북마크 추가'}
+              aria-label={isBookmarked(gradeId, dayNumber) ? '북마크 제거' : '북마크 추가'}
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill={isBookmarked(gradeId, dayNumber) ? 'currentColor' : 'none'}
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </button>
+            {/* 프린트 버튼 */}
+            <Link
+              href={`/print/${gradeId}/${dayNumber}`}
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-white/10 transition-all"
+              title="프린트용 보기"
+              aria-label="프린트용 보기"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <rect x="6" y="14" width="12" height="8" />
+              </svg>
+            </Link>
             {dayRecord.status === 'completed' && (
               <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-medium">
                 완료
@@ -235,6 +338,27 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
           {/* Practice Tab */}
           {activeTab === 'practice' && (
             <div className="space-y-4">
+              {/* 단원평가 버튼 — isTest Day 또는 문제가 있는 모든 Day */}
+              {dayContent?.problems && dayContent.problems.length > 0 && (
+                <div className="flex items-center justify-between p-3 rounded-xl border border-amber-500/20 bg-amber-500/5">
+                  <div>
+                    <div className="text-sm font-medium text-foreground flex items-center gap-1.5">
+                      <span>📝</span>
+                      {dayContent.isTest ? '단원평가 Day' : '시험 모드로 도전'}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      힌트 없이 풀고 종료 후 채점
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setTestModeActive(true)}
+                    className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-white text-xs font-semibold transition-colors"
+                  >
+                    시험 모드
+                  </button>
+                </div>
+              )}
+
               {/* Score Header */}
               {answeredCount > 0 && (
                 <div className="flex items-center justify-between p-3 rounded-xl bg-muted/20 border border-white/5">
@@ -344,6 +468,23 @@ export default function DayPage({ params }: { params: Promise<{ grade: string; d
           )}
         </motion.div>
       </main>
+
+      {/* 단원평가 시험 모드 */}
+      {testModeActive && dayContent?.problems && dayContent.problems.length > 0 && (
+        <div className="fixed inset-0 z-[60] overflow-y-auto">
+          <UnitTestMode
+            problems={dayContent.problems}
+            dayLabel={dayContent.title ? `Day ${dayNumber} - ${dayContent.title}` : `Day ${dayNumber}`}
+            sourceId={`${gradeId}/day/${dayNumber}`}
+            sourceLabel={`${course?.title ?? gradeId} · Day ${dayNumber}`}
+            timeLimitMinutes={dayContent.isTest ? 30 : 20}
+            onExit={() => setTestModeActive(false)}
+            onComplete={(score, total) => {
+              addXP(gradeId, score * 5);
+            }}
+          />
+        </div>
+      )}
 
       {/* 플로팅 샘 버튼 (우측 하단) — Day 페이지 어디서든 접근 가능 */}
       <FloatingAITutor

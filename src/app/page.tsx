@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { courses, krCourses, caCourses } from '@/data/curriculum';
 import { useProgress } from '@/hooks/useProgress';
+import { useReviewSchedule } from '@/hooks/useReviewScheduler';
 
 export default function HomePage() {
   const { isLoaded, getCompletedDaysCount } = useProgress();
+  const { dueCount } = useReviewSchedule();
 
   // 권역별 총 진도
   const krCompleted = isLoaded
@@ -32,15 +34,27 @@ export default function HomePage() {
               <p className="text-xs text-muted-foreground">중학교 맞춤 학습</p>
             </div>
           </div>
-          <Link
-            href="/profile"
-            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-white/10 transition-all"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/search"
+              className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-white/10 transition-all"
+              aria-label="검색"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </Link>
+            <Link
+              href="/profile"
+              className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-white/10 transition-all"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -214,7 +228,89 @@ export default function HomePage() {
               </svg>
             </div>
           </Link>
+          <Link href="/bookmarks">
+            <div className="group rounded-2xl border border-amber-500/20 bg-amber-500/5 hover:bg-amber-500/10 hover:border-amber-400/40 transition-all p-5 flex items-center gap-4 h-full">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center text-2xl shrink-0">
+                ★
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="text-base font-semibold text-foreground mb-0.5">북마크</h4>
+                <p className="text-xs text-muted-foreground">
+                  즐겨찾기한 Day 모아보기
+                </p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </Link>
+
+          <Link href="/flashcards">
+            <div className="group rounded-2xl border border-teal-500/20 bg-teal-500/5 hover:bg-teal-500/10 hover:border-teal-400/40 transition-all p-5 flex items-center gap-4 h-full">
+              <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center text-2xl shrink-0">
+                🗂️
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="text-base font-semibold text-foreground mb-0.5">용어 플래시카드</h4>
+                <p className="text-xs text-muted-foreground">
+                  BC Grade 8 · 한국 중1 핵심 수학 용어
+                </p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-teal-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </Link>
+
+          <Link href="/parent-report">
+            <div className="group rounded-2xl border border-sky-500/20 bg-sky-500/5 hover:bg-sky-500/10 hover:border-sky-400/40 transition-all p-5 flex items-center gap-4 h-full">
+              <div className="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center text-2xl shrink-0">
+                📊
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="text-base font-semibold text-foreground mb-0.5">부모 리포트</h4>
+                <p className="text-xs text-muted-foreground">
+                  이번 주 학습 현황 · 강약점 분석
+                </p>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-sky-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </Link>
         </motion.section>
+
+        {/* 오늘의 복습 카드 — dueCount > 0 일 때만 노출 */}
+        {dueCount > 0 && (
+          <motion.section
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.35 }}
+            className="mb-8"
+          >
+            <Link href="/review">
+              <div className="group rounded-2xl border border-indigo-500/30 bg-gradient-to-r from-indigo-500/10 to-violet-500/5 hover:border-indigo-400/50 hover:from-indigo-500/15 hover:to-violet-500/10 transition-all p-5 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-2xl shrink-0">
+                  📚
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-semibold text-foreground mb-0.5 flex items-center gap-2">
+                    오늘의 복습
+                    <span className="px-2 py-0.5 rounded-full bg-indigo-500 text-white text-xs font-bold">
+                      {dueCount}개
+                    </span>
+                  </h4>
+                  <p className="text-xs text-muted-foreground">
+                    잊을 만할 때 자동 소환 · 간격 반복 학습
+                  </p>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-400 opacity-70 group-hover:translate-x-0.5 transition-transform shrink-0">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </div>
+            </Link>
+          </motion.section>
+        )}
 
         {/* Features */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-4">

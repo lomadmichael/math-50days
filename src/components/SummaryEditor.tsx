@@ -9,7 +9,11 @@ interface SummaryEditorProps {
   placeholder?: string;
 }
 
-/** 수식 삽입 버튼 정의 */
+/**
+ * 수식 삽입 버튼 정의
+ * - 수학 모드 필요한 것(지수, 분수 등)은 `$...$` 로 감싸서 삽입
+ * - 단독으로 표시 가능한 기호(π, ∞, ≤ 등)는 Unicode 문자로 삽입 → $...$ 없이도 보임
+ */
 const SYMBOL_GROUPS = [
   {
     label: '지수·제곱근',
@@ -25,20 +29,20 @@ const SYMBOL_GROUPS = [
     label: '분수·계산',
     buttons: [
       { label: '½ 분수', snippet: '$\\frac{}{}$', cursorOffset: -4 },
-      { label: '×', snippet: '\\times ' },
-      { label: '÷', snippet: '\\div ' },
-      { label: '±', snippet: '\\pm ' },
+      { label: '×', snippet: '×' },
+      { label: '÷', snippet: '÷' },
+      { label: '±', snippet: '±' },
     ],
   },
   {
     label: '기호',
     buttons: [
-      { label: 'π', snippet: '\\pi ' },
+      { label: 'π', snippet: 'π' },
       { label: '°', snippet: '°' },
-      { label: '≤', snippet: '\\leq ' },
-      { label: '≥', snippet: '\\geq ' },
-      { label: '≠', snippet: '\\neq ' },
-      { label: '∞', snippet: '\\infty ' },
+      { label: '≤', snippet: '≤' },
+      { label: '≥', snippet: '≥' },
+      { label: '≠', snippet: '≠' },
+      { label: '∞', snippet: '∞' },
     ],
   },
   {
@@ -60,17 +64,33 @@ export default function SummaryEditor({ value, onChange, placeholder }: SummaryE
   const insertSnippet = (snippet: string, cursorOffset = 0) => {
     const textarea = textareaRef.current;
     if (!textarea) {
-      onChange(value + snippet);
+      onChange(value + (value && !/\s$/.test(value) ? ' ' : '') + snippet);
       return;
     }
     const start = textarea.selectionStart ?? value.length;
     const end = textarea.selectionEnd ?? value.length;
     const before = value.slice(0, start);
     const after = value.slice(end);
-    // 수식 snippet은 $로 감싸져있고 앞뒤 공백 확보
-    const needsSpaceBefore = before.length > 0 && !/\s$/.test(before) && !snippet.startsWith('$') && !snippet.startsWith('\\');
+
+    // `$...$` 수식끼리 붙으면 KaTeX 가 `$$..$$` 로 오해. 앞뒤 공백 확보.
+    const prevChar = before.slice(-1);
+    const nextChar = after.charAt(0);
+    const needsSpaceBefore =
+      before.length > 0 &&
+      prevChar !== ' ' &&
+      prevChar !== '\n' &&
+      prevChar !== '\t';
+    const needsSpaceAfter =
+      after.length > 0 &&
+      nextChar !== ' ' &&
+      nextChar !== '\n' &&
+      nextChar !== '\t' &&
+      // snippet 이 `$` 로 끝나고 뒤가 `$` 면 구분 공백 필수
+      (snippet.endsWith('$') || /[a-zA-Z]$/.test(snippet) ? nextChar !== '' : false);
+
     const prefix = needsSpaceBefore ? ' ' : '';
-    const next = before + prefix + snippet + after;
+    const suffix = needsSpaceAfter ? ' ' : '';
+    const next = before + prefix + snippet + suffix + after;
     onChange(next);
 
     // 다음 프레임에 커서 위치 조정

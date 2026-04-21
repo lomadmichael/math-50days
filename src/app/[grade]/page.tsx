@@ -75,7 +75,11 @@ export default function CourseDashboard({ params }: { params: Promise<{ grade: s
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center gap-4">
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href={course.region === 'ca' ? '/ca' : '/kr'}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="뒤로"
+          >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>

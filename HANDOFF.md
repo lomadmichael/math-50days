@@ -11,6 +11,52 @@ Next.js 16 + Vercel 배포. 4개 독립 코스 (기초탄탄, 중1, 중2, 중3) 
 
 ---
 
+## 2026-04-22 오후 세션 — 캐나다 BC 커리큘럼 추가
+
+### 🇨🇦 BC Grade 6-7 / 8 / 9 과정 신설 (커밋 `33fbf42`)
+한국 과정은 그대로 유지하고, 아들 학교(BC Surrey Grandview Heights Secondary) 커리큘럼을 **별도 과정**으로 추가.
+
+**홈 화면 재구성**:
+- 🇰🇷 한국 과정 (기초탄탄·중1·중2·중3) — 기존 유지
+- 🇨🇦 캐나다 BC 과정 (Grade 6-7·Grade 8·Grade 9) — 신규
+
+### BC Grade 8 (30 Days, 완성) ⭐ 아들 현재 학년
+| PART | 주제 | Days |
+|---|---|---|
+| 1 Number | Perfect Squares, Square Roots, Pythagorean Theorem | 1~7 |
+| 2 Measurement | Surface Area & Volume (Prisms, Cylinders) | 8~13 |
+| 3 Number Operations | Integers, Fractions, Percents, Ratios, Proportions | 14~20 |
+| 4 Linear Relations | Graphing, Slope, Y-intercept, 1-2 step Equations | 21~26 |
+| 5 Probability & Data | Independent Events, Tree Diagrams, Mean/Median/Mode, Review | 27~30 |
+
+**콘텐츠 특징**:
+- 영어 메인 + 한국어 보조 (용어 첫 등장 시 괄호 병기)
+- 문제는 영어로만 (학교 시험 동일 스타일)
+- realLifeExample 영어 + 한국어 요약
+
+**영상 매핑**:
+- **Khan Academy 29개** (공식 채널, WebSearch 검증)
+- **정승제 5개 재활용** (루트·피타고라스·함수·일차함수·방정식) — 한국어 보조
+
+### AI 튜터 "샘" BC 모드
+- `course.primaryLanguage === 'en'` 이면 `languageMode='en'` 자동 전달
+- API `BC_MODE_ADDENDUM`: 영어 주 언어, 한국어 요약 섹션(💡 한국어로:)
+- 제안 질문도 BC 모드 전용 영어 버전으로 자동 전환
+
+### BC Grade 6-7, Grade 9 — 프레임만
+- Grade 6-7: 30 Days 5 PARTs 구조 정의 (콘텐츠 추후)
+- Grade 9: 35 Days 6 PARTs 구조 정의 (콘텐츠 추후, 내년 대비)
+- Grade 8 실사용 검증 후 점진 확장
+
+### 작업 방법
+4개 Sonnet 서브에이전트 병렬 디스패치:
+- Day 1-10 콘텐츠 생성
+- Day 11-20 콘텐츠 생성
+- Day 21-30 콘텐츠 생성
+- Khan Academy 29개 영상 WebSearch 검증
+
+---
+
 ## 2026-04-22 심야 세션 추가 작업 (Auto mode)
 
 ### 6. LaTeX 수식 렌더링 이슈 대량 수정 (커밋 `252d6f8`)

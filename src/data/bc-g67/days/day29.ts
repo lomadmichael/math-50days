@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 29,
+  part: 5,
+  title: 'Calculating Simple Probability',
+  subtitle: 'Using the probability formula with equally likely outcomes',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d29-c1',
+      title: 'The Probability Formula',
+      content: 'When all outcomes are **equally likely** (등가능), the probability of an event $E$ is:\n\n$$P(E) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}$$\n\n**Example:** What is the probability of rolling a 4 on a fair die?\n- Favourable outcomes: $\\{4\\}$ → 1\n- Total outcomes: $\\{1,2,3,4,5,6\\}$ → 6\n$$P(4) = \\frac{1}{6}$$\n\nProbability can be written as a **fraction**, **decimal**, or **percent**:\n$$\\frac{1}{6} \\approx 0.167 \\approx 16.7\\%$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d29-c2',
+      title: 'Probability with Cards and Marbles',
+      content: 'Common probability setups at Grade 6-7:\n\n**Standard deck of cards** (52 cards):\n- 4 suits (♠ ♥ ♦ ♣), each with 13 cards (A, 2–10, J, Q, K)\n- $P(\\text{heart}) = \\frac{13}{52} = \\frac{1}{4}$\n- $P(\\text{King}) = \\frac{4}{52} = \\frac{1}{13}$\n\n**Marbles in a bag:**\n- A bag has 4 red, 3 blue, 2 green marbles (total = 9)\n- $P(\\text{blue}) = \\frac{3}{9} = \\frac{1}{3}$\n- $P(\\text{not green}) = \\frac{7}{9}$\n\n**팁**: 항상 분모는 전체 경우의 수, 분자는 원하는 경우의 수예요.',
+      type: 'example',
+    },
+    {
+      id: 'bcg67-d29-c3',
+      title: 'Theoretical vs. Experimental Probability',
+      content: '**Theoretical probability** (이론적 확률): What we calculate mathematically, assuming all outcomes are equally likely.\n$$P(\\text{heads}) = \\frac{1}{2} = 0.5$$\n\n**Experimental probability** (실험적 확률): What actually happens when we run an experiment many times.\n$$P_{\\text{exp}}(\\text{heads}) = \\frac{\\text{number of heads}}{\\text{total flips}}$$\n\n**Example:** You flip a coin 100 times and get 53 heads.\n$$P_{\\text{exp}}(\\text{heads}) = \\frac{53}{100} = 0.53$$\n\nThe more trials you run, the closer experimental probability gets to theoretical probability. This is the **Law of Large Numbers** (대수의 법칙).',
+      type: 'tip',
+    },
+    {
+      id: 'bcg67-d29-c4',
+      title: 'Tree Diagrams for Multiple Events',
+      content: 'A **tree diagram** (수형도) shows all possible outcomes for two or more events.\n\n**Example:** Flip a coin twice. What are all possible outcomes?\n\n```\nFlip 1    Flip 2    Outcome\nH ──── H ──── HH\n  └─── T ──── HT\nT ──── H ──── TH\n  └─── T ──── TT\n```\n\nSample space: $\\{HH, HT, TH, TT\\}$ → 4 outcomes\n\n$P(\\text{both heads}) = \\frac{1}{4}$\n\n$P(\\text{at least one head}) = \\frac{3}{4}$ (HH, HT, TH)\n\n**팁**: 가지(branch)를 따라가면서 각 결과를 나열하면 빠뜨리지 않아요.',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d29-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A bag contains 5 red, 3 blue, and 2 yellow marbles. What is the probability of randomly picking a blue marble?',
+      answer: '3/10',
+      explanation: 'Total marbles: $5 + 3 + 2 = 10$\n\nFavourable (blue): 3\n\n$$P(\\text{blue}) = \\frac{3}{10}$$\n\nAs a decimal: $0.3$; as a percent: $30\\%$',
+      relatedConcept: 'bcg67-d29-c1',
+    },
+    {
+      id: 'bcg67-d29-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A fair die is rolled. What is the probability of rolling a number greater than 4?',
+      options: ['$\\frac{1}{6}$', '$\\frac{2}{6}$', '$\\frac{3}{6}$', '$\\frac{4}{6}$'],
+      answer: '$\\frac{2}{6}$',
+      explanation: 'Numbers greater than 4 on a die: $\\{5, 6\\}$ → 2 outcomes\n\nTotal outcomes: 6\n\n$$P(>4) = \\frac{2}{6} = \\frac{1}{3}$$',
+      relatedConcept: 'bcg67-d29-c1',
+    },
+    {
+      id: 'bcg67-d29-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'One card is drawn from a standard 52-card deck. What is $P(\\text{Ace})$?',
+      options: ['$\\frac{1}{52}$', '$\\frac{1}{13}$', '$\\frac{1}{4}$', '$\\frac{4}{13}$'],
+      answer: '$\\frac{1}{13}$',
+      explanation: 'There are 4 Aces in a deck (one per suit).\n\n$$P(\\text{Ace}) = \\frac{4}{52} = \\frac{1}{13}$$',
+      relatedConcept: 'bcg67-d29-c2',
+    },
+    {
+      id: 'bcg67-d29-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A spinner has 8 equal sections: 3 red, 2 blue, 2 green, 1 yellow. What is $P(\\text{not red})$?',
+      answer: '5/8',
+      explanation: 'Red sections: 3\nNot red: $8 - 3 = 5$ sections\n\n$$P(\\text{not red}) = \\frac{5}{8}$$\n\nOr use complement: $P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{3}{8} = \\frac{5}{8}$',
+      relatedConcept: 'bcg67-d29-c1',
+    },
+    {
+      id: 'bcg67-d29-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A coin is flipped and a die is rolled. Using a tree diagram, how many total outcomes are in the sample space?',
+      options: ['6', '8', '12', '36'],
+      answer: '12',
+      explanation: 'Coin: 2 outcomes (H, T)\nDie: 6 outcomes (1–6)\n\nTotal: $2 \\times 6 = 12$ outcomes\n\nExamples: H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5, T6\n\n$P(\\text{Heads and 3}) = \\frac{1}{12}$',
+      relatedConcept: 'bcg67-d29-c4',
+    },
+    {
+      id: 'bcg67-d29-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A class of 30 students has 12 who play soccer, 10 who play basketball, and 8 who play neither. A student is chosen randomly. What is the probability the student plays soccer or basketball?',
+      options: ['$\\frac{11}{15}$', '$\\frac{22}{30}$', '$\\frac{12}{30}$', '$\\frac{18}{30}$'],
+      answer: '$\\frac{22}{30}$',
+      explanation: 'Students who play soccer or basketball: $30 - 8 = 22$\n(Subtract those who play neither)\n\n$$P(\\text{soccer or basketball}) = \\frac{22}{30} = \\frac{11}{15}$$\n\nNote: $\\frac{22}{30} = \\frac{11}{15}$ — both correct, but the question lists $\\frac{22}{30}$ as an option.',
+      relatedConcept: 'bcg67-d29-c1',
+    },
+  ],
+  realLifeExample: 'Board games like Monopoly use probability constantly. Rolling two dice: there are 36 possible outcomes ($6 \\times 6$). The most likely sum is 7, with probability $\\frac{6}{36} = \\frac{1}{6}$ (ways to get 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1). That\'s why landing on the middle of the board is so common! 주사위 두 개의 합 확률을 알면 보드게임을 더 잘 할 수 있어요!',
+};
+
+export default dayContent;

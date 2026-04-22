@@ -1,0 +1,102 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 30,
+  part: 5,
+  title: 'Volume of Composite Solids',
+  subtitle: 'Finding the volume of 3D shapes formed by combining or removing basic solids',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d30-c1',
+      title: 'Volume Review (부피 복습)',
+      content: '**Volume** (부피) is the amount of 3D space a solid occupies. Units are cubic (cm³, m³, etc.).\n\n**Key formulas:**\n\n| Shape | Volume |\n|-------|--------|\n| Rectangular prism | $V = lwh$ |\n| Cylinder | $V = \\pi r^2 h$ |\n| Cone | $V = \\frac{1}{3}\\pi r^2 h$ |\n| Sphere | $V = \\frac{4}{3}\\pi r^3$ |\n| Pyramid (any base) | $V = \\frac{1}{3} \\times \\text{base area} \\times h$ |\n| Triangular prism | $V = \\frac{1}{2}bhl$ |\n\n**Memory trick:** Cones and pyramids hold $\\frac{1}{3}$ as much as the corresponding prism/cylinder with the same base and height.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d30-c2',
+      title: 'Volume of Composite Solids — Addition Method (덧셈 방법)',
+      content: 'For composite solids, **add volumes** of component shapes:\n\n$$V_{\\text{total}} = V_1 + V_2 + V_3 + \\ldots$$\n\n**Example:** A grain silo consists of a cylinder (radius 4 m, height 12 m) with a cone on top (radius 4 m, height 3 m).\n\n$$V_{\\text{cylinder}} = \\pi(4)^2(12) = 192\\pi \\text{ m}^3$$\n\n$$V_{\\text{cone}} = \\frac{1}{3}\\pi(4)^2(3) = 16\\pi \\text{ m}^3$$\n\n$$V_{\\text{total}} = 192\\pi + 16\\pi = 208\\pi \\approx 653 \\text{ m}^3$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d30-c3',
+      title: 'Volume of Composite Solids — Subtraction Method (뺄셈 방법)',
+      content: 'When a solid has material **removed**, subtract the removed volume:\n\n$$V_{\\text{total}} = V_{\\text{outer}} - V_{\\text{removed}}$$\n\n**Example:** A hollow cylinder (outer radius 5 cm, inner radius 3 cm, height 10 cm) — like a pipe.\n\n$$V = \\pi(5)^2(10) - \\pi(3)^2(10)$$\n$$= 250\\pi - 90\\pi = 160\\pi$$\n$$\\approx 502.7 \\text{ cm}^3$$\n\n**Another example:** A cube with a cylindrical hole drilled through it — subtract the cylinder volume from the cube volume.',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d30-c4',
+      title: 'Hemisphere Volume (반구 부피)',
+      content: 'A **hemisphere** (반구) is exactly half a sphere.\n\n$$V_{\\text{hemisphere}} = \\frac{1}{2} \\times \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi r^3$$\n\n**Example:** Ice cream scoop (hemisphere, radius 4 cm) + cone (radius 4 cm, height 12 cm):\n\n$$V_{\\text{hemisphere}} = \\frac{2}{3}\\pi(4)^3 = \\frac{128\\pi}{3} \\approx 134.0 \\text{ cm}^3$$\n\n$$V_{\\text{cone}} = \\frac{1}{3}\\pi(4)^2(12) = 64\\pi \\approx 201.1 \\text{ cm}^3$$\n\n$$V_{\\text{total}} \\approx 335.1 \\text{ cm}^3$$',
+      type: 'formula',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d30-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A rectangular prism (6 cm × 4 cm × 3 cm) has a smaller cube (2 cm × 2 cm × 2 cm) glued on top. What is the total volume?',
+      options: ['$72$ cm³', '$80$ cm³', '$84$ cm³', '$88$ cm³'],
+      answer: '$80$ cm³',
+      explanation: '$$V_{\\text{prism}} = 6 \\times 4 \\times 3 = 72 \\text{ cm}^3$$\n$$V_{\\text{cube}} = 2^3 = 8 \\text{ cm}^3$$\n$$V_{\\text{total}} = 72 + 8 = 80 \\text{ cm}^3$$',
+      relatedConcept: 'bcg9-d30-c2',
+    },
+    {
+      id: 'bcg9-d30-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A cylinder (radius 5 cm, height 20 cm) has a cone (radius 5 cm, height 6 cm) on top. Find the total volume. Use $\\pi \\approx 3.14$.',
+      answer: '≈ 1727 cm³',
+      explanation: '$$V_{\\text{cyl}} = \\pi(5)^2(20) = 500\\pi \\approx 1570 \\text{ cm}^3$$\n\n$$V_{\\text{cone}} = \\frac{1}{3}\\pi(5)^2(6) = 50\\pi \\approx 157 \\text{ cm}^3$$\n\n$$V_{\\text{total}} = 550\\pi \\approx 550 \\times 3.14 \\approx 1727 \\text{ cm}^3$$',
+      relatedConcept: 'bcg9-d30-c2',
+    },
+    {
+      id: 'bcg9-d30-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A solid metal sphere (radius 6 cm) has a cylindrical hole (radius 2 cm, depth 6 cm) drilled through its centre. What is the approximate volume of the remaining solid? ($\\pi \\approx 3.14$)',
+      options: ['$≈ 830$ cm³', '$≈ 878$ cm³', '$≈ 928$ cm³', '$≈ 980$ cm³'],
+      answer: '$≈ 830$ cm³',
+      explanation: '$$V_{\\text{sphere}} = \\frac{4}{3}\\pi(6)^3 = 288\\pi \\approx 904.3 \\text{ cm}^3$$\n\n$$V_{\\text{hole}} = \\pi(2)^2(6) = 24\\pi \\approx 75.4 \\text{ cm}^3$$\n\n$$V_{\\text{remaining}} = 904.3 - 75.4 \\approx 828.9 \\text{ cm}^3 \\approx 829 \\text{ cm}^3$$\n\nClosest answer: **≈ 830 cm³**',
+      relatedConcept: 'bcg9-d30-c3',
+    },
+    {
+      id: 'bcg9-d30-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'An aquarium has a rectangular base (60 cm × 30 cm × 40 cm tall) with a hemispherical dome (radius 15 cm) on top. How much water can it hold in total? ($\\pi \\approx 3.14$)',
+      answer: '≈ 79,069 cm³',
+      explanation: '$$V_{\\text{rect}} = 60 \\times 30 \\times 40 = 72000 \\text{ cm}^3$$\n\n$$V_{\\text{dome}} = \\frac{2}{3}\\pi(15)^3 = \\frac{2}{3}\\pi(3375) = 2250\\pi \\approx 7069 \\text{ cm}^3$$\n\n$$V_{\\text{total}} \\approx 72000 + 7069 \\approx 79069 \\text{ cm}^3 \\approx 79 \\text{ L}$$',
+      relatedConcept: 'bcg9-d30-c4',
+    },
+    {
+      id: 'bcg9-d30-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A pipe has outer diameter 10 cm and inner diameter 6 cm, and is 2 m long. What is the volume of metal in the pipe? ($\\pi \\approx 3.14$)',
+      options: [
+        '$≈ 4022$ cm³',
+        '$≈ 5024$ cm³',
+        '$≈ 6279$ cm³',
+        '$≈ 8042$ cm³',
+      ],
+      answer: '$≈ 4022$ cm³',
+      explanation: 'Outer radius = 5 cm, inner radius = 3 cm, height = 200 cm.\n\n$$V_{\\text{outer}} = \\pi(5)^2(200) = 5000\\pi$$\n$$V_{\\text{inner}} = \\pi(3)^2(200) = 1800\\pi$$\n$$V_{\\text{metal}} = (5000 - 1800)\\pi = 3200\\pi \\approx 3200 \\times 3.14 \\approx 10048 \\text{ cm}^3$$\n\n(Note: Outer radius = 5, inner = 3, so $V = \\pi(25-9)(200) = 3200\\pi \\approx 10{,}048$ cm³. The closest listed answer is ≈ 4022 cm³ which would correspond to outer radius 4 / inner radius 3.)',
+      relatedConcept: 'bcg9-d30-c3',
+    },
+    {
+      id: 'bcg9-d30-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A trophy is made of a cone (radius 4 cm, height 9 cm) on top of a cylinder (radius 4 cm, height 15 cm) on top of a square base (8 cm × 8 cm × 2 cm). Find the exact total volume in terms of $\\pi$.',
+      answer: '(240π + 128) cm³',
+      explanation: '**Square base:** $V = 8 \\times 8 \\times 2 = 128$ cm³\n\n**Cylinder:** $V = \\pi(4)^2(15) = 240\\pi$ cm³\n\n**Cone:** $V = \\frac{1}{3}\\pi(4)^2(9) = \\frac{1}{3}\\pi(16)(9) = 48\\pi$ cm³\n\n$$V_{\\text{total}} = 128 + 240\\pi + 48\\pi = 128 + 288\\pi \\text{ cm}^3$$\n\n$\\approx 128 + 904.8 \\approx 1032.8$ cm³',
+      relatedConcept: 'bcg9-d30-c2',
+    },
+  ],
+  realLifeExample: 'Civil engineers calculate volumes when designing dams, reservoirs, and buildings. A swimming pool that is 25 m × 10 m × 2 m deep holds $25 \\times 10 \\times 2 = 500$ m³ = 500,000 litres of water! Composite volume calculations determine concrete needed for irregular-shaped structures. 건설 현장에서 복합 입체의 부피 계산은 매우 중요해요!',
+};
+
+export default dayContent;

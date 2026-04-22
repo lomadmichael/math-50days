@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 19,
+  part: 4,
+  title: 'Angles — Measurement and Classification',
+  subtitle: 'Measuring angles with a protractor and classifying acute, right, obtuse, and straight angles',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d19-c1',
+      title: 'What is an Angle?',
+      content: 'An **angle** (각도) is formed when two **rays** (반직선) share the same endpoint, called the **vertex** (꼭짓점).\n\nAngles are measured in **degrees** (도, °). A full rotation is $360°$.\n\n**Notation:** Angle ABC is written $\\angle ABC$, where B is the vertex.\n\nThink of an angle as how far you rotate one ray from another — like opening a door (0° = closed, 90° = fully open, 180° = flat).',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d19-c2',
+      title: 'Types of Angles',
+      content: 'Angles are classified by their measure:\n\n| Type | Range | Korean |\n|------|-------|--------|\n| **Acute angle** (예각) | $0° < \\theta < 90°$ | 예각 |\n| **Right angle** (직각) | $\\theta = 90°$ | 직각 |\n| **Obtuse angle** (둔각) | $90° < \\theta < 180°$ | 둔각 |\n| **Straight angle** (평각) | $\\theta = 180°$ | 평각 |\n| **Reflex angle** (반사각) | $180° < \\theta < 360°$ | 반사각 |\n\n**Memory trick:** Acute angles are "sharp" (뾰족함) like a needle; obtuse angles are "blunt" (뭉뚝함) like a book open wide.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d19-c3',
+      title: 'Complementary and Supplementary Angles',
+      content: '**Complementary angles** (여각): Two angles that add up to $90°$.\n$$\\angle A + \\angle B = 90°$$\nExample: $35°$ and $55°$ are complementary.\n\n**Supplementary angles** (보각): Two angles that add up to $180°$.\n$$\\angle A + \\angle B = 180°$$\nExample: $110°$ and $70°$ are supplementary.\n\n**Memory trick:**\n- **C**omplementary → **C**orner (right angle, $90°$)\n- **S**upplementary → **S**traight line ($180°$)',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d19-c4',
+      title: 'Angles on a Straight Line and Around a Point',
+      content: '**Angles on a straight line** add up to $180°$:\n$$\\angle a + \\angle b = 180°$$\n\n**Angles around a point** add up to $360°$:\n$$\\angle a + \\angle b + \\angle c + \\ldots = 360°$$\n\n**Vertically opposite angles** (맞꼭지각) are equal when two lines cross:\n$$\\angle a = \\angle c, \\quad \\angle b = \\angle d$$\n\n**Example:** If one angle at an intersection is $65°$, the opposite angle is also $65°$, and the adjacent angles are each $180° - 65° = 115°$.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d19-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which type of angle measures exactly $90°$?',
+      options: ['Acute angle', 'Right angle', 'Obtuse angle', 'Straight angle'],
+      answer: 'Right angle',
+      explanation: 'A **right angle** (직각) measures exactly $90°$. It looks like the corner of a square and is marked with a small square symbol in diagrams.',
+      relatedConcept: 'bcg67-d19-c2',
+    },
+    {
+      id: 'bcg67-d19-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'An angle measures $145°$. How is it classified?',
+      options: ['Acute', 'Right', 'Obtuse', 'Straight'],
+      answer: 'Obtuse',
+      explanation: '$145°$ is between $90°$ and $180°$, so it is an **obtuse angle** (둔각).\n\n- Acute: $0°$ to $90°$ (not including $90°$)\n- Right: exactly $90°$\n- **Obtuse: $90°$ to $180°$ ✓**\n- Straight: exactly $180°$',
+      relatedConcept: 'bcg67-d19-c2',
+    },
+    {
+      id: 'bcg67-d19-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the complement of $38°$ (the angle that adds up to $90°$ with $38°$).',
+      answer: '52°',
+      explanation: 'Complementary angles add to $90°$.\n$$90° - 38° = 52°$$\n\n**Check:** $38° + 52° = 90°$ ✓',
+      relatedConcept: 'bcg67-d19-c3',
+    },
+    {
+      id: 'bcg67-d19-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Two angles on a straight line are $x$ and $(x + 40)°$. Find the value of $x$.',
+      answer: '70',
+      explanation: 'Angles on a straight line add to $180°$:\n$$x + (x + 40) = 180$$\n$$2x + 40 = 180$$\n$$2x = 140$$\n$$x = 70°$$\n\n**Check:** $70° + 110° = 180°$ ✓',
+      relatedConcept: 'bcg67-d19-c4',
+    },
+    {
+      id: 'bcg67-d19-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Three angles meet at a point. Two of them are $95°$ and $130°$. What is the third angle?',
+      options: ['115°', '125°', '135°', '145°'],
+      answer: '135°',
+      explanation: 'Angles around a point add to $360°$:\n$$95° + 130° + \\theta = 360°$$\n$$225° + \\theta = 360°$$\n$$\\theta = 135°$$',
+      relatedConcept: 'bcg67-d19-c4',
+    },
+    {
+      id: 'bcg67-d19-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Two lines intersect. One of the four angles formed is $(3x + 15)°$ and the vertically opposite angle is $(5x - 25)°$. Find $x$.',
+      options: ['15', '20', '25', '30'],
+      answer: '20',
+      explanation: 'Vertically opposite angles are equal:\n$$3x + 15 = 5x - 25$$\n$$15 + 25 = 5x - 3x$$\n$$40 = 2x$$\n$$x = 20$$\n\n**Check:** $3(20) + 15 = 75°$ and $5(20) - 25 = 75°$ ✓',
+      relatedConcept: 'bcg67-d19-c4',
+    },
+  ],
+  realLifeExample: 'A clock uses angles all the time. At 3:00, the minute and hour hands form a $90°$ right angle. At 6:00, they form a $180°$ straight angle. Knowing angle types helps you read directions, design buildings, and navigate — 각도는 일상 곳곳에 있어요!',
+};
+
+export default dayContent;

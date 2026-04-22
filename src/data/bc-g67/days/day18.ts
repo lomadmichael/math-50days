@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 18,
+  part: 3,
+  title: 'Proportions and Scaling',
+  subtitle: 'Setting up proportions and using scale factors to solve real problems',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d18-c1',
+      title: 'What is a Proportion?',
+      content: 'A **proportion** (비례식) is an equation stating that two ratios are equal.\n\n$$\\frac{a}{b} = \\frac{c}{d} \\quad \\text{or} \\quad a : b = c : d$$\n\n**Example:**\n$$\\frac{2}{3} = \\frac{8}{12}$$\n\nTo check if two ratios form a proportion, use **cross multiplication** (교차 곱셈):\n$$a \\times d = b \\times c$$\n\n$2 \\times 12 = 24$ and $3 \\times 8 = 24$ — equal, so it\'s a proportion! ✓',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d18-c2',
+      title: 'Solving Proportions for a Missing Value',
+      content: 'When one value in a proportion is unknown, use cross multiplication to find it.\n\n**Example:** Solve for $x$:\n$$\\frac{3}{5} = \\frac{x}{20}$$\n\nCross multiply:\n$$3 \\times 20 = 5 \\times x$$\n$$60 = 5x$$\n$$x = 12$$\n\n**Check:** $\\frac{3}{5} = \\frac{12}{20} = 0.6$ ✓\n\n**팁**: 모르는 값($x$)을 대각선 반대쪽 두 수의 곱으로 나누면 돼요.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d18-c3',
+      title: 'Scale Factor',
+      content: 'A **scale factor** (배율/척도) is the ratio that describes how much a figure has been enlarged or reduced.\n\n$$\\text{Scale Factor} = \\frac{\\text{new measurement}}{\\text{original measurement}}$$\n\n- Scale factor $> 1$ → **enlargement** (확대)\n- Scale factor $= 1$ → same size\n- Scale factor $< 1$ → **reduction** (축소)\n\n**Example:** A photo is 4 cm wide. An enlarged version is 10 cm wide.\n$$\\text{Scale Factor} = \\frac{10}{4} = 2.5$$\n\nThe photo was enlarged by a factor of 2.5.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d18-c4',
+      title: 'Map Scales and Real-Life Proportions',
+      content: 'Maps and blueprints use proportions to represent real distances.\n\n**Example:** A map has a scale of $1 \\text{ cm} : 25 \\text{ km}$. Two towns are 4.5 cm apart on the map. What is the actual distance?\n\nSet up a proportion:\n$$\\frac{1 \\text{ cm}}{25 \\text{ km}} = \\frac{4.5 \\text{ cm}}{x \\text{ km}}$$\n\nCross multiply:\n$$x = 4.5 \\times 25 = 112.5 \\text{ km}$$\n\n**Answer: 112.5 km**\n\n**팁**: 비례식 세울 때 단위를 맞춰 써야 실수를 피할 수 있어요.',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d18-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Are $\\frac{4}{6}$ and $\\frac{10}{15}$ proportional (equal ratios)?',
+      options: ['Yes, because $4 \\times 15 = 6 \\times 10$', 'No, because $4 + 15 \\neq 6 + 10$', 'Yes, because $4 + 6 = 10$', 'No, because $4 \\times 10 \\neq 6 \\times 15$'],
+      answer: 'Yes, because $4 \\times 15 = 6 \\times 10$',
+      explanation: 'Use cross multiplication:\n$4 \\times 15 = 60$ and $6 \\times 10 = 60$\n\nSince both products are equal, the ratios **are** proportional. ✓\n\nAlso: $\\frac{4}{6} = \\frac{2}{3}$ and $\\frac{10}{15} = \\frac{2}{3}$ — same simplified fraction.',
+      relatedConcept: 'bcg67-d18-c1',
+    },
+    {
+      id: 'bcg67-d18-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Solve for $n$: $\\frac{5}{8} = \\frac{n}{40}$',
+      answer: '25',
+      explanation: 'Cross multiply:\n$$5 \\times 40 = 8 \\times n$$\n$$200 = 8n$$\n$$n = \\frac{200}{8} = 25$$\n\n**Check:** $\\frac{5}{8} = \\frac{25}{40} = 0.625$ ✓',
+      relatedConcept: 'bcg67-d18-c2',
+    },
+    {
+      id: 'bcg67-d18-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A model car is built at a scale of $1 : 20$. The real car is 440 cm long. How long is the model?',
+      options: ['20 cm', '22 cm', '40 cm', '44 cm'],
+      answer: '22 cm',
+      explanation: 'Scale $1 : 20$ means model length is $\\frac{1}{20}$ of real length.\n\n$$\\text{Model} = \\frac{440}{20} = 22 \\text{ cm}$$\n\n**Answer: 22 cm**',
+      relatedConcept: 'bcg67-d18-c3',
+    },
+    {
+      id: 'bcg67-d18-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A recipe for 4 servings needs 300 g of rice. How many grams of rice are needed for 10 servings?',
+      answer: '750',
+      explanation: 'Set up a proportion:\n$$\\frac{300 \\text{ g}}{4 \\text{ servings}} = \\frac{x \\text{ g}}{10 \\text{ servings}}$$\n\nCross multiply:\n$$4x = 300 \\times 10 = 3000$$\n$$x = \\frac{3000}{4} = 750 \\text{ g}$$\n\n**Answer: 750 g**',
+      relatedConcept: 'bcg67-d18-c2',
+    },
+    {
+      id: 'bcg67-d18-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A map scale is $1 \\text{ cm} : 50 \\text{ km}$. The actual distance between two cities is 375 km. How far apart are they on the map?',
+      options: ['5.5 cm', '6.5 cm', '7 cm', '7.5 cm'],
+      answer: '7.5 cm',
+      explanation: '$$\\frac{1 \\text{ cm}}{50 \\text{ km}} = \\frac{x \\text{ cm}}{375 \\text{ km}}$$\n\n$$x = \\frac{375}{50} = 7.5 \\text{ cm}$$\n\n**Answer: 7.5 cm**',
+      relatedConcept: 'bcg67-d18-c4',
+    },
+    {
+      id: 'bcg67-d18-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A photograph 5 cm wide and 8 cm tall is enlarged so the width becomes 12.5 cm. What is the new height?',
+      options: ['16 cm', '18 cm', '20 cm', '25 cm'],
+      answer: '20 cm',
+      explanation: 'Scale factor $= \\frac{12.5}{5} = 2.5$\n\nNew height $= 8 \\times 2.5 = 20$ cm\n\nOr set up a proportion:\n$$\\frac{5}{8} = \\frac{12.5}{h}$$\n$$5h = 8 \\times 12.5 = 100$$\n$$h = 20 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d18-c3',
+    },
+  ],
+  realLifeExample: 'Architects use scale drawings (축척 도면) to design buildings. A blueprint at scale $1:100$ means 1 cm on paper = 100 cm (1 m) in reality. If a room is 5 cm × 4 cm on the blueprint, the actual room is $5 \\text{ m} \\times 4 \\text{ m}$ — proportions keep designs accurate!',
+};
+
+export default dayContent;

@@ -1,0 +1,102 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 28,
+  part: 5,
+  title: 'Solving Similar Triangles Problems',
+  subtitle: 'Using AA similarity, proportions, and indirect measurement to solve triangle problems',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d28-c1',
+      title: 'Conditions for Similar Triangles (닮은 삼각형의 조건)',
+      content: 'Two triangles are similar if any of these conditions hold:\n\n**AA (Angle-Angle) similarity (각도-각도 닮음):**\nIf two pairs of corresponding angles are equal, the triangles are similar.\n*(This is the most commonly used condition in Grade 9.)*\n\n**SSS (Side-Side-Side) similarity:**\nAll three pairs of corresponding sides are proportional.\n\n**SAS (Side-Angle-Side) similarity:**\nTwo pairs of sides are proportional AND the included angles are equal.\n\n**Tip:** Since the angles in any triangle sum to 180°, if you know two angles match, the third automatically matches too. So AA is sufficient!',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d28-c2',
+      title: 'Setting Up Proportions Correctly (비례식 올바르게 세우기)',
+      content: 'When two triangles are similar, always match corresponding sides:\n\n$$\\frac{\\text{short side of } \\triangle 1}{\\text{short side of } \\triangle 2} = \\frac{\\text{medium side of } \\triangle 1}{\\text{medium side of } \\triangle 2} = \\frac{\\text{long side of } \\triangle 1}{\\text{long side of } \\triangle 2}$$\n\n**Example:** △ABC ~ △DEF where AB corresponds to DE, BC to EF, AC to DF.\n\nIf AB = 6, BC = 8, AC = 10, and DE = 9, find EF and DF.\n\n$$\\frac{AB}{DE} = \\frac{6}{9} = \\frac{2}{3}$$\n\n$$EF = 8 \\times \\frac{3}{2} = 12, \\quad DF = 10 \\times \\frac{3}{2} = 15$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d28-c3',
+      title: 'Indirect Measurement (간접 측정)',
+      content: '**Indirect measurement** (간접 측정) uses similar triangles to find distances that are difficult to measure directly.\n\n**Shadow method:** Objects and their shadows form similar triangles when the sun is at the same angle.\n\n$$\\frac{\\text{object height}}{\\text{shadow length}} = \\frac{\\text{other object height}}{\\text{other shadow length}}$$\n\n**Example:** A 2 m tall person casts a 3 m shadow. A tree casts a 18 m shadow at the same time. How tall is the tree?\n\n$$\\frac{2}{3} = \\frac{h}{18}$$\n$$3h = 36$$\n$$h = 12 \\text{ m}$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d28-c4',
+      title: 'Overlapping and Nested Similar Triangles (겹치는 닮은 삼각형)',
+      content: 'Sometimes two similar triangles **share a vertex** or overlap.\n\n**Example:** In triangle ABC, line DE is parallel to BC, where D is on AB and E is on AC.\n\nThen △ADE ~ △ABC (AA: they share angle A, and ∠ADE = ∠ABC because DE ∥ BC).\n\n$$\\frac{AD}{AB} = \\frac{AE}{AC} = \\frac{DE}{BC}$$\n\n**Tip for these problems:** Identify which angles are equal (often from parallel lines or shared angles), then set up the proportion carefully using the full side lengths.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d28-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: '△PQR ~ △XYZ with PQ = 8, QR = 12, XY = 6. What is YZ?',
+      options: ['$7$', '$8$', '$9$', '$10$'],
+      answer: '$9$',
+      explanation: '$$\\frac{PQ}{XY} = \\frac{QR}{YZ}$$\n$$\\frac{8}{6} = \\frac{12}{YZ}$$\n$$8 \\cdot YZ = 72$$\n$$YZ = 9$$',
+      relatedConcept: 'bcg9-d28-c2',
+    },
+    {
+      id: 'bcg9-d28-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A 1.8 m person casts a 2.4 m shadow. A flagpole nearby casts a 16 m shadow at the same time. How tall is the flagpole?',
+      answer: '12 m',
+      explanation: '$$\\frac{1.8}{2.4} = \\frac{h}{16}$$\n$$2.4h = 28.8$$\n$$h = 12 \\text{ m}$$\n\nThe flagpole is **12 metres** tall.',
+      relatedConcept: 'bcg9-d28-c3',
+    },
+    {
+      id: 'bcg9-d28-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'In △ABC, ∠A = 50° and ∠B = 70°. In △DEF, ∠D = 50° and ∠E = 70°. Are the triangles similar?',
+      options: [
+        'Yes, by SSS similarity',
+        'Yes, by AA similarity',
+        'No, they are not similar',
+        'Cannot be determined',
+      ],
+      answer: 'Yes, by AA similarity',
+      explanation: '∠A = ∠D = 50° and ∠B = ∠E = 70°.\n\nTwo pairs of corresponding angles are equal → **AA similarity** applies.\n\nThe third angles must also be equal: ∠C = ∠F = 180° - 50° - 70° = 60°.',
+      relatedConcept: 'bcg9-d28-c1',
+    },
+    {
+      id: 'bcg9-d28-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'In triangle ABC, D is on AB and E is on AC, with DE ∥ BC. AD = 4, DB = 6, and BC = 15. Find DE.',
+      answer: '6',
+      explanation: '△ADE ~ △ABC (AA: shared angle A, and DE ∥ BC creates equal corresponding angles).\n\n$$\\frac{AD}{AB} = \\frac{DE}{BC}$$\n$$\\frac{4}{4 + 6} = \\frac{DE}{15}$$\n$$\\frac{4}{10} = \\frac{DE}{15}$$\n$$DE = 15 \\times \\frac{4}{10} = 6$$',
+      relatedConcept: 'bcg9-d28-c4',
+    },
+    {
+      id: 'bcg9-d28-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Two similar triangles have sides in ratio 3:5. The larger triangle has an area of 75 cm². What is the area of the smaller triangle?',
+      options: ['$15$ cm²', '$27$ cm²', '$33$ cm²', '$45$ cm²'],
+      answer: '$27$ cm²',
+      explanation: 'Scale factor $k = \\frac{3}{5}$. Areas scale by $k^2 = \\frac{9}{25}$.\n\n$$A_{\\text{small}} = 75 \\times \\frac{9}{25} = \\frac{675}{25} = 27 \\text{ cm}^2$$',
+      relatedConcept: 'bcg9-d28-c2',
+    },
+    {
+      id: 'bcg9-d28-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A 6 m ladder leans against a wall, touching at a point 5 m up. A shorter 4 m ladder leans against the same wall at the same angle. How high does the shorter ladder reach? Round to 1 decimal place.',
+      answer: '3.3 m',
+      explanation: 'The two ladders and the wall form similar triangles (same angle with the ground).\n\nScale factor: $\\frac{4}{6} = \\frac{2}{3}$\n\nHeight reached by short ladder:\n$$h = 5 \\times \\frac{2}{3} = \\frac{10}{3} \\approx 3.3 \\text{ m}$$',
+      relatedConcept: 'bcg9-d28-c3',
+    },
+  ],
+  realLifeExample: 'Surveyors use similar triangles to measure the width of rivers or height of cliffs without crossing them. Ancient Egyptians used shadow ratios to measure pyramid heights. The same math that Thales used 2500 years ago is still used by engineers today! 삼각형의 닮음은 접근 불가능한 거리를 측정하는 데 활용돼요.',
+};
+
+export default dayContent;

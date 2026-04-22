@@ -1,0 +1,107 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 25,
+  part: 4,
+  title: 'Parallel and Perpendicular Lines',
+  subtitle: 'Using slope to identify and write equations for parallel and perpendicular lines',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d25-c1',
+      title: 'Parallel Lines (평행선)',
+      content: '**Parallel lines** (평행선) never intersect and have the **same slope**.\n\n$$\\text{If } m_1 = m_2 \\text{, the lines are parallel.}$$\n\n**Examples of parallel pairs:**\n- $y = 3x + 1$ and $y = 3x - 5$ → both have $m = 3$ → parallel ∥\n- $y = -2x$ and $y = -2x + 7$ → both have $m = -2$ → parallel ∥\n\n**Exception:** Two lines with the same slope AND the same $y$-intercept are the **same line** (coincident), not parallel!\n\n**Non-example:** $y = 2x + 1$ and $y = 3x + 1$ → different slopes, NOT parallel (they intersect at one point).',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d25-c2',
+      title: 'Perpendicular Lines (수직선)',
+      content: '**Perpendicular lines** (수직선) meet at a right angle ($90°$).\n\nTheir slopes are **negative reciprocals** (음의 역수) of each other:\n\n$$m_1 \\times m_2 = -1 \\qquad \\text{or} \\qquad m_2 = -\\frac{1}{m_1}$$\n\n**Examples:**\n- Slope $2$ ↔ slope $-\\frac{1}{2}$ (negative reciprocal) → perpendicular ⊥\n- Slope $\\frac{3}{4}$ ↔ slope $-\\frac{4}{3}$ → perpendicular ⊥\n- Slope $5$ ↔ slope $-\\frac{1}{5}$ → perpendicular ⊥\n\n**Special case:** Horizontal (slope $0$) and vertical (undefined slope) lines are perpendicular to each other.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d25-c3',
+      title: 'Finding the Negative Reciprocal (음의 역수 구하기)',
+      content: 'To find the slope of a perpendicular line:\n1. **Flip** the fraction (take the reciprocal)\n2. **Change the sign** (negate it)\n\n| Original slope | Perpendicular slope |\n|---------------|---------------------|\n| $3 = \\frac{3}{1}$ | $-\\frac{1}{3}$ |\n| $-\\frac{2}{5}$ | $\\frac{5}{2}$ |\n| $\\frac{7}{4}$ | $-\\frac{4}{7}$ |\n| $-4$ | $\\frac{1}{4}$ |\n\n**Check:** Multiply slopes → should equal $-1$:\n$$3 \\times \\left(-\\frac{1}{3}\\right) = -1 \\checkmark$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d25-c4',
+      title: 'Writing Equations of Parallel and Perpendicular Lines',
+      content: 'To write the equation of a line parallel or perpendicular to a given line through a specific point:\n\n1. Identify the slope of the original line\n2. Determine the new slope (same for parallel; negative reciprocal for perpendicular)\n3. Use point-slope form: $y - y_1 = m(x - x_1)$\n\n**Example:** Write an equation for the line perpendicular to $y = 2x + 5$ passing through $(4, 1)$.\n\nOriginal slope: $m = 2$\nPerpendicular slope: $m_\\perp = -\\frac{1}{2}$\n\n$$y - 1 = -\\frac{1}{2}(x - 4)$$\n$$y = -\\frac{1}{2}x + 3$$',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d25-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which line is parallel to $y = 4x - 7$?',
+      options: [
+        '$y = -4x + 1$',
+        '$y = 4x + 3$',
+        '$y = \\frac{1}{4}x - 7$',
+        '$y = -\\frac{1}{4}x + 2$',
+      ],
+      answer: '$y = 4x + 3$',
+      explanation: 'Parallel lines have the **same slope**. The original line has slope $m = 4$.\n\n$y = 4x + 3$ also has slope $4$ → **parallel** ∥\n\nAll other options have different slopes.',
+      relatedConcept: 'bcg9-d25-c1',
+    },
+    {
+      id: 'bcg9-d25-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the slope of a line perpendicular to $y = -3x + 2$?',
+      options: ['$3$', '$-3$', '$\\frac{1}{3}$', '$-\\frac{1}{3}$'],
+      answer: '$\\frac{1}{3}$',
+      explanation: 'Original slope: $m = -3$\n\nPerpendicular slope: $m_\\perp = -\\frac{1}{-3} = \\frac{1}{3}$\n\n**Check:** $(-3) \\times \\frac{1}{3} = -1$ ✓',
+      relatedConcept: 'bcg9-d25-c2',
+    },
+    {
+      id: 'bcg9-d25-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Are the lines $y = \\frac{2}{3}x + 1$ and $y = -\\frac{3}{2}x - 4$ parallel, perpendicular, or neither?',
+      answer: 'perpendicular',
+      explanation: 'Slopes: $m_1 = \\frac{2}{3}$ and $m_2 = -\\frac{3}{2}$\n\nCheck: $\\frac{2}{3} \\times \\left(-\\frac{3}{2}\\right) = -1$ ✓\n\nThe lines are **perpendicular** ⊥.',
+      relatedConcept: 'bcg9-d25-c2',
+    },
+    {
+      id: 'bcg9-d25-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Write the equation of the line parallel to $y = -5x + 3$ that passes through $(1, 4)$.',
+      answer: 'y = -5x + 9',
+      explanation: 'Parallel → same slope: $m = -5$\n\nUse point $(1, 4)$:\n$$y - 4 = -5(x - 1)$$\n$$y - 4 = -5x + 5$$\n$$y = -5x + 9$$\n\n**Check:** At $(1, 4)$: $y = -5(1) + 9 = 4$ ✓',
+      relatedConcept: 'bcg9-d25-c4',
+    },
+    {
+      id: 'bcg9-d25-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Write the equation of the line perpendicular to $3x - y = 6$ passing through $(-2, 0)$.',
+      options: [
+        '$y = 3x + 6$',
+        '$y = -\\frac{1}{3}x - \\frac{2}{3}$',
+        '$y = -\\frac{1}{3}x$',
+        '$y = \\frac{1}{3}x + \\frac{2}{3}$',
+      ],
+      answer: '$y = -\\frac{1}{3}x - \\frac{2}{3}$',
+      explanation: 'Rewrite $3x - y = 6$ as $y = 3x - 6$ → slope $m = 3$.\n\nPerpendicular slope: $m_\\perp = -\\frac{1}{3}$\n\nThrough $(-2, 0)$:\n$$y - 0 = -\\frac{1}{3}(x - (-2))$$\n$$y = -\\frac{1}{3}(x + 2)$$\n$$y = -\\frac{1}{3}x - \\frac{2}{3}$$',
+      relatedConcept: 'bcg9-d25-c4',
+    },
+    {
+      id: 'bcg9-d25-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'Line $\\ell$ is perpendicular to the line through $(1, 2)$ and $(3, 8)$, and passes through the origin. What is the equation of line $\\ell$?',
+      answer: 'y = -x/3',
+      explanation: 'Step 1 — Slope of the given line:\n$$m = \\frac{8 - 2}{3 - 1} = \\frac{6}{2} = 3$$\n\nStep 2 — Perpendicular slope:\n$$m_\\perp = -\\frac{1}{3}$$\n\nStep 3 — Through origin $(0, 0)$:\n$$y = -\\frac{1}{3}x$$',
+      relatedConcept: 'bcg9-d25-c4',
+    },
+  ],
+  realLifeExample: 'Architects and builders rely on parallel and perpendicular lines constantly. Walls are built perpendicular to floors (90° angle), and hallways are parallel to each other. In BC, the street grid in cities like Vancouver uses a perpendicular grid system where streets intersect at right angles. 건축에서 평행·수직의 개념은 매우 중요해요!',
+};
+
+export default dayContent;

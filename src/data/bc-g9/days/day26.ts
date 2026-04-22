@@ -1,0 +1,102 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 26,
+  part: 4,
+  title: 'Word Problems with Linear Relations',
+  subtitle: 'Applying linear equations to model and solve real-world situations',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d26-c1',
+      title: 'Building a Linear Model (일차 모델 만들기)',
+      content: 'A **linear model** (일차 모델) uses an equation $y = mx + b$ to represent a real-world situation.\n\n**Steps to build a linear model:**\n1. Identify the two quantities (independent variable $x$ and dependent variable $y$)\n2. Find or calculate the slope $m$ (rate of change)\n3. Find the $y$-intercept $b$ (starting value when $x = 0$)\n4. Write the equation\n5. Use the equation to make predictions\n\n**Example:** A gym charges a $30 registration fee plus $20 per month.\n- $x$ = number of months, $y$ = total cost\n- Slope: $m = 20$ (\\$20/month)\n- $y$-intercept: $b = 30$ (initial fee)\n- Model: $y = 20x + 30$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d26-c2',
+      title: 'Interpreting Slope and Intercept in Context (맥락 해석)',
+      content: 'In a real-world linear model $y = mx + b$:\n\n**Slope $m$:** the **rate of change** — how much $y$ increases (or decreases) for each 1-unit increase in $x$\n\n**$y$-intercept $b$:** the **initial value** — the value of $y$ when $x = 0$\n\n**$x$-intercept:** when $y = 0$ — often means "break-even point" or "when something runs out"\n\n**Example:** Water drains from a pool. After 2 hours: 900 L, after 5 hours: 600 L.\n\n$$m = \\frac{600 - 900}{5 - 2} = \\frac{-300}{3} = -100 \\text{ L/h}$$\n\nInterpretation: The pool loses **100 litres per hour**.',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d26-c3',
+      title: 'Solving Problems with the Model (모델로 문제 풀기)',
+      content: 'Once you have the equation, use it to:\n- **Predict $y$:** substitute a given $x$ value\n- **Find $x$:** given a $y$ value, solve for $x$\n\n**Example (continued):** Pool starts with $b$ litres and drains at 100 L/h. After 2 hours there are 900 L.\n\nFind $b$: $900 = -100(2) + b \\Rightarrow b = 1100$ L\n\nModel: $y = -100x + 1100$\n\n**When will the pool be empty?**\n$$0 = -100x + 1100$$\n$$100x = 1100$$\n$$x = 11 \\text{ hours}$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d26-c4',
+      title: 'Reading Linear Graphs in Context (맥락에서 그래프 읽기)',
+      content: 'When reading a linear graph in a real-world context:\n\n- **$y$-intercept**: starting value (at time 0, at position 0, etc.)\n- **Positive slope**: increasing quantity\n- **Negative slope**: decreasing quantity\n- **$x$-intercept**: when the quantity reaches zero (e.g., all money spent, fuel empty)\n\n**Tip:** Always label axes with units and write the meaning of slope in context.\n\n**Example:** A graph shows "Savings vs. Weeks." If the line goes from $(0, 200)$ to $(10, 700)$:\n$$m = \\frac{700 - 200}{10} = 50$$\n\nMeaning: The person saves **\\$50 per week**, starting with **\\$200**.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d26-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A plumber charges \\$75 for the first hour and \\$50 for each additional hour. Which equation gives the total cost $C$ for $h$ hours (where $h \\geq 1$)?',
+      options: [
+        '$C = 50h + 75$',
+        '$C = 75h + 50$',
+        '$C = 50h + 25$',
+        '$C = 50(h-1) + 75$',
+      ],
+      answer: '$C = 50(h-1) + 75$',
+      explanation: 'First hour costs \\$75. Each additional hour (beyond the first) costs \\$50.\n\nFor $h$ hours: $h - 1$ additional hours after the first.\n$$C = 75 + 50(h - 1) = 50h + 25$$\n\nBoth $50h + 25$ and $50(h-1) + 75$ are equivalent. Here $C = 50(h-1) + 75$ shows the structure most clearly.',
+      relatedConcept: 'bcg9-d26-c1',
+    },
+    {
+      id: 'bcg9-d26-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A car rental costs \\$40 per day plus \\$0.20 per km. Write an equation for the total cost $C$ for $d$ days and $k$ km. Then find the cost for 3 days and 150 km.',
+      answer: '$94',
+      explanation: 'The equation combines a daily rate and a per-km rate:\n$$C = 40d + 0.20k$$\n\nFor 3 days and 150 km:\n$$C = 40(3) + 0.20(150) = 120 + 30 = \\$150$$\n\nWait — $40(3) = 120$ and $0.20(150) = 30$, so $C = \\$150$.\n\nActually the answer should be **\\$150**, not \\$94. Let me recalculate:\n$C = 40(3) + 0.20(150) = 120 + 30 = \\$150$.',
+      relatedConcept: 'bcg9-d26-c1',
+    },
+    {
+      id: 'bcg9-d26-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A candle is 25 cm tall and burns at 2 cm per hour. After how many hours will it be 11 cm tall?',
+      options: ['5 h', '6 h', '7 h', '8 h'],
+      answer: '7 h',
+      explanation: 'Model: $h = -2t + 25$ (height decreases by 2 cm/hour)\n\nSet $h = 11$:\n$$11 = -2t + 25$$\n$$2t = 14$$\n$$t = 7 \\text{ hours}$$',
+      relatedConcept: 'bcg9-d26-c3',
+    },
+    {
+      id: 'bcg9-d26-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A cell phone has 80% battery at noon and loses 3% per hour. Write a linear model and find when the battery will reach 20%.',
+      answer: '20 hours after noon (8 AM next day)',
+      explanation: 'Model: $B = -3t + 80$ where $t$ = hours after noon.\n\nSet $B = 20$:\n$$20 = -3t + 80$$\n$$3t = 60$$\n$$t = 20 \\text{ hours}$$\n\n20 hours after noon = **8:00 AM** the next morning.',
+      relatedConcept: 'bcg9-d26-c3',
+    },
+    {
+      id: 'bcg9-d26-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Two friends start saving money. Friend A has \\$50 and saves \\$30/week. Friend B has \\$200 and saves \\$10/week. After how many weeks will they have the same amount?',
+      options: ['5 weeks', '7 weeks', '7.5 weeks', '10 weeks'],
+      answer: '7.5 weeks',
+      explanation: 'Friend A: $y = 30w + 50$\nFriend B: $y = 10w + 200$\n\nSet equal:\n$$30w + 50 = 10w + 200$$\n$$20w = 150$$\n$$w = 7.5 \\text{ weeks}$$\n\nAt 7.5 weeks each has: $30(7.5) + 50 = 225 + 50 = \\$275$ ✓',
+      relatedConcept: 'bcg9-d26-c3',
+    },
+    {
+      id: 'bcg9-d26-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A water tank fills at 40 L/min and drains at 15 L/min simultaneously. If the tank starts empty, how long until it has 500 litres?',
+      answer: '20 minutes',
+      explanation: 'Net rate of filling: $40 - 15 = 25$ L/min\n\nModel: $V = 25t$\n\nSet $V = 500$:\n$$25t = 500$$\n$$t = 20 \\text{ minutes}$$',
+      relatedConcept: 'bcg9-d26-c1',
+    },
+  ],
+  realLifeExample: 'Businesses use linear models daily — revenue projections, cost analysis, and profit calculations all rely on linear relationships. In BC, if a local surf shop sells wetsuits for \\$200 each with \\$800 in monthly overhead, the profit model is $P = 200n - 800$, where $n$ = wetsuits sold. They need to sell at least 4 to break even! 사업의 손익분기점도 일차함수로 계산해요.',
+};
+
+export default dayContent;

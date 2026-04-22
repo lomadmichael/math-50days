@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 22,
+  part: 4,
+  title: 'Perimeter and Area',
+  subtitle: 'Calculating perimeter and area for rectangles and triangles',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d22-c1',
+      title: 'Perimeter',
+      content: '**Perimeter** (둘레) is the total distance around the outside of a shape. It is measured in **linear units** (선형 단위) like cm, m, or km.\n\nTo find the perimeter, **add up all the side lengths**.\n\n**Rectangle (직사각형):**\n$$P = 2l + 2w = 2(l + w)$$\nwhere $l$ = length (길이) and $w$ = width (폭)\n\n**Square (정사각형):**\n$$P = 4s$$\nwhere $s$ = side length\n\n**Triangle (삼각형):**\n$$P = a + b + c$$\nwhere $a$, $b$, $c$ are the three side lengths',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d22-c2',
+      title: 'Area of Rectangles and Squares',
+      content: '**Area** (넓이) is the amount of space inside a 2D shape. It is measured in **square units** (제곱 단위) like cm², m², or km².\n\n**Rectangle:**\n$$A = l \\times w$$\n\n**Square:**\n$$A = s^2$$\n\n**Example:** A rectangle is 8 cm long and 5 cm wide.\n$$P = 2(8 + 5) = 2 \\times 13 = 26 \\text{ cm}$$\n$$A = 8 \\times 5 = 40 \\text{ cm}^2$$\n\n**팁**: 둘레는 길이 단위(cm), 넓이는 제곱 단위(cm²) — 단위를 꼭 확인하세요!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d22-c3',
+      title: 'Area of a Triangle',
+      content: 'A triangle\'s area is exactly **half** the area of a rectangle with the same base and height.\n\n$$A = \\frac{1}{2} \\times b \\times h$$\n\nwhere:\n- $b$ = **base** (밑변): any side of the triangle\n- $h$ = **height** (높이): the perpendicular distance from the base to the opposite vertex\n\n**Important:** The height must be **perpendicular** (수직) to the base — it is NOT always a side of the triangle!\n\n**Example:** Base = 10 cm, height = 6 cm\n$$A = \\frac{1}{2} \\times 10 \\times 6 = 30 \\text{ cm}^2$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d22-c4',
+      title: 'Working Backwards — Finding a Missing Dimension',
+      content: 'If you know the area and one dimension, you can find the other.\n\n**Example (Rectangle):** Area = $72 \\text{ cm}^2$, length = 9 cm. Find the width.\n$$72 = 9 \\times w$$\n$$w = \\frac{72}{9} = 8 \\text{ cm}$$\n\n**Example (Triangle):** Area = $30 \\text{ m}^2$, base = 12 m. Find the height.\n$$30 = \\frac{1}{2} \\times 12 \\times h$$\n$$30 = 6h$$\n$$h = 5 \\text{ m}$$\n\n**팁**: 공식을 역방향으로 적용하면 모르는 변의 길이를 구할 수 있어요.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d22-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the perimeter and area of a rectangle with length 12 cm and width 7 cm.',
+      answer: 'Perimeter = 38 cm, Area = 84 cm²',
+      explanation: '$$P = 2(l + w) = 2(12 + 7) = 2 \\times 19 = 38 \\text{ cm}$$\n$$A = l \\times w = 12 \\times 7 = 84 \\text{ cm}^2$$',
+      relatedConcept: 'bcg67-d22-c2',
+    },
+    {
+      id: 'bcg67-d22-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A triangle has a base of 14 cm and a height of 9 cm. What is its area?',
+      options: ['63 cm²', '126 cm²', '46 cm²', '23 cm²'],
+      answer: '63 cm²',
+      explanation: '$$A = \\frac{1}{2} \\times b \\times h = \\frac{1}{2} \\times 14 \\times 9 = \\frac{126}{2} = 63 \\text{ cm}^2$$',
+      relatedConcept: 'bcg67-d22-c3',
+    },
+    {
+      id: 'bcg67-d22-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A square has a side length of 11 m. What is its area?',
+      answer: '121 m²',
+      explanation: '$$A = s^2 = 11^2 = 121 \\text{ m}^2$$',
+      relatedConcept: 'bcg67-d22-c2',
+    },
+    {
+      id: 'bcg67-d22-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A rectangle has an area of $54 \\text{ cm}^2$ and a width of 6 cm. What is its length?',
+      answer: '9 cm',
+      explanation: '$$A = l \\times w$$\n$$54 = l \\times 6$$\n$$l = \\frac{54}{6} = 9 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d22-c4',
+    },
+    {
+      id: 'bcg67-d22-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A triangular garden has an area of $48 \\text{ m}^2$ and a base of 12 m. What is its height?',
+      options: ['4 m', '6 m', '8 m', '10 m'],
+      answer: '8 m',
+      explanation: '$$48 = \\frac{1}{2} \\times 12 \\times h$$\n$$48 = 6h$$\n$$h = \\frac{48}{6} = 8 \\text{ m}$$',
+      relatedConcept: 'bcg67-d22-c4',
+    },
+    {
+      id: 'bcg67-d22-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A rectangular room is 6 m × 4 m. You want to tile it with square tiles that are 50 cm × 50 cm. How many tiles do you need?',
+      options: ['48', '96', '120', '192'],
+      answer: '96',
+      explanation: 'Room area: $6 \\text{ m} \\times 4 \\text{ m} = 24 \\text{ m}^2$\n\nTile area: $0.5 \\text{ m} \\times 0.5 \\text{ m} = 0.25 \\text{ m}^2$\n\nNumber of tiles: $\\frac{24}{0.25} = 96$\n\n**Answer: 96 tiles**\n\n**팁**: 단위를 먼저 통일해야 해요 (50 cm = 0.5 m).',
+      relatedConcept: 'bcg67-d22-c2',
+    },
+  ],
+  realLifeExample: 'When you buy carpet or paint, you need to calculate **area** (to know how much material). When you build a fence, you need **perimeter** (total length of the boundary). A $5 \\text{ m} \\times 4 \\text{ m}$ garden needs $2(5+4) = 18$ m of fencing but $20 \\text{ m}^2$ of soil. 실생활에서 둘레와 넓이는 매우 다르게 쓰여요!',
+};
+
+export default dayContent;

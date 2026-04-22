@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 27,
+  part: 5,
+  title: 'Similar Figures — Ratios and Scale',
+  subtitle: 'Understanding similarity, scale factors, and proportional relationships in similar figures',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d27-c1',
+      title: 'What are Similar Figures? (닮은 도형)',
+      content: '**Similar figures** (닮은 도형) have the same shape but may be different sizes.\n\nTwo figures are similar when:\n1. Corresponding angles (대응각) are **equal**\n2. Corresponding sides (대응변) are **proportional** (in the same ratio)\n\nThe symbol for similarity is $\\sim$.\n\n**Example:** Rectangle A has sides 3 cm and 6 cm. Rectangle B has sides 6 cm and 12 cm.\n- Ratio of sides: $\\frac{6}{3} = \\frac{12}{6} = 2$\n- They are similar! Rectangle B is a scale factor of 2 compared to A.\n\n**Note:** Congruent figures (합동 도형) are a special case of similar figures where the scale factor equals 1.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d27-c2',
+      title: 'Scale Factor (축척/배율)',
+      content: 'The **scale factor** (축척, 배율) is the ratio of corresponding side lengths:\n\n$$\\text{scale factor} = \\frac{\\text{length in new figure}}{\\text{length in original figure}}$$\n\n- Scale factor $> 1$: **enlargement** (확대)\n- Scale factor $= 1$: same size (congruent)\n- Scale factor $< 1$: **reduction** (축소)\n\n**Example:** If a photo 4 cm × 6 cm is enlarged to 10 cm × 15 cm:\n$$\\text{scale factor} = \\frac{10}{4} = \\frac{15}{6} = 2.5$$\n\nThe photo was enlarged by a factor of **2.5**.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d27-c3',
+      title: 'Finding Missing Lengths Using Proportions (비례로 빠진 변 구하기)',
+      content: 'If two figures are similar, set up a **proportion** (비례식) to find missing lengths:\n\n$$\\frac{\\text{side in Figure 1}}{\\text{corresponding side in Figure 2}} = \\frac{\\text{another side in Figure 1}}{\\text{corresponding side in Figure 2}}$$\n\n**Example:** Triangles PQR and STU are similar. PQ = 8, QR = 12, ST = 6. Find TU.\n\n$$\\frac{PQ}{ST} = \\frac{QR}{TU}$$\n$$\\frac{8}{6} = \\frac{12}{TU}$$\n$$8 \\cdot TU = 72$$\n$$TU = 9$$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d27-c4',
+      title: 'Perimeter and Area of Similar Figures (닮은 도형의 둘레와 넓이)',
+      content: 'If the scale factor between two similar figures is $k$:\n\n- **Perimeters** (둘레) scale by factor $k$\n$$\\frac{P_2}{P_1} = k$$\n\n- **Areas** (넓이) scale by factor $k^2$\n$$\\frac{A_2}{A_1} = k^2$$\n\n**Example:** Two similar triangles. Scale factor $k = 3$.\n\n- If the small triangle has perimeter 10 cm → large triangle has perimeter $10 \\times 3 = 30$ cm\n- If the small triangle has area 8 cm² → large triangle has area $8 \\times 3^2 = 72$ cm²',
+      type: 'formula',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d27-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Two rectangles are similar. The first has dimensions 5 cm × 8 cm. The second has width 15 cm. What is the scale factor from the first to the second?',
+      options: ['$2$', '$2.5$', '$3$', '$4$'],
+      answer: '$3$',
+      explanation: '$$\\text{scale factor} = \\frac{15}{5} = 3$$\n\nThe second rectangle is 3 times larger. Its length would be $8 \\times 3 = 24$ cm.',
+      relatedConcept: 'bcg9-d27-c2',
+    },
+    {
+      id: 'bcg9-d27-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Triangles ABC and DEF are similar. AB = 10, BC = 15, DE = 6. Find EF.',
+      answer: '9',
+      explanation: '$$\\frac{AB}{DE} = \\frac{BC}{EF}$$\n$$\\frac{10}{6} = \\frac{15}{EF}$$\n$$10 \\cdot EF = 90$$\n$$EF = 9$$',
+      relatedConcept: 'bcg9-d27-c3',
+    },
+    {
+      id: 'bcg9-d27-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Two similar figures have a scale factor of 4. If the smaller figure has an area of 9 cm², what is the area of the larger figure?',
+      options: ['$36$ cm²', '$72$ cm²', '$108$ cm²', '$144$ cm²'],
+      answer: '$144$ cm²',
+      explanation: 'Area scales by $k^2$:\n$$A_{\\text{large}} = 9 \\times 4^2 = 9 \\times 16 = 144 \\text{ cm}^2$$',
+      relatedConcept: 'bcg9-d27-c4',
+    },
+    {
+      id: 'bcg9-d27-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'On a map, 2 cm represents 50 km. Two cities are 7 cm apart on the map. What is the actual distance between them?',
+      answer: '175 km',
+      explanation: 'Scale: $2 \\text{ cm} = 50 \\text{ km}$\n\n$$\\frac{2}{50} = \\frac{7}{d}$$\n$$2d = 350$$\n$$d = 175 \\text{ km}$$',
+      relatedConcept: 'bcg9-d27-c3',
+    },
+    {
+      id: 'bcg9-d27-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A triangle has perimeter 24 cm. A similar triangle has a scale factor of $\\frac{5}{4}$ compared to the first. What is the perimeter of the larger triangle?',
+      options: ['$28$ cm', '$30$ cm', '$32$ cm', '$36$ cm'],
+      answer: '$30$ cm',
+      explanation: 'Perimeter scales by the scale factor $k = \\frac{5}{4}$:\n$$P_{\\text{large}} = 24 \\times \\frac{5}{4} = \\frac{120}{4} = 30 \\text{ cm}$$',
+      relatedConcept: 'bcg9-d27-c4',
+    },
+    {
+      id: 'bcg9-d27-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'Two similar pentagons have areas 50 cm² and 200 cm². What is the ratio of their perimeters?',
+      answer: '1:2',
+      explanation: 'Find scale factor from areas:\n$$k^2 = \\frac{200}{50} = 4 \\implies k = 2$$\n\nPerimeters scale by $k = 2$, so the ratio is $1:2$.\n\nIf the small pentagon has perimeter $P$, the large one has perimeter $2P$.',
+      relatedConcept: 'bcg9-d27-c4',
+    },
+  ],
+  realLifeExample: 'Maps, architectural blueprints, and model cars all use scale factors. A BC road map might use a scale of 1:1,000,000 meaning 1 cm on the map = 10 km in reality. Model builders scale down cars, buildings, and bridges to create accurate miniature versions. 지도와 설계도는 닮음 도형의 실생활 예시예요!',
+};
+
+export default dayContent;

@@ -1,0 +1,107 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 32,
+  part: 6,
+  title: 'Range and Variance Introduction',
+  subtitle: 'Measuring data spread using range, and introducing variance and standard deviation',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d32-c1',
+      title: 'Range — The Simplest Spread Measure (범위)',
+      content: 'The **range** (범위) measures the spread of a data set:\n\n$$\\text{range} = \\text{maximum value} - \\text{minimum value}$$\n\n**Example:** Test scores: $55, 70, 82, 91, 98$\n$$\\text{range} = 98 - 55 = 43$$\n\n**Interpretation:** A large range means data is spread out; a small range means data is clustered together.\n\n**Limitation:** Range only uses two values (max and min), so it is affected by outliers.\n\n**Example of range being misleading:**\n- Set A: $10, 10, 10, 10, 50$ → range = 40\n- Set B: $10, 20, 30, 40, 50$ → range = 40\n\nBoth have range 40, but Set B is much more spread throughout.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d32-c2',
+      title: 'Deviation from the Mean (평균으로부터의 편차)',
+      content: 'The **deviation** (편차) of a value tells how far it is from the mean:\n\n$$\\text{deviation} = x - \\bar{x}$$\n\nwhere $\\bar{x}$ (x-bar) is the mean.\n\n- Positive deviation: value is above the mean\n- Negative deviation: value is below the mean\n- Sum of all deviations always equals **zero**!\n\n**Example:** Data: $3, 5, 7, 9, 11$, mean $= 7$\n\n| $x$ | Deviation $x - 7$ |\n|-----|-------------------|\n| 3 | $-4$ |\n| 5 | $-2$ |\n| 7 | $0$ |\n| 9 | $+2$ |\n| 11 | $+4$ |\n| **Sum** | **0** |\n',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d32-c3',
+      title: 'Variance — Average Squared Deviation (분산)',
+      content: '**Variance** (분산) measures how spread out data is around the mean, using squared deviations to eliminate negative signs:\n\n$$\\text{variance} = \\frac{\\sum (x - \\bar{x})^2}{n}$$\n\n**Example:** Data: $3, 5, 7, 9, 11$, mean $= 7$\n\n| $x$ | $x - 7$ | $(x-7)^2$ |\n|-----|---------|----------|\n| 3 | $-4$ | $16$ |\n| 5 | $-2$ | $4$ |\n| 7 | $0$ | $0$ |\n| 9 | $+2$ | $4$ |\n| 11 | $+4$ | $16$ |\n\n$$\\text{variance} = \\frac{16 + 4 + 0 + 4 + 16}{5} = \\frac{40}{5} = 8$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d32-c4',
+      title: 'Standard Deviation (표준편차)',
+      content: '**Standard deviation** (표준편차) is the square root of variance. It is in the same units as the original data:\n\n$$\\sigma = \\sqrt{\\text{variance}} = \\sqrt{\\frac{\\sum(x - \\bar{x})^2}{n}}$$\n\nUsing the example above: variance = 8\n$$\\sigma = \\sqrt{8} \\approx 2.83$$\n\n**Interpretation:**\n- Small $\\sigma$: data is close to the mean (less spread)\n- Large $\\sigma$: data is far from the mean (more spread)\n\n**Comparing two classes:**\n- Class A scores: mean 75, $\\sigma = 3$ → very consistent\n- Class B scores: mean 75, $\\sigma = 15$ → very spread out\n\n*Note: In Grade 9, you are introduced to the concept; detailed calculations are covered in Grade 11 Statistics.*',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d32-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the range of: $14, 7, 23, 5, 31, 18$.',
+      answer: '26',
+      explanation: '$$\\text{range} = \\text{max} - \\text{min} = 31 - 5 = 26$$',
+      relatedConcept: 'bcg9-d32-c1',
+    },
+    {
+      id: 'bcg9-d32-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'The mean of a data set is 12. A value in the set is 17. What is its deviation from the mean?',
+      options: ['$-5$', '$5$', '$17$', '$29$'],
+      answer: '$5$',
+      explanation: '$$\\text{deviation} = x - \\bar{x} = 17 - 12 = +5$$\n\nThe value 17 is **5 above** the mean.',
+      relatedConcept: 'bcg9-d32-c2',
+    },
+    {
+      id: 'bcg9-d32-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Calculate the variance of the data set: $2, 4, 6, 8, 10$. (First find the mean.)',
+      answer: '8',
+      explanation: 'Mean: $\\bar{x} = \\frac{2+4+6+8+10}{5} = \\frac{30}{5} = 6$\n\nSquared deviations:\n- $(2-6)^2 = 16$\n- $(4-6)^2 = 4$\n- $(6-6)^2 = 0$\n- $(8-6)^2 = 4$\n- $(10-6)^2 = 16$\n\n$$\\text{variance} = \\frac{16+4+0+4+16}{5} = \\frac{40}{5} = 8$$',
+      relatedConcept: 'bcg9-d32-c3',
+    },
+    {
+      id: 'bcg9-d32-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Two athletes\' long jump distances (m): \nAthlete A: $6.1, 6.3, 5.9, 6.2, 6.0$ \nAthlete B: $5.5, 6.8, 6.0, 7.1, 5.6$\nBoth have the same mean. Who is more consistent?',
+      options: [
+        'Athlete A (smaller range)',
+        'Athlete B (larger range)',
+        'They are equally consistent',
+        'Cannot be determined',
+      ],
+      answer: 'Athlete A (smaller range)',
+      explanation: 'Both means: A mean $= 30.5/5 = 6.1$ m, B mean $= 31.0/5 = 6.2$ m (slightly different actually)\n\nRange A: $6.3 - 5.9 = 0.4$ m\nRange B: $7.1 - 5.5 = 1.6$ m\n\nAthlete A has a much smaller range → **more consistent** performance.',
+      relatedConcept: 'bcg9-d32-c1',
+    },
+    {
+      id: 'bcg9-d32-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Find the standard deviation of $1, 3, 5, 7, 9$. Round to 2 decimal places.',
+      answer: '2.83',
+      explanation: 'Mean: $\\bar{x} = \\frac{25}{5} = 5$\n\nSquared deviations:\n$(1-5)^2 = 16$, $(3-5)^2 = 4$, $(5-5)^2 = 0$, $(7-5)^2 = 4$, $(9-5)^2 = 16$\n\nVariance $= \\frac{16+4+0+4+16}{5} = \\frac{40}{5} = 8$\n\n$$\\sigma = \\sqrt{8} = 2\\sqrt{2} \\approx 2.83$$',
+      relatedConcept: 'bcg9-d32-c4',
+    },
+    {
+      id: 'bcg9-d32-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Data set A has mean 50 and standard deviation 5. Data set B has mean 50 and standard deviation 15. Which statement is true?',
+      options: [
+        'Set A is more spread out',
+        'Set B is more spread out',
+        'They are equally spread',
+        'Cannot compare without knowing the data',
+      ],
+      answer: 'Set B is more spread out',
+      explanation: 'Standard deviation measures spread around the mean.\n\n- $\\sigma_A = 5$: data typically within 5 of the mean (45–55)\n- $\\sigma_B = 15$: data typically within 15 of the mean (35–65)\n\n**Set B is more spread out** (larger standard deviation = more variation).',
+      relatedConcept: 'bcg9-d32-c4',
+    },
+  ],
+  realLifeExample: 'Quality control in manufacturing uses standard deviation to ensure products meet specifications. If a factory produces bolts that should be 10 mm in diameter, a small standard deviation (say $\\sigma = 0.01$ mm) means nearly all bolts are close to 10 mm — very consistent! 제품 품질 관리에서 표준편차가 작을수록 균일한 품질을 뜻해요.',
+};
+
+export default dayContent;

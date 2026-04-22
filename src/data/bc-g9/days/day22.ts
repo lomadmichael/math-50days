@@ -1,0 +1,112 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 22,
+  part: 4,
+  title: 'Slope-Intercept Form — y = mx + b',
+  subtitle: 'Writing and interpreting linear equations using slope and y-intercept',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d22-c1',
+      title: 'Slope-Intercept Form (기울기-절편 형태)',
+      content: 'The **slope-intercept form** (기울기-절편 형태) of a linear equation is:\n\n$$y = mx + b$$\n\n- $m$ = slope (기울기) — how steep the line is\n- $b$ = **y-intercept** (y절편) — where the line crosses the $y$-axis (the point $(0, b)$)\n- $x$ and $y$ are the coordinates of any point on the line\n\n**Example:** $y = 3x - 2$\n- Slope: $m = 3$ (up 3, right 1)\n- $y$-intercept: $b = -2$ (line crosses $y$-axis at $(0, -2)$)',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d22-c2',
+      title: 'Identifying m and b from an Equation (방정식에서 m, b 찾기)',
+      content: 'Make sure the equation is in $y = mx + b$ form before reading $m$ and $b$.\n\n**Direct read:** $y = -\\frac{1}{2}x + 4$ → $m = -\\frac{1}{2}$, $b = 4$\n\n**Rearrange first:** $2y = 6x - 8$\n$$y = 3x - 4 \\quad \\Rightarrow \\quad m = 3, \\; b = -4$$\n\n**Another example:** $y + 5 = 2x$\n$$y = 2x - 5 \\quad \\Rightarrow \\quad m = 2, \\; b = -5$$\n\n**Tip:** The coefficient of $x$ is the slope; the constant term is the $y$-intercept.',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d22-c3',
+      title: 'Writing Equations in Slope-Intercept Form (방정식 쓰기)',
+      content: 'Given slope and $y$-intercept, substitute directly into $y = mx + b$.\n\n**Example 1:** Slope = $-2$, $y$-intercept = $5$ → $y = -2x + 5$\n\n**Example 2:** Given slope $m = 3$ and a point $(2, 7)$ on the line:\n\nSubstitute into $y = mx + b$:\n$$7 = 3(2) + b$$\n$$7 = 6 + b$$\n$$b = 1$$\n\nEquation: $y = 3x + 1$\n\n**Example 3:** Given two points $(0, -1)$ and $(4, 7)$:\n- Slope: $m = \\frac{7 - (-1)}{4 - 0} = \\frac{8}{4} = 2$\n- Since $(0, -1)$ is the $y$-intercept: $b = -1$\n- Equation: $y = 2x - 1$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d22-c4',
+      title: 'Interpreting Linear Equations in Context (맥락에서 해석)',
+      content: 'In a real-world equation $y = mx + b$:\n- $b$ = **initial value** or **starting amount** (처음 값)\n- $m$ = **rate of change** (변화율) per unit of $x$\n\n**Example:** A phone plan costs \\$25 per month (base fee) plus \\$0.10 per text.\n$$C = 0.10t + 25$$\n\n- $m = 0.10$: each text adds \\$0.10\n- $b = 25$: base monthly fee is \\$25\n- If you send 80 texts: $C = 0.10(80) + 25 = 8 + 25 = \\$33$',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d22-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What are the slope and $y$-intercept of $y = -4x + 7$?',
+      options: [
+        '$m = 4$, $b = 7$',
+        '$m = -4$, $b = 7$',
+        '$m = 7$, $b = -4$',
+        '$m = -4$, $b = -7$',
+      ],
+      answer: '$m = -4$, $b = 7$',
+      explanation: 'The equation is already in $y = mx + b$ form.\n\n$$y = -4x + 7 \\implies m = -4, \\; b = 7$$\n\nThe line crosses the $y$-axis at $(0, 7)$ and falls 4 units for every 1 unit right.',
+      relatedConcept: 'bcg9-d22-c1',
+    },
+    {
+      id: 'bcg9-d22-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Write the equation in slope-intercept form for a line with slope $\\frac{2}{3}$ and $y$-intercept $-1$.',
+      answer: 'y = (2/3)x - 1',
+      explanation: 'Substitute $m = \\frac{2}{3}$ and $b = -1$ into $y = mx + b$:\n\n$$y = \\frac{2}{3}x - 1$$',
+      relatedConcept: 'bcg9-d22-c1',
+    },
+    {
+      id: 'bcg9-d22-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Find the slope and $y$-intercept of $3y = 6x - 12$.',
+      options: [
+        '$m = 6$, $b = -12$',
+        '$m = 2$, $b = -4$',
+        '$m = 3$, $b = -12$',
+        '$m = 2$, $b = -12$',
+      ],
+      answer: '$m = 2$, $b = -4$',
+      explanation: 'Divide both sides by 3:\n$$y = 2x - 4$$\n\n$m = 2$, $b = -4$.',
+      relatedConcept: 'bcg9-d22-c2',
+    },
+    {
+      id: 'bcg9-d22-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A line has slope $-3$ and passes through $(2, 4)$. Write its equation in slope-intercept form.',
+      answer: 'y = -3x + 10',
+      explanation: 'Substitute $m = -3$ and the point $(2, 4)$ into $y = mx + b$:\n$$4 = -3(2) + b$$\n$$4 = -6 + b$$\n$$b = 10$$\n\nEquation: $y = -3x + 10$\n\n**Check with $(2, 4)$:** $y = -3(2) + 10 = -6 + 10 = 4$ ✓',
+      relatedConcept: 'bcg9-d22-c3',
+    },
+    {
+      id: 'bcg9-d22-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A candle is 20 cm tall and burns at 0.5 cm per hour. Which equation models the candle height $h$ after $t$ hours?',
+      options: [
+        '$h = 20t + 0.5$',
+        '$h = -0.5t + 20$',
+        '$h = 0.5t + 20$',
+        '$h = -20t + 0.5$',
+      ],
+      answer: '$h = -0.5t + 20$',
+      explanation: '- Initial height ($y$-intercept): $b = 20$ cm\n- Rate of change: $-0.5$ cm/hour (decreasing)\n\n$$h = -0.5t + 20$$\n\nAfter 10 hours: $h = -0.5(10) + 20 = -5 + 20 = 15$ cm ✓',
+      relatedConcept: 'bcg9-d22-c4',
+    },
+    {
+      id: 'bcg9-d22-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A line passes through $(-2, 1)$ and $(4, 13)$. Write its equation in slope-intercept form.',
+      answer: 'y = 2x + 5',
+      explanation: 'Step 1 — Find slope:\n$$m = \\frac{13 - 1}{4 - (-2)} = \\frac{12}{6} = 2$$\n\nStep 2 — Find $b$ using point $(4, 13)$:\n$$13 = 2(4) + b \\implies b = 5$$\n\nEquation: $y = 2x + 5$\n\n**Check with $(-2, 1)$:** $y = 2(-2) + 5 = -4 + 5 = 1$ ✓',
+      relatedConcept: 'bcg9-d22-c3',
+    },
+  ],
+  realLifeExample: 'Cell phone plans, taxi fares, and utility bills all follow $y = mx + b$. For example, BC Hydro charges a flat monthly fee (b) plus a rate per kilowatt-hour (m). Understanding slope-intercept form helps you compare plans and predict costs! 기울기-절편 형태는 실생활 요금 계산에 필수예요.',
+};
+
+export default dayContent;

@@ -1,0 +1,118 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 34,
+  part: 6,
+  title: 'Scatter Plots and Line of Best Fit',
+  subtitle: 'Plotting bivariate data, identifying correlations, and drawing the line of best fit',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d34-c1',
+      title: 'Scatter Plots (산점도)',
+      content: 'A **scatter plot** (산점도) displays the relationship between two variables (bivariate data).\n\n- Each data point is plotted as an ordered pair $(x, y)$\n- The **independent variable** (독립 변수) goes on the $x$-axis\n- The **dependent variable** (종속 변수) goes on the $y$-axis\n\n**Example:** Hours studied ($x$) vs. test score ($y$):\n$(2, 65), (4, 72), (3, 68), (6, 85), (8, 92), (5, 79)$\n\nEach pair becomes a dot on the graph.\n\n**Reading scatter plots:** Look for overall patterns — is there a trend? Are the dots close together or scattered widely?',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d34-c2',
+      title: 'Types of Correlation (상관관계의 종류)',
+      content: '**Correlation** (상관관계) describes how two variables relate:\n\n**Positive correlation** (양의 상관): as $x$ increases, $y$ increases\n- Example: study hours and grades\n- Points trend upward ↗\n\n**Negative correlation** (음의 상관): as $x$ increases, $y$ decreases\n- Example: price and demand\n- Points trend downward ↘\n\n**No correlation**: no clear pattern between $x$ and $y$\n- Example: shoe size and math grade\n- Points scattered randomly\n\n**Strength:**\n- **Strong**: points are close to a line\n- **Weak**: points are loosely scattered\n- **Perfect**: all points exactly on a line ($r = 1$ or $r = -1$)',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d34-c3',
+      title: 'Line of Best Fit (최적 적합선)',
+      content: 'The **line of best fit** (최적 적합선), also called the **trend line** (추세선), is a straight line that best represents the data on a scatter plot.\n\n**Properties of a good line of best fit:**\n- Passes through the "centre" of the data\n- Roughly equal numbers of points above and below the line\n- Minimizes the overall distance from all points to the line\n\n**Drawing by eye:**\n1. Look for the general direction of the data\n2. Draw a line that balances points above and below\n3. Try to pass through the "mean point" $(\\bar{x}, \\bar{y})$\n\n**Using the line to predict:** This is called **interpolation** (내삽, predicting within the data range) or **extrapolation** (외삽, predicting beyond the data range — less reliable).',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d34-c4',
+      title: 'Reading and Using the Line of Best Fit (최적 적합선 활용)',
+      content: 'Once a line of best fit is drawn or given as an equation, use it to:\n\n1. **Predict values:** read off or substitute into the equation\n2. **Interpret slope:** the rate of change between the two variables\n3. **Interpolate** (within data range): generally reliable\n4. **Extrapolate** (outside data range): less reliable, use with caution\n\n**Example:** Line of best fit for (hours studied, test score):\n$$y = 4.5x + 55$$\n\n- Slope: each extra hour of study → +4.5 points\n- $y$-intercept: 55 (predicted score with 0 hours of study)\n- Predict score for 7 hours: $y = 4.5(7) + 55 = 31.5 + 55 = 86.5$',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d34-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A scatter plot shows that as temperature increases, ice cream sales increase. What type of correlation is this?',
+      options: [
+        'Negative correlation',
+        'No correlation',
+        'Positive correlation',
+        'Perfect correlation',
+      ],
+      answer: 'Positive correlation',
+      explanation: 'When both variables increase together (temperature up, sales up), this is a **positive correlation**. The scatter plot would show points trending upward from left to right ↗.',
+      relatedConcept: 'bcg9-d34-c2',
+    },
+    {
+      id: 'bcg9-d34-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which pair of variables would most likely show NO correlation?',
+      options: [
+        'Height and weight of students',
+        'Hours worked and salary earned',
+        'Shoe size and spelling test score',
+        'Age of a car and its resale value',
+      ],
+      answer: 'Shoe size and spelling test score',
+      explanation: 'Shoe size and spelling ability have no logical connection — knowing someone\'s shoe size tells you nothing about their spelling ability.\n\nThe other pairs have clear relationships:\n- Height and weight: positive correlation\n- Hours worked and salary: positive correlation\n- Car age and resale value: negative correlation',
+      relatedConcept: 'bcg9-d34-c2',
+    },
+    {
+      id: 'bcg9-d34-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'The line of best fit for a data set is $y = 3x + 10$. Predict the value of $y$ when $x = 8$.',
+      answer: '34',
+      explanation: '$$y = 3(8) + 10 = 24 + 10 = 34$$\n\nPredicted $y$-value when $x = 8$ is **34**.',
+      relatedConcept: 'bcg9-d34-c4',
+    },
+    {
+      id: 'bcg9-d34-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A study finds that for every additional hour of TV watched per day, a student\'s GPA decreases by 0.15 points. The line of best fit passes through $(0, 3.8)$. Which equation models this?',
+      options: [
+        '$g = 0.15h + 3.8$',
+        '$g = -0.15h + 3.8$',
+        '$g = 3.8h - 0.15$',
+        '$g = -3.8h + 0.15$',
+      ],
+      answer: '$g = -0.15h + 3.8$',
+      explanation: '- $y$-intercept $(0, 3.8)$: GPA is 3.8 with 0 hours of TV → $b = 3.8$\n- Slope: $-0.15$ (GPA decreases by 0.15 per hour)\n\n$$g = -0.15h + 3.8$$',
+      relatedConcept: 'bcg9-d34-c4',
+    },
+    {
+      id: 'bcg9-d34-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Data: $(1, 5), (2, 7), (3, 8), (4, 10), (5, 13)$. Find the mean point $(\\bar{x}, \\bar{y})$, which the line of best fit should pass through.',
+      answer: '(3, 8.6)',
+      explanation: '$$\\bar{x} = \\frac{1+2+3+4+5}{5} = \\frac{15}{5} = 3$$\n\n$$\\bar{y} = \\frac{5+7+8+10+13}{5} = \\frac{43}{5} = 8.6$$\n\nThe line of best fit should pass through $(3, 8.6)$.',
+      relatedConcept: 'bcg9-d34-c3',
+    },
+    {
+      id: 'bcg9-d34-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'The line of best fit for rainfall ($x$, mm) vs. grass height ($y$, cm) is $y = 0.8x + 2$. Which interpretation is correct?',
+      options: [
+        'Every 1 cm of grass height causes 0.8 mm of rainfall',
+        'For each additional mm of rainfall, grass grows by 0.8 cm',
+        'Grass is 2 cm tall with 0.8 mm of rainfall',
+        'Rainfall causes grass to grow at a rate of 2 cm per day',
+      ],
+      answer: 'For each additional mm of rainfall, grass grows by 0.8 cm',
+      explanation: 'The slope $m = 0.8$ means: for every 1 mm increase in rainfall ($x$), grass height ($y$) increases by 0.8 cm.\n\nThe $y$-intercept $b = 2$ means: with 0 mm of rainfall, the predicted grass height is 2 cm.\n\n**Important:** Correlation does not imply causation, but here the interpretation "more rain → more growth" is scientifically reasonable.',
+      relatedConcept: 'bcg9-d34-c4',
+    },
+  ],
+  realLifeExample: 'Sports analysts use scatter plots to find correlations between training variables and performance. BC health researchers use scatter plots to study the relationship between pollution levels and respiratory illness rates. Companies use them to predict sales based on advertising spending. 데이터 과학의 기초인 산점도와 추세선은 현대 비즈니스와 연구에 필수예요!',
+};
+
+export default dayContent;

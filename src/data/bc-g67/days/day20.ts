@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 20,
+  part: 4,
+  title: 'Triangles — Types and Properties',
+  subtitle: 'Classifying triangles by sides and angles, and using the angle sum property',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d20-c1',
+      title: 'Triangle Angle Sum',
+      content: 'The **angle sum property** (내각의 합): The three interior angles of any triangle always add up to $180°$.\n\n$$\\angle A + \\angle B + \\angle C = 180°$$\n\n**Example:** A triangle has angles $50°$ and $70°$. What is the third angle?\n$$50° + 70° + \\angle C = 180°$$\n$$\\angle C = 180° - 120° = 60°$$\n\nThis works for **every** triangle, no exceptions!',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d20-c2',
+      title: 'Classifying Triangles by Angles',
+      content: 'Triangles are classified by their largest angle:\n\n- **Acute triangle** (예각삼각형): All three angles are less than $90°$\n  Example: $60°, 70°, 50°$\n\n- **Right triangle** (직각삼각형): One angle is exactly $90°$\n  Example: $90°, 45°, 45°$\n  The side opposite the right angle is the **hypotenuse** (빗변).\n\n- **Obtuse triangle** (둔각삼각형): One angle is greater than $90°$\n  Example: $120°, 35°, 25°$\n\n**팁**: A triangle can have at most one right angle or one obtuse angle.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d20-c3',
+      title: 'Classifying Triangles by Side Length',
+      content: 'Triangles are also classified by how many sides are equal:\n\n- **Scalene triangle** (부등변삼각형): No sides are equal (and no angles are equal)\n\n- **Isosceles triangle** (이등변삼각형): Exactly two sides are equal.\n  The two **base angles** (밑각) opposite the equal sides are also equal.\n\n- **Equilateral triangle** (정삼각형): All three sides are equal.\n  All angles are each $\\frac{180°}{3} = 60°$.\n\nA triangle can be described with both classifications — e.g., "right isosceles triangle."',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d20-c4',
+      title: 'Properties of Special Triangles',
+      content: '**Equilateral triangle:**\n- All sides equal: $a = b = c$\n- All angles: $60°$\n- Has 3 lines of symmetry\n\n**Isosceles triangle:**\n- Two equal sides (called **legs**, 등변)\n- Two equal base angles\n- If each leg makes an angle $\\alpha$ with the base, then the apex angle = $180° - 2\\alpha$\n\n**Right triangle:**\n- One $90°$ angle\n- Pythagorean Theorem applies: $a^2 + b^2 = c^2$ (Grade 8 topic, but good to know!)\n- The hypotenuse is always the longest side',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d20-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A triangle has angles of $45°$ and $75°$. What is the measure of the third angle?',
+      answer: '60°',
+      explanation: '$$\\angle C = 180° - 45° - 75° = 60°$$\n\n**Check:** $45° + 75° + 60° = 180°$ ✓',
+      relatedConcept: 'bcg67-d20-c1',
+    },
+    {
+      id: 'bcg67-d20-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A triangle has angles of $30°$, $60°$, and $90°$. How is it classified by its angles?',
+      options: ['Acute triangle', 'Right triangle', 'Obtuse triangle', 'Equilateral triangle'],
+      answer: 'Right triangle',
+      explanation: 'The triangle has a $90°$ angle, so it is a **right triangle** (직각삼각형). The right angle is exactly $90°$ — not less, not more.',
+      relatedConcept: 'bcg67-d20-c2',
+    },
+    {
+      id: 'bcg67-d20-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'An isosceles triangle has a base angle of $40°$. What is the apex angle (the angle between the two equal sides)?',
+      options: ['80°', '100°', '110°', '120°'],
+      answer: '100°',
+      explanation: 'In an isosceles triangle, both base angles are equal: $40°$ each.\n\n$$\\text{Apex angle} = 180° - 40° - 40° = 100°$$',
+      relatedConcept: 'bcg67-d20-c3',
+    },
+    {
+      id: 'bcg67-d20-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Which combination of angles CANNOT form a triangle?',
+      options: ['$60°, 60°, 60°$', '$90°, 45°, 45°$', '$100°, 40°, 40°$', '$110°, 80°, 20°$'],
+      answer: '$110°, 80°, 20°$',
+      explanation: 'Check each sum:\n- $60 + 60 + 60 = 180°$ ✓\n- $90 + 45 + 45 = 180°$ ✓\n- $100 + 40 + 40 = 180°$ ✓\n- $110 + 80 + 20 = 210° \\neq 180°$ ✗\n\n$110° + 80° + 20° = 210°$, which does not equal $180°$, so these angles **cannot** form a triangle.',
+      relatedConcept: 'bcg67-d20-c1',
+    },
+    {
+      id: 'bcg67-d20-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'An equilateral triangle has a perimeter of 36 cm. What is the length of each side?',
+      answer: '12 cm',
+      explanation: 'An equilateral triangle has three equal sides.\n$$\\text{Side length} = \\frac{36}{3} = 12 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d20-c4',
+    },
+    {
+      id: 'bcg67-d20-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'In triangle $PQR$, angle $P = 2x°$, angle $Q = (x + 15)°$, angle $R = (x - 5)°$. Find angle $P$.',
+      options: ['70°', '82°', '85°', '94°'],
+      answer: '85°',
+      explanation: '$$2x + (x + 15) + (x - 5) = 180$$\n$$4x + 10 = 180$$\n$$4x = 170$$\n$$x = 42.5$$\n\n$$\\angle P = 2 \\times 42.5 = 85°$$\n\n**Check:** $85° + 57.5° + 37.5° = 180°$ ✓',
+      relatedConcept: 'bcg67-d20-c1',
+    },
+  ],
+  realLifeExample: 'Triangles are the strongest shape in engineering — bridges and roofs use triangular trusses because triangles don\'t deform under pressure. The equilateral triangle (정삼각형) is especially strong because its angles are all equal at $60°$. 건축과 공학에서 삼각형이 가장 많이 쓰이는 이유예요!',
+};
+
+export default dayContent;

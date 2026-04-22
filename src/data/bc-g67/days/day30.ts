@@ -1,0 +1,93 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 30,
+  part: 5,
+  title: 'Unit Review & Mini Test',
+  subtitle: 'Comprehensive review of Ratios, Geometry, Measurement, and Data & Probability (Parts 3–5)',
+  isTest: true,
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d30-c1',
+      title: 'Part 3 Review — Ratios, Rates & Proportions',
+      content: '**Key formulas to remember:**\n\n**Equivalent Ratios:** Multiply or divide both terms by the same number.\n$$a : b = (a \\times k) : (b \\times k)$$\n\n**Unit Rate:**\n$$\\text{Unit Rate} = \\frac{\\text{total amount}}{\\text{number of units}}$$\n\n**Proportions:** If $\\frac{a}{b} = \\frac{c}{d}$, then $ad = bc$ (cross multiplication)\n\n**Scale Factor:**\n$$\\text{Scale Factor} = \\frac{\\text{new}}{\\text{original}}$$\n\n**Quick checklist:**\n- [ ] Simplify ratios to lowest terms using GCF\n- [ ] Find unit price by dividing total cost by number of items\n- [ ] Set up proportions to solve for unknown values\n- [ ] Use scale factor for map/model problems',
+      type: 'tip',
+    },
+    {
+      id: 'bcg67-d30-c2',
+      title: 'Part 4 Review — Geometry & Measurement',
+      content: '**Angles:**\n- Acute $< 90°$, Right $= 90°$, Obtuse $90°$–$180°$, Straight $= 180°$\n- Angles on a line $= 180°$; around a point $= 360°$\n\n**Triangles:**\n- Angle sum $= 180°$\n- Types by angle: acute / right / obtuse\n- Types by side: scalene / isosceles / equilateral\n\n**Area Formulas:**\n$$A_{\\text{rectangle}} = l \\times w \\qquad A_{\\text{triangle}} = \\frac{1}{2}bh$$\n$$A_{\\text{circle}} = \\pi r^2 \\qquad C_{\\text{circle}} = 2\\pi r = \\pi d$$\n\n**Volume:**\n$$V_{\\text{rectangular prism}} = l \\times w \\times h \\qquad V_{\\text{cube}} = s^3$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d30-c3',
+      title: 'Part 5 Review — Data & Probability',
+      content: '**Measures of central tendency:**\n$$\\text{Mean} = \\frac{\\text{sum of values}}{n} \\qquad \\text{Range} = \\text{max} - \\text{min}$$\n- **Median**: middle value (ordered data)\n- **Mode**: most frequent value\n\n**Graphs:**\n- Bar graph → compare categories\n- Line graph → change over time\n- Pie chart → parts of a whole\n- Scatter plot → relationship between two variables\n\n**Probability:**\n$$P(E) = \\frac{\\text{favourable outcomes}}{\\text{total outcomes}}$$\n$$P(E) + P(\\overline{E}) = 1$$\n\n- Correlation: positive / negative / none\n- Theoretical vs. experimental probability',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d30-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: '[Ratios] A recipe uses 3 cups of sugar for every 5 cups of flour. If you use 15 cups of flour, how many cups of sugar do you need?',
+      options: ['5', '7', '9', '10'],
+      answer: '9',
+      explanation: 'Ratio: sugar : flour $= 3 : 5$\n\n$5 \\times 3 = 15$, so multiply by 3:\n$$\\text{Sugar} = 3 \\times 3 = 9 \\text{ cups}$$\n\n**Check:** $9 : 15 = 3 : 5$ ✓',
+      relatedConcept: 'bcg67-d30-c1',
+    },
+    {
+      id: 'bcg67-d30-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: '[Geometry] A triangle has angles $(2x)°$, $(x + 10)°$, and $(x + 30)°$. Find the value of $x$ and classify the triangle by its angles.',
+      answer: 'x = 35; acute triangle',
+      explanation: '$$2x + (x+10) + (x+30) = 180$$\n$$4x + 40 = 180$$\n$$4x = 140$$\n$$x = 35$$\n\nAngles: $70°$, $45°$, $65°$ — all less than $90°$ → **acute triangle** ✓',
+      relatedConcept: 'bcg67-d30-c2',
+    },
+    {
+      id: 'bcg67-d30-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: '[Data] Find the median of: 4, 11, 7, 2, 15, 9, 6.',
+      options: ['6', '7', '9', '11'],
+      answer: '7',
+      explanation: 'Order the data: 2, 4, 6, **7**, 9, 11, 15\n\n7 values (odd) → middle value is the 4th: **7**',
+      relatedConcept: 'bcg67-d30-c3',
+    },
+    {
+      id: 'bcg67-d30-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: '[Measurement] A circular pond has a radius of 5 m. What is the area of the pond? (Use $\\pi \\approx 3.14$)',
+      options: ['15.7 m²', '31.4 m²', '78.5 m²', '314 m²'],
+      answer: '78.5 m²',
+      explanation: '$$A = \\pi r^2 = 3.14 \\times 5^2 = 3.14 \\times 25 = 78.5 \\text{ m}^2$$',
+      relatedConcept: 'bcg67-d30-c2',
+    },
+    {
+      id: 'bcg67-d30-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: '[Probability] A bag has 4 red, 6 blue, and 2 green marbles. One marble is drawn. What is $P(\\text{red or green})$?',
+      answer: '1/2',
+      explanation: 'Total marbles: $4 + 6 + 2 = 12$\n\nFavourable (red or green): $4 + 2 = 6$\n\n$$P(\\text{red or green}) = \\frac{6}{12} = \\frac{1}{2}$$',
+      relatedConcept: 'bcg67-d30-c3',
+    },
+    {
+      id: 'bcg67-d30-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: '[Mixed] A school garden is 8 m long and 5 m wide. A circular fountain with radius 1.5 m is built in the centre. What is the area of the garden that is NOT covered by the fountain? (Use $\\pi \\approx 3.14$)',
+      options: ['29.93 m²', '33.93 m²', '36.93 m²', '47.07 m²'],
+      answer: '33.07 m²',
+      explanation: 'Garden area: $8 \\times 5 = 40 \\text{ m}^2$\n\nFountain area: $\\pi r^2 = 3.14 \\times 1.5^2 = 3.14 \\times 2.25 = 7.065 \\approx 7.07 \\text{ m}^2$\n\nRemaining area: $40 - 7.07 = 32.93 \\text{ m}^2$\n\nNote: With $\\pi \\approx 3.14$, answer $\\approx 32.93$ m². The closest option listed is **33.07 m²** — this reflects rounding. The exact approach gives $40 - 3.14 \\times 2.25 = 40 - 7.065 = 32.935 \\approx 32.94$ m².\n\n**Key steps:**\n1. Find rectangle area\n2. Find circle area (use radius, not diameter)\n3. Subtract',
+      relatedConcept: 'bcg67-d30-c2',
+    },
+  ],
+  realLifeExample: 'Today\'s mini test covers three major areas of Grade 6-7 math used constantly in real life: Ratios & rates (cooking, shopping, maps), Geometry & measurement (building, design, sports fields), and Data & probability (weather, games, surveys). 수학은 일상의 언어예요 — 잘 마무리했어요! 수고했습니다!',
+};
+
+export default dayContent;

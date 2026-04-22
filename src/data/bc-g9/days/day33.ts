@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 33,
+  part: 6,
+  title: 'Probability — Theoretical vs Experimental',
+  subtitle: 'Understanding and comparing theoretical and experimental probability using fractions and percentages',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d33-c1',
+      title: 'Basic Probability (기본 확률)',
+      content: '**Probability** (확률) is a measure of how likely an event is to occur, expressed as a number between 0 and 1 (or 0% to 100%).\n\n$$P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of possible outcomes}}$$\n\n- $P = 0$: impossible event (불가능한 사건)\n- $P = 1$: certain event (확실한 사건)\n- $P = 0.5$: equally likely outcomes\n\n**Example:** Rolling a standard die (주사위):\n- $P(\\text{rolling a 4}) = \\frac{1}{6}$\n- $P(\\text{rolling an even}) = \\frac{3}{6} = \\frac{1}{2}$\n- $P(\\text{rolling } > 6) = \\frac{0}{6} = 0$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d33-c2',
+      title: 'Theoretical Probability (이론적 확률)',
+      content: '**Theoretical probability** (이론적 확률) is calculated mathematically based on equal likelihood — what we *expect* to happen.\n\n$$P_{\\text{theoretical}}(\\text{event}) = \\frac{\\text{favourable outcomes}}{\\text{total outcomes}}$$\n\n**Example:** In a bag with 3 red, 4 blue, and 5 green marbles:\n- $P(\\text{red}) = \\frac{3}{12} = \\frac{1}{4} = 25\\%$\n- $P(\\text{blue or green}) = \\frac{9}{12} = \\frac{3}{4} = 75\\%$\n- $P(\\text{not red}) = 1 - \\frac{1}{4} = \\frac{3}{4}$\n\n**Complementary rule:** $P(\\text{not A}) = 1 - P(A)$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d33-c3',
+      title: 'Experimental Probability (실험적 확률)',
+      content: '**Experimental probability** (실험적 확률) is based on what actually happens in trials (실험/시행):\n\n$$P_{\\text{experimental}}(\\text{event}) = \\frac{\\text{number of times event occurred}}{\\text{total number of trials}}$$\n\n**Example:** A coin is flipped 80 times. Heads appear 44 times.\n\n$$P_{\\text{exp}}(\\text{heads}) = \\frac{44}{80} = 0.55 = 55\\%$$\n\nCompare to theoretical: $P_{\\text{theory}}(\\text{heads}) = 50\\%$\n\n**Key point:** As the number of trials increases, experimental probability gets **closer** to theoretical probability. This is called the **Law of Large Numbers** (큰 수의 법칙).',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d33-c4',
+      title: 'Sample Space and Tree Diagrams (표본공간과 수형도)',
+      content: 'The **sample space** (표본공간) is the set of all possible outcomes.\n\n**Tree diagrams** (수형도) organize outcomes for multi-step experiments.\n\n**Example:** Flipping a coin twice\n\nTree:\n```\n       H → HH\n  H\n       T → HT\n       H → TH\n  T\n       T → TT\n```\n\nSample space: $\\{HH, HT, TH, TT\\}$ — 4 outcomes\n\n$$P(\\text{exactly one head}) = \\frac{2}{4} = \\frac{1}{2}$$\n$$P(\\text{two heads}) = \\frac{1}{4}$$',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d33-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A bag contains 5 yellow, 3 purple, and 2 orange balls. What is $P(\\text{purple})$?',
+      options: ['$\\frac{3}{5}$', '$\\frac{3}{8}$', '$\\frac{3}{10}$', '$\\frac{1}{3}$'],
+      answer: '$\\frac{3}{10}$',
+      explanation: 'Total balls: $5 + 3 + 2 = 10$\n\n$$P(\\text{purple}) = \\frac{3}{10}$$',
+      relatedConcept: 'bcg9-d33-c2',
+    },
+    {
+      id: 'bcg9-d33-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A spinner with 8 equal sections is spun 200 times. Section 3 appears 31 times. What is the experimental probability of landing on section 3?',
+      answer: '31/200 = 15.5%',
+      explanation: '$$P_{\\text{exp}}(\\text{section 3}) = \\frac{31}{200} = 0.155 = 15.5\\%$$\n\nTheoretical probability: $\\frac{1}{8} = 12.5\\%$ — the experimental result is somewhat close.',
+      relatedConcept: 'bcg9-d33-c3',
+    },
+    {
+      id: 'bcg9-d33-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A card is drawn from a standard 52-card deck. What is the probability of drawing a heart?',
+      options: ['$\\frac{1}{52}$', '$\\frac{1}{13}$', '$\\frac{1}{4}$', '$\\frac{1}{2}$'],
+      answer: '$\\frac{1}{4}$',
+      explanation: 'A standard deck has 52 cards, and 13 are hearts.\n\n$$P(\\text{heart}) = \\frac{13}{52} = \\frac{1}{4} = 25\\%$$',
+      relatedConcept: 'bcg9-d33-c2',
+    },
+    {
+      id: 'bcg9-d33-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Two dice are rolled. What is the probability that the sum is 7?',
+      answer: '6/36 = 1/6',
+      explanation: 'Total outcomes: $6 \\times 6 = 36$\n\nFavourable outcomes (sum = 7):\n$(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ → 6 outcomes\n\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 16.7\\%$$\n\nSeven is the most probable sum when rolling two dice!',
+      relatedConcept: 'bcg9-d33-c4',
+    },
+    {
+      id: 'bcg9-d33-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'In a school of 500 students, 180 take French. A student is selected at random. What is the probability they do NOT take French?',
+      options: ['$36\\%$', '$54\\%$', '$64\\%$', '$72\\%$'],
+      answer: '$64\\%$',
+      explanation: '$$P(\\text{French}) = \\frac{180}{500} = 0.36 = 36\\%$$\n\n$$P(\\text{not French}) = 1 - 0.36 = 0.64 = 64\\%$$\n\nUsing the complementary rule.',
+      relatedConcept: 'bcg9-d33-c2',
+    },
+    {
+      id: 'bcg9-d33-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A thumbtack is dropped 120 times. It lands point-up 78 times. What is the experimental probability of point-down? How many point-down landings would you expect in 500 drops?',
+      answer: '35%; 175 times',
+      explanation: 'Point-down: $120 - 78 = 42$ times\n\n$$P_{\\text{exp}}(\\text{point-down}) = \\frac{42}{120} = 0.35 = 35\\%$$\n\nExpected in 500 drops:\n$$500 \\times 0.35 = 175 \\text{ times}$$',
+      relatedConcept: 'bcg9-d33-c3',
+    },
+  ],
+  realLifeExample: 'Insurance companies use probability to calculate premiums. If the probability of a car accident for a young driver in BC is estimated at 8%, an insurer expects 8 out of every 100 young drivers to file a claim annually. Weather forecasters use experimental data from thousands of past days to say "70% chance of rain." 보험과 날씨 예보 모두 확률을 기반으로 해요!',
+};
+
+export default dayContent;

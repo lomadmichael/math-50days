@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 26,
+  part: 5,
+  title: 'Mean, Median, Mode, and Range',
+  subtitle: 'Measures of central tendency and spread — describing a data set with one number',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d26-c1',
+      title: 'Mean (Average)',
+      content: 'The **mean** (평균) is the arithmetic average of a data set. It is the most commonly used measure of central tendency.\n\n$$\\text{Mean} = \\frac{\\text{Sum of all values}}{\\text{Number of values}}$$\n\n**Example:** Test scores: 72, 85, 90, 68, 95\n$$\\text{Sum} = 72 + 85 + 90 + 68 + 95 = 410$$\n$$\\text{Mean} = \\frac{410}{5} = 82$$\n\n**When it works best:** When there are no extreme outliers (값이 크게 벗어난 이상값이 없을 때).\n\n**Limitation:** One very large or small value can pull the mean away from the "typical" value.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d26-c2',
+      title: 'Median',
+      content: 'The **median** (중앙값) is the middle value when data is arranged in order.\n\n**Steps:**\n1. Arrange all values in **ascending order** (오름차순)\n2. If **odd** number of values → middle value is the median\n3. If **even** number of values → median = mean of the two middle values\n\n**Example (odd):** 3, 7, 9, 12, 15 → Median = **9**\n\n**Example (even):** 4, 7, 10, 13 → Middle two are 7 and 10\n$$\\text{Median} = \\frac{7 + 10}{2} = 8.5$$\n\n**팁**: 중앙값은 이상값(outlier)에 영향을 덜 받아요.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d26-c3',
+      title: 'Mode and Range',
+      content: '**Mode** (최빈값): The value that appears **most often** in a data set.\n- A data set can have **no mode**, **one mode**, or **multiple modes**\n- Example: 3, 5, 5, 7, 9 → Mode = **5**\n- Example: 2, 4, 6, 8 → **No mode** (all appear once)\n- Example: 1, 1, 3, 3, 5 → Modes = **1 and 3** (bimodal)\n\n**Range** (범위): The difference between the largest and smallest values.\n$$\\text{Range} = \\text{Maximum} - \\text{Minimum}$$\n\n**Example:** 4, 8, 3, 15, 7\nRange = $15 - 3 = 12$\n\nRange tells us about the **spread** (분포) of the data.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d26-c4',
+      title: 'Choosing the Right Measure',
+      content: '| Situation | Best Measure |\n|-----------|-------------|\n| No extreme values | **Mean** |\n| Outliers present | **Median** |\n| Most popular / most common | **Mode** |\n| Spread of data | **Range** |\n\n**Example:** House prices in a neighbourhood:\n$\\$350{,}000$, $\\$380{,}000$, $\\$360{,}000$, $\\$370{,}000$, $\\$1{,}500{,}000$\n\nMean ≈ $\\$592{,}000$ — not representative! The $\\$1.5M$ mansion skews it.\nMedian = $\\$370{,}000$ — better represents the "typical" house.\n\n**팁**: 집값이나 소득처럼 이상값이 있는 자료에는 중앙값이 더 대표적이에요.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d26-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the mean of: 14, 22, 18, 30, 16.',
+      answer: '20',
+      explanation: '$$\\text{Sum} = 14 + 22 + 18 + 30 + 16 = 100$$\n$$\\text{Mean} = \\frac{100}{5} = 20$$',
+      relatedConcept: 'bcg67-d26-c1',
+    },
+    {
+      id: 'bcg67-d26-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the median of: 7, 2, 15, 9, 4, 11.',
+      answer: '8',
+      explanation: 'Step 1: Order the data: 2, 4, 7, 9, 11, 15\n\nStep 2: Even number of values (6) → mean of 3rd and 4th:\n$$\\text{Median} = \\frac{7 + 9}{2} = \\frac{16}{2} = 8$$',
+      relatedConcept: 'bcg67-d26-c2',
+    },
+    {
+      id: 'bcg67-d26-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the mode of: 5, 3, 8, 3, 7, 5, 3, 9?',
+      options: ['3', '5', '8', 'No mode'],
+      answer: '3',
+      explanation: 'Count each value:\n- 3 appears **3 times** ← most frequent\n- 5 appears 2 times\n- Others appear once\n\n**Mode = 3**',
+      relatedConcept: 'bcg67-d26-c3',
+    },
+    {
+      id: 'bcg67-d26-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Five friends have ages: 11, 12, 11, 13, and 38. Which measure best describes the "typical" age?',
+      options: ['Mean (17)', 'Median (12)', 'Mode (11)', 'Range (27)'],
+      answer: 'Median (12)',
+      explanation: 'The age 38 is an **outlier** — it pulls the mean up to 17, which does not represent the group well.\n\nMedian: ordered → 11, 11, **12**, 13, 38 → Median = **12**\n\nMedian gives the most typical age for this group since the outlier (38) doesn\'t affect it.',
+      relatedConcept: 'bcg67-d26-c4',
+    },
+    {
+      id: 'bcg67-d26-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A student scored 78, 85, 92, and 77 on four tests. What score does she need on the fifth test to have a mean of 85?',
+      answer: '93',
+      explanation: 'Required total for mean of 85 over 5 tests:\n$$\\text{Total needed} = 85 \\times 5 = 425$$\n\nCurrent total: $78 + 85 + 92 + 77 = 332$\n\nFifth score needed: $425 - 332 = 93$',
+      relatedConcept: 'bcg67-d26-c1',
+    },
+    {
+      id: 'bcg67-d26-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A data set has 7 values. The mean is 12 and the range is 10. If the minimum value is 6, what is the maximum value?',
+      options: ['14', '16', '18', '22'],
+      answer: '16',
+      explanation: 'Range = Maximum − Minimum\n$$10 = \\text{Maximum} - 6$$\n$$\\text{Maximum} = 16$$\n\nNote: The mean (12) was extra information here — used to confirm the total sum = $12 \\times 7 = 84$, but not needed to find the maximum from the range.',
+      relatedConcept: 'bcg67-d26-c3',
+    },
+  ],
+  realLifeExample: 'When your teacher calculates your report card grade, they are usually finding the **mean** of your test scores. But when real estate agents advertise the "average" house price in a neighbourhood, they often use the **median** to avoid one expensive mansion skewing the result. 같은 "평균"이라도 맥락에 따라 평균값 vs. 중앙값을 달리 써요!',
+};
+
+export default dayContent;

@@ -1,0 +1,107 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 20,
+  part: 3,
+  title: 'Inequality Word Problems and Graphing Solutions',
+  subtitle: 'Translating real-world constraints into inequalities and graphing on a number line',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d20-c1',
+      title: 'Inequality Symbols Review (부등호 복습)',
+      content: 'An **inequality** (부등식) shows that two expressions are not necessarily equal.\n\n| Symbol | Meaning | Example |\n|--------|---------|----------|\n| $<$ | less than (미만) | $x < 5$ |\n| $>$ | greater than (초과) | $x > 3$ |\n| $\\leq$ | less than or equal to (이하) | $x \\leq 7$ |\n| $\\geq$ | greater than or equal to (이상) | $x \\geq 0$ |\n\n**Key rule:** When you multiply or divide both sides by a **negative number**, the inequality sign **flips**!\n\n$$-2x < 10 \\implies x > -5$$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d20-c2',
+      title: 'Graphing Inequalities on a Number Line (수직선에 그리기)',
+      content: 'To graph an inequality on a **number line** (수직선):\n\n- **Open circle** (빈 원): the endpoint is NOT included (use with $<$ or $>$)\n- **Closed/filled circle** (채운 원): the endpoint IS included (use with $\\leq$ or $\\geq$)\n- Shade/arrow in the direction of the solution\n\n**Examples:**\n- $x > 3$: open circle at 3, arrow pointing right →\n- $x \\leq -1$: closed circle at $-1$, arrow pointing left ←\n- $-2 < x \\leq 5$: open circle at $-2$, closed circle at 5, line between them',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d20-c3',
+      title: 'Solving Inequality Word Problems (부등식 활용)',
+      content: 'Translate the problem into an inequality, solve it, and graph if asked.\n\n**Common phrases:**\n- "at least" (적어도) → $\\geq$\n- "at most" (최대) → $\\leq$\n- "more than" → $>$\n- "fewer/less than" → $<$\n- "no more than" → $\\leq$\n- "no less than" → $\\geq$\n\n**Example:** You need at least \$50 to buy a gift. You have \$18 and earn \$8 per hour. How many hours must you work?\n\n$$18 + 8h \\geq 50$$\n$$8h \\geq 32$$\n$$h \\geq 4$$\n\nYou must work **at least 4 hours**.',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d20-c4',
+      title: 'Compound Inequalities (복합 부등식)',
+      content: 'A **compound inequality** (복합 부등식) has two conditions at once.\n\n**"And" compound:** both conditions must be true\n$$-3 < x \\leq 5$$\nThis means $x > -3$ AND $x \\leq 5$.\n\n**Example:** A roller coaster requires riders to be taller than 120 cm but no more than 200 cm.\n$$120 < h \\leq 200$$\n\nTo solve: apply the same operations to all three parts.\n$$-3 < 2x + 1 \\leq 9$$\n$$-4 < 2x \\leq 8$$\n$$-2 < x \\leq 4$$',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d20-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which inequality represents "a number $n$ is at most 12"?',
+      options: ['$n < 12$', '$n > 12$', '$n \\leq 12$', '$n \\geq 12$'],
+      answer: '$n \\leq 12$',
+      explanation: '"At most 12" means $n$ can equal 12 or be less than 12.\n\n$$n \\leq 12$$\n\nThe closed circle at 12 with an arrow pointing left shows the solution on a number line.',
+      relatedConcept: 'bcg9-d20-c1',
+    },
+    {
+      id: 'bcg9-d20-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the correct graph for $x > -2$?',
+      options: [
+        'Open circle at $-2$, arrow pointing right',
+        'Closed circle at $-2$, arrow pointing right',
+        'Open circle at $-2$, arrow pointing left',
+        'Closed circle at $-2$, arrow pointing left',
+      ],
+      answer: 'Open circle at $-2$, arrow pointing right',
+      explanation: '$x > -2$ means $x$ is greater than $-2$ but does NOT include $-2$.\n\n- Use an **open circle** at $-2$ (endpoint not included)\n- Arrow pointing **right** (values greater than $-2$)',
+      relatedConcept: 'bcg9-d20-c2',
+    },
+    {
+      id: 'bcg9-d20-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Solve: $3x - 7 > 11$. Write the solution as an inequality.',
+      answer: 'x > 6',
+      explanation: '$$3x - 7 > 11$$\n$$3x > 18$$\n$$x > 6$$\n\nGraph: open circle at 6, arrow pointing right.',
+      relatedConcept: 'bcg9-d20-c1',
+    },
+    {
+      id: 'bcg9-d20-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A taxi charges a \$3.50 base fee plus \$2.00 per km. Tomas can spend at most \$15.50. What is the maximum number of whole kilometres he can travel?',
+      answer: '6',
+      explanation: 'Let $k$ = number of kilometres.\n\n$$3.50 + 2.00k \\leq 15.50$$\n$$2.00k \\leq 12.00$$\n$$k \\leq 6$$\n\nTomas can travel at most **6 km**.\n\n**Check:** $3.50 + 2(6) = 3.50 + 12.00 = 15.50$ ✓',
+      relatedConcept: 'bcg9-d20-c3',
+    },
+    {
+      id: 'bcg9-d20-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Solve the compound inequality: $-1 \\leq 2x + 3 < 9$',
+      options: [
+        '$-2 \\leq x < 3$',
+        '$-1 \\leq x < 3$',
+        '$-2 < x \\leq 3$',
+        '$1 \\leq x < 6$',
+      ],
+      answer: '$-2 \\leq x < 3$',
+      explanation: 'Subtract 3 from all three parts:\n$$-1 - 3 \\leq 2x + 3 - 3 < 9 - 3$$\n$$-4 \\leq 2x < 6$$\n\nDivide all parts by 2:\n$$-2 \\leq x < 3$$\n\nGraph: closed circle at $-2$, open circle at 3, line between them.',
+      relatedConcept: 'bcg9-d20-c4',
+    },
+    {
+      id: 'bcg9-d20-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A school needs at least 200 but no more than 250 students for a field trip. Each bus holds 45 students. Write a compound inequality for the number of buses $b$ needed, then solve it.',
+      answer: '5 ≤ b ≤ 6',
+      explanation: 'Number of students with $b$ buses: $45b$.\n\n$$200 \\leq 45b \\leq 250$$\n\nDivide all parts by 45:\n$$\\frac{200}{45} \\leq b \\leq \\frac{250}{45}$$\n$$4.44... \\leq b \\leq 5.55...$$\n\nSince $b$ must be a whole number: $b = 5$ or $b = 6$.\n\nSo $5 \\leq b \\leq 6$ — the school needs **5 or 6 buses**.',
+      relatedConcept: 'bcg9-d20-c4',
+    },
+  ],
+  realLifeExample: 'Inequalities appear in daily life constantly — speed limits ($v \\leq 50$ km/h in a school zone), age restrictions (must be $\\geq 16$ to drive), or budget constraints. 부등식은 현실 세계의 제약 조건을 수학으로 표현하는 강력한 도구예요!',
+};
+
+export default dayContent;

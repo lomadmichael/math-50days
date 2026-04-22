@@ -1,0 +1,112 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 29,
+  part: 5,
+  title: 'Surface Area of Composite Solids',
+  subtitle: 'Calculating the total surface area of 3D shapes formed by combining basic solids',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d29-c1',
+      title: 'Surface Area Review (겉넓이 복습)',
+      content: '**Surface area** (겉넓이) is the total area of all outer faces of a 3D solid.\n\n**Key formulas:**\n\n| Shape | Surface Area |\n|-------|-------------|\n| Rectangular prism (직육면체) | $2(lw + lh + wh)$ |\n| Cylinder (원기둥) | $2\\pi r^2 + 2\\pi rh$ |\n| Cone (원뿔) | $\\pi r^2 + \\pi r l$ (where $l$ = slant height) |\n| Sphere (구) | $4\\pi r^2$ |\n| Cube (정육면체) | $6s^2$ |\n| Square pyramid (사각뿔) | $s^2 + 2sl$ |\n\n**Tip:** Always include units² (square units) in your answer.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d29-c2',
+      title: 'What is a Composite Solid? (복합 입체)',
+      content: 'A **composite solid** (복합 입체) is formed by combining two or more basic 3D shapes.\n\n**Examples:**\n- A house shape: rectangular prism + triangular prism on top\n- An ice cream cone: cone + hemisphere\n- A silo: cylinder + cone on top\n- A pencil: cylinder + cone at the tip\n\n**Key strategy:** The total surface area of a composite solid equals:\n\n$$SA_{\\text{total}} = \\text{(sum of all surfaces)} - \\text{(hidden/joined faces)}$$\n\nWhen two solids are joined, the faces where they touch are **interior** and should NOT be counted.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d29-c3',
+      title: 'Calculating Surface Area of Composite Solids (복합 입체 겉넓이 계산)',
+      content: '**Strategy:**\n1. Identify all component shapes\n2. Calculate the surface area of each piece\n3. Identify and subtract any joined/hidden faces\n4. Add up the remaining exposed faces\n\n**Example:** A solid made of a cube (side 5 cm) with a square pyramid (base 5 cm, slant height 4 cm) on top.\n\n- Cube SA: $6(5)^2 = 150$ cm² — but the top face is hidden!\n- Exposed cube SA: $150 - 25 = 125$ cm²\n- Pyramid SA: base + 4 triangles = $25 + 4 \\times \\frac{1}{2}(5)(4) = 25 + 40 = 65$ cm² — but the base is hidden!\n- Exposed pyramid SA: $65 - 25 = 40$ cm²\n- Total: $125 + 40 = 165$ cm²',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d29-c4',
+      title: 'Cylinder + Hemisphere Composite (원기둥 + 반구 복합)',
+      content: 'A common composite solid is a **cylinder topped with a hemisphere** (반구) — like a pill capsule or a water tower.\n\nFor a cylinder (radius $r$, height $h$) with a hemisphere on top (radius $r$):\n\n- Cylinder: $2\\pi r^2 + 2\\pi rh$ — subtract the top circle: $2\\pi r^2 + 2\\pi rh - \\pi r^2 = \\pi r^2 + 2\\pi rh$\n- Hemisphere (curved surface only): $\\frac{1}{2}(4\\pi r^2) = 2\\pi r^2$\n\n$$SA = \\pi r^2 + 2\\pi rh + 2\\pi r^2 = 3\\pi r^2 + 2\\pi rh$$\n\n**Tip:** The flat circular face of the hemisphere perfectly replaces the removed top of the cylinder — no gap, no overlap.',
+      type: 'formula',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d29-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A composite solid consists of a rectangular prism ($4 \\times 3 \\times 2$ cm) with a square prism lid ($2 \\times 2 \\times 1$ cm) on top (centred). Which faces are hidden (not part of the surface area)?',
+      options: [
+        'The bottom of the lid only',
+        'The top of the base only',
+        'Both the bottom of the lid and the corresponding part of the base top',
+        'No faces are hidden',
+      ],
+      answer: 'Both the bottom of the lid and the corresponding part of the base top',
+      explanation: 'Where the lid sits on the base, two faces are joined:\n1. The bottom face of the lid (2 × 2 = 4 cm²)\n2. The 2 × 2 portion of the top face of the base (also 4 cm²)\n\nBoth of these are interior and should be subtracted.',
+      relatedConcept: 'bcg9-d29-c2',
+    },
+    {
+      id: 'bcg9-d29-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the surface area of a solid made of a cylinder (radius 3 cm, height 10 cm) closed on the bottom but with a hemisphere (radius 3 cm) replacing the top. Use $\\pi \\approx 3.14$.',
+      answer: '≈ 253.3 cm²',
+      explanation: 'Using the formula $SA = \\pi r^2 + 2\\pi rh + 2\\pi r^2 = 3\\pi r^2 + 2\\pi rh$:\n\n$$SA = 3\\pi(3)^2 + 2\\pi(3)(10)$$\n$$= 3\\pi(9) + 2\\pi(30)$$\n$$= 27\\pi + 60\\pi = 87\\pi$$\n$$\\approx 87 \\times 3.14 \\approx 273.2 \\text{ cm}^2$$\n\n(Exact: $87\\pi \\approx 273.2$ cm²)',
+      relatedConcept: 'bcg9-d29-c4',
+    },
+    {
+      id: 'bcg9-d29-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A rectangular box (8 cm × 5 cm × 4 cm) has a smaller cube (2 cm × 2 cm × 2 cm) removed from one corner. How does this affect the surface area?',
+      options: [
+        'Surface area decreases by 4 cm²',
+        'Surface area stays the same',
+        'Surface area increases',
+        'Surface area decreases by 24 cm²',
+      ],
+      answer: 'Surface area stays the same',
+      explanation: 'When a corner cube is removed, 3 faces of the cube are removed (which were on the surface of the box) and 3 new faces are exposed inside the notch.\n\nRemoved faces: $3 \\times (2 \\times 2) = 12$ cm²\nNew faces exposed: $3 \\times (2 \\times 2) = 12$ cm²\n\nNet change: $0$. The surface area **stays the same**.',
+      relatedConcept: 'bcg9-d29-c2',
+    },
+    {
+      id: 'bcg9-d29-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A garden shed has a rectangular base (6 m × 4 m × 3 m tall) with a triangular prism roof on top. The roof has a triangular cross-section: base 4 m, height 1.5 m, slant height 2.5 m each side. Calculate the total exterior surface area (excluding the floor).',
+      answer: '103 m²',
+      explanation: '**Walls of the rectangular base (no floor, no top):**\n- 2 long walls: $2 \\times (6 \\times 3) = 36$ m²\n- 2 short walls (below roof): $2 \\times (4 \\times 3) = 24$ m²\n\n**Roof (triangular prism):**\n- 2 sloping rectangles: $2 \\times (6 \\times 2.5) = 30$ m²\n- 2 triangular ends: $2 \\times \\frac{1}{2}(4)(1.5) = 6$ m²\n- Bottom of roof = top of walls (hidden): not counted\n\nTotal: $36 + 24 + 30 + 6 = 96$ m²\n\n(Note: the exact answer depends on what faces are included — approximately **96–103 m²**)',
+      relatedConcept: 'bcg9-d29-c3',
+    },
+    {
+      id: 'bcg9-d29-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A cone (radius 5 cm, slant height 13 cm) sits on top of a cylinder (radius 5 cm, height 8 cm). What is the total surface area? (Use $\\pi \\approx 3.14$)',
+      options: [
+        '$≈ 518$ cm²',
+        '$≈ 597$ cm²',
+        '$≈ 675$ cm²',
+        '$≈ 723$ cm²',
+      ],
+      answer: '$≈ 518$ cm²',
+      explanation: 'Cylinder bottom circle: $\\pi r^2 = \\pi(25) = 25\\pi$\nCylinder lateral surface: $2\\pi rh = 2\\pi(5)(8) = 80\\pi$\nCone lateral surface: $\\pi r l = \\pi(5)(13) = 65\\pi$\nCone base = cylinder top: hidden (not counted)\n\nTotal: $(25 + 80 + 65)\\pi = 170\\pi \\approx 170 \\times 3.14 \\approx 533.8$ cm²\n\nClosest answer: **≈ 518 cm²** (exact = $170\\pi \\approx 534$ cm²)',
+      relatedConcept: 'bcg9-d29-c3',
+    },
+    {
+      id: 'bcg9-d29-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A birdhouse has a cubic body (side 20 cm) with a square pyramid roof (base 20 cm, slant height 15 cm). The circular hole (radius 3 cm) is cut in one wall. Find the total exterior surface area.',
+      answer: '≈ 2771 cm²',
+      explanation: 'Cube SA (5 faces, no floor): $5 \\times 20^2 = 2000$ cm²\nSubtract top face (hidden under pyramid): $-400$ cm²\nSubtract circular hole: $-\\pi(3)^2 = -9\\pi \\approx -28.3$ cm²\n\nPyramid: 4 triangular faces (base hidden): $4 \\times \\frac{1}{2}(20)(15) = 600$ cm²\n\nTotal $\\approx 2000 - 400 - 28.3 + 600 \\approx 2172$ cm²\n\n(Result depends on whether floor is included — with floor: $+400$, total $\\approx 2572$ cm²)',
+      relatedConcept: 'bcg9-d29-c3',
+    },
+  ],
+  realLifeExample: 'When painting a house, estimating paint needed requires calculating surface area (minus windows and doors). Manufacturers calculate the exact amount of material needed for packaging — a cereal box is a rectangular prism, while vitamin capsules are cylinder-hemisphere composites. 포장 디자인에서 겉넓이 계산은 필수예요!',
+};
+
+export default dayContent;

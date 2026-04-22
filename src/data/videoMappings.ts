@@ -544,6 +544,98 @@ export const videoMappings: Record<string, VideoMapping[]> = {
     },
   ],
 
+  // ── BC Grade 6-7: Khan Academy 29개 + 정승제 재활용 ──
+  'bc-g67': [
+    // PART 1: Number Sense
+    { youtubeVideoId: 'jxA8MffVmPs', title: 'Place Value (Khan Academy)', description: 'Khan Academy · Finding a number\u2019s place value', days: [1] },
+    { youtubeVideoId: 'Hlal9ME2Aig', title: 'Negative numbers intro (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [2] },
+    { youtubeVideoId: 'NQSN00zL5gg', title: 'Adding/subtracting negative numbers (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [3] },
+    { youtubeVideoId: 'HJUUcTyWXKw', title: '양수와 음수 (정승제)', description: '정승제 · 양수와 음수 개념 끝내기 (한국어 보조)', days: [2, 3] },
+    { youtubeVideoId: 'd8lP5tR2R3Q', title: 'Multiplying/dividing negatives (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [4] },
+    { youtubeVideoId: 'wVayYzfT0Fo', title: '정수·유리수 사칙연산 (정승제)', description: '정승제 · 쉽고 간단하게 (한국어 보조)', days: [3, 4] },
+    { youtubeVideoId: 'jFd-6EPfnec', title: 'Greatest common factor (Khan Academy)', description: 'Khan Academy · GCF explained', days: [5] },
+    { youtubeVideoId: 'ADBtgOxs8e8', title: '공약수와 공배수 (정승제)', description: '정승제 · 모든 것이 쉬워진다 (한국어 보조)', days: [5] },
+    { youtubeVideoId: '3h4UK62Qrbo', title: 'Prime vs Composite (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [6] },
+    { youtubeVideoId: 'eoYThjIAhOc', title: 'Order of Operations (Khan Academy)', description: 'Khan Academy · 6th grade BEDMAS/PEMDAS', days: [7] },
+    { youtubeVideoId: 'XZRQhkii0h0', title: 'Intro to exponents (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [8] },
+    // PART 2: Fractions, Decimals, Percents
+    { youtubeVideoId: 'N1X0vf5PUz4', title: 'Equivalent fractions (Khan Academy)', description: 'Khan Academy · 4th grade intro', days: [9] },
+    { youtubeVideoId: 'k8VnUHUMNSk', title: '분수의 모든 것 (정승제)', description: '정승제 · 분수를 가장 쉽게 이해 (한국어 보조)', days: [9, 10, 11] },
+    { youtubeVideoId: '52ZlXsFJULI', title: 'Add/subtract fractions (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [10] },
+    { youtubeVideoId: 'f3ySpxX9oeM', title: 'Multiplying/dividing fractions (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [11] },
+    { youtubeVideoId: 'JEHejQphIYc', title: 'Multiplying decimals (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [12] },
+    { youtubeVideoId: 'PNb7prOGowE', title: '소수의 사칙연산 (정승제)', description: '정승제 · 핵심만 짚어주는 소수 (한국어 보조)', days: [12] },
+    { youtubeVideoId: '-gB1y-PMWfs', title: 'Converting percent/decimal/fraction (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [13] },
+    { youtubeVideoId: '-lUEWEEpmIo', title: 'Percent of a number (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [14] },
+    // PART 3: Ratios & Rates
+    { youtubeVideoId: 'bIKmw0aTmYc', title: 'Intro to ratios (Khan Academy)', description: 'Khan Academy · 6th grade', days: [15] },
+    { youtubeVideoId: 'rfDIFBY4ZIM', title: 'Equivalent ratios (Khan Academy)', description: 'Khan Academy · 7th grade', days: [16] },
+    { youtubeVideoId: 'Zm0KaIw-35k', title: 'Unit rates (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [17] },
+    { youtubeVideoId: 'GO5ajwbFqVQ', title: 'Proportions & unknown variable (Khan Academy)', description: 'Khan Academy · 7th grade', days: [18] },
+    // PART 4: Geometry
+    { youtubeVideoId: 'ALhv3Rlydig', title: 'Acute/right/obtuse angles (Khan Academy)', description: 'Khan Academy · Geometry', days: [19] },
+    { youtubeVideoId: 'D5lZ3thuEeA', title: 'Triangle types (Khan Academy)', description: 'Khan Academy · 4th grade', days: [20] },
+    { youtubeVideoId: 'Ka82QC4QvGA', title: 'Quadrilaterals overview (Khan Academy)', description: 'Khan Academy · Geometry', days: [21] },
+    { youtubeVideoId: 'LoaBd-sPzkU', title: 'Perimeter and area basics (Khan Academy)', description: 'Khan Academy · Geometry', days: [22] },
+    { youtubeVideoId: 'Rcb7ZUTOQ1I', title: 'Circle circumference (Khan Academy)', description: 'Khan Academy · 7th grade · area 보조: ZyOhRgnFmIY', days: [23] },
+    { youtubeVideoId: 'EJTPGyWqhqc', title: 'Volume of rectangular prism (Khan Academy)', description: 'Khan Academy · 6th grade', days: [24] },
+    // PART 5: Data & Probability
+    { youtubeVideoId: 'kiQ6MUQZHSs', title: 'Reading bar graphs (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [25] },
+    { youtubeVideoId: 'h8EYEJ32oQ8', title: 'Mean/median/mode (Khan Academy)', description: 'Khan Academy · 6th grade', days: [26] },
+    { youtubeVideoId: '36v2EXZRzUE', title: 'Reading line graphs (Khan Academy)', description: 'Khan Academy · Pre-Algebra · 산점도 보조: sHbX58y5D4U', days: [27] },
+    { youtubeVideoId: 'uzkc-qNVoOk', title: 'Probability explained (Khan Academy)', description: 'Khan Academy · Probability & Stats', days: [28] },
+    { youtubeVideoId: 'yUaI0JriZtY', title: 'Finding probability example (Khan Academy)', description: 'Khan Academy · Probability & Stats', days: [29] },
+  ],
+
+  // ── BC Grade 9: Khan Academy 34개 + 정승제 재활용 ──
+  'bc-g9': [
+    // PART 1: Powers & Exponents
+    { youtubeVideoId: '-TpiL4J_yUA', title: 'Exponent properties 1 (Khan Academy)', description: 'Khan Academy · Algebra I', days: [1] },
+    { youtubeVideoId: 'zM_p7tfWvLU', title: 'Exponent products (Khan Academy)', description: 'Khan Academy · 8th grade', days: [2] },
+    { youtubeVideoId: 'I1xUUV3lVAQ', title: '지수법칙 (정승제)', description: '정승제 · 지수법칙을 이해하는 법칙 (한국어 보조)', days: [1, 2, 3, 4] },
+    { youtubeVideoId: 'SwqOrUWzDY8', title: 'Power of power/product (Khan Academy)', description: 'Khan Academy · Algebra I', days: [3] },
+    { youtubeVideoId: 'tOuCdKqO6-s', title: 'Zero/negative/fractional exponents (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [4] },
+    { youtubeVideoId: 'trdbaV4TaAo', title: 'Scientific notation intro (Khan Academy)', description: 'Khan Academy · Pre-Algebra', days: [5] },
+    { youtubeVideoId: '_jiI0AV8Vr4', title: 'Order of ops with exponents (Khan Academy)', description: 'Khan Academy · 6th grade', days: [6] },
+    // PART 2: Polynomials
+    { youtubeVideoId: 'Vm7H0VTlIco', title: 'Polynomials intro (Khan Academy)', description: 'Khan Academy · Math II High School', days: [7] },
+    { youtubeVideoId: 'H6treQu1_uY', title: '다항식과 일차식 (정승제)', description: '정승제 · 다항식과 일차식 (한국어 보조)', days: [7, 8, 9] },
+    { youtubeVideoId: 'ZGl2ExHwdak', title: 'Adding/subtracting polynomials (Khan Academy)', description: 'Khan Academy · Algebra Basics', days: [9] },
+    { youtubeVideoId: 'pD2-H15ucNE', title: 'Monomial × Polynomial (Khan Academy)', description: 'Khan Academy · Algebra I', days: [10] },
+    { youtubeVideoId: '8kHMKr9nLRI', title: '단항식 곱셈·나눗셈 (정승제)', description: '정승제 · 확실하게 정리 (한국어 보조)', days: [10, 12] },
+    { youtubeVideoId: 'fGThIRpWEE4', title: 'Multiplying binomials FOIL (Khan Academy)', description: 'Khan Academy · Algebra Basics', days: [11] },
+    { youtubeVideoId: 'UquFdMg6Z_U', title: 'Polynomial ÷ Monomial (Khan Academy)', description: 'Khan Academy · Algebra II', days: [12] },
+    { youtubeVideoId: 'EvvxBdNIUeQ', title: 'Polynomial word problems (Khan Academy)', description: 'Khan Academy · Algebra I', days: [13] },
+    // PART 3: Linear Eq & Ineq
+    { youtubeVideoId: 'vkhYFml0w6c', title: 'Multi-step equations (Khan Academy)', description: 'Khan Academy · Algebra I · balancing', days: [14] },
+    { youtubeVideoId: 'r-bIFWGmf9k', title: '방정식 개념 종결 (정승제)', description: '정승제 · 일차방정식 풀이 (한국어 보조)', days: [14, 15, 16] },
+    { youtubeVideoId: 'f15zA0PhSek', title: 'Equations w/ variables both sides (Khan Academy)', description: 'Khan Academy · Algebra I', days: [15] },
+    { youtubeVideoId: 'XD-FDGdWnR8', title: 'Equations w/ fractions & decimals (Khan Academy)', description: 'Khan Academy · 6th grade', days: [16] },
+    { youtubeVideoId: 'RHe9X2HDEjA', title: 'Writing inequalities (Khan Academy)', description: 'Khan Academy · Algebra I', days: [17] },
+    { youtubeVideoId: 'xOxvyeSl0uA', title: 'Multi-step inequalities (Khan Academy)', description: 'Khan Academy · Algebra I', days: [18] },
+    { youtubeVideoId: 'bAUT_Pux73w', title: 'Age word problems (Khan Academy)', description: 'Khan Academy · Algebra I', days: [19] },
+    { youtubeVideoId: 'VEIf5TfceAw', title: 'Inequalities word problems (Khan Academy)', description: 'Khan Academy · 6th grade', days: [20] },
+    // PART 4: Linear Relations
+    { youtubeVideoId: 'Iqws-qzyZwc', title: 'Slope & rate of change (Khan Academy)', description: 'Khan Academy · Algebra Basics', days: [21] },
+    { youtubeVideoId: 'IL3UCuXrUzE', title: 'Slope-intercept form (Khan Academy)', description: 'Khan Academy · Algebra I', days: [22] },
+    { youtubeVideoId: '5Yo8mkqnk_w', title: '일차함수와 일차방정식 (정승제)', description: '정승제 · 머릿속이 환해지는 일차함수 (한국어 보조)', days: [21, 22, 23, 24] },
+    { youtubeVideoId: 'K_OI9LA54AA', title: 'Point-slope form (Khan Academy)', description: 'Khan Academy · Algebra I', days: [23] },
+    { youtubeVideoId: '6m642-2D3V4', title: 'Graphing with intercepts (Khan Academy)', description: 'Khan Academy · Algebra Basics', days: [24] },
+    { youtubeVideoId: 'V0xounKGEXs', title: 'Parallel/perpendicular lines (Khan Academy)', description: 'Khan Academy · Geometry', days: [25] },
+    { youtubeVideoId: 'TI75fW6w71k', title: '함수의 기본 개념 (정승제)', description: '정승제 · 함수 개념 두 가지 조건 (한국어 보조)', days: [25, 26] },
+    { youtubeVideoId: 'xKH1Evwu150', title: 'Linear eq word problem (Khan Academy)', description: 'Khan Academy · Algebra I', days: [26] },
+    // PART 5: Geometry
+    { youtubeVideoId: 'R-6CAr_zEEk', title: 'Similarity examples (Khan Academy)', description: 'Khan Academy · Geometry', days: [27] },
+    { youtubeVideoId: 'Ly86lwq_2gc', title: 'Similar triangle problems (Khan Academy)', description: 'Khan Academy · Geometry', days: [28] },
+    { youtubeVideoId: 'ny5DVYNpqM8', title: 'Surface area using nets (Khan Academy)', description: 'Khan Academy · Nets approach', days: [29] },
+    { youtubeVideoId: 'dp3my9MnmOM', title: 'Applying volume of solids (Khan Academy)', description: 'Khan Academy · High school geometry', days: [30] },
+    // PART 6: Statistics & Probability
+    { youtubeVideoId: 'h8EYEJ32oQ8', title: 'Mean/median/mode (Khan Academy)', description: 'Khan Academy · 6th grade', days: [31] },
+    { youtubeVideoId: 'E4HAYd0QnRc', title: 'Range, variance, std dev (Khan Academy)', description: 'Khan Academy · Statistics', days: [32] },
+    { youtubeVideoId: 'tXlcE_K_C-Y', title: 'Theoretical vs Experimental prob (Khan Academy)', description: 'Khan Academy · 7th grade', days: [33] },
+    { youtubeVideoId: 'sHbX58y5D4U', title: 'Scatter plot construction (Khan Academy)', description: 'Khan Academy · Probability & Stats', days: [34] },
+  ],
+
   // ── 기초탄탄 코스: 3개 영상 ──
   foundation: [
     {

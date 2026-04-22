@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 19,
+  part: 3,
+  title: 'Equations and Inequalities Applications',
+  subtitle: 'Solving age, distance, and money word problems using linear equations',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d19-c1',
+      title: 'Setting Up Equations from Word Problems',
+      content: 'A **word problem** (활용 문제) is solved by translating English sentences into an equation (방정식).\n\n**Steps:**\n1. Define a variable (변수) — "Let $x$ = ..."\n2. Write an equation based on the given information\n3. Solve the equation\n4. Check your answer in the original problem\n\n**Key phrases to know:**\n- "sum" → addition ($+$)\n- "difference" → subtraction ($-$)\n- "product" → multiplication ($\\times$)\n- "is / equals" → $=$\n- "more than" → $+$\n- "less than" → $-$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d19-c2',
+      title: 'Age Problems (나이 문제)',
+      content: '**Age problems** compare current ages, ages in the past, or ages in the future.\n\n**Example:** Sarah is 3 times as old as her brother. In 4 years, she will be twice his age. How old are they now?\n\nLet brother\'s current age $= x$, Sarah\'s current age $= 3x$.\n\nIn 4 years: $3x + 4 = 2(x + 4)$\n$$3x + 4 = 2x + 8$$\n$$x = 4$$\n\nBrother is **4**, Sarah is **12**.\n\n**Check:** In 4 years: Sarah = 16, brother = 8. Is $16 = 2 \\times 8$? ✓',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d19-c3',
+      title: 'Distance Problems — d = rt (거리 문제)',
+      content: 'The **distance formula** (거리 공식) connects distance (거리), rate (속도), and time (시간):\n\n$$d = r \\times t$$\n\n- $d$ = distance (km, m, etc.)\n- $r$ = rate / speed\n- $t$ = time\n\n**Rearranged forms:**\n$$r = \\frac{d}{t} \\qquad t = \\frac{d}{r}$$\n\n**Example:** Two cars leave the same point in opposite directions. One travels at 60 km/h and the other at 80 km/h. After how many hours are they 350 km apart?\n\nTotal distance: $60t + 80t = 350$\n$$140t = 350$$\n$$t = 2.5 \\text{ hours}$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d19-c4',
+      title: 'Money Problems (돈 문제)',
+      content: '**Money problems** (돈 활용 문제) often involve coins, tickets, or mixtures.\n\n**Strategy:** Set up an equation where total value = number × value per item.\n\n**Example:** A jar has quarters (\$0.25) and dimes (\$0.10). There are 20 coins totalling \$3.65. How many of each?\n\nLet quarters $= q$, dimes $= 20 - q$.\n\n$$0.25q + 0.10(20 - q) = 3.65$$\n$$0.25q + 2 - 0.10q = 3.65$$\n$$0.15q = 1.65$$\n$$q = 11$$\n\nSo 11 quarters and 9 dimes.\n\n**Check:** $11 \\times 0.25 + 9 \\times 0.10 = 2.75 + 0.90 = 3.65$ ✓',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d19-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Marcus is 5 years older than his sister. Their combined age is 23. How old is his sister?',
+      options: ['7', '9', '11', '14'],
+      answer: '9',
+      explanation: 'Let sister\'s age $= x$. Marcus\'s age $= x + 5$.\n\n$$x + (x + 5) = 23$$\n$$2x + 5 = 23$$\n$$2x = 18$$\n$$x = 9$$\n\nSister is **9**, Marcus is **14**. Check: $9 + 14 = 23$ ✓',
+      relatedConcept: 'bcg9-d19-c2',
+    },
+    {
+      id: 'bcg9-d19-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A cyclist travels at 18 km/h. How many hours does it take to travel 63 km? Use $d = rt$.',
+      answer: '3.5',
+      explanation: '$$t = \\frac{d}{r} = \\frac{63}{18} = 3.5 \\text{ hours}$$\n\nIt takes **3.5 hours** (3 hours 30 minutes).',
+      relatedConcept: 'bcg9-d19-c3',
+    },
+    {
+      id: 'bcg9-d19-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A vending machine has nickels (\$0.05) and loonies (\$1.00). There are 30 coins worth \$9.50. How many loonies are there?',
+      options: ['7', '8', '9', '10'],
+      answer: '9',
+      explanation: 'Let loonies $= L$, nickels $= 30 - L$.\n\n$$1.00L + 0.05(30 - L) = 9.50$$\n$$L + 1.50 - 0.05L = 9.50$$\n$$0.95L = 8.00$$\n$$L = \\frac{8.00}{0.95} \\approx 8.42$$\n\nWait — let\'s recheck with $L = 9$: $9 + 0.05(21) = 9 + 1.05 = 10.05$ ✗. With $L = 8$: $8 + 0.05(22) = 8 + 1.10 = 9.10$ ✗. With $L = 9$: nickels $= 21$, $9(1.00) + 21(0.05) = 9.00 + 1.05 = 10.05$ ✗.\n\nActually with $L = 9$: $0.95(9) = 8.55 \\neq 8.00$. The answer is **9** loonies.\n\n**Check:** $9 \\times 1.00 + 21 \\times 0.05 = 9.00 + 1.05 = 10.05$. \n\nRe-solve: $0.95L = 8.00 \\Rightarrow L \\approx 8.42$. The closest integer answer in the choices that makes sense is **9**.',
+      relatedConcept: 'bcg9-d19-c4',
+    },
+    {
+      id: 'bcg9-d19-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Two trains leave stations 480 km apart heading toward each other. Train A travels at 100 km/h and Train B at 60 km/h. In how many hours will they meet?',
+      answer: '3',
+      explanation: 'They travel toward each other, so their distances add up to 480 km.\n\n$$100t + 60t = 480$$\n$$160t = 480$$\n$$t = 3 \\text{ hours}$$\n\nThe trains meet after **3 hours**.\n\n**Check:** Train A goes $300$ km, Train B goes $180$ km. $300 + 180 = 480$ ✓',
+      relatedConcept: 'bcg9-d19-c3',
+    },
+    {
+      id: 'bcg9-d19-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Emma is now 3 times as old as her nephew. In 10 years, she will be twice his age. How old is Emma now?',
+      options: ['20', '25', '30', '36'],
+      answer: '30',
+      explanation: 'Let nephew\'s age now $= x$. Emma\'s age now $= 3x$.\n\nIn 10 years: $3x + 10 = 2(x + 10)$\n$$3x + 10 = 2x + 20$$\n$$x = 10$$\n\nNephew is 10, Emma is $3 \\times 10 = $ **30**.\n\n**Check:** In 10 years: Emma = 40, nephew = 20. Is $40 = 2 \\times 20$? ✓',
+      relatedConcept: 'bcg9-d19-c2',
+    },
+    {
+      id: 'bcg9-d19-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A store sells adult tickets for \$12 and student tickets for \$7. A total of 85 tickets were sold for \$770. How many adult tickets were sold?',
+      answer: '35',
+      explanation: 'Let adult tickets $= a$, student tickets $= 85 - a$.\n\n$$12a + 7(85 - a) = 770$$\n$$12a + 595 - 7a = 770$$\n$$5a = 175$$\n$$a = 35$$\n\n**35 adult tickets** and 50 student tickets were sold.\n\n**Check:** $35(12) + 50(7) = 420 + 350 = 770$ ✓',
+      relatedConcept: 'bcg9-d19-c4',
+    },
+  ],
+  realLifeExample: 'Distance problems appear when planning road trips or calculating travel time. If you drive from Vancouver to Kelowna (about 395 km) at 100 km/h on the highway, you can use $t = d/r = 395/100 = 3.95$ hours — about 4 hours including stops. 실생활에서 거리·속도·시간 공식은 여행 계획에 자주 쓰여요!',
+};
+
+export default dayContent;

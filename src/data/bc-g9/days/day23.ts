@@ -1,0 +1,107 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 23,
+  part: 4,
+  title: 'Point-Slope Form and Standard Form',
+  subtitle: 'Writing linear equations from a point and slope, and converting to standard form',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d23-c1',
+      title: 'Point-Slope Form (점기울기 형태)',
+      content: 'The **point-slope form** (점기울기 형태) of a line is useful when you know a point $(x_1, y_1)$ and the slope $m$:\n\n$$y - y_1 = m(x - x_1)$$\n\n**Example:** Write the equation of a line through $(3, -2)$ with slope $4$.\n\n$$y - (-2) = 4(x - 3)$$\n$$y + 2 = 4(x - 3)$$\n\nThis can be left in point-slope form or converted to slope-intercept form:\n$$y + 2 = 4x - 12$$\n$$y = 4x - 14$$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d23-c2',
+      title: 'Standard Form — Ax + By = C (표준형)',
+      content: '**Standard form** (표준형) of a linear equation is:\n\n$$Ax + By = C$$\n\nwhere $A$, $B$, $C$ are integers, $A \\geq 0$, and there are no fractions.\n\n**Converting from slope-intercept to standard form:**\n\n$y = 3x - 5$\n\nSubtract $3x$ from both sides:\n$$-3x + y = -5$$\n\nMultiply by $-1$ (so $A > 0$):\n$$3x - y = 5$$\n\n**Tip:** Standard form is useful for finding both intercepts quickly:\n- $x$-intercept (x절편): set $y = 0$\n- $y$-intercept (y절편): set $x = 0$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d23-c3',
+      title: 'Converting Between Forms (형태 변환)',
+      content: '**Summary of three forms:**\n\n| Form | Equation | Best used when... |\n|------|----------|-------------------|\n| Slope-intercept | $y = mx + b$ | graphing, knowing slope & $y$-int |\n| Point-slope | $y - y_1 = m(x - x_1)$ | given a point and slope |\n| Standard | $Ax + By = C$ | finding intercepts, integers |\n\n**Example — convert $y - 1 = \\frac{2}{3}(x - 6)$ to standard form:**\n\nExpand: $y - 1 = \\frac{2}{3}x - 4$\n\nMultiply by 3: $3y - 3 = 2x - 12$\n\nRearrange: $-2x + 3y = -9 \\Rightarrow 2x - 3y = 9$',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d23-c4',
+      title: 'Finding Equations from Two Points (두 점으로 방정식 구하기)',
+      content: 'Given two points, find the equation of the line:\n1. Calculate the slope $m = \\frac{y_2 - y_1}{x_2 - x_1}$\n2. Use either point in point-slope form\n3. Simplify to desired form\n\n**Example:** Line through $(1, 5)$ and $(-3, -3)$:\n\n$$m = \\frac{-3 - 5}{-3 - 1} = \\frac{-8}{-4} = 2$$\n\nUse point $(1, 5)$:\n$$y - 5 = 2(x - 1)$$\n$$y = 2x + 3$$',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d23-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which equation is in standard form?',
+      options: [
+        '$y = 2x - 3$',
+        '$y - 4 = 3(x + 1)$',
+        '$5x + 2y = 10$',
+        '$y + x = 3.5$',
+      ],
+      answer: '$5x + 2y = 10$',
+      explanation: 'Standard form is $Ax + By = C$ where $A$, $B$, $C$ are integers and $A \\geq 0$.\n\n- $y = 2x - 3$ → slope-intercept form\n- $y - 4 = 3(x + 1)$ → point-slope form\n- $5x + 2y = 10$ → **standard form** ✓ (integers, $A = 5 > 0$)\n- $y + x = 3.5$ → has a decimal, not standard form',
+      relatedConcept: 'bcg9-d23-c2',
+    },
+    {
+      id: 'bcg9-d23-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Write the equation of the line through $(5, 1)$ with slope $-2$ in point-slope form.',
+      answer: 'y - 1 = -2(x - 5)',
+      explanation: 'Use $y - y_1 = m(x - x_1)$ with $(x_1, y_1) = (5, 1)$ and $m = -2$:\n\n$$y - 1 = -2(x - 5)$$',
+      relatedConcept: 'bcg9-d23-c1',
+    },
+    {
+      id: 'bcg9-d23-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Convert $y = -3x + 6$ to standard form.',
+      options: [
+        '$3x - y = 6$',
+        '$3x + y = 6$',
+        '$-3x + y = 6$',
+        '$x - 3y = 6$',
+      ],
+      answer: '$3x + y = 6$',
+      explanation: 'Starting from $y = -3x + 6$:\n\nAdd $3x$ to both sides:\n$$3x + y = 6$$\n\nThis is in standard form with $A = 3$, $B = 1$, $C = 6$.',
+      relatedConcept: 'bcg9-d23-c2',
+    },
+    {
+      id: 'bcg9-d23-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Find the equation (slope-intercept form) of the line through $(2, 3)$ and $(6, -1)$.',
+      answer: 'y = -x + 5',
+      explanation: 'Step 1 — Slope:\n$$m = \\frac{-1 - 3}{6 - 2} = \\frac{-4}{4} = -1$$\n\nStep 2 — Point-slope using $(2, 3)$:\n$$y - 3 = -1(x - 2)$$\n$$y - 3 = -x + 2$$\n$$y = -x + 5$$\n\n**Check with $(6, -1)$:** $y = -6 + 5 = -1$ ✓',
+      relatedConcept: 'bcg9-d23-c4',
+    },
+    {
+      id: 'bcg9-d23-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Find the $x$-intercept of the line $4x + 3y = 24$.',
+      options: ['$(6, 0)$', '$(0, 6)$', '$(8, 0)$', '$(0, 8)$'],
+      answer: '$(6, 0)$',
+      explanation: 'For the $x$-intercept, set $y = 0$:\n$$4x + 3(0) = 24$$\n$$4x = 24$$\n$$x = 6$$\n\n$x$-intercept is $(6, 0)$.\n\n**Bonus:** The $y$-intercept (set $x = 0$): $3y = 24 \\Rightarrow y = 8$, so $(0, 8)$.',
+      relatedConcept: 'bcg9-d23-c2',
+    },
+    {
+      id: 'bcg9-d23-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'A line passes through $(-1, 4)$ and $(3, -4)$. Write its equation in standard form.',
+      answer: '2x + y = 2',
+      explanation: 'Step 1 — Slope:\n$$m = \\frac{-4 - 4}{3 - (-1)} = \\frac{-8}{4} = -2$$\n\nStep 2 — Point-slope using $(-1, 4)$:\n$$y - 4 = -2(x - (-1))$$\n$$y - 4 = -2x - 2$$\n$$y = -2x + 2$$\n\nStep 3 — Standard form:\n$$2x + y = 2$$\n\n**Check with $(3, -4)$:** $2(3) + (-4) = 6 - 4 = 2$ ✓',
+      relatedConcept: 'bcg9-d23-c4',
+    },
+  ],
+  realLifeExample: 'Standard form is widely used in systems of equations — two equations like $3x + 2y = 12$ and $x - y = 1$ are easy to solve together. Architects and engineers write blueprints using equations to describe lines and boundaries. 건축 설계에서 표준형 방정식이 자주 쓰여요!',
+};
+
+export default dayContent;

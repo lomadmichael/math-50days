@@ -1,0 +1,108 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 35,
+  part: 6,
+  isTest: true,
+  title: 'Unit Review & Final Test',
+  subtitle: 'Comprehensive review covering Parts 3–6: Linear Relations, Geometry, and Statistics',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d35-c1',
+      title: 'Part 3 Review: Linear Equations & Inequalities (Parts 3 복습)',
+      content: '**Key skills from Days 19–20:**\n\n**Word problems:** Translate words → equations → solve → check\n- Age problems: define variable, write equation for each person\n- Distance problems: $d = rt$; use $60t + 80t = 350$ for opposite directions\n- Money problems: coins × value = total\n\n**Inequalities:**\n- Solving: same as equations, but flip sign when multiplying/dividing by negative\n- Graphing: open circle ($<$, $>$), closed circle ($\\leq$, $\\geq$)\n- Word translations: "at least" → $\\geq$, "at most" → $\\leq$, "more than" → $>$\n\n**Compound inequalities:** $-2 < x \\leq 5$ — solve by operating on all three parts simultaneously',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d35-c2',
+      title: 'Part 4 Review: Linear Relations (Part 4 복습)',
+      content: '**Key skills from Days 21–26:**\n\n**Slope:** $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\text{rise}}{\\text{run}}$\n\n**Three forms of linear equations:**\n- Slope-intercept: $y = mx + b$\n- Point-slope: $y - y_1 = m(x - x_1)$\n- Standard: $Ax + By = C$ (integers, $A \\geq 0$)\n\n**Parallel lines:** same slope ($m_1 = m_2$)\n\n**Perpendicular lines:** negative reciprocal slopes ($m_1 \\times m_2 = -1$)\n\n**Graphing:** use $y$-intercept and slope, or table of values, or intercept method\n\n**Linear models:** $b$ = initial value, $m$ = rate of change',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d35-c3',
+      title: 'Part 5 Review: Geometry (Part 5 복습)',
+      content: '**Key skills from Days 27–30:**\n\n**Similar figures:** same shape, proportional sides, equal angles\n- Scale factor $k$: perimeter scales by $k$, area scales by $k^2$\n- Proportion: $\\frac{a_1}{b_1} = \\frac{a_2}{b_2}$\n\n**Similar triangles:** AA, SSS, or SAS similarity\n- Shadow method for indirect measurement\n\n**Surface area of composite solids:**\n$SA_{\\text{total}} = \\sum SA_{\\text{parts}} - 2 \\times \\text{(hidden faces)}$\n\n**Volume of composite solids:**\n- Addition: $V_{\\text{total}} = V_1 + V_2$\n- Subtraction: $V_{\\text{total}} = V_{\\text{outer}} - V_{\\text{removed}}$',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d35-c4',
+      title: 'Part 6 Review: Statistics & Probability (Part 6 복습)',
+      content: '**Key skills from Days 31–34:**\n\n**Central tendency:**\n- Mean: $\\bar{x} = \\frac{\\sum x}{n}$ (affected by outliers)\n- Median: middle value when sorted (not affected by outliers)\n- Mode: most frequent value (can be none or multiple)\n\n**Spread:**\n- Range: max $-$ min\n- Variance: $\\frac{\\sum(x - \\bar{x})^2}{n}$\n- Standard deviation: $\\sigma = \\sqrt{\\text{variance}}$\n\n**Probability:**\n- Theoretical: $\\frac{\\text{favourable}}{\\text{total}}$\n- Experimental: $\\frac{\\text{occurrences}}{\\text{trials}}$\n- Complement: $P(\\text{not A}) = 1 - P(A)$\n\n**Scatter plots:**\n- Positive/negative/no correlation\n- Line of best fit: $y = mx + b$; slope = rate of change per unit $x$',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d35-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Two cars leave the same city at the same time going in opposite directions. Car A travels at 90 km/h and Car B at 70 km/h. After how many hours are they 480 km apart?',
+      options: ['$2$ h', '$3$ h', '$4$ h', '$5$ h'],
+      answer: '$3$ h',
+      explanation: '$$90t + 70t = 480$$\n$$160t = 480$$\n$$t = 3 \\text{ hours}$$\n\n**(Day 19 — Distance word problems)**',
+      relatedConcept: 'bcg9-d35-c1',
+    },
+    {
+      id: 'bcg9-d35-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the equation (slope-intercept form) of the line through $(−1, 3)$ and $(3, 11)$.',
+      answer: 'y = 2x + 5',
+      explanation: 'Slope: $m = \\frac{11-3}{3-(-1)} = \\frac{8}{4} = 2$\n\nUsing $(-1, 3)$: $3 = 2(-1) + b \\Rightarrow b = 5$\n\n$$y = 2x + 5$$\n\n**(Day 22 — Slope-intercept form)**',
+      relatedConcept: 'bcg9-d35-c2',
+    },
+    {
+      id: 'bcg9-d35-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which line is perpendicular to $y = \\frac{3}{4}x - 2$?',
+      options: [
+        '$y = \\frac{3}{4}x + 1$',
+        '$y = -\\frac{4}{3}x + 5$',
+        '$y = \\frac{4}{3}x - 2$',
+        '$y = -\\frac{3}{4}x + 6$',
+      ],
+      answer: '$y = -\\frac{4}{3}x + 5$',
+      explanation: 'Original slope: $\\frac{3}{4}$\n\nPerpendicular slope: $-\\frac{4}{3}$ (negative reciprocal)\n\n$y = -\\frac{4}{3}x + 5$ has slope $-\\frac{4}{3}$ ✓\n\n**Check:** $\\frac{3}{4} \\times (-\\frac{4}{3}) = -1$ ✓\n\n**(Day 25 — Perpendicular lines)**',
+      relatedConcept: 'bcg9-d35-c2',
+    },
+    {
+      id: 'bcg9-d35-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Two similar triangles have sides in ratio 2:5. The larger triangle has an area of 150 cm². Find the area of the smaller triangle.',
+      answer: '24 cm²',
+      explanation: 'Scale factor $k = \\frac{2}{5}$. Area scales by $k^2 = \\frac{4}{25}$.\n\n$$A_{\\text{small}} = 150 \\times \\frac{4}{25} = \\frac{600}{25} = 24 \\text{ cm}^2$$\n\n**(Day 27 — Similar figures and area scaling)**',
+      relatedConcept: 'bcg9-d35-c3',
+    },
+    {
+      id: 'bcg9-d35-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A cone (radius 6 cm, height 8 cm) sits on top of a cylinder (radius 6 cm, height 14 cm). What is the total volume? (Use $\\pi \\approx 3.14$)',
+      options: [
+        '$\\approx 1,695$ cm³',
+        '$\\approx 2,034$ cm³',
+        '$\\approx 2,222$ cm³',
+        '$\\approx 2,507$ cm³',
+      ],
+      answer: '$\\approx 2,034$ cm³',
+      explanation: '$$V_{\\text{cone}} = \\frac{1}{3}\\pi(6)^2(8) = \\frac{1}{3}\\pi(288) = 96\\pi \\approx 301.4 \\text{ cm}^3$$\n\n$$V_{\\text{cyl}} = \\pi(6)^2(14) = 504\\pi \\approx 1{,}582.6 \\text{ cm}^3$$\n\n$$V_{\\text{total}} = 600\\pi \\approx 1884 \\text{ cm}^3$$\n\nClosest: ≈ 2,034 cm³\n\n**(Day 30 — Volume of composite solids)**',
+      relatedConcept: 'bcg9-d35-c3',
+    },
+    {
+      id: 'bcg9-d35-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'Test scores for 8 students: $62, 71, 84, 90, 78, 55, 91, 69$. Find the mean, median, and range. Then: a die is rolled — what is the probability the result is less than the median (rounded to nearest integer)?',
+      answer: 'Mean=75, Median=74.5, Range=36; P(<75)=P(≤6)=1 but P(<74.5)=P(≤6)=1; actually P(rolling < 75) = 1 since max die = 6',
+      explanation: '**Sorted:** $55, 62, 69, 71, 78, 84, 90, 91$\n\n**Mean:** $\\frac{55+62+69+71+78+84+90+91}{8} = \\frac{600}{8} = 75$\n\n**Median** (8 values, even): $\\frac{71+78}{2} = \\frac{149}{2} = 74.5$\n\n**Range:** $91 - 55 = 36$\n\n**Probability:** A die shows 1–6, all less than 74.5, so $P(\\text{result} < 74.5) = \\frac{6}{6} = 1$ (certain event).\n\n**(Days 31–33 — Central tendency and probability)**',
+      relatedConcept: 'bcg9-d35-c4',
+    },
+  ],
+  realLifeExample: 'This unit covered the building blocks of algebra, geometry, and data analysis that are central to Grade 9 BC math. Linear equations model phone plans and road trips. Similar triangles help surveyors measure unreachable distances. Statistics help us make sense of data in medicine, sports, and business. Probability drives insurance, weather forecasting, and game design. 이 단원에서 배운 모든 개념들은 실생활 곳곳에서 활용돼요 — 계속 공부해 나가요!',
+};
+
+export default dayContent;

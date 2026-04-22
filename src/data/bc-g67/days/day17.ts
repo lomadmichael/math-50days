@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 17,
+  part: 3,
+  title: 'Unit Rates',
+  subtitle: 'Comparing quantities per one unit — dollars per item, km per hour',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d17-c1',
+      title: 'What is a Rate?',
+      content: 'A **rate** (비율/요율) is a special ratio that compares two quantities with **different units**.\n\nExamples of rates:\n- Speed: 60 km per 1 hour\n- Price: $\\$3.50$ per 1 litre\n- Heartbeats: 72 beats per 1 minute\n\nThe key word is **"per"** (당, 마다), which means "for every one."\n\nRates always have two different units attached — like km and hours, or dollars and items.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d17-c2',
+      title: 'Unit Rate',
+      content: 'A **unit rate** (단위율) is a rate with a denominator of **1**. It tells you how much of one quantity there is for every single unit of the other.\n\n**Formula:**\n$$\\text{Unit Rate} = \\frac{\\text{total amount}}{\\text{number of units}}$$\n\n**Example:** A car travels 240 km in 3 hours. What is the unit rate (speed)?\n$$\\text{Speed} = \\frac{240 \\text{ km}}{3 \\text{ h}} = 80 \\text{ km/h}$$\n\n"80 km per hour" means the car travels 80 km for every **1** hour.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d17-c3',
+      title: 'Unit Price — Finding the Best Deal',
+      content: '**Unit price** (단위 가격) is how much one item costs. You use it to compare value.\n\n**Example:** Which is a better deal?\n- Store A: 6 apples for $\\$4.20$\n- Store B: 9 apples for $\\$5.85$\n\nStore A unit price: $\\frac{\\$4.20}{6} = \\$0.70$ per apple\n\nStore B unit price: $\\frac{\\$5.85}{9} = \\$0.65$ per apple\n\nStore B is cheaper per apple → **better deal**!\n\n**팁**: 단위 가격이 낮을수록 더 저렴한 거예요.',
+      type: 'example',
+    },
+    {
+      id: 'bcg67-d17-c4',
+      title: 'Using Unit Rates to Solve Problems',
+      content: 'Once you know the unit rate, multiply to find any quantity.\n\n**Example:** A printer prints 15 pages per minute. How many pages can it print in 8 minutes?\n\n$$15 \\text{ pages/min} \\times 8 \\text{ min} = 120 \\text{ pages}$$\n\n**Example:** If bananas cost $\\$1.20$ per kg, how much do 3.5 kg cost?\n\n$$\\$1.20 \\times 3.5 = \\$4.20$$\n\n**Steps:**\n1. Find the unit rate\n2. Multiply by the number of units needed',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d17-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A cyclist rides 90 km in 3 hours. What is the unit rate (speed) in km/h?',
+      answer: '30 km/h',
+      explanation: '$$\\text{Speed} = \\frac{90 \\text{ km}}{3 \\text{ h}} = 30 \\text{ km/h}$$\n\nThe cyclist travels **30 km per hour**.',
+      relatedConcept: 'bcg67-d17-c2',
+    },
+    {
+      id: 'bcg67-d17-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A store sells 4 notebooks for $\\$6.00$. What is the unit price per notebook?',
+      options: ['$1.00', '$1.50', '$2.00', '$2.50'],
+      answer: '$1.50',
+      explanation: '$$\\text{Unit price} = \\frac{\\$6.00}{4} = \\$1.50 \\text{ per notebook}$$\n\n**Answer: \\$1.50**',
+      relatedConcept: 'bcg67-d17-c3',
+    },
+    {
+      id: 'bcg67-d17-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which is the better value?\n\nOption A: 8 granola bars for $\\$4.80$\nOption B: 5 granola bars for $\\$3.25$',
+      options: ['Option A ($0.60 each)', 'Option B ($0.65 each)', 'They are equal', 'Cannot be determined'],
+      answer: 'Option A ($0.60 each)',
+      explanation: 'Option A: $\\frac{\\$4.80}{8} = \\$0.60$ per bar\n\nOption B: $\\frac{\\$3.25}{5} = \\$0.65$ per bar\n\n$\\$0.60 < \\$0.65$, so **Option A is the better value**.',
+      relatedConcept: 'bcg67-d17-c3',
+    },
+    {
+      id: 'bcg67-d17-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A factory produces 360 bottles per hour. How many bottles does it produce in 2.5 hours?',
+      answer: '900',
+      explanation: '$$360 \\text{ bottles/h} \\times 2.5 \\text{ h} = 900 \\text{ bottles}$$\n\n**Answer: 900 bottles**',
+      relatedConcept: 'bcg67-d17-c4',
+    },
+    {
+      id: 'bcg67-d17-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Maria earns $\\$11.25$ in 1.5 hours. What is her hourly wage?',
+      options: ['$6.50/h', '$7.00/h', '$7.50/h', '$8.00/h'],
+      answer: '$7.50/h',
+      explanation: '$$\\text{Hourly wage} = \\frac{\\$11.25}{1.5 \\text{ h}} = \\$7.50 \\text{ per hour}$$\n\n**Answer: \\$7.50/h**',
+      relatedConcept: 'bcg67-d17-c2',
+    },
+    {
+      id: 'bcg67-d17-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A tap fills a 90-litre tank in 6 minutes. A second tap fills a 140-litre tank in 8 minutes. Which tap has the greater flow rate?',
+      options: ['First tap (15 L/min)', 'Second tap (17.5 L/min)', 'They are equal', 'Cannot be determined'],
+      answer: 'Second tap (17.5 L/min)',
+      explanation: 'First tap: $\\frac{90 \\text{ L}}{6 \\text{ min}} = 15$ L/min\n\nSecond tap: $\\frac{140 \\text{ L}}{8 \\text{ min}} = 17.5$ L/min\n\n$17.5 > 15$, so the **second tap** has the greater flow rate.',
+      relatedConcept: 'bcg67-d17-c2',
+    },
+  ],
+  realLifeExample: 'Gas prices at the pump are unit rates — dollars per litre. When you see "$1.45/L", that tells you exactly how much each litre costs. To find the total cost, just multiply: $1.45 \\times 40 \\text{ L} = \\$58.00$. 주유소 가격표가 바로 단위율이에요!',
+};
+
+export default dayContent;

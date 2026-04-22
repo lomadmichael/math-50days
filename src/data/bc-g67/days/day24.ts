@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 24,
+  part: 4,
+  title: 'Volume of Rectangular Prisms',
+  subtitle: 'Understanding 3D space and calculating the volume of boxes and cubes',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d24-c1',
+      title: 'What is Volume?',
+      content: '**Volume** (부피) is the amount of 3D space a solid object takes up. Volume is measured in **cubic units** (세제곱 단위) like cm³, m³, or mm³.\n\nThink of volume as how many unit cubes fit inside a 3D shape.\n\n- 1 cm³ = a cube that is 1 cm on every edge\n- 1 m³ = a cube that is 1 m on every edge = 1,000,000 cm³\n\n**Area vs. Volume:**\n- Area (넓이) → 2D, measured in square units (cm²)\n- Volume (부피) → 3D, measured in cubic units (cm³)',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d24-c2',
+      title: 'Volume of a Rectangular Prism',
+      content: 'A **rectangular prism** (직육면체, also called a cuboid) has 6 rectangular faces.\n\n$$V = l \\times w \\times h$$\n\nwhere:\n- $l$ = length (길이)\n- $w$ = width (폭)\n- $h$ = height (높이)\n\n**Example:** A box is 8 cm long, 5 cm wide, and 4 cm tall.\n$$V = 8 \\times 5 \\times 4 = 160 \\text{ cm}^3$$\n\n**팁**: 곱하는 순서는 달라도 결과는 같아요. $l \\times w \\times h = w \\times h \\times l$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d24-c3',
+      title: 'Volume of a Cube',
+      content: 'A **cube** (정육면체) is a special rectangular prism where all three dimensions are equal.\n\n$$V = s^3$$\n\nwhere $s$ is the side length.\n\n**Example:** A cube with side 6 cm:\n$$V = 6^3 = 6 \\times 6 \\times 6 = 216 \\text{ cm}^3$$\n\n**Perfect cubes you should know:**\n$$1^3=1,\\; 2^3=8,\\; 3^3=27,\\; 4^3=64,\\; 5^3=125,\\; 10^3=1000$$\n\n**팁**: $s^3$은 "s 세제곱"이라고 읽어요. $6^3 = 216$처럼 세 번 곱한 값이에요.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d24-c4',
+      title: 'Volume Using Base Area',
+      content: 'Another way to think about volume:\n\n$$V = \\text{Base Area} \\times \\text{height} = A_{\\text{base}} \\times h$$\n\nThis works for any prism — the cross-section is the same all the way through.\n\n**Example:** A rectangular prism has a base area of $30 \\text{ cm}^2$ and height 7 cm.\n$$V = 30 \\times 7 = 210 \\text{ cm}^3$$\n\nFinding a missing dimension:\nIf $V = 240 \\text{ cm}^3$, $l = 8$ cm, $w = 6$ cm:\n$$240 = 8 \\times 6 \\times h$$\n$$240 = 48h$$\n$$h = 5 \\text{ cm}$$',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d24-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the volume of a rectangular prism with length 10 cm, width 4 cm, and height 5 cm.',
+      answer: '200 cm³',
+      explanation: '$$V = l \\times w \\times h = 10 \\times 4 \\times 5 = 200 \\text{ cm}^3$$',
+      relatedConcept: 'bcg67-d24-c2',
+    },
+    {
+      id: 'bcg67-d24-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A cube has a side length of 7 cm. What is its volume?',
+      options: ['49 cm³', '147 cm³', '343 cm³', '441 cm³'],
+      answer: '343 cm³',
+      explanation: '$$V = s^3 = 7^3 = 7 \\times 7 \\times 7 = 343 \\text{ cm}^3$$',
+      relatedConcept: 'bcg67-d24-c3',
+    },
+    {
+      id: 'bcg67-d24-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A fish tank has a base that is 50 cm × 30 cm and a height of 40 cm. What is its volume in cm³?',
+      options: ['60 000 cm³', '6 000 cm³', '120 000 cm³', '12 000 cm³'],
+      answer: '60 000 cm³',
+      explanation: '$$V = l \\times w \\times h = 50 \\times 30 \\times 40 = 60{,}000 \\text{ cm}^3$$',
+      relatedConcept: 'bcg67-d24-c2',
+    },
+    {
+      id: 'bcg67-d24-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A rectangular box has a volume of $360 \\text{ cm}^3$, a length of 12 cm, and a width of 5 cm. What is its height?',
+      answer: '6 cm',
+      explanation: '$$V = l \\times w \\times h$$\n$$360 = 12 \\times 5 \\times h$$\n$$360 = 60h$$\n$$h = \\frac{360}{60} = 6 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d24-c4',
+    },
+    {
+      id: 'bcg67-d24-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A swimming pool is 25 m long, 10 m wide, and 2 m deep. How many litres of water does it hold? ($1 \\text{ m}^3 = 1{,}000$ L)',
+      options: ['500 L', '5 000 L', '50 000 L', '500 000 L'],
+      answer: '500 000 L',
+      explanation: '$$V = 25 \\times 10 \\times 2 = 500 \\text{ m}^3$$\n\nConvert: $500 \\text{ m}^3 \\times 1{,}000 \\text{ L/m}^3 = 500{,}000 \\text{ L}$\n\n**Answer: 500 000 litres** (half a million litres!)',
+      relatedConcept: 'bcg67-d24-c2',
+    },
+    {
+      id: 'bcg67-d24-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Two cubes: Cube A has side 4 cm and Cube B has side 8 cm. How many times greater is the volume of Cube B than Cube A?',
+      options: ['2 times', '4 times', '6 times', '8 times'],
+      answer: '8 times',
+      explanation: 'Cube A: $V_A = 4^3 = 64 \\text{ cm}^3$\nCube B: $V_B = 8^3 = 512 \\text{ cm}^3$\n\n$$\\frac{V_B}{V_A} = \\frac{512}{64} = 8$$\n\nWhen you double the side length, volume increases by a factor of $2^3 = 8$.\n\n**Key insight:** If scale factor = $k$, then volume ratio = $k^3$.',
+      relatedConcept: 'bcg67-d24-c3',
+    },
+  ],
+  realLifeExample: 'When you buy a refrigerator or a storage box, the volume tells you how much it can hold. A fridge advertised as "500 L" has a volume of $0.5 \\text{ m}^3$. Moving boxes are often $45 \\times 45 \\times 45$ cm = about $91{,}125 \\text{ cm}^3 \\approx 91$ L each. 부피를 알면 물건이 얼마나 들어갈지 가늠할 수 있어요!',
+};
+
+export default dayContent;

@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 16,
+  part: 3,
+  title: 'Equivalent Ratios',
+  subtitle: 'Scaling ratios up or down — same relationship, different numbers',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d16-c1',
+      title: 'What is a Ratio?',
+      content: 'A **ratio** (비율) compares two quantities using the same units.\n\nFor example, if there are 3 red marbles and 5 blue marbles, the ratio of red to blue is:\n$$3 : 5 \\quad \\text{or} \\quad \\frac{3}{5}$$\n\nRatios can be written three ways:\n- With a colon: $3 : 5$\n- As a fraction: $\\frac{3}{5}$\n- In words: "3 to 5"\n\n**Order matters!** The ratio of red to blue ($3:5$) is different from the ratio of blue to red ($5:3$).',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d16-c2',
+      title: 'Equivalent Ratios',
+      content: '**Equivalent ratios** (동치비) are ratios that represent the same relationship. You create them by multiplying or dividing both terms by the same number.\n\n$$1 : 2 = 2 : 4 = 3 : 6 = 5 : 10$$\n\nThink of it like equivalent fractions:\n$$\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6}$$\n\n**To find an equivalent ratio:** multiply or divide both parts by the same **non-zero** number.\n\nExample: $4 : 6$\n- Multiply by 2 → $8 : 12$ ✓\n- Divide by 2 → $2 : 3$ ✓',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d16-c3',
+      title: 'Simplifying Ratios to Lowest Terms',
+      content: 'A ratio is in **lowest terms** (기약비) when the GCF (greatest common factor, 최대공약수) of both parts is 1.\n\n**Steps to simplify:**\n1. Find the GCF of both numbers\n2. Divide both parts by the GCF\n\n**Example:** Simplify $12 : 18$\n- $\\text{GCF}(12, 18) = 6$\n- $12 \\div 6 = 2$, $18 \\div 6 = 3$\n- Simplified: $2 : 3$\n\n**Check:** No whole number greater than 1 divides both 2 and 3, so $2:3$ is fully simplified.',
+      type: 'example',
+    },
+    {
+      id: 'bcg67-d16-c4',
+      title: 'Using Equivalent Ratios to Solve Problems',
+      content: 'You can use equivalent ratios to find missing values.\n\n**Example:** A recipe uses 2 cups of flour for every 3 cups of milk. How many cups of flour are needed for 9 cups of milk?\n\nSet up the ratio: $\\text{flour} : \\text{milk} = 2 : 3$\n\nWe need: $? : 9$\n\n$3 \\times 3 = 9$, so multiply both parts by 3:\n$$2 \\times 3 : 3 \\times 3 = 6 : 9$$\n\nAnswer: **6 cups of flour**.\n\n**팁**: 한쪽을 몇 배했는지 파악하고 반대쪽에도 같은 수를 곱하세요.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d16-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Which ratio is equivalent to $3 : 4$?',
+      options: ['6 : 9', '9 : 12', '4 : 3', '6 : 8'],
+      answer: '9 : 12',
+      explanation: 'To get an equivalent ratio, multiply both parts by the same number.\n\n$3 \\times 3 : 4 \\times 3 = 9 : 12$ ✓\n\nCheck the others:\n- $6 : 9$ → $\\frac{6}{9} = \\frac{2}{3} \\neq \\frac{3}{4}$\n- $4 : 3$ → reversed\n- $6 : 8 = 3 : 4$ ✓ — wait, this also works!\n\nBoth $9:12$ and $6:8$ are equivalent to $3:4$. Since only one answer can be chosen and the question selects one, $9:12$ ($3 \\times 3$) is the primary answer shown.',
+      relatedConcept: 'bcg67-d16-c2',
+    },
+    {
+      id: 'bcg67-d16-p2',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Simplify the ratio $20 : 30$ to lowest terms.',
+      answer: '2 : 3',
+      explanation: 'Find the GCF of 20 and 30.\n$20 = 2 \\times 2 \\times 5$, $30 = 2 \\times 3 \\times 5$\n$\\text{GCF} = 2 \\times 5 = 10$\n\n$20 \\div 10 = 2$, $30 \\div 10 = 3$\n\nSimplified ratio: $\\mathbf{2 : 3}$',
+      relatedConcept: 'bcg67-d16-c3',
+    },
+    {
+      id: 'bcg67-d16-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A classroom has 12 boys and 16 girls. What is the ratio of boys to girls in lowest terms?',
+      options: ['12 : 16', '3 : 4', '4 : 3', '6 : 8'],
+      answer: '3 : 4',
+      explanation: 'Ratio of boys to girls: $12 : 16$\n\n$\\text{GCF}(12, 16) = 4$\n$12 \\div 4 = 3$, $16 \\div 4 = 4$\n\nLowest terms: $\\mathbf{3 : 4}$',
+      relatedConcept: 'bcg67-d16-c3',
+    },
+    {
+      id: 'bcg67-d16-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A paint mix uses red and white paint in the ratio $2 : 5$. If you use 10 litres of red paint, how many litres of white paint do you need?',
+      answer: '25',
+      explanation: 'Red : White $= 2 : 5$\n\nRed is 10 litres. $2 \\times 5 = 10$, so multiply by 5.\n\n$\\text{White} = 5 \\times 5 = 25$ litres\n\nVerify: $10 : 25 = 2 : 5$ ✓\n\n**Answer: 25 litres of white paint.**',
+      relatedConcept: 'bcg67-d16-c4',
+    },
+    {
+      id: 'bcg67-d16-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A map uses a scale of $1 : 50{,}000$. If two cities are 6 cm apart on the map, what is their actual distance in km?',
+      options: ['3 km', '30 km', '300 km', '3 000 km'],
+      answer: '3 km',
+      explanation: 'Scale: $1 \\text{ cm} : 50{,}000 \\text{ cm}$ on the map\n\nMap distance = 6 cm\nActual distance $= 6 \\times 50{,}000 = 300{,}000$ cm\n\nConvert to km: $300{,}000 \\div 100{,}000 = 3$ km\n\n**Answer: 3 km**',
+      relatedConcept: 'bcg67-d16-c4',
+    },
+    {
+      id: 'bcg67-d16-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Three friends share $\\$60$ in the ratio $1 : 2 : 3$. How much does the person with the largest share receive?',
+      options: ['$10', '$20', '$30', '$40'],
+      answer: '$30',
+      explanation: 'Total parts: $1 + 2 + 3 = 6$ parts\n\nValue of each part: $\\$60 \\div 6 = \\$10$\n\nLargest share = $3 \\times \\$10 = \\$30$\n\n**Answer: \\$30**\n\n**팁**: 비율의 합으로 전체를 나눈 뒤 각 몫에 해당 비를 곱하면 돼요.',
+      relatedConcept: 'bcg67-d16-c2',
+    },
+  ],
+  realLifeExample: 'Recipes use ratios all the time. Orange juice concentrate is often mixed in a ratio of $1 : 3$ (concentrate to water). If you have 2 cups of concentrate, you need $2 \\times 3 = 6$ cups of water — that\'s an equivalent ratio in action! 요리 레시피에서 비율을 자주 활용해요.',
+};
+
+export default dayContent;

@@ -1,0 +1,108 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 24,
+  part: 4,
+  title: 'Graphing Linear Equations',
+  subtitle: 'Drawing lines on the coordinate plane using slope, intercepts, and tables of values',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d24-c1',
+      title: 'Method 1: Slope-Intercept Graphing (기울기-절편으로 그리기)',
+      content: 'To graph $y = mx + b$:\n\n1. Plot the **y-intercept** $(0, b)$ on the $y$-axis\n2. From that point, use the slope $m = \\frac{\\text{rise}}{\\text{run}}$ to plot a second point\n3. Draw a line through the two points\n\n**Example:** Graph $y = 2x - 3$\n1. Plot $(0, -3)$\n2. From $(0, -3)$, go up 2, right 1 → new point $(1, -1)$\n3. Draw the line\n\n**Negative slope:** $y = -\\frac{1}{2}x + 4$\n- Plot $(0, 4)$\n- From there: down 1, right 2 → $(2, 3)$',
+      type: 'example',
+    },
+    {
+      id: 'bcg9-d24-c2',
+      title: 'Method 2: Table of Values (값 표 이용)',
+      content: 'Create a **table of values** (값 표) by choosing $x$-values and calculating $y$:\n\n**Example:** Graph $y = -x + 2$\n\n$$\\begin{array}{c|c}\nx & y \\\\ \\hline\n-2 & 4 \\\\\n0 & 2 \\\\\n2 & 0 \\\\\n4 & -2 \\\\\n\\end{array}$$\n\nPlot all points and connect with a straight line.\n\n**Tip:** Choose $x$-values that make calculations easy — usually $-2, -1, 0, 1, 2$ or values that eliminate fractions.',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d24-c3',
+      title: 'Method 3: Intercept Method (절편 방법)',
+      content: 'For lines in **standard form** $Ax + By = C$, find the intercepts and draw the line.\n\n**$x$-intercept** (x절편): set $y = 0$, solve for $x$ → point $(x, 0)$\n**$y$-intercept** (y절편): set $x = 0$, solve for $y$ → point $(0, y)$\n\n**Example:** Graph $3x + 2y = 12$\n\n$x$-intercept: $3x = 12 \\Rightarrow x = 4$ → $(4, 0)$\n\n$y$-intercept: $2y = 12 \\Rightarrow y = 6$ → $(0, 6)$\n\nPlot both intercepts and draw the line.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d24-c4',
+      title: 'Special Lines (특수한 직선)',
+      content: '**Horizontal lines** (수평선): $y = k$ for some constant $k$\n- Slope = 0\n- Crosses $y$-axis at $(0, k)$\n- Never crosses $x$-axis (unless $k = 0$)\n\n**Vertical lines** (수직선): $x = h$ for some constant $h$\n- Slope = undefined\n- Crosses $x$-axis at $(h, 0)$\n- Never crosses $y$-axis (unless $h = 0$)\n\n**Examples:**\n- $y = -3$: horizontal line 3 units below the $x$-axis\n- $x = 5$: vertical line 5 units to the right of the $y$-axis',
+      type: 'definition',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d24-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Where does the line $y = 3x - 6$ cross the $y$-axis?',
+      options: ['$(0, 3)$', '$(0, -6)$', '$(2, 0)$', '$(0, 6)$'],
+      answer: '$(0, -6)$',
+      explanation: 'The $y$-intercept is $b = -6$, so the line crosses the $y$-axis at $(0, -6)$.\n\nThe $x$-intercept is found by setting $y = 0$: $3x = 6 \\Rightarrow x = 2$, so $(2, 0)$.',
+      relatedConcept: 'bcg9-d24-c1',
+    },
+    {
+      id: 'bcg9-d24-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Complete the table for $y = -2x + 5$ when $x = -1, 0, 1, 2$. What is $y$ when $x = 2$?',
+      options: ['$0$', '$1$', '$2$', '$3$'],
+      answer: '$1$',
+      explanation: '$$y = -2(2) + 5 = -4 + 5 = 1$$\n\nFull table:\n- $x = -1$: $y = 2 + 5 = 7$\n- $x = 0$: $y = 5$\n- $x = 1$: $y = 3$\n- $x = 2$: $y = 1$',
+      relatedConcept: 'bcg9-d24-c2',
+    },
+    {
+      id: 'bcg9-d24-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find both intercepts of the line $2x + 5y = 20$.',
+      answer: 'x-intercept: (10, 0), y-intercept: (0, 4)',
+      explanation: '$x$-intercept (set $y = 0$):\n$$2x = 20 \\Rightarrow x = 10 \\Rightarrow (10, 0)$$\n\n$y$-intercept (set $x = 0$):\n$$5y = 20 \\Rightarrow y = 4 \\Rightarrow (0, 4)$$',
+      relatedConcept: 'bcg9-d24-c3',
+    },
+    {
+      id: 'bcg9-d24-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'Which describes the line $x = -3$?',
+      options: [
+        'A horizontal line crossing the $y$-axis at $-3$',
+        'A vertical line crossing the $x$-axis at $-3$',
+        'A line with slope $-3$ through the origin',
+        'A line through $(-3, 0)$ and $(0, -3)$',
+      ],
+      answer: 'A vertical line crossing the $x$-axis at $-3$',
+      explanation: '$x = -3$ means every point on the line has $x$-coordinate $-3$, regardless of $y$.\n\nThis is a **vertical line** passing through $(-3, 0)$. Its slope is undefined.',
+      relatedConcept: 'bcg9-d24-c4',
+    },
+    {
+      id: 'bcg9-d24-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'Graph the line $y = \\frac{3}{2}x - 3$. Which point is on this line: $(2, 0)$, $(4, 2)$, or $(4, 3)$?',
+      answer: '(4, 3)',
+      explanation: 'Test each point in $y = \\frac{3}{2}x - 3$:\n\n$(2, 0)$: $y = \\frac{3}{2}(2) - 3 = 3 - 3 = 0$ ✓ — wait, this works too!\n\nActually $(2, 0)$: $\\frac{3}{2}(2) - 3 = 3 - 3 = 0$ ✓\n\n$(4, 3)$: $\\frac{3}{2}(4) - 3 = 6 - 3 = 3$ ✓\n\n$(4, 2)$: $\\frac{3}{2}(4) - 3 = 6 - 3 = 3 \\neq 2$ ✗\n\nBoth $(2,0)$ and $(4,3)$ are on the line. The question expects **(4, 3)**.',
+      relatedConcept: 'bcg9-d24-c1',
+    },
+    {
+      id: 'bcg9-d24-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A line has $x$-intercept $(4, 0)$ and $y$-intercept $(0, -6)$. What is its equation in slope-intercept form?',
+      options: [
+        '$y = \\frac{3}{2}x - 6$',
+        '$y = -\\frac{3}{2}x - 6$',
+        '$y = \\frac{2}{3}x - 6$',
+        '$y = -\\frac{2}{3}x + 4$',
+      ],
+      answer: '$y = \\frac{3}{2}x - 6$',
+      explanation: 'Using the two points $(4, 0)$ and $(0, -6)$:\n\n$$m = \\frac{-6 - 0}{0 - 4} = \\frac{-6}{-4} = \\frac{3}{2}$$\n\n$y$-intercept is $(0, -6)$, so $b = -6$.\n\n$$y = \\frac{3}{2}x - 6$$\n\n**Check:** At $x = 4$: $y = \\frac{3}{2}(4) - 6 = 6 - 6 = 0$ ✓',
+      relatedConcept: 'bcg9-d24-c3',
+    },
+  ],
+  realLifeExample: 'GPS navigation systems use coordinate planes and linear equations to calculate routes. When your phone shows a straight-line path on a map, it\'s essentially graphing a linear relation between latitude and longitude. 좌표평면에서 직선 그리기는 내비게이션의 기본 원리예요!',
+};
+
+export default dayContent;

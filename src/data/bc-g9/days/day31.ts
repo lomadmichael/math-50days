@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 31,
+  part: 6,
+  title: 'Measures of Central Tendency',
+  subtitle: 'Calculating and interpreting mean, median, and mode for data sets',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d31-c1',
+      title: 'Mean — The Average (평균)',
+      content: 'The **mean** (평균) is the arithmetic average of a data set.\n\n$$\\text{mean} = \\frac{\\text{sum of all values}}{\\text{number of values}} = \\frac{\\sum x}{n}$$\n\n**Example:** Test scores: 72, 85, 90, 68, 95\n$$\\text{mean} = \\frac{72 + 85 + 90 + 68 + 95}{5} = \\frac{410}{5} = 82$$\n\n**Properties of mean:**\n- Affected by **outliers** (극단값) — very large or small values\n- Best used when data is relatively symmetric\n- Every value in the data set contributes to the mean',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d31-c2',
+      title: 'Median — The Middle Value (중앙값)',
+      content: 'The **median** (중앙값) is the middle value when data is arranged in order.\n\n**Steps:**\n1. Sort the data from smallest to largest\n2. If $n$ is **odd**: median = middle value (position $\\frac{n+1}{2}$)\n3. If $n$ is **even**: median = average of the two middle values\n\n**Example (odd):** $3, 5, 7, 9, 11$ → median = $7$\n\n**Example (even):** $4, 6, 8, 10$ → median = $\\frac{6 + 8}{2} = 7$\n\n**Advantage:** Not affected by extreme outliers (unlike mean).',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d31-c3',
+      title: 'Mode — The Most Frequent (최빈값)',
+      content: 'The **mode** (최빈값) is the value that appears most often in a data set.\n\n- A data set may have **one mode**, **multiple modes**, or **no mode** (if all values appear equally often)\n\n**Examples:**\n- $2, 3, 3, 4, 5, 5, 5, 7$ → mode = $5$ (appears 3 times)\n- $1, 2, 3, 4$ → **no mode** (each appears once)\n- $2, 2, 5, 5, 8$ → modes = $2$ and $5$ (bimodal)\n\n**When to use mode:**\n- For categorical data (e.g., most popular colour, most common shoe size)\n- When you want the most typical value',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d31-c4',
+      title: 'Choosing the Best Measure (적절한 대푯값 선택)',
+      content: '**When to use each measure of central tendency (대푯값):**\n\n| Measure | Best when... |\n|---------|-------------|\n| **Mean** | Data is symmetric, no outliers, numerical data |\n| **Median** | Data has outliers or is skewed, numerical data |\n| **Mode** | Categorical data, or most common value needed |\n\n**Example:** House prices in a neighbourhood:\n$300k, 310k, 290k, 305k, 1.5M$ (one mansion!)\n\n- Mean: $\\frac{2705000}{5} = \\$541,000$ — misleadingly high\n- Median: $\\$305,000$ — more representative ✓\n- Mode: no mode\n\n**Conclusion:** Median is best when there are outliers.',
+      type: 'tip',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d31-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the mean of: $14, 22, 18, 30, 16$.',
+      answer: '20',
+      explanation: '$$\\text{mean} = \\frac{14 + 22 + 18 + 30 + 16}{5} = \\frac{100}{5} = 20$$',
+      relatedConcept: 'bcg9-d31-c1',
+    },
+    {
+      id: 'bcg9-d31-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'Find the median of: $7, 15, 3, 22, 10, 8, 19$.',
+      options: ['$8$', '$10$', '$12$', '$15$'],
+      answer: '$10$',
+      explanation: 'Sort: $3, 7, 8, \\mathbf{10}, 15, 19, 22$\n\nWith 7 values (odd), the median is the 4th value: **10**.',
+      relatedConcept: 'bcg9-d31-c2',
+    },
+    {
+      id: 'bcg9-d31-p3',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the mode of: $4, 7, 4, 9, 2, 7, 4, 1$?',
+      options: ['$4$ and $7$', '$4$', '$7$', '$4.75$'],
+      answer: '$4$',
+      explanation: 'Count frequencies:\n- 1: once\n- 2: once\n- 4: **three times**\n- 7: twice\n- 9: once\n\nThe mode is **4** (appears most often).',
+      relatedConcept: 'bcg9-d31-c3',
+    },
+    {
+      id: 'bcg9-d31-p4',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A student\'s test scores are 75, 82, 79, 91, and a missing score. If the mean of all 5 scores is 83, what is the missing score?',
+      answer: '88',
+      explanation: 'Let the missing score $= x$.\n$$\\frac{75 + 82 + 79 + 91 + x}{5} = 83$$\n$$327 + x = 415$$\n$$x = 88$$\n\nThe missing score is **88**.',
+      relatedConcept: 'bcg9-d31-c1',
+    },
+    {
+      id: 'bcg9-d31-p5',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A class survey of weekly study hours: $2, 5, 4, 3, 20, 4, 6, 3, 4, 5$. Which measure best represents "typical" weekly study hours?',
+      options: ['Mean ($5.6$)', 'Median ($4$)', 'Mode ($4$)', 'Either median or mode'],
+      answer: 'Either median or mode',
+      explanation: 'The value 20 is an outlier that pulls the mean up to:\n$$\\text{mean} = \\frac{56}{10} = 5.6$$\n\nSorted: $2, 3, 3, 4, 4, 4, 5, 5, 6, 20$\nMedian $= \\frac{4 + 4}{2} = 4$, Mode $= 4$\n\nBoth **median and mode** = 4, which better represents "typical" because the outlier (20) is excluded from their calculations.',
+      relatedConcept: 'bcg9-d31-c4',
+    },
+    {
+      id: 'bcg9-d31-p6',
+      type: 'short-answer',
+      difficulty: 'challenge',
+      question: 'Nine students scored on a test. The mean is 72 and the median is 75. If the highest-scoring student gets 10 extra bonus points (score goes from 90 to 100), which measure changes and by how much?',
+      answer: 'Only the mean changes, increasing by 10/9 ≈ 1.1',
+      explanation: 'Adding 10 points to one score:\n\n**Mean:** The sum increases by 10, so the new mean $= 72 + \\frac{10}{9} \\approx 73.1$. **Mean changes.**\n\n**Median:** The middle value (5th in order) does not change because the highest score was already the 9th value — adding points to it doesn\'t affect the middle. **Median stays at 75.**\n\n**Mode:** Depends on data, but typically unaffected.',
+      relatedConcept: 'bcg9-d31-c4',
+    },
+  ],
+  realLifeExample: 'Statistics Canada uses mean and median household incomes to describe the Canadian economy. The median income is reported alongside the mean because high earners make the mean higher than most Canadians actually earn. In BC, the median home price more accurately reflects the housing market than the mean (because of ultra-expensive properties). 통계에서 대푯값 선택은 현실을 정확히 반영해요!',
+};
+
+export default dayContent;

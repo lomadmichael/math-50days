@@ -1,0 +1,98 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 21,
+  part: 4,
+  title: 'Slope — Review and Calculations',
+  subtitle: 'Understanding and calculating the steepness of a line using rise over run',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg9-d21-c1',
+      title: 'What is Slope? (기울기란?)',
+      content: '**Slope** (기울기) measures how steep a line is. It is defined as:\n\n$$m = \\frac{\\text{rise}}{\\text{run}} = \\frac{\\Delta y}{\\Delta x}$$\n\n- **Rise** (수직 변화): the vertical change (up is positive, down is negative)\n- **Run** (수평 변화): the horizontal change (right is positive, left is negative)\n- $m$ is the conventional letter for slope\n\n**Types of slope:**\n- Positive slope ($m > 0$): line goes up left to right ↗\n- Negative slope ($m < 0$): line goes down left to right ↘\n- Zero slope ($m = 0$): horizontal line →\n- Undefined slope: vertical line ↑ (division by zero)',
+      type: 'definition',
+    },
+    {
+      id: 'bcg9-d21-c2',
+      title: 'Slope Formula from Two Points (두 점으로 기울기 계산)',
+      content: 'Given two points $(x_1, y_1)$ and $(x_2, y_2)$, the slope is:\n\n$$m = \\frac{y_2 - y_1}{x_2 - x_1}$$\n\n**Example:** Find the slope through $(2, 3)$ and $(6, 11)$.\n\n$$m = \\frac{11 - 3}{6 - 2} = \\frac{8}{4} = 2$$\n\n**Important:** Always subtract in the same order — $(x_2, y_2)$ minus $(x_1, y_1)$. You can swap which point is "1" and which is "2", but be consistent!\n\n$$m = \\frac{3 - 11}{2 - 6} = \\frac{-8}{-4} = 2 \\checkmark$$',
+      type: 'formula',
+    },
+    {
+      id: 'bcg9-d21-c3',
+      title: 'Reading Slope from a Graph (그래프에서 기울기 읽기)',
+      content: 'To find slope from a graph:\n1. Pick two **clear lattice points** (격자점 — where the line crosses grid intersections)\n2. Count the rise (vertical change)\n3. Count the run (horizontal change)\n4. Compute $m = \\frac{\\text{rise}}{\\text{run}}$\n\n**Example:** A line passes through $(0, 1)$ and $(3, 7)$.\n- Rise: $7 - 1 = 6$ (up)\n- Run: $3 - 0 = 3$ (right)\n- Slope: $m = \\frac{6}{3} = 2$\n\n**Tip:** A slope of $2$ means "up 2, right 1" — you can use this to draw more points on the line.',
+      type: 'tip',
+    },
+    {
+      id: 'bcg9-d21-c4',
+      title: 'Slope as Rate of Change (변화율로서의 기울기)',
+      content: 'Slope represents a **rate of change** (변화율) — how much $y$ changes for each unit increase in $x$.\n\n**Example:** A water tank drains at a constant rate. After 2 hours there are 80 litres, and after 5 hours there are 20 litres.\n\n$$m = \\frac{20 - 80}{5 - 2} = \\frac{-60}{3} = -20$$\n\nThe tank loses **20 litres per hour** (negative because it\'s decreasing).\n\n**Units of slope:** always $\\frac{\\text{unit of } y}{\\text{unit of } x}$, e.g., km/h, \\$/day, °C/hour.',
+      type: 'example',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg9-d21-p1',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'What is the slope of the line passing through $(1, 2)$ and $(4, 8)$?',
+      options: ['$\\frac{1}{2}$', '$2$', '$3$', '$6$'],
+      answer: '$2$',
+      explanation: '$$m = \\frac{8 - 2}{4 - 1} = \\frac{6}{3} = 2$$\n\nThe slope is **2**, which means the line goes up 2 units for every 1 unit to the right.',
+      relatedConcept: 'bcg9-d21-c2',
+    },
+    {
+      id: 'bcg9-d21-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A line goes through $(-3, 5)$ and $(1, 5)$. What is its slope?',
+      options: ['$-1$', '$0$', '$1$', 'Undefined'],
+      answer: '$0$',
+      explanation: '$$m = \\frac{5 - 5}{1 - (-3)} = \\frac{0}{4} = 0$$\n\nThe $y$-values are the same, so the line is **horizontal** with slope **0**.',
+      relatedConcept: 'bcg9-d21-c1',
+    },
+    {
+      id: 'bcg9-d21-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the slope of the line through $(-2, -1)$ and $(4, 5)$.',
+      answer: '1',
+      explanation: '$$m = \\frac{5 - (-1)}{4 - (-2)} = \\frac{6}{6} = 1$$\n\nThe slope is **1**.',
+      relatedConcept: 'bcg9-d21-c2',
+    },
+    {
+      id: 'bcg9-d21-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A ramp rises 1.2 m over a horizontal distance of 8 m. What is the slope of the ramp?',
+      options: ['$0.10$', '$0.15$', '$0.20$', '$0.25$'],
+      answer: '$0.15$',
+      explanation: '$$m = \\frac{\\text{rise}}{\\text{run}} = \\frac{1.2}{8} = 0.15$$\n\nThe slope of the ramp is **0.15** (or 15%). This is within the range recommended for accessible ramps.',
+      relatedConcept: 'bcg9-d21-c1',
+    },
+    {
+      id: 'bcg9-d21-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A car\'s fuel consumption: at 100 km the tank has 45 L, and at 300 km the tank has 25 L. What is the rate of fuel consumption (L/km)?',
+      answer: '-0.1',
+      explanation: 'Treat km as $x$ and litres as $y$:\n\n$$m = \\frac{25 - 45}{300 - 100} = \\frac{-20}{200} = -0.1$$\n\nThe car uses **0.1 L/km** (negative slope because fuel decreases as distance increases).',
+      relatedConcept: 'bcg9-d21-c4',
+    },
+    {
+      id: 'bcg9-d21-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'Three points are on the same line: $(1, k)$, $(3, 7)$, and $(5, 13)$. What is the value of $k$?',
+      options: ['$1$', '$2$', '$3$', '$4$'],
+      answer: '$1$',
+      explanation: 'First find the slope using the last two points:\n$$m = \\frac{13 - 7}{5 - 3} = \\frac{6}{2} = 3$$\n\nNow use the slope between the first and second points:\n$$3 = \\frac{7 - k}{3 - 1} = \\frac{7 - k}{2}$$\n$$6 = 7 - k$$\n$$k = 1$$',
+      relatedConcept: 'bcg9-d21-c2',
+    },
+  ],
+  realLifeExample: 'Engineers use slope constantly when designing roads, ramps, and roofs. In BC, road grades (slopes) are posted as percentages — a "6% grade" means the road rises 6 m for every 100 m of horizontal distance. 도로 경사도도 기울기로 표현돼요!',
+};
+
+export default dayContent;

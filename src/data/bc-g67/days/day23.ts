@@ -1,0 +1,97 @@
+import { DayContent } from '@/lib/types';
+
+const dayContent: DayContent = {
+  dayNumber: 23,
+  part: 4,
+  title: 'Circle — Circumference and Area',
+  subtitle: 'Understanding π and calculating the circumference and area of circles',
+  lectures: [],
+  concepts: [
+    {
+      id: 'bcg67-d23-c1',
+      title: 'Parts of a Circle',
+      content: 'Key vocabulary for circles:\n\n- **Centre** (중심): The middle point of the circle\n- **Radius** (반지름, $r$): Distance from the centre to any point on the circle\n- **Diameter** (지름, $d$): Distance across the circle through the centre\n  - $d = 2r$ and $r = \\frac{d}{2}$\n- **Circumference** (원주, $C$): The distance all the way around the circle (its perimeter)\n- **Chord** (현): A line segment connecting two points on the circle (a diameter is the longest chord)\n\n**Example:** If $r = 5$ cm, then $d = 10$ cm.',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d23-c2',
+      title: 'Pi (π)',
+      content: '**Pi** ($\\pi$, 파이) is the ratio of any circle\'s circumference to its diameter:\n\n$$\\pi = \\frac{C}{d} \\approx 3.14159\\ldots$$\n\n$\\pi$ is an **irrational number** (무리수) — its decimal never ends or repeats.\n\nIn calculations, use:\n- $\\pi \\approx 3.14$ (rounded to 2 decimal places)\n- $\\pi \\approx \\frac{22}{7}$ (fraction approximation)\n- Or keep $\\pi$ as a symbol for exact answers\n\n**Example (exact):** $C = 2\\pi(5) = 10\\pi \\text{ cm}$\n**Example (decimal):** $C \\approx 10 \\times 3.14 = 31.4 \\text{ cm}$',
+      type: 'definition',
+    },
+    {
+      id: 'bcg67-d23-c3',
+      title: 'Circumference of a Circle',
+      content: 'The **circumference** (원주) is the perimeter of a circle.\n\n$$C = \\pi d = 2\\pi r$$\n\n**Example 1:** A circle has radius 7 cm.\n$$C = 2\\pi r = 2 \\times 3.14 \\times 7 = 43.96 \\text{ cm}$$\n\n**Example 2:** A circle has diameter 10 m.\n$$C = \\pi d = 3.14 \\times 10 = 31.4 \\text{ m}$$\n\n**팁**: 지름(d)이 주어지면 $C = \\pi d$를, 반지름(r)이 주어지면 $C = 2\\pi r$을 쓰면 편해요.',
+      type: 'formula',
+    },
+    {
+      id: 'bcg67-d23-c4',
+      title: 'Area of a Circle',
+      content: 'The **area** (넓이) of a circle uses the radius squared:\n\n$$A = \\pi r^2$$\n\n**Example 1:** Circle with radius 5 cm:\n$$A = \\pi \\times 5^2 = 25\\pi \\approx 25 \\times 3.14 = 78.5 \\text{ cm}^2$$\n\n**Example 2:** Circle with diameter 12 m (so $r = 6$ m):\n$$A = \\pi \\times 6^2 = 36\\pi \\approx 113.04 \\text{ m}^2$$\n\n**Common mistake:** Students often use diameter instead of radius in $A = \\pi r^2$ — always halve the diameter first!\n\n**팁**: $A = \\pi r^2$에서 $r$은 반지름이에요. 지름을 2로 나누는 것 잊지 마세요!',
+      type: 'formula',
+    },
+  ],
+  problems: [
+    {
+      id: 'bcg67-d23-p1',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'A circle has a radius of 6 cm. Find its diameter.',
+      answer: '12 cm',
+      explanation: '$$d = 2r = 2 \\times 6 = 12 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d23-c1',
+    },
+    {
+      id: 'bcg67-d23-p2',
+      type: 'multiple-choice',
+      difficulty: 'basic',
+      question: 'A circle has a diameter of 14 cm. What is its circumference? (Use $\\pi \\approx 3.14$)',
+      options: ['21.98 cm', '43.96 cm', '153.86 cm', '87.92 cm'],
+      answer: '43.96 cm',
+      explanation: '$$C = \\pi d = 3.14 \\times 14 = 43.96 \\text{ cm}$$\n\nNote: $r = 7$, so $C = 2\\pi(7) = 14\\pi \\approx 43.96$ cm — same answer either way.',
+      relatedConcept: 'bcg67-d23-c3',
+    },
+    {
+      id: 'bcg67-d23-p3',
+      type: 'short-answer',
+      difficulty: 'basic',
+      question: 'Find the area of a circle with radius 9 m. (Use $\\pi \\approx 3.14$, round to 2 decimal places)',
+      answer: '254.34 m²',
+      explanation: '$$A = \\pi r^2 = 3.14 \\times 9^2 = 3.14 \\times 81 = 254.34 \\text{ m}^2$$',
+      relatedConcept: 'bcg67-d23-c4',
+    },
+    {
+      id: 'bcg67-d23-p4',
+      type: 'multiple-choice',
+      difficulty: 'applied',
+      question: 'A circular swimming pool has a diameter of 10 m. What is its area? (Use $\\pi \\approx 3.14$)',
+      options: ['31.4 m²', '78.5 m²', '314 m²', '157 m²'],
+      answer: '78.5 m²',
+      explanation: 'Diameter = 10 m, so radius $r = 5$ m.\n$$A = \\pi r^2 = 3.14 \\times 5^2 = 3.14 \\times 25 = 78.5 \\text{ m}^2$$\n\n**Common mistake:** Do not use $A = \\pi \\times 10^2$ — always use the **radius**, not the diameter.',
+      relatedConcept: 'bcg67-d23-c4',
+    },
+    {
+      id: 'bcg67-d23-p5',
+      type: 'short-answer',
+      difficulty: 'applied',
+      question: 'A wheel has a circumference of $62.8$ cm. What is its radius? (Use $\\pi \\approx 3.14$)',
+      answer: '10 cm',
+      explanation: '$$C = 2\\pi r$$\n$$62.8 = 2 \\times 3.14 \\times r$$\n$$62.8 = 6.28r$$\n$$r = \\frac{62.8}{6.28} = 10 \\text{ cm}$$',
+      relatedConcept: 'bcg67-d23-c3',
+    },
+    {
+      id: 'bcg67-d23-p6',
+      type: 'multiple-choice',
+      difficulty: 'challenge',
+      question: 'A semicircle (half circle) has a diameter of 8 cm. What is the perimeter of the semicircle? (Use $\\pi \\approx 3.14$)',
+      options: ['12.56 cm', '20.56 cm', '25.12 cm', '37.68 cm'],
+      answer: '20.56 cm',
+      explanation: 'The perimeter of a semicircle = half the circumference + the diameter.\n\nHalf circumference: $\\frac{1}{2} \\times \\pi d = \\frac{1}{2} \\times 3.14 \\times 8 = 12.56$ cm\n\nDiameter: 8 cm\n\nTotal perimeter: $12.56 + 8 = 20.56$ cm\n\n**팁**: 반원의 둘레 = (원주 ÷ 2) + 지름이에요.',
+      relatedConcept: 'bcg67-d23-c3',
+    },
+  ],
+  realLifeExample: 'Bicycle wheels, pizza, coins, clocks — circles are everywhere! A bicycle tire with radius 35 cm has circumference $C = 2\\pi(35) \\approx 220$ cm $= 2.2$ m. After 100 rotations, it travels $100 \\times 2.2 = 220$ m. 자전거 바퀴의 회전 수로 이동 거리를 계산할 수 있어요!',
+};
+
+export default dayContent;

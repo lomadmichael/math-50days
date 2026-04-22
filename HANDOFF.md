@@ -11,6 +11,45 @@ Next.js 16 + Vercel 배포. 4개 독립 코스 (기초탄탄, 중1, 중2, 중3) 
 
 ---
 
+## 2026-04-22 밤 세션 — BC Grade 6-7 + Grade 9 전체 콘텐츠 완성
+
+### 🇨🇦 BC 캐나다 과정 3개 학년 모두 풀 콘텐츠로 완성 (커밋 `144c4e1`)
+
+| 학년 | Days | PARTs | 상태 |
+|---|---|---|---|
+| BC Grade 6-7 | 30 | 5 | ✅ 신규 완성 |
+| BC Grade 8 | 30 | 5 | ✅ 기존 |
+| BC Grade 9 | 35 | 6 | ✅ 신규 완성 |
+
+### BC Grade 6-7 주제 (30 Days)
+- PART 1 Number Sense (Day 1-8): Place Value, Integers, GCF/LCM, BEDMAS, Powers intro
+- PART 2 Fractions/Decimals/% (Day 9-14): F/D/% 변환, 연산
+- PART 3 Ratios (Day 15-18): Ratios, Unit Rates, Proportions
+- PART 4 Geometry (Day 19-24): Angles, Triangles, Circle, Volume
+- PART 5 Data/Probability (Day 25-30): Graphs, Mean/Median/Mode, Probability, Mini Test
+
+### BC Grade 9 주제 (35 Days)
+- PART 1 Powers (Day 1-6): Laws of Exponents, Scientific Notation
+- PART 2 Polynomials (Day 7-13): FOIL, Word Problems
+- PART 3 Linear Eq & Ineq (Day 14-20): Multi-step, Fractions, Inequalities
+- PART 4 Linear Relations (Day 21-26): Slope, Intercept, Parallel/Perpendicular
+- PART 5 Geometry (Day 27-30): Similarity, Composite Solids
+- PART 6 Stats & Probability (Day 31-35): Central Tendency, Scatter Plots, Final Test
+
+### 영상 매핑 (63개 추가)
+**Khan Academy** (공식 채널, WebSearch 검증): G6-7 29개 + G9 34개
+**정승제 재활용** (한국어 보조):
+- G6-7: 양수/음수, 정수 사칙, 공약수/공배수, 분수의 모든 것, 소수 사칙연산
+- G9: 지수법칙, 다항식과 일차식, 단항식 곱셈나눗셈, 방정식 개념, 일차함수, 함수 기본 개념
+
+### 작업 방법
+6개 Sonnet 서브에이전트 병렬 디스패치:
+- 콘텐츠 4개 (G6-7 1-15, 16-30, G9 1-18, 19-35)
+- Khan Academy 2개 (G6-7, G9)
+- 모두 TypeScript 타입 체크 통과
+
+---
+
 ## 2026-04-22 저녁 세션 — Grade 8 대규모 업그레이드 (9개 기능)
 
 3개 서브에이전트 병렬 디스패치 + Phase A·E 직접 구현.
